@@ -66,6 +66,7 @@
     "leaflet": "^1.9.4",
     "lodash-es": "^4.17.21",
     "luxon": "^3.3.0",
-    "tabulator-tables": "^6.3.0"
+    "tabulator-tables": "^6.3.0",
+    "term-size": "^3.0.2"
   }
 }

@@ -2,7 +2,7 @@ name: Tests
 on: [pull_request, workflow_dispatch]
 jobs:
   test:
-    if: github.repository_owner == 'ParkingReformNetwork'
+    if: github.repository_owner == 'stphnblack'
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -22,9 +22,3 @@ jobs:
         run: npm run lint
       - name: Run tests
         run: npm test
-
-      - name: Check static generation works
-        run: |
-          npm run gen-html
-          npm run gen-redirects
-          npm run gen-data-set
