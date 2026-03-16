@@ -5,7 +5,7 @@
         "summary": "Abbeville University plant-based default nudge summary.",
         "notes": "Abbeville University plant-based default nudge notes.",
         "strategy": ["social_media", "ally"],
-        "policy_url":[ "https://www.example.com", "https://www.example.com"]
+        "policy_url": ["https://www.example.com", "https://www.example.com"]
       }
     ],
     "ratio": [
