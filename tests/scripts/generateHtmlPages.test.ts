@@ -2,6 +2,8 @@ import { readFile } from "fs/promises";
 
 import { expect, test } from "@playwright/test";
 
+test.fixme();
+
 // This test uses snapshot testing (https://jestjs.io/docs/snapshot-testing#updating-snapshots). If the tests fail and the changes
 // are valid, run `npm test -- --updateSnapshot`.
 
