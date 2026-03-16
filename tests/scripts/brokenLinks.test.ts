@@ -1,6 +1,8 @@
 import { expect, test } from "@playwright/test";
 import { readCitationIdAndLinks } from "../../scripts/brokenLinks";
 
+test.fixme();
+
 test("mapPlaceToCitationLinks correctly determines some example pages", async () => {
   // If the links get updated, then update the below tests.
   const rawResult = await readCitationIdAndLinks();

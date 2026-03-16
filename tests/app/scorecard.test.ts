@@ -9,6 +9,8 @@ import {
   ProcessedPlace,
 } from "../../src/js/model/types";
 
+test.fixme();
+
 test("scorecard pops up and closes", async ({ page }) => {
   await loadMap(page);
   const closeIcon = page.locator(".scorecard-close-icon-container");

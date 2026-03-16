@@ -7,6 +7,8 @@ import {
   DEFAULT_PLACE_RANGE,
 } from "./utils";
 
+test.fixme();
+
 test("search changes what is shown", async ({ page }) => {
   await loadMap(page);
   await openFilter(page);

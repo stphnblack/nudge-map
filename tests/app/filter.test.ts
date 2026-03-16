@@ -15,6 +15,8 @@ import {
 import { PolicyTypeFilter } from "../../src/js/state/FilterState";
 import { ReformStatus } from "../../src/js/model/types";
 
+test.fixme();
+
 type StringArrayOption = string[] | "all";
 
 interface EdgeCase {

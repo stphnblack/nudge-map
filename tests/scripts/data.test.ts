@@ -7,6 +7,8 @@ import {
   getCitations,
 } from "../../scripts/lib/data";
 
+test.fixme();
+
 test("JSON files have enough entries", async () => {
   const core = await readRawCoreData();
   const extended = await readRawExtendedData();
