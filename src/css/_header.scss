@@ -1,0 +1,62 @@
+@use "theme/borders";
+@use "theme/breakpoints";
+@use "theme/colors";
+@use "theme/hover";
+@use "theme/spacing";
+@use "theme/icons";
+@use "theme/typography";
+
+$header-y-padding: 4px;
+$header-border-bottom-size: 4px;
+$header-height: calc(
+  spacing.$min-touch-target + ($header-y-padding * 2) +
+    $header-border-bottom-size
+);
+
+.top-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  padding: $header-y-padding spacing.$element-gap;
+
+  background-color: colors.$gray;
+  border-bottom: $header-border-bottom-size solid colors.$teal;
+}
+
+.header-control-icons {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-icon-container {
+  height: spacing.$min-touch-target;
+  width: spacing.$min-touch-target;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  svg {
+    color: colors.$white;
+    height: icons.$icon-size-md;
+    width: icons.$icon-size-md;
+  }
+
+  @include hover.enabled {
+    background-color: colors.$gray-hover;
+  }
+}
+
+.header-full-screen-icon-container {
+  // We don't show the icon on small screens because it takes up
+  // too much screen real estate, and it's not very useful to see
+  // the map in full-screen vs iframe if you're on such a small screen.
+  //
+  // iframe.ts also disables the icon when the site is not in an iframe.
+  display: none;
+  @include breakpoints.gt-xxs {
+    display: inline-flex;
+  }
+}

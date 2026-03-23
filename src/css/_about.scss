@@ -1,0 +1,91 @@
+@use "theme/borders";
+@use "theme/breakpoints";
+@use "theme/colors";
+@use "theme/hover";
+@use "theme/icons";
+@use "theme/spacing";
+@use "theme/typography";
+@use "theme/zindex";
+
+@use "header";
+
+.about-popup {
+  position: absolute;
+  left: spacing.$map-controls-margin-x;
+  right: spacing.$map-controls-margin-x;
+  margin-left: spacing.$map-controls-margin-x;
+  margin-right: spacing.$map-controls-margin-x;
+
+  min-height: 50%;
+  max-height: 70%;
+  min-width: 200px;
+  max-width: 800px;
+  top: calc(header.$header-height + 25px);
+  z-index: zindex.$about;
+
+  background-color: colors.$white;
+  font-size: typography.$font-size-base;
+  padding: spacing.$container-edge-spacing;
+
+  border: borders.$component-border;
+  border-radius: borders.$border-radius;
+
+  overflow-y: auto;
+  overflow-wrap: break-word;
+
+  @include breakpoints.gt-sm {
+    margin-left: 10%;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: typography.$font-size-lg;
+  }
+}
+
+.about-popup-header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  h2 {
+    flex: 1;
+    margin: 0;
+    margin-right: spacing.$element-gap;
+    line-height: 1.3;
+    font-size: typography.$font-size-xl;
+    font-weight: 500;
+  }
+}
+
+.about-popup-close-icon-container {
+  cursor: pointer;
+  height: spacing.$min-touch-target;
+  width: spacing.$min-touch-target;
+  margin-left: auto;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  @include hover.enabled {
+    background-color: colors.$white-hover;
+  }
+
+  svg {
+    height: icons.$icon-size-md;
+    width: icons.$icon-size-md;
+
+    @include breakpoints.gt-sm {
+      height: icons.$icon-size-lg;
+      width: icons.$icon-size-lg;
+    }
+  }
+}
+
+.about-popup-links-list {
+  margin-top: spacing.$element-gap;
+  padding: 0;
+  padding-inline-start: 20px; // Default is 40px
+}

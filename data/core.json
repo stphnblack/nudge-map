@@ -1,0 +1,177 @@
+{
+  "Abbeville University": {
+    "place": {
+      "name": "Abbeville University",
+      "state": "Alabama",
+      "country": "United States",
+      "institution": "uni_dining",
+      "encoded": "Abbeville_University",
+      "consumer_base": 2358,
+      "coord": [-85.2503315, 31.5702088]
+    },
+    "default": [
+      {
+        "status": "adopted",
+        "org_credit": ["Better Food Foundation"],
+        "date": "2025"
+      }
+    ],
+    "ratio": [
+      {
+        "status": "adopted",
+        "date": "2024-11-12"
+      }
+    ],
+    "sub": [
+      {
+        "status": "adopted"
+      }
+    ],
+    "titles": [
+      {
+        "status": "pledged"
+      }
+    ],
+    "placement": [
+      {
+        "status": "adopted"
+      }
+    ]
+  },
+  "Abbottstown Cafe": {
+    "place": {
+      "name": "Abbottstown Cafe",
+      "state": "Pennsylvania",
+      "country": "United States",
+      "institution": "cafe",
+      "encoded": "Abbottstown_Cafe",
+      "consumer_base": 1022,
+      "coord": [-76.9847013, 39.8864869]
+    },
+    "default": [
+      {
+        "status": "adopted",
+        "date": "2025-04-09"
+      }
+    ]
+  },
+  "Aberdeen Hospital": {
+    "place": {
+      "name": "Aberdeen Hospital",
+      "state": "New Jersey",
+      "country": "United States",
+      "institution": "hospital",
+      "encoded": "Aberdeen-Hospital",
+      "consumer_base": 19329,
+      "coord": [-74.2216287, 40.4071138]
+    },
+    "sub": [
+      {
+        "status": "pledged"
+      }
+    ]
+  },
+  "Aberdeen Hotel": {
+    "place": {
+      "name": "Aberdeen Hotel",
+      "state": "Maryland",
+      "country": "United States",
+      "institution": "hotel",
+      "encoded": "Aberdeen-Hotel",
+      "consumer_base": 16254,
+      "coord": [-76.1643289, 39.5120347]
+    },
+    "titles": [
+      {
+        "status": "adopted",
+        "org_credit": ["Better Food Foundation", "Organization"]
+      }
+    ],
+    "placement": [
+      {
+        "status": "adopted"
+      }
+    ]
+  },
+  "Aberdeen City Hall": {
+    "place": {
+      "name": "Aberdeen City Hall",
+      "state": "Mississippi",
+      "country": "United States",
+      "institution": "gov_facility",
+      "encoded": "Aberdeen_City_Hall",
+      "consumer_base": 4961,
+      "coord": [-88.5436553, 33.8251139]
+    },
+    "placement": [
+      {
+        "status": "adopted",
+        "date": "2023-01-01"
+      }
+    ],
+    "other": [
+      {
+        "status": "adopted"
+      }
+    ]
+  },
+  "Aberdeen Stadium": {
+    "place": {
+      "name": "Aberdeen Stadium",
+      "state": "Saskatchewan",
+      "country": "Canada",
+      "institution": "stadium",
+      "encoded": "Aberdeen-Stadium",
+      "consumer_base": 716,
+      "coord": [-106.2900807, 52.3271538]
+    },
+    "default": [
+      {
+        "status": "adopted",
+        "date": "2020"
+      }
+    ],
+    "ratio": [
+      {
+        "status": "adopted"
+      }
+    ]
+  },
+  "Aberdeen Conference": {
+    "place": {
+      "name": "Aberdeen Conference",
+      "state": "South Dakota",
+      "country": "United States",
+      "institution": "event",
+      "encoded": "Aberdeen_Conference",
+      "consumer_base": 28324,
+      "coord": [-98.487813, 45.4649805]
+    },
+    "default": [
+      {
+        "status": "adopted"
+      }
+    ],
+    "ratio": [
+      {
+        "status": "adopted"
+      }
+    ]
+  },
+  "Aberdeen Restaurant": {
+    "place": {
+      "name": "Aberdeen Restaurant",
+      "state": "Washington",
+      "country": "United States",
+      "institution": "chain_restaurant",
+      "encoded": "Aberdeen_Restaurant",
+      "consumer_base": 17013,
+      "coord": [-123.815722, 46.975371]
+    },
+    "ratio": [
+      {
+        "status": "adopted"
+      }
+    ]
+  }
+}

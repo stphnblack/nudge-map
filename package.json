@@ -1,0 +1,72 @@
+{
+  "name": "mandates-map",
+  "version": "0.1.0",
+  "source": "index.html",
+  "type": "module",
+  "scripts": {
+    "start": "parcel",
+    "build": "rm -rf dist; parcel build --detailed-report",
+    "test": "npm run gen-html -- --quiet; playwright test",
+    "check": "tsc --noEmit",
+    "fmt": "prettier --write .",
+    "fix": "prettier --write .; eslint --fix scripts/ tests/ src/",
+    "lint": "prettier --check . && eslint scripts/ tests/ src/",
+    "gen-data-set": "tsx scripts/generateDataSet.ts",
+    "gen-html": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts",
+    "gen-redirects": "tsx scripts/generateRedirects.ts",
+    "sync-directus": "tsx scripts/syncDirectus.ts",
+    "broken-links": "tsx scripts/brokenLinks.ts",
+    "serve-dist": "cd dist; http-server",
+    "test-dist": "PORT=8080 playwright test tests/app"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@directus/sdk": "^18.0.3",
+    "@parcel/compressor-brotli": "^2.13.3",
+    "@parcel/compressor-gzip": "^2.13.3",
+    "@parcel/transformer-sass": "^2.13.3",
+    "@playwright/test": "^1.56.1",
+    "@types/leaflet": "^1.9.15",
+    "@types/lodash-es": "^4.17.12",
+    "@types/luxon": "^3.4.2",
+    "@types/node-fetch": "^2.6.12",
+    "@types/node-geocoder": "^4.2.6",
+    "@types/papaparse": "^5.3.15",
+    "@types/tabulator-tables": "^6.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.19.0",
+    "@typescript-eslint/parser": "^8.19.0",
+    "clean-css": "^5.3.3",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "happy-dom": "^20.0.2",
+    "http-server": "^14.1.1",
+    "node-fetch": "^3.3.2",
+    "node-geocoder": "^4.4.1",
+    "papaparse": "^5.4.1",
+    "parcel": "^2.13.3",
+    "playwright": "^1.56.1",
+    "prettier": "^3.4.2",
+    "sass": "^1.83.0",
+    "svgo": "^3.3.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.7.2",
+    "zx": "^8.3.0"
+  },
+  "targets": {
+    "default": {
+      "publicUrl": "./"
+    }
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "choices.js": "^10.2.0",
+    "leaflet": "^1.9.4",
+    "lodash-es": "^4.17.21",
+    "luxon": "^3.3.0",
+    "tabulator-tables": "^6.3.0",
+    "term-size": "^3.0.2"
+  }
+}

@@ -1,0 +1,28 @@
+<details class="citation">
+  <summary>Citation{% if numCitations > 1 %} {{ index }}{% endif %}</summary>
+  <dl>
+    <dt>Source</dt>
+    <dd>{{ citation.description }}</dd>
+    {% if citation.notes -%}
+      <dt>Notes</dt>
+      <dd>{{ citation.notes }}</dd>
+    {%- endif %}
+    {% if citation.url -%}
+      <dt>URL</dt>
+      <dd><a target="_blank" class="external-link" href="{{ citation.url }}">{{ citation.urlDomain }} {% render "icons/right-arrow" %}</a></dd>
+    {%- endif %}
+    {%- if citation.attachments.size > 0 -%}
+      <dt>Attachments</dt>
+      <dd>
+        {% render "attachment-array" array: citation.attachments %}
+      </dd>
+    {%- endif %}
+  </dl>
+  {% if citation.screenshots.size > 0 -%}
+    <ul class="screenshots">
+    {% for screenshot in citation.screenshots -%}
+      <li><img alt="Screenshot of {{ citation.description }}" src="https://mandates-map.directus.app/assets/{{ screenshot.directusId }}/{{ screenshot.fileName }}" /></li>
+    {%- endfor %}
+    </ul>
+  {%- endif %}
+</details>

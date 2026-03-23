@@ -1,0 +1,235 @@
+@use "theme/borders";
+@use "theme/colors";
+@use "theme/icons";
+@use "theme/hover";
+@use "theme/spacing";
+@use "theme/typography";
+@use "theme/zindex";
+@use "header";
+
+$filter-total-width: 310px;
+$filter-inner-width: calc(
+  $filter-total-width - (borders.$border-thickness * 2)
+);
+
+.filter-popup {
+  position: fixed;
+  right: spacing.$map-controls-margin-x;
+  top: calc(header.$header-height + spacing.$map-controls-margin-top);
+  z-index: zindex.$filter-popup;
+  width: $filter-total-width;
+
+  max-height: min(600px, 75vh);
+  overflow-y: auto;
+
+  background-color: colors.$filter-light-gray;
+  border: borders.$component-border;
+  border-color: black;
+  border-radius: borders.$border-radius;
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.filter-accordion-toggle {
+  height: spacing.$min-touch-target;
+  width: 100%;
+  padding: 0;
+
+  font-size: typography.$font-size-base;
+  cursor: pointer;
+  text-align: left;
+  padding-left: spacing.$container-edge-spacing;
+  padding-right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: colors.$filter-medium-gray;
+  border-top: borders.$component-inner-divider;
+
+  @include hover.enabled {
+    background-color: colors.$filter-medium-gray-hover;
+  }
+
+  .filter-accordion-title {
+    flex: 1;
+  }
+
+  .filter-accordion-icon-container {
+    height: spacing.$min-touch-target;
+    width: spacing.$min-touch-target;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      height: icons.$icon-size-sm;
+    }
+  }
+}
+
+.filter-accordion-content {
+  border-top: borders.$component-inner-divider;
+}
+
+.filter-checkbox {
+  cursor: pointer;
+  font-size: typography.$font-size-base;
+
+  border: borders.$component-inner-divider;
+  border-radius: borders.$border-radius;
+
+  min-height: spacing.$min-touch-target;
+  margin: spacing.$element-gap spacing.$container-edge-spacing;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: colors.$white;
+
+  @include hover.enabled {
+    background-color: colors.$white-hover;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    margin: 0;
+  }
+
+  svg {
+    height: icons.$icon-size-md;
+    width: icons.$icon-size-md;
+    margin-left: spacing.$element-gap;
+    color: colors.$gray;
+  }
+
+  .fa-square {
+    display: block;
+  }
+
+  .fa-square-check {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked {
+    & ~ .fa-square {
+      display: none;
+    }
+
+    & ~ .fa-square-check {
+      display: block;
+    }
+  }
+
+  span {
+    flex: 1;
+    margin: spacing.$element-gap;
+    line-height: 1.1;
+  }
+}
+
+.filter-group-selectors-container {
+  display: flex;
+  width: 100%;
+
+  button {
+    flex: 1;
+    height: spacing.$min-touch-target;
+    cursor: pointer;
+
+    border: borders.$component-inner-divider;
+    border-radius: borders.$border-radius;
+    margin-top: spacing.$container-edge-spacing;
+
+    background-color: colors.$white;
+
+    &:first-child {
+      margin-left: spacing.$container-edge-spacing;
+      margin-right: spacing.$element-gap;
+    }
+
+    &:last-child {
+      margin-right: spacing.$container-edge-spacing;
+    }
+
+    @include hover.enabled {
+      background-color: colors.$white-hover;
+    }
+  }
+}
+
+.filter-checkbox-options-container {
+  margin-bottom: spacing.$container-edge-spacing;
+}
+
+.filter-checkbox-options-two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: spacing.$element-gap;
+
+  margin-top: spacing.$element-gap;
+  margin-left: spacing.$container-edge-spacing;
+  margin-right: spacing.$container-edge-spacing;
+  margin-bottom: spacing.$container-edge-spacing;
+
+  .filter-checkbox {
+    min-width: calc(50% - spacing.$element-gap / 2);
+    margin: 0;
+  }
+}
+
+// Inspired by https://designsystem.digital.gov/components/select/.
+.filter-policy-type-dropdown-container,
+.filter-status-dropdown-container {
+  margin: spacing.$element-gap spacing.$container-edge-spacing;
+
+  label {
+    font-size: typography.$font-size-base;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    font-size: typography.$font-size-base;
+    min-height: spacing.$min-touch-target;
+    width: 100%;
+
+    margin-top: 5px;
+    padding-left: spacing.$element-gap;
+
+    border: borders.$component-inner-divider;
+    border-radius: borders.$border-radius;
+
+    color: colors.$black;
+
+    background-color: colors.$white;
+    background-image: url(../../assets/unfold-more.svg),
+      linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    background-position: right spacing.$element-gap center;
+    background-size: icons.$icon-size-md;
+
+    @include hover.enabled {
+      background-color: colors.$white-hover;
+    }
+  }
+}
+
+.filter-illegal-dataset-container {
+  margin-top: spacing.$container-edge-spacing;
+  margin-bottom: spacing.$element-gap;
+  margin-left: spacing.$container-edge-spacing;
+  margin-right: spacing.$container-edge-spacing;
+  line-height: 1.3;
+}

@@ -1,0 +1,146 @@
+{
+  "Abbeville University": {
+    "default": [
+      {
+        "summary": "Abbeville University plant-based default nudge summary.",
+        "notes": "Abbeville University plant-based default nudge notes.",
+        "strategy": ["social_media", "ally"],
+        "policy_url": ["https://www.example.com", "https://www.example.com"]
+      }
+    ],
+    "ratio": [
+      {
+        "summary": "Abbeville University ratio summary.",
+        "notes": "Abbeville University ratio notes.",
+        "strategy": ["survey", "ambassador"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ],
+    "sub": [
+      {
+        "summary": "Abbeville University subtle substitution summary.",
+        "notes": "Abbeville University subtle substitution notes.",
+        "strategy": ["food_rep"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ],
+    "titles": [
+      {
+        "summary": "Abbeville University tasty titles & descriptions summary.",
+        "notes": "Abbeville University tasty titles & descriptions notes.",
+        "strategy": ["guide"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ],
+    "placement": [
+      {
+        "summary": "Abbeville University prime placement summary.",
+        "notes": "Abbeville University prime placement notes.",
+        "strategy": ["ed_pres", "letter", "article"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ]
+  },
+  "Abbottstown Cafe": {
+    "default": [
+      {
+        "summary": "Abbottstown Cafe plant-based default nudge summary.",
+        "notes": "Abbottstown Cafe plant-based default nudge notes.",
+        "strategy": ["ally"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ]
+  },
+  "Aberdeen Hospital": {
+    "sub": [
+      {
+        "summary": "Aberdeen Hospital subtle substitution summary.",
+        "notes": "Aberdeen Hospital subtle substitution notes.",
+        "strategy": ["guide"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ]
+  },
+  "Aberdeen Hotel": {
+    "titles": [
+      {
+        "summary": "Aberdeen Hotel tasty titles summary.",
+        "notes": "Aberdeen Hotel tasty titles notes.",
+        "strategy": ["guide"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ],
+    "placement": [
+      {
+        "summary": "Aberdeen placement summary.",
+        "notes": "Aberdeen placement notes.",
+        "strategy": ["letter"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ]
+  },
+  "Aberdeen City Hall": {
+    "placement": [
+      {
+        "summary": "Aberdeen City Hall placement summary.",
+        "notes": "Aberdeen City Hall placement notes.",
+        "strategy": ["letter"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ],
+    "other": [
+      {
+        "summary": "Aberdeen other summary.",
+        "notes": "Aberdeen other notes.",
+        "strategy": ["letter"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ]
+  },
+  "Aberdeen Stadium": {
+    "default": [
+      {
+        "summary": "Aberdeen Stadium default summary.",
+        "notes": "Aberdeen Stadium default notes.",
+        "strategy": ["event"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ],
+    "ratio": [
+      {
+        "summary": "Aberdeen Stadium ratio summary.",
+        "notes": "Aberdeen Stadium ratio notes.",
+        "strategy": ["event"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ]
+  },
+  "Aberdeen Conference": {
+    "default": [
+      {
+        "summary": "Aberdeen Conference default summary.",
+        "notes": "Aberdeen Conference default notes.",
+        "strategy": ["event"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ],
+    "ratio": [
+      {
+        "summary": "Aberdeen Conference ratio summary.",
+        "notes": "Aberdeen Conference ratio notes.",
+        "strategy": ["event"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ]
+  },
+  "Aberdeen Restaurant": {
+    "ratio": [
+      {
+        "summary": "Aberdeen Restaurant ratio summary.",
+        "notes": "Aberdeen Restaurant ratio notes.",
+        "strategy": ["event"],
+        "policy_url": ["https://www.example.com"]
+      }
+    ]
+  }
+}

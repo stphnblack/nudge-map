@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Parking reform map | Parking Reform Network</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="An interactive map showing places with parking reforms, such as removing parking minimums and adding parking benefit districts."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Parking reform map &#x2d; Parking Reform Network"
+    />
+    <meta
+      property="og:description"
+      content="An interactive map showing places with parking reforms, such as removing parking minimums."
+    />
+    <meta
+      property="og:url"
+      content="https://parkingreform.org/resources/mandates-map/"
+    />
+    <meta property="og:site_name" content="Parking Reform Network" />
+    <meta
+      name="twitter:title"
+      content="Parking reform map &#x2d; Parking Reform Network"
+    />
+    <meta
+      name="twitter:description"
+      content="An interactive map showing places with parking reforms, such as removing parking minimums."
+    />
+    <link rel="stylesheet" href="./src/css/style.scss" />
+  </head>
+
+  <body>
+    <header class="top-header">
+      <nav class="header-view-toggle">
+        <button
+          class="header-icon-container header-table-icon-container"
+          title="switch to table view"
+          aria-label="switch to table view from map view"
+        >
+          <i class="fa-solid fa-table" aria-hidden="true"></i>
+        </button>
+        <button
+          class="header-icon-container header-map-icon-container"
+          title="switch to map view"
+          aria-label="switch to map view from table view"
+          style="display: none"
+        >
+          <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
+        </button>
+      </nav>
+      <nav class="header-control-icons">
+        <button
+          class="header-icon-container header-filter-icon-container"
+          title="open up filter options"
+          aria-expanded="false"
+          aria-controls="filter-popup"
+        >
+          <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+          <span class="sr-only">open a popup to control filter options</span>
+        </button>
+        <button
+          class="header-icon-container header-search-icon-container"
+          title="search for a place"
+          aria-expanded="false"
+          aria-controls="search-popup"
+        >
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <span class="sr-only"
+            >open a popup to search for a specific place</span
+          >
+        </button>
+        <button
+          class="header-icon-container header-about-icon-container"
+          title="about the map"
+          aria-expanded="false"
+          aria-controls="about-popup"
+        >
+          <i class="fa-regular fa-circle-question" aria-hidden="true"></i>
+          <span class="sr-only">toggle a popup describing the map</span>
+        </button>
+        <a
+          class="header-icon-container header-share-icon-container"
+          title="copy link"
+          ><i class="share-link-icon fa-solid fa-link" aria-hidden="true"></i
+          ><i
+            class="share-check-icon fa-solid fa-check"
+            style="display: none"
+            aria-hidden="true"
+          ></i>
+          <span class="sr-only"
+            >copy a link to the map with the current filter configuration</span
+          >
+        </a>
+        <a
+          class="header-icon-container header-full-screen-icon-container"
+          href="https://parkingreform.org/mandates-map"
+          title="view fullscreen"
+          target="_blank"
+        >
+          <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
+          <span class="sr-only">view fullscreen (opens in new tab)</span>
+        </a>
+      </nav>
+    </header>
+
+    <section
+      id="about-popup"
+      class="about-popup"
+      aria-label="about the map"
+      hidden
+    >
+      <header class="about-popup-header">
+        <h2>About the Parking Reform Map</h2>
+        <button
+          class="about-popup-close-icon-container"
+          title="close the about popup"
+          aria-label="close the about popup"
+        >
+          <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <h3>Instructions</h3>
+      <p>
+        The map shows places that have enacted parking reforms. Click on one of
+        the colored dots for additional information about that place's reforms.
+      </p>
+      <p>
+        Click the filter or search icons in the top-right to change which places
+        are shown, such as to filter by population size. By default, the map
+        only shows places with all parking minimums removed. You can instead see
+        all places with any parking reform by clicking the toggle at the top of
+        the filter. You can also focus on a particular policy type, such as "add
+        parking maximums", by using the dropdown at the top of the filter.
+      </p>
+      <p>
+        Click the table icon in the top-left to switch from map view to table
+        view. When in table view, click the map icon in the top-left to switch
+        back to the map.
+      </p>
+
+      <div role="region" aria-labelledby="about-popup-links-heading">
+        <h3 id="about-popup-links-heading">Relevant links</h3>
+        <ul class="about-popup-links-list">
+          <li>
+            <a
+              class="external-link"
+              target="_blank"
+              href="https://parkingreform.org/resources/mandates-map/"
+              >Methodology and key takeaways
+              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="external-link"
+              target="_blank"
+              href="https://forms.gle/PaYXUP5J7YR1Zi6q6"
+              >Submit a report
+              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="external-link"
+              target="_blank"
+              href="https://parkingreform.org/mandates-map/data/mandates-map-data.zip"
+              >Download the data set (zip file)
+              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="external-link"
+              target="_blank"
+              href="https://parkingreform.org/resources/parking-lot-map"
+              >PRN's Parking Lot Map
+              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="external-link"
+              target="_blank"
+              href="https://parkingreform.org/support/"
+              >Support this project with a donation
+              <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+
+      <h3>Acknowledgments</h3>
+      <p>
+        This project is built and hosted by the
+        <a
+          class="external-link"
+          target="_blank"
+          href="https://parkingreform.org/support/"
+          >Parking Reform Network
+          <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a
+        >. It is based on "A Map of Cities That Got Rid of Parking Minimums",
+        initially published by
+        <a
+          class="external-link"
+          target="_blank"
+          href="https://strongtowns.org"
+          target="_blank"
+          >Strong Towns
+          <i aria-hidden="true" class="fa-solid fa-arrow-right"></i
+        ></a>
+        in November 2015. Reports have been submitted by many Strong Towns
+        readers and Parking Reform Network members over the years; reporters are
+        credited on the detailed information pages for each place.
+      </p>
+      <p>
+        The source code is maintained at
+        <a
+          class="external-link"
+          target="_blank"
+          href="https://github.com/ParkingReformNetwork/reform-map"
+          >GitHub <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a
+        >, where you can see the code contributors under the "Insights" tab.
+      </p>
+    </section>
+
+    <section
+      id="scorecard-container"
+      class="scorecard-container"
+      role="region"
+      hidden
+    ></section>
+
+    <section id="map-counter" class="map-counter" role="region"></section>
+
+    <form
+      class="filter-popup"
+      id="filter-popup"
+      aria-label="filter options"
+      hidden
+    ></form>
+
+    <div id="search-popup" class="search-popup" hidden>
+      <select single class="search" aria-label="search for a place">
+        <option value="">Search</option>
+      </select>
+    </div>
+
+    <div class="prn-logo-map">
+      <a
+        href="https://parkingreform.org/support/"
+        target="_blank"
+        aria-label="Support Parking Reform Network"
+        ><img
+          src="./assets/prn-logo-wide.png"
+          alt="Parking Reform Network logo"
+      /></a>
+    </div>
+
+    <div
+      id="map"
+      role="application"
+      aria-label="interactive map showing places with parking reforms as clickable dots"
+    ></div>
+
+    <div
+      id="table-view"
+      role="application"
+      aria-label="sortable table showing places selected by the filter and search controls"
+      hidden
+    >
+      <section class="table-counter-container" role="region">
+        <p id="table-counter"></p>
+        <a
+          id="table-logo"
+          href="https://parkingreform.org/support/"
+          target="_blank"
+          aria-label="Support Parking Reform Network"
+          ><img
+            src="./assets/prn-logo-square.png"
+            alt="Parking Reform Network logo"
+        /></a>
+      </section>
+      <div id="table-container">
+        <div id="table"></div>
+      </div>
+    </div>
+
+    <script type="module" src="src/js/main.ts"></script>
+  </body>
+</html>
