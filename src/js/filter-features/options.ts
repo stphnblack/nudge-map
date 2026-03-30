@@ -1,13 +1,6 @@
 import { capitalize } from "lodash-es";
 
-import {
-  ALL_POLICY_TYPE_FILTER,
-  FilterState,
-  isAllMinimumsRemovedToggleShown,
-  isAllMinimumsRemovedToggleInEffect,
-  PlaceFilterManager,
-  PolicyTypeFilter,
-} from "../state/FilterState";
+import { FilterState, PlaceFilterManager } from "../state/FilterState";
 import Observable from "../state/Observable";
 import {
   BaseAccordionElements,
@@ -19,11 +12,6 @@ import {
 import { initPopulationSlider } from "./populationSlider";
 
 import optionValuesData from "../../../data/option-values.json" with { type: "json" };
-import {
-  ALL_POLICY_TYPE,
-  ALL_REFORM_STATUS,
-  ReformStatus,
-} from "../model/types";
 
 /** These option values change depending on which dataset is loaded.
  *
@@ -33,115 +21,16 @@ import {
  * Keep in alignment with FilterState.
  */
 type DataSetSpecificOptions = {
-  includedPolicyChanges: readonly string[];
-  scope: string[];
-  landUse: string[];
   country: string[];
-  year: string[];
-  placeType: string[];
 };
 
 export interface FilterOptions {
   readonly merged: DataSetSpecificOptions;
-  readonly datasets: Record<
-    PolicyTypeFilter,
-    Record<ReformStatus, DataSetSpecificOptions>
-  >;
-  getOptions(
-    policyType: PolicyTypeFilter,
-    status: ReformStatus,
-  ): DataSetSpecificOptions;
-  enabled(policyType: PolicyTypeFilter, status: ReformStatus): boolean;
 }
 
 export const FILTER_OPTIONS: FilterOptions = {
   merged: {
-    includedPolicyChanges: ALL_POLICY_TYPE,
-    ...optionValuesData.merged,
-  },
-
-  datasets: {
-    "any parking reform": {
-      adopted: {
-        includedPolicyChanges: ALL_POLICY_TYPE,
-        ...optionValuesData.anyAdopted,
-      },
-      proposed: {
-        includedPolicyChanges: ALL_POLICY_TYPE,
-        ...optionValuesData.anyProposed,
-      },
-      repealed: {
-        includedPolicyChanges: ALL_POLICY_TYPE,
-        ...optionValuesData.anyRepealed,
-      },
-    },
-    "add parking maximums": {
-      adopted: {
-        includedPolicyChanges: [],
-        ...optionValuesData.addMaxAdopted,
-      },
-      proposed: {
-        includedPolicyChanges: [],
-        ...optionValuesData.addMaxProposed,
-      },
-      repealed: {
-        includedPolicyChanges: [],
-        ...optionValuesData.addMaxRepealed,
-      },
-    },
-    "reduce parking minimums": {
-      adopted: {
-        includedPolicyChanges: [],
-        ...optionValuesData.reduceMinAdopted,
-      },
-      proposed: {
-        includedPolicyChanges: [],
-        ...optionValuesData.reduceMinProposed,
-      },
-      repealed: {
-        includedPolicyChanges: [],
-        ...optionValuesData.reduceMinRepealed,
-      },
-    },
-    "remove parking minimums": {
-      adopted: {
-        includedPolicyChanges: [],
-        ...optionValuesData.rmMinAdopted,
-      },
-      proposed: {
-        includedPolicyChanges: [],
-        ...optionValuesData.rmMinProposed,
-      },
-      repealed: {
-        includedPolicyChanges: [],
-        ...optionValuesData.rmMinRepealed,
-      },
-    },
-    "parking benefit district": {
-      adopted: {
-        includedPolicyChanges: [],
-        ...optionValuesData.benefitDistrictAdopted,
-      },
-      proposed: {
-        includedPolicyChanges: [],
-        ...optionValuesData.benefitDistrictProposed,
-      },
-      repealed: {
-        includedPolicyChanges: [],
-        ...optionValuesData.benefitDistrictRepealed,
-      },
-    },
-  },
-
-  getOptions(
-    policyType: PolicyTypeFilter,
-    status: ReformStatus,
-  ): DataSetSpecificOptions {
-    return this.datasets[policyType][status];
-  },
-
-  enabled(policyType: PolicyTypeFilter, status: ReformStatus): boolean {
-    return this.datasets[policyType][status].placeType.length > 0;
+    country: optionValuesData.merged.country,
   },
 } as const;
 
@@ -370,173 +259,6 @@ function initFilterGroup(
       [params.filterStateKey]: checkedLabels,
     });
   });
-
-  filterManager.subscribe(
-    `possibly update ${params.htmlName} filter UI`,
-    (state) => {
-      updateCheckboxVisibility(
-        FILTER_OPTIONS.getOptions(state.policyTypeFilter, state.status)[
-          params.filterStateKey
-        ],
-        accordionElements.fieldSet,
-        params.preserveCapitalization,
-      );
-      updateCheckboxStats(accordionState, accordionElements.fieldSet);
-
-      const priorAccordionState = accordionState.getValue();
-      const hidden = params.hide ? params.hide(state) : false;
-      const title =
-        typeof params.legend === "string"
-          ? params.legend
-          : params.legend(state);
-      accordionState.setValue({ ...priorAccordionState, title, hidden });
-    },
-  );
-}
-
-function initOutermostContainers(
-  filterManager: PlaceFilterManager,
-  filterPopup: HTMLFormElement,
-): {
-  datasetDiv: HTMLDivElement;
-  optionsDiv: HTMLDivElement;
-} {
-  const datasetDiv = document.createElement("div");
-
-  const disabledDatasetDiv = document.createElement("div");
-  disabledDatasetDiv.classList.add("filter-illegal-dataset-container");
-  disabledDatasetDiv.hidden = true;
-  const warningIcon = document.createElement("i");
-  warningIcon.classList.add("fa-solid", "fa-triangle-exclamation");
-  warningIcon.ariaHidden = "true";
-  const warningText = document.createElement("span");
-  warningText.textContent =
-    " This dataset has no entries. To fix, change either the 'reform type' or 'status'.";
-  disabledDatasetDiv.append(warningIcon);
-  disabledDatasetDiv.append(warningText);
-
-  const optionsDiv = document.createElement("div");
-
-  filterManager.subscribe(
-    `possibly disable dataset`,
-    ({ policyTypeFilter, status }) => {
-      const enabled = FILTER_OPTIONS.enabled(policyTypeFilter, status);
-      disabledDatasetDiv.hidden = enabled;
-      optionsDiv.hidden = !enabled;
-    },
-  );
-
-  filterPopup.append(datasetDiv);
-  filterPopup.append(disabledDatasetDiv);
-  filterPopup.append(optionsDiv);
-  return {
-    datasetDiv,
-    optionsDiv,
-  };
-}
-
-function initAllMinimumsToggle(
-  filterManager: PlaceFilterManager,
-  optionsContainer: HTMLDivElement,
-): void {
-  const outerContainer = document.createElement("div");
-
-  const [label, input] = generateCheckbox(
-    "filter-all-minimums-toggle",
-    "filter-all-minimums-toggle",
-    filterManager.getState().allMinimumsRemovedToggle,
-    "Only places with all parking minimums removed",
-  );
-  label.id = "filter-all-minimums-toggle-label";
-  outerContainer.append(label);
-  optionsContainer.append(outerContainer);
-
-  input.addEventListener("change", () => {
-    filterManager.update({
-      allMinimumsRemovedToggle: input.checked,
-    });
-  });
-
-  filterManager.subscribe(
-    `possibly hide all minimums toggle`,
-    (filterState) => {
-      outerContainer.hidden = !isAllMinimumsRemovedToggleShown(filterState);
-    },
-  );
-}
-
-function initPolicyTypeFilterDropdown(
-  filterManager: PlaceFilterManager,
-  dropdownContainer: HTMLDivElement,
-): void {
-  const id = "filter-policy-type-dropdown";
-
-  const container = document.createElement("div");
-  container.className = "filter-policy-type-dropdown-container";
-
-  const label = document.createElement("label");
-  label.htmlFor = id;
-  label.textContent = "Reform type";
-
-  const select = document.createElement("select");
-  select.id = id;
-  select.name = id;
-
-  ALL_POLICY_TYPE_FILTER.forEach((option) => {
-    const element = document.createElement("option");
-    element.value = option;
-    element.textContent = capitalize(option);
-    select.append(element);
-  });
-
-  // Set initial value.
-  select.value = filterManager.getState().policyTypeFilter;
-
-  select.addEventListener("change", () => {
-    const policyTypeFilter = select.value as PolicyTypeFilter;
-    filterManager.update({ policyTypeFilter });
-  });
-
-  container.append(label);
-  container.append(select);
-  dropdownContainer.append(container);
-}
-
-function initStatusDropdown(
-  filterManager: PlaceFilterManager,
-  dropdownContainer: HTMLDivElement,
-): void {
-  const id = "filter-status-dropdown";
-
-  const container = document.createElement("div");
-  container.className = "filter-status-dropdown-container";
-
-  const label = document.createElement("label");
-  label.htmlFor = id;
-  label.textContent = "Status";
-
-  const select = document.createElement("select");
-  select.id = id;
-  select.name = id;
-
-  ALL_REFORM_STATUS.forEach((option) => {
-    const element = document.createElement("option");
-    element.value = option;
-    element.textContent = capitalize(option);
-    select.append(element);
-  });
-
-  // Set initial value.
-  select.value = filterManager.getState().status;
-
-  select.addEventListener("change", () => {
-    const status = select.value as ReformStatus;
-    filterManager.update({ status });
-  });
-
-  container.append(label);
-  container.append(select);
-  dropdownContainer.append(container);
 }
 
 export function initFilterOptions(filterManager: PlaceFilterManager): void {
@@ -544,56 +266,9 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
   const filterPopup = document.querySelector<HTMLFormElement>("#filter-popup");
   if (!filterPopup) return;
 
-  const { datasetDiv, optionsDiv } = initOutermostContainers(
-    filterManager,
-    filterPopup,
-  );
-
-  // Top-level options that change profoundly the app.
-  initPolicyTypeFilterDropdown(filterManager, datasetDiv);
-  initStatusDropdown(filterManager, datasetDiv);
-  initAllMinimumsToggle(filterManager, optionsDiv);
-
-  // Options about the reform
-  initFilterGroup(filterManager, optionsDiv, {
-    htmlName: "policy-change",
-    filterStateKey: "includedPolicyChanges",
-    legend: "Reform types",
-    hide: ({ policyTypeFilter }) => policyTypeFilter !== "any parking reform",
-  });
-  initFilterGroup(filterManager, optionsDiv, {
-    htmlName: "scope",
-    filterStateKey: "scope",
-    legend: "Reform scopes",
-    hide: (filterState) =>
-      filterState.policyTypeFilter === "any parking reform" ||
-      filterState.policyTypeFilter === "parking benefit district" ||
-      isAllMinimumsRemovedToggleInEffect(filterState),
-  });
-  initFilterGroup(filterManager, optionsDiv, {
-    htmlName: "land-use",
-    filterStateKey: "landUse",
-    legend: "Affected land uses",
-    hide: (filterState) =>
-      filterState.policyTypeFilter === "any parking reform" ||
-      filterState.policyTypeFilter === "parking benefit district" ||
-      isAllMinimumsRemovedToggleInEffect(filterState),
-  });
-  initFilterGroup(filterManager, optionsDiv, {
-    htmlName: "year",
-    filterStateKey: "year",
-    legend: ({ status }) => {
-      const mapping: Record<ReformStatus, string> = {
-        adopted: "Adoption years",
-        proposed: "Proposal years",
-        repealed: "Repeal years",
-      };
-      return mapping[status];
-    },
-    useTwoColumns: true,
-    hide: ({ policyTypeFilter }) => policyTypeFilter === "any parking reform",
-  });
-
+  const optionsDiv = document.createElement("div");
+  filterPopup.appendChild(optionsDiv);
+  
   // Options about the Place
   initFilterGroup(filterManager, optionsDiv, {
     htmlName: "country",
@@ -601,11 +276,4 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     legend: "Countries",
     preserveCapitalization: true,
   });
-  initFilterGroup(filterManager, optionsDiv, {
-    htmlName: "place-type",
-    filterStateKey: "placeType",
-    legend: "Jurisdictions",
-    useTwoColumns: true,
-  });
-  initPopulationSlider(filterManager, optionsDiv);
 }

@@ -3,15 +3,8 @@ import {
   PlaceId,
   ProcessedCoreEntry,
   RawCoreEntry,
-  RawCoreLandUsePolicy,
-  PolicyType,
-  Date,
   RawPlace,
   ProcessedPlace,
-  ProcessedCoreLandUsePolicy,
-  ReformStatus,
-  RawCoreBenefitDistrict,
-  ProcessedCoreBenefitDistrict,
 } from "./types";
 
 export const COUNTRIES_PREFIXED_BY_THE = new Set([
@@ -54,69 +47,10 @@ export function processPlace(raw: RawPlace): ProcessedPlace {
   };
 }
 
-export function determineAllPolicyTypes(
-  entry: RawCoreEntry | ProcessedCoreEntry,
-  status: ReformStatus,
-): PolicyType[] {
-  const hasPolicy = (policies: Array<{ status: ReformStatus }> | undefined) =>
-    !!policies?.filter((policy) => policy.status === status).length;
-
-  const result: PolicyType[] = [];
-  if (hasPolicy(entry.add_max)) result.push("add parking maximums");
-  if (hasPolicy(entry.reduce_min)) result.push("reduce parking minimums");
-  if (hasPolicy(entry.rm_min)) result.push("remove parking minimums");
-  if (hasPolicy(entry.benefit_district))
-    result.push("parking benefit district");
-  return result;
-}
-
-export function determinePolicyTypeStatuses(
-  entry: RawCoreEntry | ProcessedCoreEntry,
-): Record<PolicyType, Set<ReformStatus>> {
-  const getStatuses = (policies: Array<{ status: ReformStatus }> | undefined) =>
-    new Set(policies?.map((policy) => policy.status) ?? []);
-  return {
-    "add parking maximums": getStatuses(entry.add_max),
-    "reduce parking minimums": getStatuses(entry.reduce_min),
-    "remove parking minimums": getStatuses(entry.rm_min),
-    "parking benefit district": getStatuses(entry.benefit_district),
-  };
-}
-
-function processLandUsePolicy(
-  raw: RawCoreLandUsePolicy,
-): ProcessedCoreLandUsePolicy {
-  return {
-    ...raw,
-    date: Date.fromNullable(raw.date),
-  };
-}
-
-function processBenefitDistrict(
-  raw: RawCoreBenefitDistrict,
-): ProcessedCoreBenefitDistrict {
-  return {
-    ...raw,
-    date: Date.fromNullable(raw.date),
-  };
-}
-
 export function processRawCoreEntry(raw: RawCoreEntry): ProcessedCoreEntry {
   const result: ProcessedCoreEntry = {
     place: processPlace(raw.place),
   };
-  if (raw.add_max) {
-    result.add_max = raw.add_max.map(processLandUsePolicy);
-  }
-  if (raw.reduce_min) {
-    result.reduce_min = raw.reduce_min.map(processLandUsePolicy);
-  }
-  if (raw.rm_min) {
-    result.rm_min = raw.rm_min.map(processLandUsePolicy);
-  }
-  if (raw.benefit_district) {
-    result.benefit_district = raw.benefit_district.map(processBenefitDistrict);
-  }
   return result;
 }
 

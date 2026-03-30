@@ -1,18 +1,10 @@
 import { isEqual } from "lodash-es";
 import {
-  ALL_POLICY_TYPE,
   PlaceId,
-  PlaceType,
-  PolicyType,
-  ProcessedCoreBenefitDistrict,
   ProcessedCoreEntry,
-  ProcessedCoreLandUsePolicy,
   ProcessedPlace,
-  ReformStatus,
-  UNKNOWN_YEAR,
 } from "../model/types";
 import Observable from "./Observable";
-import { determineAllPolicyTypes, getFilteredIndexes } from "../model/data";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],
@@ -25,11 +17,6 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["75M", 750000000],
 ];
 
-export const ALL_POLICY_TYPE_FILTER = [
-  "any parking reform",
-  ...ALL_POLICY_TYPE,
-] as const;
-export type PolicyTypeFilter = (typeof ALL_POLICY_TYPE_FILTER)[number];
 
 // Note that this only tracks state set by the user.
 // Computed values are handled elsewhere.
@@ -46,41 +33,19 @@ export type PolicyTypeFilter = (typeof ALL_POLICY_TYPE_FILTER)[number];
 // Keep key names in alignment with DataSetSpecificOptions in filter-features/options.ts
 export interface FilterState {
   searchInput: string | null;
-  policyTypeFilter: PolicyTypeFilter;
-  status: ReformStatus;
-  allMinimumsRemovedToggle: boolean;
-  placeType: Set<string>;
-  includedPolicyChanges: Set<string>;
-  scope: Set<string>;
-  landUse: Set<string>;
   country: Set<string>;
-  year: Set<string>;
-  populationSliderIndexes: [number, number];
 }
 
 interface PlaceMatchSearch {
   type: "search";
 }
 
-interface PlaceMatchSinglePolicy {
-  type: "single policy";
-  policyType: PolicyType;
-  matchingIndexes: number[];
-}
-
 interface PlaceMatchAnyPolicy {
   type: "any";
-  // Note that we still record if a place has a certain policy type
-  // even if the filter state is actively ignoring that policy.
-  hasRmMin: boolean;
-  hasReduceMin: boolean;
-  hasAddMax: boolean;
-  hasBenefitDistrict: boolean;
 }
 
 type PlaceMatch =
-  | PlaceMatchSearch
-  | PlaceMatchSinglePolicy
+  | PlaceMatchSearch 
   | PlaceMatchAnyPolicy;
 
 // This allows us to avoid recomputing computed state when the FilterState has not changed.
@@ -88,37 +53,6 @@ interface CacheEntry {
   state: FilterState;
   matchedPlaces: Record<PlaceId, PlaceMatch>;
   matchedCountries: Set<string>;
-  matchedPolicyTypesForAnyPolicy: Set<PolicyType>;
-  matchedPlaceTypes: Set<PlaceType>;
-}
-
-/**
- * Return whether the 'only places with all minimums removed' toggle
- * is shown to the user, which is based on the current dataset.
- */
-export function isAllMinimumsRemovedToggleShown(
-  filterState: Pick<FilterState, "policyTypeFilter" | "status">,
-): boolean {
-  return (
-    filterState.policyTypeFilter === "remove parking minimums" &&
-    filterState.status === "adopted"
-  );
-}
-
-/**
- * Return whether the 'only places with all minimums removed' toggle
- * is activated and relevant to the current dataset.
- */
-export function isAllMinimumsRemovedToggleInEffect(
-  filterState: Pick<
-    FilterState,
-    "allMinimumsRemovedToggle" | "policyTypeFilter" | "status"
-  >,
-): boolean {
-  return (
-    filterState.allMinimumsRemovedToggle &&
-    isAllMinimumsRemovedToggleShown(filterState)
-  );
 }
 
 export class PlaceFilterManager {
@@ -152,19 +86,6 @@ export class PlaceFilterManager {
     return this.ensureCache().matchedCountries;
   }
 
-  get matchedPlaceTypes(): Set<PlaceType> {
-    return this.ensureCache().matchedPlaceTypes;
-  }
-
-  /// The policy types the matched places have.
-  ///
-  /// This is only set when the policy type is 'any parking reform'.
-  ///
-  /// Stores all policy types belonging to matched places, even if the
-  /// filter state is set to ignore that policy type.
-  get matchedPolicyTypes(): Set<PolicyType> {
-    return this.ensureCache().matchedPolicyTypesForAnyPolicy;
-  }
 
   getState(): FilterState {
     return this.state.getValue();
@@ -192,30 +113,17 @@ export class PlaceFilterManager {
 
     const matchedPlaces: Record<PlaceId, PlaceMatch> = {};
     const matchedCountries = new Set<string>();
-    const matchedPolicyTypes = new Set<PolicyType>();
-    const matchedPlaceTypes = new Set<PlaceType>();
     for (const placeId of Object.keys(this.entries)) {
       const match = this.getPlaceMatch(placeId);
       if (!match) continue;
       matchedPlaces[placeId] = match;
       matchedCountries.add(this.entries[placeId].place.country);
-      matchedPlaceTypes.add(this.entries[placeId].place.type);
-      if (match.type === "any") {
-        if (match.hasAddMax) matchedPolicyTypes.add("add parking maximums");
-        if (match.hasReduceMin)
-          matchedPolicyTypes.add("reduce parking minimums");
-        if (match.hasRmMin) matchedPolicyTypes.add("remove parking minimums");
-        if (match.hasBenefitDistrict)
-          matchedPolicyTypes.add("parking benefit district");
-      }
     }
 
     this.cache = {
       state: currentState,
       matchedPlaces,
       matchedCountries,
-      matchedPolicyTypesForAnyPolicy: matchedPolicyTypes,
-      matchedPlaceTypes,
     };
     return this.cache;
   }
@@ -223,64 +131,8 @@ export class PlaceFilterManager {
   private matchesPlace(place: ProcessedPlace): boolean {
     const filterState = this.state.getValue();
 
-    const isPlaceType = filterState.placeType.has(place.type);
-    if (!isPlaceType) return false;
-
     const isCountry = filterState.country.has(place.country);
     if (!isCountry) return false;
-
-    const isAllMinimumsRepealed =
-      !isAllMinimumsRemovedToggleInEffect(filterState) || place.repeal;
-    if (!isAllMinimumsRepealed) return false;
-
-    const [sliderLeftIndex, sliderRightIndex] =
-      filterState.populationSliderIndexes;
-    const isPopulation =
-      place.pop >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
-      place.pop <= POPULATION_INTERVALS[sliderRightIndex][1];
-    return isPopulation;
-  }
-
-  private matchesLandUsePolicy(
-    policyRecord: ProcessedCoreLandUsePolicy,
-    options: { ignoreScope?: boolean; ignoreLand?: boolean },
-  ): boolean {
-    const filterState = this.state.getValue();
-
-    const isStatus = policyRecord.status === filterState.status;
-    if (!isStatus) return false;
-
-    const isYear = filterState.year.has(
-      policyRecord.date?.parsed.year.toString() || UNKNOWN_YEAR,
-    );
-    if (!isYear) return false;
-
-    if (!options.ignoreScope) {
-      const isScope = policyRecord.scope.some((v) => filterState.scope.has(v));
-      if (!isScope) return false;
-    }
-
-    if (!options.ignoreLand) {
-      const isLand = policyRecord.land.some((v) => filterState.landUse.has(v));
-      if (!isLand) return false;
-    }
-
-    return true;
-  }
-
-  private matchesBenefitDistrict(
-    record: ProcessedCoreBenefitDistrict,
-  ): boolean {
-    const filterState = this.state.getValue();
-
-    const isStatus = record.status === filterState.status;
-    if (!isStatus) return false;
-
-    const isYear = filterState.year.has(
-      record.date?.parsed.year.toString() || UNKNOWN_YEAR,
-    );
-    if (!isYear) return false;
-
     return true;
   }
 
@@ -300,89 +152,8 @@ export class PlaceFilterManager {
     const isPlace = this.matchesPlace(entry.place);
     if (!isPlace) return null;
 
-    if (filterState.policyTypeFilter === "any parking reform") {
-      const policyTypes = determineAllPolicyTypes(entry, filterState.status);
-      const isPolicyType = policyTypes.some((v) =>
-        filterState.includedPolicyChanges.has(v),
-      );
-      return isPolicyType
-        ? {
-            type: "any",
-            hasAddMax: policyTypes.includes("add parking maximums"),
-            hasReduceMin: policyTypes.includes("reduce parking minimums"),
-            hasRmMin: policyTypes.includes("remove parking minimums"),
-            hasBenefitDistrict: policyTypes.includes(
-              "parking benefit district",
-            ),
-          }
-        : null;
-    }
-
-    if (filterState.policyTypeFilter === "add parking maximums") {
-      const matchingPolicies = getFilteredIndexes(
-        entry.add_max ?? [],
-        (policyRecord) => this.matchesLandUsePolicy(policyRecord, {}),
-      );
-      return matchingPolicies.length
-        ? {
-            type: "single policy",
-            policyType: "add parking maximums",
-            matchingIndexes: matchingPolicies,
-          }
-        : null;
-    }
-
-    if (filterState.policyTypeFilter === "reduce parking minimums") {
-      const matchingPolicies = getFilteredIndexes(
-        entry.reduce_min ?? [],
-        (policyRecord) => this.matchesLandUsePolicy(policyRecord, {}),
-      );
-      return matchingPolicies.length
-        ? {
-            type: "single policy",
-            policyType: "reduce parking minimums",
-            matchingIndexes: matchingPolicies,
-          }
-        : null;
-    }
-
-    if (filterState.policyTypeFilter === "remove parking minimums") {
-      // If 'all minimums removed' is in effect, then 'land use' and 'scope' are irrelevent:
-      //  - the place will only have a single policy record for minimum removal
-      //  - that policy record must be set to "All uses" and "Citywide"
-      const allMinimumsInEffect =
-        isAllMinimumsRemovedToggleInEffect(filterState);
-      const options = {
-        ignoreScope: allMinimumsInEffect,
-        ignoreLand: allMinimumsInEffect,
-      };
-      const matchingPolicies = getFilteredIndexes(
-        entry.rm_min ?? [],
-        (policyRecord) => this.matchesLandUsePolicy(policyRecord, options),
-      );
-      return matchingPolicies.length
-        ? {
-            type: "single policy",
-            policyType: "remove parking minimums",
-            matchingIndexes: matchingPolicies,
-          }
-        : null;
-    }
-
-    if (filterState.policyTypeFilter === "parking benefit district") {
-      const matchingPolicies = getFilteredIndexes(
-        entry.benefit_district ?? [],
-        (record) => this.matchesBenefitDistrict(record),
-      );
-      return matchingPolicies.length
-        ? {
-            type: "single policy",
-            policyType: "parking benefit district",
-            matchingIndexes: matchingPolicies,
-          }
-        : null;
-    }
-
-    throw new Error(`Unrecognized policy type`);
+    return {
+      type: "any",
+    };
   }
 }
