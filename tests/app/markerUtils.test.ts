@@ -1,7 +1,6 @@
 import { expect, test } from "@playwright/test";
 
 import { radiusGivenZoom } from "../../src/js/map-features/markerUtils";
-import { ProcessedPlace } from "../../src/js/model/types";
 
 test.describe("radiusGivenZoom", () => {
   test("calculates radius correctly for zoom levels", () => {

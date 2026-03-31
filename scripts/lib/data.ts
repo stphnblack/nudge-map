@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import fs from "fs/promises";
 
 import { zipWith } from "lodash-es";

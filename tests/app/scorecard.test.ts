@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 
 import { loadMap } from "./utils";
 import { generateScorecard } from "../../src/js/map-features/scorecard";
-import { ProcessedCoreEntry, ProcessedPlace } from "../../src/js/model/types";
+import { ProcessedPlace } from "../../src/js/model/types";
 
 test("scorecard pops up and closes", async ({ page }) => {
   await loadMap(page);

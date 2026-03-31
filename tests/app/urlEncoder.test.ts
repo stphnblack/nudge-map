@@ -9,7 +9,6 @@ import {
   COUNTRY_NAME,
 } from "../../src/js/state/urlEncoder";
 import { FilterState } from "../../src/js/state/FilterState";
-import { UNKNOWN_YEAR } from "../../src/js/model/types";
 
 test.describe("encodeFilterState", () => {
   test("default state", () => {

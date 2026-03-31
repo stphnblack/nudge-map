@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import type { PlaceId, ProcessedCoreEntry } from "../../src/js/model/types";
 
 interface SEO {

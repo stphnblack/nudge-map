@@ -9,7 +9,6 @@ import {
   generateCheckbox,
   updateAccordionUI,
 } from "../layout/accordion";
-import { initPopulationSlider } from "./populationSlider";
 
 import optionValuesData from "../../../data/option-values.json" with { type: "json" };
 
@@ -188,24 +187,6 @@ function updateCheckboxStats(
     ...accordionPriorState,
     supplementalTitle: determineSupplementalTitle(fieldSet),
   });
-}
-
-/**
- * Hide all options not in the dataset.
- */
-function updateCheckboxVisibility(
-  optionsInDataset: readonly string[],
-  fieldSet: HTMLFieldSetElement,
-  preserveCapitalization?: boolean,
-): void {
-  const validOptions = new Set(optionsInDataset);
-  fieldSet
-    .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
-    .forEach((checkbox) => {
-      const label = extractLabel(checkbox, preserveCapitalization);
-      // eslint-disable-next-line no-param-reassign
-      checkbox.parentElement!.hidden = !label || !validOptions.has(label);
-    });
 }
 
 function initFilterGroup(

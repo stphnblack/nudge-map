@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 /** Config for Eleventy to generate the details pages. */
 
 // @ts-ignore

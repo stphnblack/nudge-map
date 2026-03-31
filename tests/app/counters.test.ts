@@ -5,10 +5,8 @@ import {
   determinePlaceDescription,
   determineSearch,
   SEARCH_RESET_HTML,
-  TABLE_DOWNLOAD_HTML,
 } from "../../src/js/filter-features/counters";
 import { FilterState } from "../../src/js/state/FilterState";
-import { ViewState } from "../../src/js/layout/viewToggle";
 
 test.describe("determineHtml", () => {
   const DEFAULT_STATE: FilterState = {

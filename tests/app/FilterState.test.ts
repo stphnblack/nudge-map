@@ -4,8 +4,7 @@ import {
   FilterState,
   PlaceFilterManager,
 } from "../../src/js/state/FilterState";
-import { POPULATION_MAX_INDEX } from "../../src/js/filter-features/populationSlider";
-import { PlaceId, ProcessedCoreEntry, Date } from "../../src/js/model/types";
+import { PlaceId, ProcessedCoreEntry } from "../../src/js/model/types";
 
 test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
   function defaultState(): FilterState {

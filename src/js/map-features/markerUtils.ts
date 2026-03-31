@@ -1,5 +1,3 @@
-import type { ProcessedCoreEntry } from "../model/types";
-
 export function radiusGivenZoom(options: { zoom: number }): number {
   const { zoom } = options;
   // This formula comes from Claude to go from radius 5 to 21 between zoom 3 to 10

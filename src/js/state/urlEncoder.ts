@@ -14,8 +14,6 @@ export const DEFAULT_FILTER_STATE: FilterState = {
 };
 
 const ARRAY_DELIMITER = ".";
-const BOOL_TRUE = "y";
-const BOOL_FALSE = "n";
 
 class BidirectionalMap<K extends string, V extends string> {
   private constructor(

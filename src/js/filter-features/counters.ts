@@ -1,5 +1,3 @@
-import { isEqual } from "lodash-es";
-
 import { FilterState, PlaceFilterManager } from "../state/FilterState";
 import { PlaceId, ProcessedCoreEntry } from "../model/types";
 import { COUNTRIES_PREFIXED_BY_THE } from "../model/data";
