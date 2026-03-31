@@ -1,4 +1,3 @@
-import { determineAllPolicyTypes } from "../../src/js/model/data";
 import type { PlaceId, ProcessedCoreEntry } from "../../src/js/model/types";
 
 interface SEO {

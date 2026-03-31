@@ -7,11 +7,7 @@ import {
   RawCoreEntry,
   PlaceId,
   RawPlace,
-  RawCoreLandUsePolicy,
   ProcessedPlace,
-  ProcessedCoreLandUsePolicy,
-  RawCoreBenefitDistrict,
-  ProcessedCoreBenefitDistrict,
 } from "../../src/js/model/types";
 import { processRawCoreEntry } from "../../src/js/model/data";
 
