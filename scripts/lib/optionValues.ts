@@ -6,10 +6,12 @@ import fs from "fs/promises";
 import { sortBy, without } from "lodash-es";
 
 import {
+  RawCoreLandUsePolicy,
   UNKNOWN_YEAR,
   Date,
   RawPlace,
   RawCoreEntry,
+  RawCoreBenefitDistrict,
 } from "../../src/js/model/types";
 
 /** The option values for a single dataset. */
