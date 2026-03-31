@@ -1,7 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 
-import { determineAllPolicyTypes } from "../../src/js/model/data";
 import type { PlaceId, ProcessedCoreEntry } from "../../src/js/model/types";
 
 interface SEO {
