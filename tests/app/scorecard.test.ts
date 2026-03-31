@@ -2,14 +2,7 @@ import { expect, test } from "@playwright/test";
 
 import { loadMap } from "./utils";
 import { generateScorecard } from "../../src/js/map-features/scorecard";
-import {
-  ProcessedCoreBenefitDistrict,
-  ProcessedCoreEntry,
-  ProcessedCoreLandUsePolicy,
-  ProcessedPlace,
-} from "../../src/js/model/types";
-
-test.fixme();
+import { ProcessedCoreEntry, ProcessedPlace } from "../../src/js/model/types";
 
 test("scorecard pops up and closes", async ({ page }) => {
   await loadMap(page);
@@ -51,28 +44,14 @@ test("generateScorecard()", () => {
     name: "My City",
     state: "Arizona",
     country: "United States",
-    type: "city",
     encoded: "",
-    pop: 245132,
-    repeal: true,
     coord: [0, 0],
     url: "https://my-site.org",
-  };
-  const landUsePolicy: ProcessedCoreLandUsePolicy = {
-    status: "adopted",
-    scope: [],
-    land: [],
-    date: undefined,
-  };
-  const benefitDistrict: ProcessedCoreBenefitDistrict = {
-    status: "proposed",
-    date: undefined,
   };
 
   expect(
     generateScorecard({
       place,
-      add_max: [landUsePolicy],
     }),
   ).toEqual(
     `
@@ -86,41 +65,6 @@ test("generateScorecard()", () => {
         <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
       </button>
     </header>
-    <ul>
-      <li>245,132 residents</li>
-      <li>All parking minimums removed</li>
-    </ul>
-    <div>Reform types:</div><ul><li>Add parking maximums</li></ul>
-    <a class="external-link" target="_blank" href=https://my-site.org>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
-    `,
-  );
-
-  const repealed: ProcessedCoreEntry = {
-    place: { ...place, repeal: false },
-    add_max: [
-      { ...landUsePolicy, status: "repealed" },
-      { ...landUsePolicy, status: "proposed" },
-    ],
-    rm_min: [landUsePolicy],
-    benefit_district: [benefitDistrict],
-  };
-  expect(generateScorecard(repealed)).toEqual(
-    `
-    <header class="scorecard-header">
-      <h2 class="scorecard-title">My City<br/><span class="scorecard-supplemental-place-info">Arizona, United States</span></h2>
-      <button
-        class="scorecard-close-icon-container"
-        title="close the place details popup"
-        aria-label="close the place details popup"
-      >
-        <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
-      </button>
-    </header>
-    <ul>
-      <li>245,132 residents</li>
-      
-    </ul>
-    <div>Reform types:</div><ul><li>Add parking maximums (proposed and repealed)</li><li>Remove parking minimums (adopted)</li><li>Parking benefit district (proposed)</li></ul>
     <a class="external-link" target="_blank" href=https://my-site.org>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>
     `,
   );

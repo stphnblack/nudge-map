@@ -31,7 +31,6 @@ export class Date {
 
 export type PlaceId = string;
 
-
 export interface RawPlace {
   // Full name of the place.
   name: string;

@@ -268,7 +268,7 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
 
   const optionsDiv = document.createElement("div");
   filterPopup.appendChild(optionsDiv);
-  
+
   // Options about the Place
   initFilterGroup(filterManager, optionsDiv, {
     htmlName: "country",

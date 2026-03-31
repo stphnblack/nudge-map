@@ -1,9 +1,5 @@
 import { isEqual } from "lodash-es";
-import {
-  PlaceId,
-  ProcessedCoreEntry,
-  ProcessedPlace,
-} from "../model/types";
+import { PlaceId, ProcessedCoreEntry, ProcessedPlace } from "../model/types";
 import Observable from "./Observable";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
@@ -16,7 +12,6 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["1M", 1000000],
   ["75M", 750000000],
 ];
-
 
 // Note that this only tracks state set by the user.
 // Computed values are handled elsewhere.
@@ -44,9 +39,7 @@ interface PlaceMatchAnyPolicy {
   type: "any";
 }
 
-type PlaceMatch =
-  | PlaceMatchSearch 
-  | PlaceMatchAnyPolicy;
+type PlaceMatch = PlaceMatchSearch | PlaceMatchAnyPolicy;
 
 // This allows us to avoid recomputing computed state when the FilterState has not changed.
 interface CacheEntry {
@@ -85,7 +78,6 @@ export class PlaceFilterManager {
   get matchedCountries(): Set<string> {
     return this.ensureCache().matchedCountries;
   }
-
 
   getState(): FilterState {
     return this.state.getValue();

@@ -56,11 +56,7 @@ export function determineHtml(
 
   if (state.searchInput) {
     const placeId = state.searchInput;
-    return determineSearch(
-      view,
-      placeId,
-      entries[placeId].place.encoded,
-    );
+    return determineSearch(view, placeId, entries[placeId].place.encoded);
   }
 
   const placeDescription = determinePlaceDescription(

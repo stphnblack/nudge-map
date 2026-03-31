@@ -183,7 +183,7 @@ export default function initTable(
     });
   });
 
-// Either re-filter the data or load an entirely new dataset.
+  // Either re-filter the data or load an entirely new dataset.
   const updateData = (
     newPolicyTypeFilter: PolicyTypeFilter,
     newStatus: ReformStatus,
