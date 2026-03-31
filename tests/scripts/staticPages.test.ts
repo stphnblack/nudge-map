@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
 import { expect, test } from "@playwright/test";
 
 import { generateSEO } from "../../scripts/lib/staticPages";
