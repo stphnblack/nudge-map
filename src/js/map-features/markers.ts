@@ -100,8 +100,9 @@ export default function initPlaceMarkers(
   // Adjust marker size on zoom changes.
   map.addEventListener("zoomend", () => {
     const zoom = map.getZoom();
-    // @ts-ignore - TODO: remove placeId since we're just accessing marker
-    Object.entries(placesToMarkers).forEach(([placeId, marker]) => {
+    // TODO: remove placeId since we're just accessing marker
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    Object.entries(placesToMarkers).forEach(([_placeId, marker]) => {
       const newRadius = radiusGivenZoom({
         zoom,
       });

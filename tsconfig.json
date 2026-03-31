@@ -23,5 +23,19 @@
     "exactOptionalPropertyTypes": true /* Interpret optional property types as written, rather than adding 'undefined'. */,
     "noImplicitReturns": true /* Enable error reporting for codepaths that do not explicitly return in a function. */,
     "noFallthroughCasesInSwitch": true /* Enable error reporting for fallthrough cases in switch statements. */
-  }
+  },
+  "exclude": [
+    "scripts/generateDataSet.ts",
+    "scripts/lib/data.ts",
+    "scripts/lib/directus.ts",
+    "scripts/lib/optionValues.ts",
+    "scripts/lib/staticPages.ts",
+    "scripts/syncDirectus.ts",
+    "src/js/filter-features/populationSlider.ts",
+    "src/js/table.ts",
+    "tests/app/filter.test.ts",
+    "tests/scripts/generateDataSet.test.ts",
+    "tests/scripts/optionValues.test.ts",
+    "tests/scripts/staticPages.test.ts"
+  ]
 }

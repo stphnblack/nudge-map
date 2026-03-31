@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import {
   AccordionState,
   generateAccordion,

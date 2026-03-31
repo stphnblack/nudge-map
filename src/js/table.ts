@@ -1,5 +1,3 @@
-// @ts-nocheck - need to update Tabulator filtering to fit nudge data
-
 import {
   Tabulator,
   FilterModule,
@@ -12,7 +10,6 @@ import {
   ColumnDefinition,
   FrozenColumnsModule,
   PageModule,
-  CellComponent,
   RowComponent,
   SortDirection,
   ColumnComponent,
@@ -21,16 +18,6 @@ import {
 import { PlaceFilterManager } from "./state/FilterState";
 import { Date } from "./model/types";
 import { ViewStateObservable } from "./layout/viewToggle";
-
-function formatBoolean(cell: CellComponent): string {
-  const v = cell.getValue() as boolean;
-  return v ? "✓" : "";
-}
-
-function formatDate(cell: CellComponent): string {
-  const v = cell.getValue() as Date | null;
-  return v ? v.format() : "";
-}
 
 export function compareDates(
   a: Date | undefined,
@@ -51,15 +38,6 @@ export function compareDates(
   return a.parsed.valueOf() - b.parsed.valueOf();
 }
 
-function compareStringArrays(a: string[], b: string[]): number {
-  return a.join(",").localeCompare(b.join(","));
-}
-
-function formatStringArrays(cell: CellComponent): string {
-  const v = cell.getValue() as string[] | null;
-  return v ? v.join("; ") : "";
-}
-
 const PLACE_COLUMNS: ColumnDefinition[] = [
   {
     title: "Place",
@@ -76,14 +54,6 @@ const PLACE_COLUMNS: ColumnDefinition[] = [
   { title: "State", field: "state", width: 120 },
   { title: "Country", field: "country", width: 120 },
 ];
-
-const DATE_COLUMN: ColumnDefinition = {
-  title: "Date",
-  field: "date",
-  width: 110,
-  formatter: formatDate,
-  sorter: compareDates,
-};
 
 export function tableDownloadFileName(
   policyType: PolicyTypeFilter,
@@ -138,7 +108,7 @@ export default function initTable(
   );
 
   const table = new Tabulator("#table", {
-    data: data,
+    data,
     columns: PLACE_COLUMNS,
     layout: "fitColumns",
     movableColumns: true,
