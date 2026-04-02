@@ -15,7 +15,6 @@ test.describe("determinePlaceIdForDirectus", () => {
         name: "Tucson",
         state: "Arizona",
         country_code: "US",
-        type: "city",
       }),
     ).toEqual("Tucson, Arizona, United States");
     expect(
@@ -23,7 +22,6 @@ test.describe("determinePlaceIdForDirectus", () => {
         name: "London",
         state: null,
         country_code: "UK",
-        type: "city",
       }),
     ).toEqual("London, United Kingdom");
     expect(
@@ -31,7 +29,6 @@ test.describe("determinePlaceIdForDirectus", () => {
         name: "Germany",
         state: null,
         country_code: "DE",
-        type: "country",
       }),
     ).toEqual("Germany");
 
@@ -40,7 +37,6 @@ test.describe("determinePlaceIdForDirectus", () => {
         name: "Scotland",
         state: null,
         country_code: "UK",
-        type: "country",
       }),
     ).toEqual("Scotland, United Kingdom");
   });
@@ -51,7 +47,6 @@ test.describe("determinePlaceIdForDirectus", () => {
         name: "Tucson",
         state: "Arizona",
         country_code: "BAD",
-        type: "city",
       }),
     ).toThrow();
   });
@@ -63,7 +58,6 @@ test("determinesupplementalPlaceInfo", () => {
       name: "Tucson",
       state: "Arizona",
       country: "United States",
-      type: "city",
     }),
   ).toEqual("Arizona, United States");
   expect(
@@ -71,7 +65,6 @@ test("determinesupplementalPlaceInfo", () => {
       name: "Tucson",
       state: null,
       country: "United States",
-      type: "city",
     }),
   ).toEqual("United States");
   expect(
@@ -79,7 +72,6 @@ test("determinesupplementalPlaceInfo", () => {
       name: "Scotland",
       state: null,
       country: "United Kingdom",
-      type: "country",
     }),
   ).toEqual("United Kingdom");
   expect(
@@ -87,7 +79,6 @@ test("determinesupplementalPlaceInfo", () => {
       name: "United States",
       state: null,
       country: "United States",
-      type: "country",
     }),
   ).toBeNull();
 });

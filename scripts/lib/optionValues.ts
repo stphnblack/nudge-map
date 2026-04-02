@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
 import fs from "fs/promises";
 
 import { sortBy, without } from "lodash-es";

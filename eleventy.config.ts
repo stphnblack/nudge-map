@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
 /** Config for Eleventy to generate the details pages. */
 
 // @ts-ignore

@@ -1,11 +1,9 @@
 import type { FeatureGroup } from "leaflet";
-import { capitalize } from "lodash-es";
 
 import type { ProcessedCoreEntry, PlaceId } from "../model/types";
 import Observable from "../state/Observable";
 import { PlaceFilterManager } from "../state/FilterState";
 import { ViewStateObservable } from "../layout/viewToggle";
-import { determinePolicyTypeStatuses } from "../model/data";
 import type { MarkerWithPlaceId } from "./markers";
 import { determinesupplementalPlaceInfo } from "../model/placeId";
 
@@ -14,34 +12,6 @@ export function generateScorecard(entry: ProcessedCoreEntry): string {
   const titleContents = supplementalPlace
     ? `${entry.place.name}<br/><span class="scorecard-supplemental-place-info">${supplementalPlace}</span>`
     : entry.place.name;
-
-  const policyToStatuses = determinePolicyTypeStatuses(entry);
-  // If at least one policy record is proposed or repealed, we mention
-  // the ReformStatus with every policy type so that people don't incorrectly
-  // think a record was adopted when it wasn't.
-  const needsStatusLabels = Object.values(policyToStatuses).some(
-    (statuses) => statuses.has("proposed") || statuses.has("repealed"),
-  );
-
-  const policies = Object.entries(policyToStatuses)
-    .filter(([, statuses]) => statuses.size)
-    .map(([policyType, statusesSet]) => {
-      let suffix = "";
-      if (needsStatusLabels) {
-        const statuses = new Intl.ListFormat("en").format(
-          Array.from(statusesSet).sort(),
-        );
-        suffix = ` (${statuses})`;
-      }
-      const val = capitalize(`${policyType}${suffix}`);
-      return `<li>${val}</li>`;
-    })
-    .join("");
-  const policyTypesHtml = `<div>Reform types:</div><ul>${policies}</ul>`;
-
-  const allMinimumsRemoved = entry.place.repeal
-    ? "<li>All parking minimums removed</li>"
-    : "";
 
   return `
     <header class="scorecard-header">
@@ -54,11 +24,6 @@ export function generateScorecard(entry: ProcessedCoreEntry): string {
         <i class="fa-regular fa-circle-xmark" aria-hidden="true"></i>
       </button>
     </header>
-    <ul>
-      <li>${entry.place.pop.toLocaleString()} residents</li>
-      ${allMinimumsRemoved}
-    </ul>
-    ${policyTypesHtml}
     <a class="external-link" target="_blank" href=${
       entry.place.url
     }>Details and citations <i aria-hidden="true" class="fa-solid fa-arrow-right"></i></a>

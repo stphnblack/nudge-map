@@ -1,24 +1,15 @@
 import { CircleMarker, FeatureGroup, Map } from "leaflet";
 
-import { NO_MANDATES_MARKERS_PANE } from "../layout/map";
 import { PlaceFilterManager } from "../state/FilterState";
 import { ViewStateObservable } from "../layout/viewToggle";
 import type { PlaceId } from "../model/types";
-import { radiusGivenZoom, determineIsPrimary } from "./markerUtils";
+import { radiusGivenZoom } from "./markerUtils";
 import { determinePlaceIdWithoutCountry } from "../model/placeId";
 
 const PRIMARY_MARKER_STYLE = {
   weight: 1,
   color: "white",
   fillColor: "#d7191c",
-  fillOpacity: 1,
-  pane: NO_MANDATES_MARKERS_PANE,
-} as const;
-
-const SECONDARY_MARKER_STYLE = {
-  weight: 1,
-  color: "white",
-  fillColor: "#fdae61",
   fillOpacity: 1,
 } as const;
 
@@ -56,11 +47,10 @@ export default function initPlaceMarkers(
     filterManager.entries,
   ).reduce((acc: Record<string, MarkerWithPlaceId>, [placeId, entry]) => {
     const [long, lat] = entry.place.coord;
-    const isPrimary = determineIsPrimary(entry);
-    const style = isPrimary ? PRIMARY_MARKER_STYLE : SECONDARY_MARKER_STYLE;
+    const style = PRIMARY_MARKER_STYLE;
     const marker = new CircleMarker([lat, long], {
       ...style,
-      radius: radiusGivenZoom({ zoom: map.getZoom(), isPrimary }),
+      radius: radiusGivenZoom({ zoom: map.getZoom() }),
     }) as MarkerWithPlaceId;
     marker.placeId = placeId;
 
@@ -110,10 +100,11 @@ export default function initPlaceMarkers(
   // Adjust marker size on zoom changes.
   map.addEventListener("zoomend", () => {
     const zoom = map.getZoom();
-    Object.entries(placesToMarkers).forEach(([placeId, marker]) => {
+    // TODO: remove placeId since we're just accessing marker
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    Object.entries(placesToMarkers).forEach(([_placeId, marker]) => {
       const newRadius = radiusGivenZoom({
         zoom,
-        isPrimary: determineIsPrimary(filterManager.entries[placeId]),
       });
       marker.setRadius(newRadius);
     });
