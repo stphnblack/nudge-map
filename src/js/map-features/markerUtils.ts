@@ -6,6 +6,5 @@ export function radiusGivenZoom(options: { zoom: number }): number {
   // 21px radius => 42px diameter + 2px stroke == 4px. That meets the accessibility
   // requirement of 44px touch target size, while balancing the dot not being too big
   // on the screen when zoomed out.
-  const base = Math.round(2.37 * zoom - 2.29) + 2;
-  return base;
+  return Math.round(2.37 * zoom - 2.29) + 2;
 }
