@@ -1,5 +1,13 @@
 import { isEqual } from "lodash-es";
-import { PlaceId, ProcessedCoreEntry, ProcessedPlace } from "../model/types";
+import { 
+  ALL_NUDGE_TYPE,
+  PlaceId,
+  PlaceType,
+  ProcessedCoreEntry,
+  ProcessedPlace,
+  NudgeStatus,
+  NudgeType,
+ } from "../model/types";
 import Observable from "./Observable";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
@@ -12,6 +20,12 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["1M", 1000000],
   ["75M", 750000000],
 ];
+
+export const ALL_NUDGE_TYPE_FILTER = [
+  "any nudge",
+  ...ALL_NUDGE_TYPE,
+] as const;
+export type NudgeTypeFilter = (typeof ALL_NUDGE_TYPE_FILTER)[number];
 
 // Note that this only tracks state set by the user.
 // Computed values are handled elsewhere.
@@ -28,24 +42,50 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
 // Keep key names in alignment with DataSetSpecificOptions in filter-features/options.ts
 export interface FilterState {
   searchInput: string | null;
+  nudgeTypeFilter: NudgeTypeFilter;
+  status: NudgeStatus;
+  placeType: Set<string>;
+  includedNudges: Set<string>;
   country: Set<string>;
+  year: Set<string>;
+  orgCredit: Set<string>;
+  // TODO: add impactSliderIndexes
 }
 
 interface PlaceMatchSearch {
   type: "search";
 }
 
-interface PlaceMatchAnyPolicy {
-  type: "any";
+interface PlaceMatchSingleNudge {
+  type: "single nudge";
+  nudgeType: NudgeType;
+  matchingIndexes: number[];
 }
 
-type PlaceMatch = PlaceMatchSearch | PlaceMatchAnyPolicy;
+interface PlaceMatchAnyNudge {
+  type: "any";
+  // Note that we still record if a place has a certain policy type
+  // even if the filter state is actively ignoring that policy.
+  hasDefault: boolean;
+  hasRatio: boolean;
+  hasSub: boolean;
+  hasTitles: boolean;
+  hasPlacement: boolean;
+  hasOther: boolean;
+}
+
+type PlaceMatch = 
+  | PlaceMatchSearch
+  | PlaceMatchSingleNudge
+  | PlaceMatchAnyNudge;
 
 // This allows us to avoid recomputing computed state when the FilterState has not changed.
 interface CacheEntry {
   state: FilterState;
   matchedPlaces: Record<PlaceId, PlaceMatch>;
   matchedCountries: Set<string>;
+  matchedNudgeTypesForAnyNudge: Set<NudgeType>;
+  matchedPlaceTypes: Set<PlaceType>;
 }
 
 export class PlaceFilterManager {
@@ -105,6 +145,8 @@ export class PlaceFilterManager {
 
     const matchedPlaces: Record<PlaceId, PlaceMatch> = {};
     const matchedCountries = new Set<string>();
+    const matchedNudgeTypes = new Set<NudgeType>();
+    const matchedPlaceTypes = new Set<PlaceType>();
     for (const placeId of Object.keys(this.entries)) {
       const match = this.getPlaceMatch(placeId);
       if (!match) continue;
@@ -116,6 +158,8 @@ export class PlaceFilterManager {
       state: currentState,
       matchedPlaces,
       matchedCountries,
+      matchedNudgeTypesForAnyNudge: matchedNudgeTypes,
+      matchedPlaceTypes,
     };
     return this.cache;
   }
@@ -144,8 +188,15 @@ export class PlaceFilterManager {
     const isPlace = this.matchesPlace(entry.place);
     if (!isPlace) return null;
 
+    // hard code for now, until proper filtering is set up
     return {
       type: "any",
+      hasDefault: true,
+      hasRatio: true,
+      hasSub: true,
+      hasTitles: true,
+      hasPlacement: true,
+      hasOther: true,
     };
   }
 }

@@ -31,20 +31,55 @@ export class Date {
 
 export type PlaceId = string;
 
+export const ALL_PLACE_TYPES = [
+  "uni_dining",
+  "uni_cafe",
+  "uni_event",
+  "k12",
+  "work_cafeteria",
+  "ind_restaurant",
+  "chain_restaurant",
+  "cafe",
+  "stadium",
+  "event",
+  "hotel",
+  "transit_station",
+  "hospital",
+  "religious_center",
+  "gov_facility",
+  "other",
+] as const;
+export type PlaceType = (typeof ALL_PLACE_TYPES)[number];
+
 export interface RawPlace {
   // Full name of the place.
   name: string;
   // State or province abbreviation. Not set for countries.
   state: string | null;
   country: string;
+  type: PlaceType;
   // The value used for the URL. Note that this may be an outdated value
   // so that we don't require a redirect.
   encoded: string;
+  // Estimated reach of the nudge
+  consumer_base: number;
   // [long, lat]
   coord: [number, number];
 }
 export type ProcessedPlace = RawPlace & { url: string };
 
+export const ALL_NUDGE_TYPE = [
+  "plant-based default", 
+  "climate-positive ratio", 
+  "subtle substitution", 
+  "tasty titles", 
+  "prime placement", 
+  "other"
+] as const;
+export type NudgeType = (typeof ALL_NUDGE_TYPE)[number];
+
+export const ALL_NUDGE_STATUS = ["adopted", "pledged"] as const;
+export type NudgeStatus = (typeof ALL_NUDGE_STATUS)[number];
 export interface RawCoreEntry {
   place: RawPlace;
 }
@@ -57,4 +92,8 @@ export const UNKNOWN_YEAR = "unknown";
 /// The types from `data/option-values.json`.
 export interface OptionValues {
   country: string[];
+  placeType: PlaceType[];
+  nudge: NudgeType[];
+  year: string[];
+  orgCredit: string[];
 }

@@ -1,6 +1,10 @@
 import { capitalize } from "lodash-es";
 
-import { FilterState, PlaceFilterManager } from "../state/FilterState";
+import { 
+  FilterState, 
+  PlaceFilterManager,
+  NudgeTypeFilter,
+} from "../state/FilterState";
 import Observable from "../state/Observable";
 import {
   BaseAccordionElements,
@@ -12,6 +16,11 @@ import {
 
 import optionValuesData from "../../../data/option-values.json" with { type: "json" };
 
+import {
+  ALL_NUDGE_TYPE,
+  NudgeStatus,
+} from "../model/types";
+
 /** These option values change depending on which dataset is loaded.
  *
  * Note that some datasets may not actually use a particular option group, but
@@ -20,17 +29,117 @@ import optionValuesData from "../../../data/option-values.json" with { type: "js
  * Keep in alignment with FilterState.
  */
 type DataSetSpecificOptions = {
+  includedNudges: readonly string[];
   country: string[];
+  year: string[];
+  placeType: string[];
+  orgCredit: string[];
 };
 
 export interface FilterOptions {
   readonly merged: DataSetSpecificOptions;
+  readonly datasets: Record<
+    NudgeTypeFilter,
+    Record<NudgeStatus, DataSetSpecificOptions>
+  >;
+  getOptions(
+    nudgeType: NudgeTypeFilter,
+    status: NudgeStatus,
+  ): DataSetSpecificOptions;
+  enabled(nudgeType: NudgeTypeFilter, status: NudgeStatus): boolean;
 }
 
 export const FILTER_OPTIONS: FilterOptions = {
   merged: {
-    country: optionValuesData.merged.country,
+    includedNudges: ALL_NUDGE_TYPE,
+    ...optionValuesData.merged,
   },
+  // TODO: need to update optionValues script to replace empty arrays in option-values.json
+  datasets: {
+    "any nudge": {
+      adopted: {
+        includedNudges: ALL_NUDGE_TYPE,
+        ...optionValuesData.anyAdopted,
+      },
+      pledged: {
+        includedNudges: ALL_NUDGE_TYPE,
+        ...optionValuesData.anyPledged,
+      },
+    },
+    "plant-based default": {
+      adopted: {
+        includedNudges: [],
+        ...optionValuesData.defaultAdopted,
+      },
+      pledged: {
+        includedNudges: [],
+        ...optionValuesData.defaultPledged,
+      },
+    },
+    "climate-positive ratio": {
+      adopted: {
+        includedNudges: [],
+        ...optionValuesData.ratioAdopted,
+      },
+      pledged: {
+        includedNudges: [],
+        ...optionValuesData.ratioPledged,
+      },
+    },
+    "subtle substitution": {
+      adopted: {
+        includedNudges: [],
+        ...optionValuesData.subAdopted,
+      },
+      pledged: {
+        includedNudges: [],
+        ...optionValuesData.subPledged,
+      },
+    },
+    "tasty titles": {
+      adopted: {
+        includedNudges: [],
+        ...optionValuesData.titlesAdopted,
+      },
+      pledged: {
+        includedNudges: [],
+        ...optionValuesData.titlesPledged,
+      },
+    },
+    "prime placement": {
+      adopted: {
+        includedNudges: [],
+        ...optionValuesData.placementAdopted,
+      },
+      pledged: {
+        includedNudges: [],
+        ...optionValuesData.placementPledged,
+      },
+    },
+    "other": {
+      adopted: {
+        includedNudges: [],
+        ...optionValuesData.otherAdopted,
+      },
+      pledged: {
+        includedNudges: [],
+        ...optionValuesData.otherPledged,
+      },
+    },
+  },
+
+  getOptions(
+    nudgeType: NudgeTypeFilter,
+    status: NudgeStatus,
+  ): DataSetSpecificOptions {
+    return this.datasets[nudgeType][status];
+  },
+  
+  // TODO: check if i need this
+  enabled(nudgeType: NudgeTypeFilter, status: NudgeStatus): boolean {
+    return this.datasets[nudgeType][status].placeType.length > 0;
+  }
+
 } as const;
 
 function getVisibleCheckboxes(
