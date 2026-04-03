@@ -80,12 +80,36 @@ export type NudgeType = (typeof ALL_NUDGE_TYPE)[number];
 
 export const ALL_NUDGE_STATUS = ["adopted", "pledged"] as const;
 export type NudgeStatus = (typeof ALL_NUDGE_STATUS)[number];
-export interface RawCoreEntry {
-  place: RawPlace;
+
+/// Every nudge type has these values. It is missing some fields like 'date'.
+export interface BaseNudge {
+  status: NudgeStatus;
 }
 
+export type RawNudge = BaseNudge & {
+  date: string | undefined;
+};
+
+export type ProcessedNudge = BaseNudge & {
+  date: Date | undefined;
+}
+export interface RawCoreEntry {
+  place: RawPlace;
+  default?: RawNudge[];
+  ratio?: RawNudge[];
+  sub?: RawNudge[];
+  titles?: RawNudge[];
+  placement?: RawNudge[];
+  other?: RawNudge[];
+}
 export interface ProcessedCoreEntry {
   place: ProcessedPlace;
+  default?: ProcessedNudge[];
+  ratio?: ProcessedNudge[];
+  sub?: ProcessedNudge[];
+  titles?: ProcessedNudge[];
+  placement?: ProcessedNudge[];
+  other?: ProcessedNudge[];
 }
 export const UNKNOWN_YEAR = "unknown";
 
