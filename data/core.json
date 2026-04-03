@@ -4,7 +4,7 @@
       "name": "Abbeville University",
       "state": "Alabama",
       "country": "United States",
-      "institution": "uni_dining",
+      "type": "uni_dining",
       "encoded": "Abbeville_University",
       "consumer_base": 2358,
       "coord": [-85.2503315, 31.5702088]
@@ -43,7 +43,7 @@
       "name": "Abbottstown Cafe",
       "state": "Pennsylvania",
       "country": "United States",
-      "institution": "cafe",
+      "type": "cafe",
       "encoded": "Abbottstown_Cafe",
       "consumer_base": 1022,
       "coord": [-76.9847013, 39.8864869]
@@ -60,7 +60,7 @@
       "name": "Aberdeen Hospital",
       "state": "New Jersey",
       "country": "United States",
-      "institution": "hospital",
+      "type": "hospital",
       "encoded": "Aberdeen-Hospital",
       "consumer_base": 19329,
       "coord": [-74.2216287, 40.4071138]
@@ -76,7 +76,7 @@
       "name": "Aberdeen Hotel",
       "state": "Maryland",
       "country": "United States",
-      "institution": "hotel",
+      "type": "hotel",
       "encoded": "Aberdeen-Hotel",
       "consumer_base": 16254,
       "coord": [-76.1643289, 39.5120347]
@@ -98,7 +98,7 @@
       "name": "Aberdeen City Hall",
       "state": "Mississippi",
       "country": "United States",
-      "institution": "gov_facility",
+      "type": "gov_facility",
       "encoded": "Aberdeen_City_Hall",
       "consumer_base": 4961,
       "coord": [-88.5436553, 33.8251139]
@@ -120,7 +120,7 @@
       "name": "Aberdeen Stadium",
       "state": "Saskatchewan",
       "country": "Canada",
-      "institution": "stadium",
+      "type": "stadium",
       "encoded": "Aberdeen-Stadium",
       "consumer_base": 716,
       "coord": [-106.2900807, 52.3271538]
@@ -142,7 +142,7 @@
       "name": "Aberdeen Conference",
       "state": "South Dakota",
       "country": "United States",
-      "institution": "event",
+      "type": "event",
       "encoded": "Aberdeen_Conference",
       "consumer_base": 28324,
       "coord": [-98.487813, 45.4649805]
@@ -163,7 +163,7 @@
       "name": "Aberdeen Restaurant",
       "state": "Washington",
       "country": "United States",
-      "institution": "chain_restaurant",
+      "type": "chain_restaurant",
       "encoded": "Aberdeen_Restaurant",
       "consumer_base": 17013,
       "coord": [-123.815722, 46.975371]
