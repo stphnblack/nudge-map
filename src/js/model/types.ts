@@ -69,12 +69,12 @@ export interface RawPlace {
 export type ProcessedPlace = RawPlace & { url: string };
 
 export const ALL_NUDGE_TYPE = [
-  "plant-based default", 
-  "climate-positive ratio", 
-  "subtle substitution", 
-  "tasty titles", 
-  "prime placement", 
-  "other"
+  "plant-based default",
+  "climate-positive ratio",
+  "subtle substitution",
+  "tasty titles",
+  "prime placement",
+  "other",
 ] as const;
 export type NudgeType = (typeof ALL_NUDGE_TYPE)[number];
 
@@ -92,7 +92,7 @@ export type RawNudge = BaseNudge & {
 
 export type ProcessedNudge = BaseNudge & {
   date: Date | undefined;
-}
+};
 export interface RawCoreEntry {
   place: RawPlace;
   default?: RawNudge[];

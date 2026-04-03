@@ -1,7 +1,7 @@
 import { capitalize } from "lodash-es";
 
-import { 
-  FilterState, 
+import {
+  FilterState,
   PlaceFilterManager,
   NudgeTypeFilter,
 } from "../state/FilterState";
@@ -16,10 +16,7 @@ import {
 
 import optionValuesData from "../../../data/option-values.json" with { type: "json" };
 
-import {
-  ALL_NUDGE_TYPE,
-  NudgeStatus,
-} from "../model/types";
+import { ALL_NUDGE_TYPE, NudgeStatus } from "../model/types";
 
 /** These option values change depending on which dataset is loaded.
  *
@@ -116,7 +113,7 @@ export const FILTER_OPTIONS: FilterOptions = {
         ...optionValuesData.placementPledged,
       },
     },
-    "other": {
+    other: {
       adopted: {
         includedNudges: [],
         ...optionValuesData.otherAdopted,
@@ -134,12 +131,11 @@ export const FILTER_OPTIONS: FilterOptions = {
   ): DataSetSpecificOptions {
     return this.datasets[nudgeType][status];
   },
-  
+
   // TODO: check if i need this
   enabled(nudgeType: NudgeTypeFilter, status: NudgeStatus): boolean {
     return this.datasets[nudgeType][status].placeType.length > 0;
-  }
-
+  },
 } as const;
 
 function getVisibleCheckboxes(

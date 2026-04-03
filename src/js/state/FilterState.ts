@@ -1,5 +1,5 @@
 import { isEqual } from "lodash-es";
-import { 
+import {
   ALL_NUDGE_TYPE,
   PlaceId,
   PlaceType,
@@ -7,7 +7,7 @@ import {
   ProcessedPlace,
   NudgeStatus,
   NudgeType,
- } from "../model/types";
+} from "../model/types";
 import Observable from "./Observable";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
@@ -21,10 +21,7 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["75M", 750000000],
 ];
 
-export const ALL_NUDGE_TYPE_FILTER = [
-  "any nudge",
-  ...ALL_NUDGE_TYPE,
-] as const;
+export const ALL_NUDGE_TYPE_FILTER = ["any nudge", ...ALL_NUDGE_TYPE] as const;
 export type NudgeTypeFilter = (typeof ALL_NUDGE_TYPE_FILTER)[number];
 
 // Note that this only tracks state set by the user.
@@ -74,10 +71,7 @@ interface PlaceMatchAnyNudge {
   hasOther: boolean;
 }
 
-type PlaceMatch = 
-  | PlaceMatchSearch
-  | PlaceMatchSingleNudge
-  | PlaceMatchAnyNudge;
+type PlaceMatch = PlaceMatchSearch | PlaceMatchSingleNudge | PlaceMatchAnyNudge;
 
 // This allows us to avoid recomputing computed state when the FilterState has not changed.
 interface CacheEntry {
