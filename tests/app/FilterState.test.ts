@@ -4,13 +4,23 @@ import {
   FilterState,
   PlaceFilterManager,
 } from "../../src/js/state/FilterState";
-import { PlaceId, ProcessedCoreEntry } from "../../src/js/model/types";
+import { 
+  PlaceId,
+  ProcessedCoreEntry,
+  ALL_NUDGE_TYPE,
+} from "../../src/js/model/types";
 
 test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
   function defaultState(): FilterState {
     return {
       searchInput: null,
+      nudgeTypeFilter: "any nudge",
+      status: "adopted",
+      placeType: new Set(["uni_dining", "cafe"]),
+      includedNudges: new Set(ALL_NUDGE_TYPE),
+      year: new Set(["1997", "2023", "2024"]),
       country: new Set(["United States", "Brazil"]),
+      orgCredit: new Set(),
     };
   }
 
@@ -24,6 +34,8 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
           encoded: "",
           coord: [0, 0],
           url: "",
+          consumer_base: 0,
+          type: "transit_station",
         },
       },
       "Place 2": {
@@ -34,6 +46,8 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
           encoded: "",
           coord: [0, 0],
           url: "",
+          consumer_base: 0,
+          type: "transit_station",
         },
       },
     };

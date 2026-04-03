@@ -7,12 +7,19 @@ import {
   SEARCH_RESET_HTML,
 } from "../../src/js/filter-features/counters";
 import { FilterState } from "../../src/js/state/FilterState";
+import { ALL_NUDGE_TYPE } from "../../src/js/model/types";
 
 test.describe("determineHtml", () => {
   const DEFAULT_STATE: FilterState = {
     searchInput: null,
+    nudgeTypeFilter: "any nudge",
+    includedNudges: new Set(ALL_NUDGE_TYPE),
     // The below values are ignored.
     country: new Set(),
+    status: "adopted",
+    placeType: new Set(),
+    year: new Set(),
+    orgCredit: new Set(),
   };
 
   test("no places", () => {
