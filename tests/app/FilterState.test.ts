@@ -4,7 +4,7 @@ import {
   FilterState,
   PlaceFilterManager,
 } from "../../src/js/state/FilterState";
-import { 
+import {
   PlaceId,
   ProcessedCoreEntry,
   ALL_NUDGE_TYPE,
