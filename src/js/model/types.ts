@@ -65,6 +65,8 @@ export interface RawPlace {
   consumer_base: number;
   // [long, lat]
   coord: [number, number];
+  // The organization[s] credited with the nudge
+  orgCredit: string;
 }
 export type ProcessedPlace = RawPlace & { url: string };
 
@@ -81,7 +83,7 @@ export type NudgeType = (typeof ALL_NUDGE_TYPE)[number];
 export const ALL_NUDGE_STATUS = ["adopted", "pledged"] as const;
 export type NudgeStatus = (typeof ALL_NUDGE_STATUS)[number];
 
-/// Every nudge type has these values. It is missing some fields like 'date'.
+/// Every nudge type has a status.
 export interface BaseNudge {
   status: NudgeStatus;
 }

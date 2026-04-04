@@ -132,7 +132,6 @@ export const FILTER_OPTIONS: FilterOptions = {
     return this.datasets[nudgeType][status];
   },
 
-  // TODO: check if i need this
   enabled(nudgeType: NudgeTypeFilter, status: NudgeStatus): boolean {
     return this.datasets[nudgeType][status].placeType.length > 0;
   },

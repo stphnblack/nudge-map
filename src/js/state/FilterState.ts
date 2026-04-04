@@ -80,6 +80,7 @@ interface CacheEntry {
   matchedCountries: Set<string>;
   matchedNudgeTypesForAnyNudge: Set<NudgeType>;
   matchedPlaceTypes: Set<PlaceType>;
+  matchedOrgCredits: Set<string>;
 }
 
 export class PlaceFilterManager {
@@ -141,11 +142,15 @@ export class PlaceFilterManager {
     const matchedCountries = new Set<string>();
     const matchedNudgeTypes = new Set<NudgeType>();
     const matchedPlaceTypes = new Set<PlaceType>();
+    const matchedOrgCredits = new Set<string>();
     for (const placeId of Object.keys(this.entries)) {
       const match = this.getPlaceMatch(placeId);
       if (!match) continue;
       matchedPlaces[placeId] = match;
       matchedCountries.add(this.entries[placeId].place.country);
+      matchedPlaceTypes.add(this.entries[placeId].place.type);
+      matchedOrgCredits.add(this.entries[placeId].place.orgCredit);
+      // TODO: add nudge type matching
     }
 
     this.cache = {
@@ -154,6 +159,7 @@ export class PlaceFilterManager {
       matchedCountries,
       matchedNudgeTypesForAnyNudge: matchedNudgeTypes,
       matchedPlaceTypes,
+      matchedOrgCredits,
     };
     return this.cache;
   }
