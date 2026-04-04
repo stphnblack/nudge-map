@@ -36,6 +36,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
           url: "",
           consumer_base: 0,
           type: "transit_station",
+          orgCredit: "Org 1",
         },
       },
       "Place 2": {
@@ -48,6 +49,7 @@ test.describe("PlaceFilterManager.matchedPolicyRecords()", () => {
           url: "",
           consumer_base: 0,
           type: "transit_station",
+          orgCredit: "Org 2",
         },
       },
     };
