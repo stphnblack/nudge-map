@@ -5,11 +5,16 @@ import { FILTER_OPTIONS } from "../filter-features/options";
 import { COUNTRY_MAPPING } from "../model/data";
 
 export const MERGED_STRING_SET_OPTIONS = {
+  placeType: new Set(FILTER_OPTIONS.merged.placeType),
+  includedNudges: new Set(FILTER_OPTIONS.merged.includedNudges),
   country: new Set(FILTER_OPTIONS.merged.country),
+  year: new Set(FILTER_OPTIONS.merged.year),
 };
 
 export const DEFAULT_FILTER_STATE: FilterState = {
   searchInput: null,
+  nudgeTypeFilter: "any nudge",
+  status: "adopted",
   ...MERGED_STRING_SET_OPTIONS,
 };
 
@@ -66,12 +71,53 @@ class BidirectionalMap<K extends string, V extends string> {
     return parsed.size ? parsed : fallback;
   }
 }
+export const NUDGE_TYPE_NAME = "nudge";
+export const STATUS_NAME = "status";
+export const YEAR_NAME = "yr";
 export const COUNTRY_NAME = "cntry";
+export const PLACE_TYPE_NAME = "inst";
+export const INCLUDED_NUDGE_NAME = "nudges";
+export const ORG_NAME = "org";
+
+export const NUDGE_TYPE_MAP = BidirectionalMap.from([
+  ["any nudge", "any"],
+  ["plant-based default", "pbd"],
+  ["climate-positive ratio", "cpr"],
+  ["subtle substitution", "ss"],
+  ["tasty titles", "tt"],
+  ["prime placement", "pp"],
+  ["other", "oth"],
+]);
+export const STATUS_MAP = BidirectionalMap.from([
+  ["adopted", "a"],
+  ["pledged", "p"],
+]);
+export const PLACE_TYPE_MAP = BidirectionalMap.from([
+  ["uni_dining", "ud"],
+  ["uni_cafe", "uc"],
+  ["uni_event", "ue"],
+  ["k12", "k12"],
+  ["work_cafeteria", "wc"],
+  ["ind_restaurant", "ir"],
+  ["chain_restaurant", "cr"],
+  ["cafe", "cfe"],
+  ["stadium", "std"],
+  ["event", "evt"],
+  ["hotel", "htl"],
+  ["transit_station", "ts"],
+  ["hospital", "hsp"],
+  ["religious_center", "rc"],
+  ["gov_facility", "gf"],
+  ["other", "othp"],
+]);
 export const COUNTRY_MAP = BidirectionalMap.from(
   Object.entries(COUNTRY_MAPPING).map(([code, country]) => [
     country!,
     code.toLowerCase(),
   ]),
+);
+export const YEAR_MAP = BidirectionalMap.from(
+  Array.from(MERGED_STRING_SET_OPTIONS.year).map((year) => [year, year]),
 );
 
 export function encodeFilterState(filterState: FilterState): URLSearchParams {
@@ -96,9 +142,24 @@ export function decodeFilterState(queryString: string): FilterState {
   const params = queryStringToParams(queryString);
   return {
     searchInput: DEFAULT_FILTER_STATE.searchInput,
+    nudgeTypeFilter:
+      NUDGE_TYPE_MAP.decode(params.get(NUDGE_TYPE_NAME)) ??
+      DEFAULT_FILTER_STATE.nudgeTypeFilter,
+    status:
+      STATUS_MAP.decode(params.get(STATUS_NAME)) ?? DEFAULT_FILTER_STATE.status,
+    includedNudges: NUDGE_TYPE_MAP.decodeSet(
+      params.get(INCLUDED_NUDGE_NAME),
+      DEFAULT_FILTER_STATE.includedNudges,
+    ),
+    year: YEAR_MAP.decodeSet(params.get(YEAR_NAME), DEFAULT_FILTER_STATE.year),
     country: COUNTRY_MAP.decodeSet(
       params.get(COUNTRY_NAME),
       DEFAULT_FILTER_STATE.country,
     ),
+    placeType: PLACE_TYPE_MAP.decodeSet(
+      params.get(PLACE_TYPE_NAME),
+      DEFAULT_FILTER_STATE.placeType,
+    ),
+    // TODO: add orgCredit mapping and data in model/data.ts.
   };
 }
