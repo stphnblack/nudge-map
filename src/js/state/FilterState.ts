@@ -45,7 +45,7 @@ export interface FilterState {
   includedNudges: Set<string>;
   country: Set<string>;
   year: Set<string>;
-  orgCredit: Set<string>;
+  // TODO: add orgCredit
   // TODO: add impactSliderIndexes
 }
 
@@ -61,8 +61,8 @@ interface PlaceMatchSingleNudge {
 
 interface PlaceMatchAnyNudge {
   type: "any";
-  // Note that we still record if a place has a certain policy type
-  // even if the filter state is actively ignoring that policy.
+  // Note that we still record if a place has a certain nudge type
+  // even if the filter state is actively ignoring that nudge.
   hasDefault: boolean;
   hasRatio: boolean;
   hasSub: boolean;
@@ -80,7 +80,6 @@ interface CacheEntry {
   matchedCountries: Set<string>;
   matchedNudgeTypesForAnyNudge: Set<NudgeType>;
   matchedPlaceTypes: Set<PlaceType>;
-  matchedOrgCredits: Set<string>;
 }
 
 export class PlaceFilterManager {
@@ -142,14 +141,12 @@ export class PlaceFilterManager {
     const matchedCountries = new Set<string>();
     const matchedNudgeTypes = new Set<NudgeType>();
     const matchedPlaceTypes = new Set<PlaceType>();
-    const matchedOrgCredits = new Set<string>();
     for (const placeId of Object.keys(this.entries)) {
       const match = this.getPlaceMatch(placeId);
       if (!match) continue;
       matchedPlaces[placeId] = match;
       matchedCountries.add(this.entries[placeId].place.country);
       matchedPlaceTypes.add(this.entries[placeId].place.type);
-      matchedOrgCredits.add(this.entries[placeId].place.orgCredit);
       // TODO: add nudge type matching
     }
 
@@ -159,7 +156,6 @@ export class PlaceFilterManager {
       matchedCountries,
       matchedNudgeTypesForAnyNudge: matchedNudgeTypes,
       matchedPlaceTypes,
-      matchedOrgCredits,
     };
     return this.cache;
   }

@@ -61,12 +61,8 @@ export interface RawPlace {
   // The value used for the URL. Note that this may be an outdated value
   // so that we don't require a redirect.
   encoded: string;
-  // Estimated reach of the nudge
-  consumer_base: number;
   // [long, lat]
   coord: [number, number];
-  // The organization[s] credited with the nudge
-  orgCredit: string;
 }
 export type ProcessedPlace = RawPlace & { url: string };
 
@@ -121,5 +117,4 @@ export interface OptionValues {
   placeType: PlaceType[];
   nudge: NudgeType[];
   year: string[];
-  orgCredit: string[];
 }

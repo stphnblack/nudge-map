@@ -30,7 +30,6 @@ type DataSetSpecificOptions = {
   country: string[];
   year: string[];
   placeType: string[];
-  orgCredit: string[];
 };
 
 export interface FilterOptions {

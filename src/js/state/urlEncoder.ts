@@ -7,7 +7,6 @@ import { COUNTRY_MAPPING } from "../model/data";
 export const MERGED_STRING_SET_OPTIONS = {
   placeType: new Set(FILTER_OPTIONS.merged.placeType),
   includedNudges: new Set(FILTER_OPTIONS.merged.includedNudges),
-  orgCredit: new Set(FILTER_OPTIONS.merged.orgCredit),
   country: new Set(FILTER_OPTIONS.merged.country),
   year: new Set(FILTER_OPTIONS.merged.year),
 };
@@ -161,7 +160,6 @@ export function decodeFilterState(queryString: string): FilterState {
       params.get(PLACE_TYPE_NAME),
       DEFAULT_FILTER_STATE.placeType,
     ),
-    // TODO: add orgCredit mapping and data in model/data.ts. Use empty set for now.
-    orgCredit: new Set(),
+    // TODO: add orgCredit mapping and data in model/data.ts.
   };
 }

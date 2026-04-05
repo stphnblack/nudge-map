@@ -19,7 +19,6 @@ test.describe("determineHtml", () => {
     status: "adopted",
     placeType: new Set(),
     year: new Set(),
-    orgCredit: new Set(),
   };
 
   test("no places", () => {
