@@ -1,17 +1,13 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-
 import fs from "fs/promises";
 
 import { sortBy, without } from "lodash-es";
 
 import {
-  RawCoreLandUsePolicy,
   UNKNOWN_YEAR,
   Date,
   RawPlace,
   RawCoreEntry,
-  RawCoreBenefitDistrict,
+  RawNudge,
 } from "../../src/js/model/types";
 
 /** The option values for a single dataset. */
@@ -20,17 +16,11 @@ class OptionValues {
 
   readonly country: Set<string>;
 
-  readonly scope: Set<string>;
-
-  readonly landUse: Set<string>;
-
   readonly year: Set<string>;
 
   constructor() {
     this.placeType = new Set();
     this.country = new Set();
-    this.scope = new Set();
-    this.landUse = new Set();
     this.year = new Set();
   }
 
@@ -43,27 +33,18 @@ class OptionValues {
     this.year.add(date ? new Date(date).parsed.year.toString() : UNKNOWN_YEAR);
   }
 
-  addBenefitDistrict(
+  addNudge(
     place: RawPlace,
-    benefitDistrict: RawCoreBenefitDistrict,
+    nudge: RawNudge,
   ): void {
     this.#addPlace(place);
-    this.#addDate(benefitDistrict.date);
-  }
-
-  addLandUse(place: RawPlace, landUseRecord: RawCoreLandUsePolicy): void {
-    this.#addPlace(place);
-    this.#addDate(landUseRecord.date);
-    landUseRecord.scope.forEach((v) => this.scope.add(v));
-    landUseRecord.land.forEach((v) => this.landUse.add(v));
+    this.#addDate(nudge.date);
   }
 
   export() {
     return {
       placeType: Array.from(this.placeType).sort(),
       country: sortCountries(this.country),
-      scope: Array.from(this.scope).sort(),
-      landUse: Array.from(this.landUse).sort(),
       year: Array.from(this.year).sort().reverse(),
     };
   }
@@ -72,81 +53,93 @@ class OptionValues {
 export function determineOptionValues(entries: RawCoreEntry[]) {
   const merged = new OptionValues();
   const anyAdopted = new OptionValues();
-  const anyProposed = new OptionValues();
-  const anyRepealed = new OptionValues();
-  const addMaxAdopted = new OptionValues();
-  const addMaxProposed = new OptionValues();
-  const addMaxRepealed = new OptionValues();
-  const reduceMinAdopted = new OptionValues();
-  const reduceMinProposed = new OptionValues();
-  const reduceMinRepealed = new OptionValues();
-  const rmMinAdopted = new OptionValues();
-  const rmMinProposed = new OptionValues();
-  const rmMinRepealed = new OptionValues();
-  const benefitDistrictAdopted = new OptionValues();
-  const benefitDistrictProposed = new OptionValues();
-  const benefitDistrictRepealed = new OptionValues();
+  const anyPledged = new OptionValues();
+  const defaultAdopted = new OptionValues();
+  const defaultPledged = new OptionValues();
+  const ratioAdopted = new OptionValues();
+  const ratioPledged = new OptionValues();
+  const subAdopted = new OptionValues();
+  const subPledged = new OptionValues();
+  const titlesAdopted = new OptionValues();
+  const titlesPledged = new OptionValues();
+  const placementAdopted = new OptionValues();
+  const placementPledged = new OptionValues();
+  const otherAdopted = new OptionValues();
+  const otherPledged = new OptionValues();
 
   entries.forEach((entry) => {
-    entry.add_max?.forEach((policyRecord) => {
-      merged.addLandUse(entry.place, policyRecord);
-      const [any, policy] = {
-        adopted: [anyAdopted, addMaxAdopted],
-        proposed: [anyProposed, addMaxProposed],
-        repealed: [anyRepealed, addMaxRepealed],
-      }[policyRecord.status];
-      any.addLandUse(entry.place, policyRecord);
-      policy.addLandUse(entry.place, policyRecord);
+    entry.default?.forEach((nudgeRecord) => {
+      merged.addNudge(entry.place, nudgeRecord);
+      const [any, nudge] = {
+        adopted: [anyAdopted, defaultAdopted],
+        pledged: [anyPledged, defaultPledged],
+      }[nudgeRecord.status];
+      any.addNudge(entry.place, nudgeRecord);
+      nudge.addNudge(entry.place, nudgeRecord);
     });
-    entry.reduce_min?.forEach((policyRecord) => {
-      merged.addLandUse(entry.place, policyRecord);
-      const [any, policy] = {
-        adopted: [anyAdopted, reduceMinAdopted],
-        proposed: [anyProposed, reduceMinProposed],
-        repealed: [anyRepealed, reduceMinRepealed],
-      }[policyRecord.status];
-      any.addLandUse(entry.place, policyRecord);
-      policy.addLandUse(entry.place, policyRecord);
+    entry.ratio?.forEach((nudgeRecord) => {
+      merged.addNudge(entry.place, nudgeRecord);
+      const [any, nudge] = {
+        adopted: [anyAdopted, ratioAdopted],
+        pledged: [anyPledged, ratioPledged],
+      }[nudgeRecord.status];
+      any.addNudge(entry.place, nudgeRecord);
+      nudge.addNudge(entry.place, nudgeRecord);
     });
-    entry.rm_min?.forEach((policyRecord) => {
-      merged.addLandUse(entry.place, policyRecord);
-      const [any, policy] = {
-        adopted: [anyAdopted, rmMinAdopted],
-        proposed: [anyProposed, rmMinProposed],
-        repealed: [anyRepealed, rmMinRepealed],
-      }[policyRecord.status];
-      any.addLandUse(entry.place, policyRecord);
-      policy.addLandUse(entry.place, policyRecord);
+    entry.sub?.forEach((nudgeRecord) => {
+      merged.addNudge(entry.place, nudgeRecord);
+      const [any, nudge] = {
+        adopted: [anyAdopted, subAdopted],
+        pledged: [anyPledged, subPledged],
+      }[nudgeRecord.status];
+      any.addNudge(entry.place, nudgeRecord);
+      nudge.addNudge(entry.place, nudgeRecord);
     });
-    entry.benefit_district?.forEach((record) => {
-      merged.addBenefitDistrict(entry.place, record);
-      const [any, policy] = {
-        adopted: [anyAdopted, benefitDistrictAdopted],
-        proposed: [anyProposed, benefitDistrictProposed],
-        repealed: [anyRepealed, benefitDistrictRepealed],
-      }[record.status];
-      any.addBenefitDistrict(entry.place, record);
-      policy.addBenefitDistrict(entry.place, record);
+    entry.titles?.forEach((nudgeRecord) => {
+      merged.addNudge(entry.place, nudgeRecord);
+      const [any, nudge] = {
+        adopted: [anyAdopted, titlesAdopted],
+        pledged: [anyPledged, titlesPledged],
+      }[nudgeRecord.status];
+      any.addNudge(entry.place, nudgeRecord);
+      nudge.addNudge(entry.place, nudgeRecord);
+    });
+    entry.placement?.forEach((nudgeRecord) => {
+      merged.addNudge(entry.place, nudgeRecord);
+      const [any, nudge] = {
+        adopted: [anyAdopted, placementAdopted],
+        pledged: [anyPledged, placementPledged],
+      }[nudgeRecord.status];
+      any.addNudge(entry.place, nudgeRecord);
+      nudge.addNudge(entry.place, nudgeRecord);
+    });
+    entry.other?.forEach((nudgeRecord) => {
+      merged.addNudge(entry.place, nudgeRecord);
+      const [any, nudge] = {
+        adopted: [anyAdopted, otherAdopted],
+        pledged: [anyPledged, otherPledged],
+      }[nudgeRecord.status];
+      any.addNudge(entry.place, nudgeRecord);
+      nudge.addNudge(entry.place, nudgeRecord);
     });
   });
 
   const result = {
     merged: merged.export(),
     anyAdopted: anyAdopted.export(),
-    anyProposed: anyProposed.export(),
-    anyRepealed: anyRepealed.export(),
-    addMaxAdopted: addMaxAdopted.export(),
-    addMaxProposed: addMaxProposed.export(),
-    addMaxRepealed: addMaxRepealed.export(),
-    reduceMinAdopted: reduceMinAdopted.export(),
-    reduceMinProposed: reduceMinProposed.export(),
-    reduceMinRepealed: reduceMinRepealed.export(),
-    rmMinAdopted: rmMinAdopted.export(),
-    rmMinProposed: rmMinProposed.export(),
-    rmMinRepealed: rmMinRepealed.export(),
-    benefitDistrictAdopted: benefitDistrictAdopted.export(),
-    benefitDistrictProposed: benefitDistrictProposed.export(),
-    benefitDistrictRepealed: benefitDistrictRepealed.export(),
+    anyPledged: anyPledged.export(),
+    defaultAdopted: defaultAdopted.export(),
+    defaultPledged: defaultPledged.export(),
+    ratioAdopted: ratioAdopted.export(),
+    ratioPledged: ratioPledged.export(),
+    subAdopted: subAdopted.export(),
+    subPledged: subPledged.export(),
+    titlesAdopted: titlesAdopted.export(),
+    titlesPledged: titlesPledged.export(),
+    placementAdopted: placementAdopted.export(),
+    placementPledged: placementPledged.export(),
+    otherAdopted: otherAdopted.export(),
+    otherPledged: otherPledged.export(),
   };
   return result;
 }
