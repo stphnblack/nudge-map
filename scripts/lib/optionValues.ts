@@ -33,10 +33,7 @@ class OptionValues {
     this.year.add(date ? new Date(date).parsed.year.toString() : UNKNOWN_YEAR);
   }
 
-  addNudge(
-    place: RawPlace,
-    nudge: RawNudge,
-  ): void {
+  addNudge(place: RawPlace, nudge: RawNudge): void {
     this.#addPlace(place);
     this.#addDate(nudge.date);
   }
