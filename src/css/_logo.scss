@@ -3,7 +3,7 @@
 @use "theme/spacing";
 @use "theme/zindex";
 
-.prn-logo-map {
+.bff-logo-map {
   position: absolute;
   left: spacing.$map-controls-margin-x;
   z-index: zindex.$logo;
@@ -25,7 +25,7 @@
   }
 
   img {
-    background-color: colors.$white;
+    // background-color: colors.$white;
     width: 100%;
   }
 }
