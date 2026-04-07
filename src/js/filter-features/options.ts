@@ -113,7 +113,7 @@ export const FILTER_OPTIONS: FilterOptions = {
         ...optionValuesData.placementPledged,
       },
     },
-    other: {
+    "other": {
       adopted: {
         includedNudges: [],
         ...optionValuesData.otherAdopted,
