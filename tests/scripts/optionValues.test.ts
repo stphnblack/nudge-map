@@ -1,6 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-
 import { expect, test } from "@playwright/test";
 
 import {
@@ -14,30 +11,24 @@ test("determineOptionValues()", () => {
     name: "n/a",
     state: "n/a",
     encoded: "",
-    pop: 0,
     coord: [0, 0] as [number, number],
-    repeal: false,
   };
   const input: RawCoreEntry[] = [
     {
       place: {
         ...commonPlace,
         country: "United States",
-        type: "city",
+        type: "hotel",
       },
-      rm_min: [
+      default: [
         {
           status: "adopted",
-          scope: ["city center / business district"],
-          land: ["all uses"],
           date: undefined,
         },
       ],
-      add_max: [
+      ratio: [
         {
-          status: "repealed",
-          scope: ["citywide"],
-          land: ["other", "residential, all uses"],
+          status: "pledged",
           date: "2022-02-13",
         },
       ],
@@ -46,147 +37,95 @@ test("determineOptionValues()", () => {
       place: {
         ...commonPlace,
         country: "Brazil",
-        type: "country",
+        type: "cafe",
       },
-      reduce_min: [
+      sub: [
         {
           status: "adopted",
-          scope: ["regional"],
-          land: ["commercial"],
           date: undefined,
         },
         {
-          status: "proposed",
-          scope: ["transit-oriented", "regional"],
-          land: ["medical"],
+          status: "pledged",
           date: "2025",
         },
       ],
-      benefit_district: [{ status: "adopted", date: "1997" }],
+      titles: [{ status: "adopted", date: "1997" }],
     },
   ];
   const expected = {
     merged: {
-      placeType: ["city", "country"],
+      placeType: ["cafe", "hotel"],
       country: ["United States", "Brazil"],
-      scope: [
-        "city center / business district",
-        "citywide",
-        "regional",
-        "transit-oriented",
-      ],
-      landUse: [
-        "all uses",
-        "commercial",
-        "medical",
-        "other",
-        "residential, all uses",
-      ],
       year: [UNKNOWN_YEAR, "2025", "2022", "1997"],
     },
     anyAdopted: {
-      placeType: ["city", "country"],
+      placeType: ["cafe", "hotel"],
       country: ["United States", "Brazil"],
-      scope: ["city center / business district", "regional"],
-      landUse: ["all uses", "commercial"],
       year: [UNKNOWN_YEAR, "1997"],
     },
-    anyProposed: {
-      placeType: ["country"],
-      country: ["Brazil"],
-      scope: ["regional", "transit-oriented"],
-      landUse: ["medical"],
-      year: ["2025"],
+    anyPledged: {
+      placeType: ["cafe", "hotel"],
+      country: ["United States", "Brazil"],
+      year: ["2025", "2022"],
     },
-    anyRepealed: {
-      placeType: ["city"],
+    defaultAdopted: {
+      placeType: ["hotel"],
       country: ["United States"],
-      scope: ["citywide"],
-      landUse: ["other", "residential, all uses"],
-      year: ["2022"],
-    },
-    addMaxAdopted: {
-      placeType: [],
-      country: [],
-      scope: [],
-      landUse: [],
-      year: [],
-    },
-    addMaxProposed: {
-      placeType: [],
-      country: [],
-      scope: [],
-      landUse: [],
-      year: [],
-    },
-    addMaxRepealed: {
-      placeType: ["city"],
-      country: ["United States"],
-      scope: ["citywide"],
-      landUse: ["other", "residential, all uses"],
-      year: ["2022"],
-    },
-    reduceMinAdopted: {
-      placeType: ["country"],
-      country: ["Brazil"],
-      scope: ["regional"],
-      landUse: ["commercial"],
       year: [UNKNOWN_YEAR],
     },
-    reduceMinProposed: {
-      placeType: ["country"],
-      country: ["Brazil"],
-      scope: ["regional", "transit-oriented"],
-      landUse: ["medical"],
-      year: ["2025"],
-    },
-    reduceMinRepealed: {
+    defaultPledged: {
       placeType: [],
       country: [],
-      scope: [],
-      landUse: [],
       year: [],
     },
-    rmMinAdopted: {
-      placeType: ["city"],
+    ratioAdopted: {
+      placeType: [],
+      country: [],
+      year: [],
+    },
+    ratioPledged: {
+      placeType: ["hotel"],
       country: ["United States"],
-      scope: ["city center / business district"],
-      landUse: ["all uses"],
+      year: ["2022"],
+    },
+    subAdopted: {
+      placeType: ["cafe"],
+      country: ["Brazil"],
       year: [UNKNOWN_YEAR],
     },
-    rmMinProposed: {
-      placeType: [],
-      country: [],
-      scope: [],
-      landUse: [],
-      year: [],
-    },
-    rmMinRepealed: {
-      placeType: [],
-      country: [],
-      scope: [],
-      landUse: [],
-      year: [],
-    },
-    benefitDistrictAdopted: {
-      placeType: ["country"],
+    subPledged: {
+      placeType: ["cafe"],
       country: ["Brazil"],
-      scope: [],
-      landUse: [],
+      year: ["2025"],
+    },
+    titlesAdopted: {
+      placeType: ["cafe"],
+      country: ["Brazil"],
       year: ["1997"],
     },
-    benefitDistrictProposed: {
+    titlesPledged: {
       placeType: [],
       country: [],
-      scope: [],
-      landUse: [],
       year: [],
     },
-    benefitDistrictRepealed: {
+    placementAdopted: {
       placeType: [],
       country: [],
-      scope: [],
-      landUse: [],
+      year: [],
+    },
+    placementPledged: {
+      placeType: [],
+      country: [],
+      year: [],
+    },
+    otherAdopted: {
+      placeType: [],
+      country: [],
+      year: [],
+    },
+    otherPledged: {
+      placeType: [],
+      country: [],
       year: [],
     },
   };
