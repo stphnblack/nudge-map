@@ -1,6 +1,7 @@
 import { capitalize } from "lodash-es";
 
 import {
+  ALL_NUDGE_TYPE_FILTER,
   FilterState,
   PlaceFilterManager,
   NudgeTypeFilter,
@@ -16,7 +17,7 @@ import {
 
 import optionValuesData from "../../../data/option-values.json" with { type: "json" };
 
-import { ALL_NUDGE_TYPE, NudgeStatus } from "../model/types";
+import { ALL_NUDGE_STATUS, ALL_NUDGE_TYPE, NudgeStatus } from "../model/types";
 
 /** These option values change depending on which dataset is loaded.
  *
@@ -50,7 +51,7 @@ export const FILTER_OPTIONS: FilterOptions = {
     includedNudges: ALL_NUDGE_TYPE,
     ...optionValuesData.merged,
   },
-  // TODO: need to update optionValues script to replace empty arrays in option-values.json
+
   datasets: {
     "any nudge": {
       adopted: {
@@ -292,6 +293,24 @@ function updateCheckboxStats(
   });
 }
 
+/**
+ * Hide all options not in the dataset.
+ */
+function updateCheckboxVisibility(
+  optionsInDataset: readonly string[],
+  fieldSet: HTMLFieldSetElement,
+  preserveCapitalization?: boolean,
+): void {
+  const validOptions = new Set(optionsInDataset);
+  fieldSet
+    .querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
+    .forEach((checkbox) => {
+      const label = extractLabel(checkbox, preserveCapitalization);
+      // eslint-disable-next-line no-param-reassign
+      checkbox.parentElement!.hidden = !label || !validOptions.has(label);
+    });
+}
+
 function initFilterGroup(
   filterManager: PlaceFilterManager,
   optionsContainer: HTMLDivElement,
@@ -343,6 +362,142 @@ function initFilterGroup(
       [params.filterStateKey]: checkedLabels,
     });
   });
+  filterManager.subscribe(
+    `possibly update ${params.htmlName} filter UI`,
+    (state) => {
+      updateCheckboxVisibility(
+        FILTER_OPTIONS.getOptions(state.nudgeTypeFilter, state.status)[
+          params.filterStateKey
+        ],
+        accordionElements.fieldSet,
+        params.preserveCapitalization,
+      );
+      updateCheckboxStats(accordionState, accordionElements.fieldSet);
+
+      const priorAccordionState = accordionState.getValue();
+      const hidden = params.hide ? params.hide(state) : false;
+      const title =
+        typeof params.legend === "string"
+          ? params.legend
+          : params.legend(state);
+      accordionState.setValue({ ...priorAccordionState, title, hidden });
+    },
+  );
+}
+
+function initOutermostContainers(
+  filterManager: PlaceFilterManager,
+  filterPopup: HTMLFormElement,
+): {
+  datasetDiv: HTMLDivElement;
+  optionsDiv: HTMLDivElement;
+} {
+  const datasetDiv = document.createElement("div");
+
+  const disabledDatasetDiv = document.createElement("div");
+  disabledDatasetDiv.classList.add("filter-illegal-dataset-container");
+  disabledDatasetDiv.hidden = true;
+  const warningIcon = document.createElement("i");
+  warningIcon.classList.add("fa-solid", "fa-triangle-exclamation");
+  warningIcon.ariaHidden = "true";
+  const warningText = document.createElement("span");
+  warningText.textContent =
+    " This dataset has no entries. To fix, change either the 'nudge type' or 'status'.";
+  disabledDatasetDiv.append(warningIcon);
+  disabledDatasetDiv.append(warningText);
+
+  const optionsDiv = document.createElement("div");
+
+  filterManager.subscribe(
+    `possibly disable dataset`,
+    ({ nudgeTypeFilter, status }) => {
+      const enabled = FILTER_OPTIONS.enabled(nudgeTypeFilter, status);
+      disabledDatasetDiv.hidden = enabled;
+      optionsDiv.hidden = !enabled;
+    },
+  );
+
+  filterPopup.append(datasetDiv);
+  filterPopup.append(disabledDatasetDiv);
+  filterPopup.append(optionsDiv);
+  return {
+    datasetDiv,
+    optionsDiv,
+  };
+}
+
+function initNudgeTypeFilterDropdown(
+  filterManager: PlaceFilterManager,
+  dropdownContainer: HTMLDivElement,
+): void {
+  const id = "filter-nudge-type-dropdown";
+
+  const container = document.createElement("div");
+  container.className = "filter-nudge-type-dropdown-container";
+
+  const label = document.createElement("label");
+  label.htmlFor = id;
+  label.textContent = "Nudge type";
+
+  const select = document.createElement("select");
+  select.id = id;
+  select.name = id;
+
+  ALL_NUDGE_TYPE_FILTER.forEach((option) => {
+    const element = document.createElement("option");
+    element.value = option;
+    element.textContent = capitalize(option);
+    select.append(element);
+  });
+
+  // Set initial value.
+  select.value = filterManager.getState().nudgeTypeFilter;
+
+  select.addEventListener("change", () => {
+    const nudgeTypeFilter = select.value as NudgeTypeFilter;
+    filterManager.update({ nudgeTypeFilter });
+  });
+
+  container.append(label);
+  container.append(select);
+  dropdownContainer.append(container);
+}
+
+function initStatusDropdown(
+  filterManager: PlaceFilterManager,
+  dropdownContainer: HTMLDivElement,
+): void {
+  const id = "filter-status-dropdown";
+
+  const container = document.createElement("div");
+  container.className = "filter-status-dropdown-container";
+
+  const label = document.createElement("label");
+  label.htmlFor = id;
+  label.textContent = "Status";
+
+  const select = document.createElement("select");
+  select.id = id;
+  select.name = id;
+
+  ALL_NUDGE_STATUS.forEach((option) => {
+    const element = document.createElement("option");
+    element.value = option;
+    element.textContent = capitalize(option);
+    select.append(element);
+  });
+
+  // Set initial value.
+  select.value = filterManager.getState().status;
+
+  select.addEventListener("change", () => {
+    const status = select.value as NudgeStatus;
+    filterManager.update({ status });
+  });
+
+  container.append(label);
+  container.append(select);
+  dropdownContainer.append(container);
 }
 
 export function initFilterOptions(filterManager: PlaceFilterManager): void {
@@ -350,14 +505,40 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
   const filterPopup = document.querySelector<HTMLFormElement>("#filter-popup");
   if (!filterPopup) return;
 
-  const optionsDiv = document.createElement("div");
-  filterPopup.appendChild(optionsDiv);
+  const { datasetDiv, optionsDiv } = initOutermostContainers(
+    filterManager,
+    filterPopup,
+  );
 
-  // Options about the Place
+  // Top-level options that change profoundly the app.
+  initNudgeTypeFilterDropdown(filterManager, datasetDiv);
+  initStatusDropdown(filterManager, datasetDiv);
+
+  // Options about the nudge
+  initFilterGroup(filterManager, optionsDiv, {
+    htmlName: "nudge-change",
+    filterStateKey: "includedNudges",
+    legend: "Nudge types",
+    hide: ({ nudgeTypeFilter }) => nudgeTypeFilter !== "any nudge",
+  });
   initFilterGroup(filterManager, optionsDiv, {
     htmlName: "country",
     filterStateKey: "country",
     legend: "Countries",
     preserveCapitalization: true,
   });
+  initFilterGroup(filterManager, optionsDiv, {
+    htmlName: "year",
+    filterStateKey: "year",
+    legend: ({ status }) => {
+      const mapping: Record<NudgeStatus, string> = {
+        adopted: "Adoption years",
+        pledged: "Pledge years",
+      };
+      return mapping[status];
+    },
+    useTwoColumns: true,
+    hide: ({ nudgeTypeFilter }) => nudgeTypeFilter === "any nudge",
+  });
+
 }
