@@ -72,8 +72,8 @@ export function determineAllNudgeTypes(
 export function determineNudgeTypeStatuses(
   entry: RawCoreEntry | ProcessedCoreEntry,
 ): Record<NudgeType, Set<NudgeStatus>> {
-  const getStatuses = (policies: Array<{ status: NudgeStatus }> | undefined) =>
-    new Set(policies?.map((policy) => policy.status) ?? []);
+  const getStatuses = (nudges: Array<{ status: NudgeStatus }> | undefined) =>
+    new Set(nudges?.map((nudge) => nudge.status) ?? []);
   return {
     "plant-based default": getStatuses(entry.default),
     "climate-positive ratio": getStatuses(entry.ratio),

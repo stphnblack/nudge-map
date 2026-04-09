@@ -31,13 +31,11 @@ export type NudgeTypeFilter = (typeof ALL_NUDGE_TYPE_FILTER)[number];
 // Computed values are handled elsewhere.
 //
 // This is a single unified global view of the state, even though we
-// have multiple datasets like 'remove parking minimums'. Some of the
-// option groups are not relevant to certain datasets; for example,
-// "any parking reform" will ignore `scope`. Likewise, certain values
+// have multiple datasets like 'plant-based defaults'. Certain values
 // within an option group are irrelevant to certain data sets; for example,
 // while all datasets have 'country', their entries usually only have a subset
 // of the total set of countries across all datsets. Nevertheless,
-// we unify the state so that it persists when changing the policy type.
+// we unify the state so that it persists when changing the nudge type.
 //
 // Keep key names in alignment with DataSetSpecificOptions in filter-features/options.ts
 export interface FilterState {
@@ -314,6 +312,6 @@ export class PlaceFilterManager {
         : null;
     }
 
-    throw new Error(`Unrecognized policy type`);
+    throw new Error(`Unrecognized nudge type`);
   }
 }
