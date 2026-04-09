@@ -113,7 +113,7 @@ export const FILTER_OPTIONS: FilterOptions = {
         ...optionValuesData.placementPledged,
       },
     },
-    "other": {
+    other: {
       adopted: {
         includedNudges: [],
         ...optionValuesData.otherAdopted,
@@ -522,12 +522,6 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     hide: ({ nudgeTypeFilter }) => nudgeTypeFilter !== "any nudge",
   });
   initFilterGroup(filterManager, optionsDiv, {
-    htmlName: "country",
-    filterStateKey: "country",
-    legend: "Countries",
-    preserveCapitalization: true,
-  });
-  initFilterGroup(filterManager, optionsDiv, {
     htmlName: "year",
     filterStateKey: "year",
     legend: ({ status }) => {
@@ -541,4 +535,17 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     hide: ({ nudgeTypeFilter }) => nudgeTypeFilter === "any nudge",
   });
 
+  // Options about the Place
+  initFilterGroup(filterManager, optionsDiv, {
+    htmlName: "country",
+    filterStateKey: "country",
+    legend: "Countries",
+    preserveCapitalization: true,
+  });
+  initFilterGroup(filterManager, optionsDiv, {
+    htmlName: "place-type",
+    filterStateKey: "placeType",
+    legend: "Institution types",
+    useTwoColumns: true,
+  });
 }

@@ -152,8 +152,7 @@ export class PlaceFilterManager {
       matchedPlaceTypes.add(this.entries[placeId].place.type);
       if (match.type === "any") {
         if (match.hasDefault) matchedNudgeTypes.add("plant-based default");
-        if (match.hasRatio)
-          matchedNudgeTypes.add("climate-positive ratio");
+        if (match.hasRatio) matchedNudgeTypes.add("climate-positive ratio");
         if (match.hasSub) matchedNudgeTypes.add("subtle substitution");
         if (match.hasTitles) matchedNudgeTypes.add("tasty titles");
         if (match.hasPlacement) matchedNudgeTypes.add("prime placement");
@@ -183,9 +182,7 @@ export class PlaceFilterManager {
     return true;
   }
 
-  private matchesNudge(
-    nudgeRecord: ProcessedNudge,
-  ): boolean {
+  private matchesNudge(nudgeRecord: ProcessedNudge): boolean {
     const filterState = this.state.getValue();
 
     const isStatus = nudgeRecord.status === filterState.status;

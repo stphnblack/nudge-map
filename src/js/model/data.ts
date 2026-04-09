@@ -80,13 +80,11 @@ export function determineNudgeTypeStatuses(
     "subtle substitution": getStatuses(entry.sub),
     "tasty titles": getStatuses(entry.titles),
     "prime placement": getStatuses(entry.placement),
-    "other": getStatuses(entry.other),
+    other: getStatuses(entry.other),
   };
 }
 
-function processNudge(
-  raw: RawNudge,
-): ProcessedNudge {
+function processNudge(raw: RawNudge): ProcessedNudge {
   return {
     ...raw,
     date: Date.fromNullable(raw.date),
