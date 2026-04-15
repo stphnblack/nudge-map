@@ -1,6 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-await-in-loop */
 
@@ -9,121 +6,98 @@ import { Page, test } from "@playwright/test";
 import {
   loadMap,
   assertNumPlaces,
-  selectToggle,
-  DEFAULT_PLACE_RANGE,
   getTotalNumPlaces,
   openFilter,
-  DEFAULT_ALL_MINIMUMS_RANGE,
 } from "./utils";
-import { PolicyTypeFilter } from "../../src/js/state/FilterState";
-import { ReformStatus } from "../../src/js/model/types";
-
-test.fixme();
+import { NudgeTypeFilter } from "../../src/js/state/FilterState";
+import { NudgeStatus } from "../../src/js/model/types";
 
 type StringArrayOption = string[] | "all";
 
 interface EdgeCase {
   desc: string;
-  policyTypeFilter: PolicyTypeFilter;
-  status?: ReformStatus;
-  scope?: StringArrayOption;
-  includedPolicy?: StringArrayOption;
-  land?: StringArrayOption;
+  nudgeTypeFilter: NudgeTypeFilter;
+  status?: NudgeStatus;
+  includedNudge?: StringArrayOption;
   country?: StringArrayOption;
   year?: StringArrayOption;
   placeType?: StringArrayOption;
-  populationIntervals?: [number, number];
-  allMinimumsRemoved?: boolean;
   expectedRange: [number, number] | "all";
 }
 
-const EXPECTED_MAX_RANGE: [number, number] = [1200, 1600];
+// TODO: Add an EXPECTED_MAX_RANGE constant once we have more data
 
 // The expected ranges can be updated as the data is updated!
 const TESTS: EdgeCase[] = [
   {
     desc: "default: any",
-    policyTypeFilter: "any parking reform",
-    expectedRange: DEFAULT_PLACE_RANGE,
+    nudgeTypeFilter: "any nudge",
+    expectedRange: [1, 8],
   },
   {
-    desc: "default: reduce",
-    policyTypeFilter: "reduce parking minimums",
-    expectedRange: [1920, 2800],
+    desc: "default: default",
+    nudgeTypeFilter: "plant-based default",
+    expectedRange: [1, 8],
   },
   {
-    desc: "default: remove",
-    policyTypeFilter: "remove parking minimums",
-    expectedRange: [2800, 3400],
+    desc: "default: ratio",
+    nudgeTypeFilter: "climate-positive ratio",
+    expectedRange: [1, 8],
   },
   {
-    desc: "default: max",
-    policyTypeFilter: "add parking maximums",
-    expectedRange: EXPECTED_MAX_RANGE,
+    desc: "default: sub",
+    nudgeTypeFilter: "subtle substitution",
+    expectedRange: [1, 8],
   },
   {
-    desc: "default: benefit district",
-    policyTypeFilter: "parking benefit district",
-    expectedRange: [3, 25],
+    desc: "default: titles",
+    nudgeTypeFilter: "tasty titles",
+    expectedRange: [1, 8],
+  },
+  {
+    desc: "default: placement",
+    nudgeTypeFilter: "prime placement",
+    expectedRange: [1, 8],
+  },
+  {
+    desc: "default: other",
+    nudgeTypeFilter: "other",
+    expectedRange: [1, 8],
   },
   {
     desc: "disabled filter",
-    policyTypeFilter: "any parking reform",
+    nudgeTypeFilter: "any nudge",
     country: [],
     expectedRange: [0, 0],
   },
   {
-    desc: "any reform: policy change filter",
-    policyTypeFilter: "any parking reform",
-    includedPolicy: ["Add parking maximums"],
-    expectedRange: EXPECTED_MAX_RANGE,
+    desc: "any nudge: nudge change filter",
+    nudgeTypeFilter: "any nudge",
+    includedNudge: ["Plant-based default"],
+    expectedRange: [1, 8],
   },
   {
     desc: "country filter",
-    policyTypeFilter: "any parking reform",
-    country: ["Mexico"],
-    expectedRange: [2, 7],
+    nudgeTypeFilter: "any nudge",
+    country: ["United States"],
+    expectedRange: [1, 8],
   },
   {
     desc: "place type filter",
-    policyTypeFilter: "any parking reform",
-    placeType: ["Country"],
-    expectedRange: [6, 14],
-  },
-  {
-    desc: "population slider",
-    policyTypeFilter: "any parking reform",
-    populationIntervals: [3, 6],
-    expectedRange: [600, 1200],
-  },
-  {
-    desc: "all minimums removed",
-    policyTypeFilter: "remove parking minimums",
-    allMinimumsRemoved: true,
-    expectedRange: DEFAULT_ALL_MINIMUMS_RANGE,
-  },
-  {
-    desc: "scope filter",
-    policyTypeFilter: "add parking maximums",
-    scope: ["City center / business district"],
-    expectedRange: [150, 400],
-  },
-  {
-    desc: "land use filter",
-    policyTypeFilter: "remove parking minimums",
-    land: ["Residential, all uses"],
-    expectedRange: [150, 400],
+    nudgeTypeFilter: "any nudge",
+    placeType: ["Cafe"],
+    expectedRange: [1, 8],
   },
   {
     desc: "status filter",
-    policyTypeFilter: "remove parking minimums",
-    status: "repealed",
-    expectedRange: [2, 10],
+    nudgeTypeFilter: "subtle substitution",
+    status: "pledged",
+    expectedRange: [1, 8],
   },
   {
     desc: "year filter",
-    policyTypeFilter: "remove parking minimums",
-    year: ["1952"],
+    nudgeTypeFilter: "prime placement",
+    year: ["Unknown", "2023"],
     expectedRange: [1, 4],
   },
 ];
@@ -179,10 +153,10 @@ for (const edgeCase of TESTS) {
     await loadMap(page);
     await openFilter(page);
 
-    if (edgeCase.policyTypeFilter !== "any parking reform") {
+    if (edgeCase.nudgeTypeFilter !== "any nudge") {
       await page
-        .locator("#filter-policy-type-dropdown")
-        .selectOption(edgeCase.policyTypeFilter);
+        .locator("#filter-nudge-type-dropdown")
+        .selectOption(edgeCase.nudgeTypeFilter);
     }
 
     if (edgeCase.status && edgeCase.status !== "adopted") {
@@ -191,27 +165,9 @@ for (const edgeCase of TESTS) {
         .selectOption(edgeCase.status);
     }
 
-    if (edgeCase.allMinimumsRemoved === true) {
-      await selectToggle(page);
-    }
-
-    await selectIfSet(page, "scope", edgeCase.scope);
-    await selectIfSet(page, "policy-change", edgeCase.includedPolicy);
-    await selectIfSet(page, "land-use", edgeCase.land);
     await selectIfSet(page, "country", edgeCase.country);
     await selectIfSet(page, "year", edgeCase.year);
     await selectIfSet(page, "place-type", edgeCase.placeType);
-
-    if (edgeCase.populationIntervals !== undefined) {
-      const [leftInterval, rightInterval] = edgeCase.populationIntervals;
-      await page.locator("#filter-accordion-toggle-population-slider").click();
-      await page
-        .locator(".population-slider-left")
-        .fill(leftInterval.toString());
-      await page
-        .locator(".population-slider-right")
-        .fill(rightInterval.toString());
-    }
 
     if (edgeCase.expectedRange === "all") {
       const expected = await getTotalNumPlaces();

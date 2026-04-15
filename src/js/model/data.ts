@@ -5,6 +5,11 @@ import {
   RawCoreEntry,
   RawPlace,
   ProcessedPlace,
+  NudgeType,
+  Date,
+  NudgeStatus,
+  RawNudge,
+  ProcessedNudge,
 } from "./types";
 
 export const COUNTRIES_PREFIXED_BY_THE = new Set([
@@ -47,10 +52,68 @@ export function processPlace(raw: RawPlace): ProcessedPlace {
   };
 }
 
+export function determineAllNudgeTypes(
+  entry: RawCoreEntry | ProcessedCoreEntry,
+  status: NudgeStatus,
+): NudgeType[] {
+  const hasNudge = (nudges: Array<{ status: NudgeStatus }> | undefined) =>
+    !!nudges?.filter((nudge) => nudge.status === status).length;
+
+  const result: NudgeType[] = [];
+  if (hasNudge(entry.default)) result.push("plant-based default");
+  if (hasNudge(entry.ratio)) result.push("climate-positive ratio");
+  if (hasNudge(entry.sub)) result.push("subtle substitution");
+  if (hasNudge(entry.titles)) result.push("tasty titles");
+  if (hasNudge(entry.placement)) result.push("prime placement");
+  if (hasNudge(entry.other)) result.push("other");
+  return result;
+}
+
+export function determineNudgeTypeStatuses(
+  entry: RawCoreEntry | ProcessedCoreEntry,
+): Record<NudgeType, Set<NudgeStatus>> {
+  const getStatuses = (nudges: Array<{ status: NudgeStatus }> | undefined) =>
+    new Set(nudges?.map((nudge) => nudge.status) ?? []);
+  return {
+    "plant-based default": getStatuses(entry.default),
+    "climate-positive ratio": getStatuses(entry.ratio),
+    "subtle substitution": getStatuses(entry.sub),
+    "tasty titles": getStatuses(entry.titles),
+    "prime placement": getStatuses(entry.placement),
+    other: getStatuses(entry.other),
+  };
+}
+
+function processNudge(raw: RawNudge): ProcessedNudge {
+  return {
+    ...raw,
+    date: Date.fromNullable(raw.date),
+  };
+}
+
 export function processRawCoreEntry(raw: RawCoreEntry): ProcessedCoreEntry {
   const result: ProcessedCoreEntry = {
     place: processPlace(raw.place),
   };
+
+  if (raw.default) {
+    result.default = raw.default.map(processNudge);
+  }
+  if (raw.ratio) {
+    result.ratio = raw.ratio.map(processNudge);
+  }
+  if (raw.sub) {
+    result.sub = raw.sub.map(processNudge);
+  }
+  if (raw.titles) {
+    result.titles = raw.titles.map(processNudge);
+  }
+  if (raw.placement) {
+    result.placement = raw.placement.map(processNudge);
+  }
+  if (raw.other) {
+    result.other = raw.other.map(processNudge);
+  }
   return result;
 }
 

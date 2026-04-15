@@ -86,7 +86,7 @@ test.describe("decodeFilterState", () => {
   });
 });
 
-// currently broken because option-values.json has blank values
+// TODO: update when full data is available
 test.skip("mappers are fully comprehensive", () => {
   test("country", () => {
     expect(COUNTRY_MAP.keys()).toEqual(MERGED_STRING_SET_OPTIONS.country);

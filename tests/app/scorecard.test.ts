@@ -25,7 +25,7 @@ test("scorecard pops up and closes", async ({ page }) => {
   await page.locator("path:nth-child(4)").first().click({ force: true });
   expect(await scorecardIsVisible()).toBe(true);
   // click on another marker
-  await page.locator("path:nth-child(8)").first().click({ force: true });
+  await page.locator("path:nth-child(5)").first().click({ force: true });
   expect(await scorecardIsVisible()).toBe(true);
   // close popup
   await closeIcon.click();
