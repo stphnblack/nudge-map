@@ -29,7 +29,7 @@ export default function createMap(): Map {
   // meant for power users doing actual research.
   map.setView([40, -96], 3);
   map.attributionControl.setPrefix(
-    '<a href="https://parkingreform.org/support/">Parking Reform Network</a>',
+    '<a href="https://www.betterfoodfoundation.org/donate/" target="_blank">Better Food Foundation</a>',
   );
 
   // Workaround for no mandates markers appearing at the top of the map
