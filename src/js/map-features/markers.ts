@@ -9,7 +9,7 @@ import { determinePlaceIdWithoutCountry } from "../model/placeId";
 const PRIMARY_MARKER_STYLE = {
   weight: 1,
   color: "white",
-  fillColor: "#d7191c",
+  fillColor: "#F05B43",
   fillOpacity: 1,
 } as const;
 

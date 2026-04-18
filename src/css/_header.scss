@@ -20,8 +20,8 @@ $header-height: calc(
 
   padding: $header-y-padding spacing.$element-gap;
 
-  background-color: colors.$gray;
-  border-bottom: $header-border-bottom-size solid colors.$teal;
+  background-color: colors.$teal;
+  border-bottom: $header-border-bottom-size solid colors.$red-orange;
 }
 
 .header-control-icons {
@@ -45,7 +45,7 @@ $header-height: calc(
   }
 
   @include hover.enabled {
-    background-color: colors.$gray-hover;
+    background-color: colors.$teal-hover;
   }
 }
 
