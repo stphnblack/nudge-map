@@ -139,7 +139,7 @@ function updateSlidersUI(
   sliders.label.innerHTML = `${leftLabel} - ${rightLabel} residents`;
 }
 
-export function initPopulationSlider(
+export function initConsumerBaseSlider(
   filterManager: PlaceFilterManager,
   optionsContainer: HTMLDivElement,
 ): void {

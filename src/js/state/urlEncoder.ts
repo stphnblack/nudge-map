@@ -3,7 +3,7 @@ import { isEqual } from "lodash-es";
 import type { FilterState } from "./FilterState";
 import { FILTER_OPTIONS } from "../filter-features/options";
 import { COUNTRY_MAPPING } from "../model/data";
-import { POPULATION_MAX_INDEX } from "../filter-features/populationSlider";
+import { POPULATION_MAX_INDEX } from "../filter-features/consumerBaseSlider";
 
 export const MERGED_STRING_SET_OPTIONS = {
   placeType: new Set(FILTER_OPTIONS.merged.placeType),
