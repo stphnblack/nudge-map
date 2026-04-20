@@ -46,8 +46,8 @@ export interface FilterState {
   includedNudges: Set<string>;
   country: Set<string>;
   year: Set<string>;
+  consumerBaseSliderIndexes: [number, number]; 
   // TODO: add orgCredit
-  // TODO: add impactSliderIndexes
 }
 
 interface PlaceMatchSearch {
@@ -177,7 +177,12 @@ export class PlaceFilterManager {
     const isPlaceType = filterState.placeType.has(place.type);
     if (!isPlaceType) return false;
 
-    return true;
+    const [sliderLeftIndex, sliderRightIndex] =
+      filterState.consumerBaseSliderIndexes;
+    const isConsumerBase =
+      place.consumerBase >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
+      place.consumerBase <= POPULATION_INTERVALS[sliderRightIndex][1];
+    return isConsumerBase;
   }
 
   private matchesNudge(nudgeRecord: ProcessedNudge): boolean {
