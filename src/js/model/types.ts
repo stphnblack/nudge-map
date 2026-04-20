@@ -63,7 +63,7 @@ export interface RawPlace {
   encoded: string;
   // [long, lat]
   coord: [number, number];
-  consumerBase: number;
+  consumer_base: number;
 }
 export type ProcessedPlace = RawPlace & { url: string };
 

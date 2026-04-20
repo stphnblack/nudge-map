@@ -159,7 +159,9 @@ export function initConsumerBaseSlider(
   const onChange = (): void => {
     const leftIndex = Math.floor(parseFloat(sliders.left.value));
     const rightIndex = Math.ceil(parseFloat(sliders.right.value));
-    filterManager.update({ consumerBaseSliderIndexes: [leftIndex, rightIndex] });
+    filterManager.update({
+      consumerBaseSliderIndexes: [leftIndex, rightIndex],
+    });
   };
   sliders.left.addEventListener("input", onChange);
   sliders.right.addEventListener("input", onChange);

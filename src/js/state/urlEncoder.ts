@@ -142,7 +142,8 @@ export function decodeConsumerBase(str: string | null): [number, number] {
   let right: number;
   try {
     const split = str.split(ARRAY_DELIMITER);
-    if (split.length !== 2) return DEFAULT_FILTER_STATE.consumerBaseSliderIndexes;
+    if (split.length !== 2)
+      return DEFAULT_FILTER_STATE.consumerBaseSliderIndexes;
     left = Number.parseInt(split[0], 10);
     right = Number.parseInt(split[1], 10);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -150,7 +151,9 @@ export function decodeConsumerBase(str: string | null): [number, number] {
     return DEFAULT_FILTER_STATE.consumerBaseSliderIndexes;
   }
   const isValid = left >= 0 && right <= POPULATION_MAX_INDEX && left < right;
-  return isValid ? [left, right] : DEFAULT_FILTER_STATE.consumerBaseSliderIndexes;
+  return isValid
+    ? [left, right]
+    : DEFAULT_FILTER_STATE.consumerBaseSliderIndexes;
 }
 
 export function queryStringToParams(queryString: string): URLSearchParams {
@@ -182,7 +185,9 @@ export function decodeFilterState(queryString: string): FilterState {
       params.get(PLACE_TYPE_NAME),
       DEFAULT_FILTER_STATE.placeType,
     ),
-    consumerBaseSliderIndexes: decodeConsumerBase(params.get(CONSUMER_BASE_NAME)),
+    consumerBaseSliderIndexes: decodeConsumerBase(
+      params.get(CONSUMER_BASE_NAME),
+    ),
     // TODO: add orgCredit mapping and data in model/data.ts.
   };
 }

@@ -46,7 +46,7 @@ export interface FilterState {
   includedNudges: Set<string>;
   country: Set<string>;
   year: Set<string>;
-  consumerBaseSliderIndexes: [number, number]; 
+  consumerBaseSliderIndexes: [number, number];
   // TODO: add orgCredit
 }
 
@@ -180,8 +180,8 @@ export class PlaceFilterManager {
     const [sliderLeftIndex, sliderRightIndex] =
       filterState.consumerBaseSliderIndexes;
     const isConsumerBase =
-      place.consumerBase >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
-      place.consumerBase <= POPULATION_INTERVALS[sliderRightIndex][1];
+      place.consumer_base >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
+      place.consumer_base <= POPULATION_INTERVALS[sliderRightIndex][1];
     return isConsumerBase;
   }
 
