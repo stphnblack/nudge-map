@@ -3,6 +3,7 @@ import { isEqual } from "lodash-es";
 import type { FilterState } from "./FilterState";
 import { FILTER_OPTIONS } from "../filter-features/options";
 import { COUNTRY_MAPPING } from "../model/data";
+import { POPULATION_MAX_INDEX } from "../filter-features/populationSlider";
 
 export const MERGED_STRING_SET_OPTIONS = {
   placeType: new Set(FILTER_OPTIONS.merged.placeType),
@@ -16,6 +17,7 @@ export const DEFAULT_FILTER_STATE: FilterState = {
   nudgeTypeFilter: "any nudge",
   status: "adopted",
   ...MERGED_STRING_SET_OPTIONS,
+  consumerBaseSliderIndexes: [0, POPULATION_MAX_INDEX],
 };
 
 const ARRAY_DELIMITER = ".";
@@ -78,6 +80,7 @@ export const COUNTRY_NAME = "cntry";
 export const PLACE_TYPE_NAME = "inst";
 export const INCLUDED_NUDGE_NAME = "nudges";
 export const ORG_NAME = "org";
+export const CONSUMER_BASE_NAME = "cb";
 
 export const NUDGE_TYPE_MAP = BidirectionalMap.from([
   ["any nudge", "any"],
@@ -127,8 +130,27 @@ export function encodeFilterState(filterState: FilterState): URLSearchParams {
     result.append(COUNTRY_NAME, COUNTRY_MAP.encodeSet(filterState.country));
   }
 
+  // TODO: add other filters to URL params (e.g. year, consumer base)
+
   result.sort();
   return result;
+}
+
+export function decodeConsumerBase(str: string | null): [number, number] {
+  if (str === null) return DEFAULT_FILTER_STATE.consumerBaseSliderIndexes;
+  let left: number;
+  let right: number;
+  try {
+    const split = str.split(ARRAY_DELIMITER);
+    if (split.length !== 2) return DEFAULT_FILTER_STATE.consumerBaseSliderIndexes;
+    left = Number.parseInt(split[0], 10);
+    right = Number.parseInt(split[1], 10);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (e) {
+    return DEFAULT_FILTER_STATE.consumerBaseSliderIndexes;
+  }
+  const isValid = left >= 0 && right <= POPULATION_MAX_INDEX && left < right;
+  return isValid ? [left, right] : DEFAULT_FILTER_STATE.consumerBaseSliderIndexes;
 }
 
 export function queryStringToParams(queryString: string): URLSearchParams {
@@ -160,6 +182,7 @@ export function decodeFilterState(queryString: string): FilterState {
       params.get(PLACE_TYPE_NAME),
       DEFAULT_FILTER_STATE.placeType,
     ),
+    consumerBaseSliderIndexes: decodeConsumerBase(params.get(CONSUMER_BASE_NAME)),
     // TODO: add orgCredit mapping and data in model/data.ts.
   };
 }
