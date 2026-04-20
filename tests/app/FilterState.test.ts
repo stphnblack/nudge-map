@@ -10,6 +10,7 @@ import {
   Date,
   ALL_NUDGE_TYPE,
 } from "../../src/js/model/types";
+import { POPULATION_MAX_INDEX } from "../../src/js/filter-features/consumerBaseSlider";
 
 test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
   function defaultState(): FilterState {
@@ -21,6 +22,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
       includedNudges: new Set(ALL_NUDGE_TYPE),
       year: new Set(["1997", "2023", "2024"]),
       country: new Set(["United States", "Brazil"]),
+      consumerBaseSliderIndexes: [0, POPULATION_MAX_INDEX],
     };
   }
 
@@ -35,6 +37,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
           coord: [0, 0],
           url: "",
           type: "cafe",
+          consumer_base: 48100,
         },
         default: [
           {
@@ -52,6 +55,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
           coord: [0, 0],
           url: "",
           type: "transit_station",
+          consumer_base: 400,
         },
         ratio: [
           {
@@ -137,6 +141,14 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
       "Place 1": expectedPlace1Match,
     });
     manager.update({ country: defaultState().country });
+
+  manager.update({ consumerBaseSliderIndexes: [0, 1] });
+    expect(manager.matchedPlaces).toEqual({
+      "Place 2": expectedPlace2Match,
+    });
+    manager.update({
+      consumerBaseSliderIndexes: defaultState().consumerBaseSliderIndexes,
+    }); 
 
     manager.update({ placeType: new Set(["transit_station"]) });
     expect(manager.matchedPlaces).toEqual({

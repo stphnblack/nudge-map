@@ -12,6 +12,7 @@ test("determineOptionValues()", () => {
     state: "n/a",
     encoded: "",
     coord: [0, 0] as [number, number],
+    consumer_base: 0,
   };
   const input: RawCoreEntry[] = [
     {
