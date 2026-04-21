@@ -48,6 +48,7 @@ test("generateScorecard()", () => {
     coord: [0, 0],
     url: "https://my-site.org",
     type: "gov_facility",
+    consumer_base: 245132,
   };
 
   expect(

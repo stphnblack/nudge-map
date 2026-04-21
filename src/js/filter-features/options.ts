@@ -19,6 +19,8 @@ import optionValuesData from "../../../data/option-values.json" with { type: "js
 
 import { ALL_NUDGE_STATUS, ALL_NUDGE_TYPE, NudgeStatus } from "../model/types";
 
+import { initConsumerBaseSlider } from "./consumerBaseSlider";
+
 /** These option values change depending on which dataset is loaded.
  *
  * Note that some datasets may not actually use a particular option group, but
@@ -548,4 +550,6 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     legend: "Institution types",
     useTwoColumns: true,
   });
+
+  initConsumerBaseSlider(filterManager, optionsDiv);
 }

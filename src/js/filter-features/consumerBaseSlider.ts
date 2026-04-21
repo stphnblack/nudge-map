@@ -1,6 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-
 import {
   AccordionState,
   generateAccordion,
@@ -65,11 +62,11 @@ function generateSliders(
   controls.append(right);
 
   const accordionState = new Observable<AccordionState>(
-    `filter accordion population`,
+    `filter accordion consumer base`,
     {
       hidden: false,
       expanded: false,
-      title: "Population",
+      title: "Consumer Base",
       supplementalTitle: determineSupplementalTitle(
         initialPopulationSliderIndexes,
       ),
@@ -139,16 +136,16 @@ function updateSlidersUI(
   const leftLabel = POPULATION_INTERVALS[leftIndex][0];
   const rightLabel = POPULATION_INTERVALS[rightIndex][0];
   // eslint-disable-next-line no-param-reassign
-  sliders.label.innerHTML = `${leftLabel} - ${rightLabel} residents`;
+  sliders.label.innerHTML = `${leftLabel} - ${rightLabel} impacted`;
 }
 
-export function initPopulationSlider(
+export function initConsumerBaseSlider(
   filterManager: PlaceFilterManager,
   optionsContainer: HTMLDivElement,
 ): void {
-  const { populationSliderIndexes } = filterManager.getState();
+  const { consumerBaseSliderIndexes } = filterManager.getState();
   const [sliders, accordionStateObservable] = generateSliders(
-    populationSliderIndexes,
+    consumerBaseSliderIndexes,
     optionsContainer,
   );
 
@@ -156,13 +153,15 @@ export function initPopulationSlider(
   const maxIndex = POPULATION_MAX_INDEX.toString();
   sliders.left.setAttribute("max", maxIndex);
   sliders.right.setAttribute("max", maxIndex);
-  sliders.right.setAttribute("value", populationSliderIndexes[1].toString());
+  sliders.right.setAttribute("value", consumerBaseSliderIndexes[1].toString());
 
   // Add event listeners.
   const onChange = (): void => {
     const leftIndex = Math.floor(parseFloat(sliders.left.value));
     const rightIndex = Math.ceil(parseFloat(sliders.right.value));
-    filterManager.update({ populationSliderIndexes: [leftIndex, rightIndex] });
+    filterManager.update({
+      consumerBaseSliderIndexes: [leftIndex, rightIndex],
+    });
   };
   sliders.left.addEventListener("input", onChange);
   sliders.right.addEventListener("input", onChange);
@@ -172,7 +171,7 @@ export function initPopulationSlider(
   accordionStateObservable.subscribe(({ hidden }) => {
     if (!hidden && !optionsContainer.hidden) {
       updateSlidersUI(
-        filterManager.getState().populationSliderIndexes,
+        filterManager.getState().consumerBaseSliderIndexes,
         sliders,
       );
     }
@@ -184,7 +183,7 @@ export function initPopulationSlider(
     accordionStateObservable.setValue({
       ...accordionPriorState,
       supplementalTitle: determineSupplementalTitle(
-        state.populationSliderIndexes,
+        state.consumerBaseSliderIndexes,
       ),
     });
 
@@ -192,7 +191,7 @@ export function initPopulationSlider(
       !accordionStateObservable.getValue().hidden &&
       !optionsContainer.hidden
     ) {
-      updateSlidersUI(state.populationSliderIndexes, sliders);
+      updateSlidersUI(state.consumerBaseSliderIndexes, sliders);
     }
   });
 

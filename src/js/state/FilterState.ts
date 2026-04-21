@@ -21,7 +21,7 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100k", 100000],
   ["500k", 500000],
   ["1M", 1000000],
-  ["75M", 750000000],
+  ["10M", 10000000],
 ];
 
 export const ALL_NUDGE_TYPE_FILTER = ["any nudge", ...ALL_NUDGE_TYPE] as const;
@@ -46,8 +46,8 @@ export interface FilterState {
   includedNudges: Set<string>;
   country: Set<string>;
   year: Set<string>;
+  consumerBaseSliderIndexes: [number, number];
   // TODO: add orgCredit
-  // TODO: add impactSliderIndexes
 }
 
 interface PlaceMatchSearch {
@@ -177,7 +177,12 @@ export class PlaceFilterManager {
     const isPlaceType = filterState.placeType.has(place.type);
     if (!isPlaceType) return false;
 
-    return true;
+    const [sliderLeftIndex, sliderRightIndex] =
+      filterState.consumerBaseSliderIndexes;
+    const isConsumerBase =
+      place.consumer_base >= POPULATION_INTERVALS[sliderLeftIndex][1] &&
+      place.consumer_base <= POPULATION_INTERVALS[sliderRightIndex][1];
+    return isConsumerBase;
   }
 
   private matchesNudge(nudgeRecord: ProcessedNudge): boolean {
