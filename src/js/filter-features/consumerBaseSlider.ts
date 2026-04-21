@@ -62,11 +62,11 @@ function generateSliders(
   controls.append(right);
 
   const accordionState = new Observable<AccordionState>(
-    `filter accordion population`,
+    `filter accordion consumer base`,
     {
       hidden: false,
       expanded: false,
-      title: "Population",
+      title: "Consumer Base",
       supplementalTitle: determineSupplementalTitle(
         initialPopulationSliderIndexes,
       ),
@@ -136,7 +136,7 @@ function updateSlidersUI(
   const leftLabel = POPULATION_INTERVALS[leftIndex][0];
   const rightLabel = POPULATION_INTERVALS[rightIndex][0];
   // eslint-disable-next-line no-param-reassign
-  sliders.label.innerHTML = `${leftLabel} - ${rightLabel} residents`;
+  sliders.label.innerHTML = `${leftLabel} - ${rightLabel} impacted`;
 }
 
 export function initConsumerBaseSlider(
