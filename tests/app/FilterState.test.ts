@@ -142,13 +142,13 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
     });
     manager.update({ country: defaultState().country });
 
-  manager.update({ consumerBaseSliderIndexes: [0, 1] });
+    manager.update({ consumerBaseSliderIndexes: [0, 1] });
     expect(manager.matchedPlaces).toEqual({
       "Place 2": expectedPlace2Match,
     });
     manager.update({
       consumerBaseSliderIndexes: defaultState().consumerBaseSliderIndexes,
-    }); 
+    });
 
     manager.update({ placeType: new Set(["transit_station"]) });
     expect(manager.matchedPlaces).toEqual({
