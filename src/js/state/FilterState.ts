@@ -21,7 +21,7 @@ export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100k", 100000],
   ["500k", 500000],
   ["1M", 1000000],
-  ["75M", 750000000],
+  ["10M", 10000000],
 ];
 
 export const ALL_NUDGE_TYPE_FILTER = ["any nudge", ...ALL_NUDGE_TYPE] as const;
