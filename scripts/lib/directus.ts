@@ -1,6 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-
 /* eslint-disable no-use-before-define */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-console */
@@ -25,12 +22,12 @@ import {
 } from "@directus/sdk";
 
 import {
-  LandUsePolicyType,
+  NudgeType,
   PlaceType,
-  ReformStatus,
+  NudgeStatus,
 } from "../../src/js/model/types.js";
 
-export const CITATIONS_FILES_FOLDER = "f085de08-b747-4251-973d-1752ccc29649";
+export const CITATIONS_FILES_FOLDER = "ADD_ID_HERE"; // TODO: Add the ID of the folder in Directus where citation files are stored
 
 // ------------------------------------------------------------------------------
 // Generic types
@@ -44,15 +41,19 @@ interface Metadata {
   date_updated: "datetime";
 }
 
-type PolicyRecord = {
-  place: number;
+type NudgeRecord = {
+  institution: number;
+  type: NudgeType;
+  status: NudgeStatus;
+  date: string | null;
+  archived: boolean;
   last_verified_at: string | null;
-  status: ReformStatus;
   summary: string;
   reporter: string | null;
-  reform_date: string | null;
+  org_credit: string | null;
+  org_credit_expanded: string | null;
+  notes: string | null;
   citations: number[];
-  archived: boolean;
 } & Metadata;
 
 interface Coordinates {
@@ -65,29 +66,26 @@ interface Coordinates {
 // ------------------------------------------------------------------------------
 
 export interface Schema {
-  places: Place[];
+  institutions: Institution[];
   citations: Citation[];
-  land_use: LandUseRecord[];
-  benefit_districts: BenefitDistrict[];
+  nudges: Nudge[];
   citations_files: CitationsFileJunction[];
-  land_use_citations: LandUseCitationJunction[];
-  benefit_districts_citations: BenefitDistrictCitationJunction[];
+  nudge_citations: NudgeCitationJunction[];
 }
 
-export type Place = {
-  name: string;
-  state: string | null;
-  country_code: string;
+export type Institution = {
   type: PlaceType;
-  population: number;
-  complete_minimums_repeal: boolean;
+  name: string;
+  street: string | null;
+  city: string | null;
+  region_state: string | null;
+  postal_code: string | null;
+  country_code: string;
   coordinates: Coordinates | null;
+  consumer_base: number;  
 } & Metadata;
 
-type CitationType = "city code" | "media report" | "other";
-
 export type Citation = {
-  type: CitationType;
   source_description: string;
   notes: string | null;
   url: string | null;
@@ -95,30 +93,16 @@ export type Citation = {
   attachments: number[];
 } & Metadata;
 
-export type LandUseRecord = {
-  type: LandUsePolicyType;
-  land_uses: string[];
-  reform_scope: string[];
-  requirements: string[];
-} & PolicyRecord;
-
-export type BenefitDistrict = PolicyRecord;
-
+export type Nudge = NudgeRecord;
 export interface CitationsFileJunction {
   id: number;
   citations_id: number;
   directus_files_id: string;
 }
 
-export interface LandUseCitationJunction {
+export interface NudgeCitationJunction {
   id: number;
-  policy_records_id: number;
-  citations_id: number;
-}
-
-export interface BenefitDistrictCitationJunction {
-  id: number;
-  benefit_districts_id: number;
+  nudge_id: number;
   citations_id: number;
 }
 
@@ -137,7 +121,7 @@ export async function initDirectus(): Promise<DirectusClient> {
   if (!password) throw new Error("Must set the env var DIRECTUS_PASSWORD");
   delete process.env.DIRECTUS_PASSWORD;
 
-  const client = createDirectus("https://mandates-map.directus.app")
+  const client = createDirectus("https://plant-based-nudge-map.directus.app")
     .with(rest())
     .with(authentication());
   await client.login(email, password);
