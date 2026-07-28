@@ -88,6 +88,7 @@ async function readPlacesAndEnsureCoordinates(
         record.street,
         record.city,
         record.state,
+        record.postal_code,
         record.country_code,
         geocoder,
       );
