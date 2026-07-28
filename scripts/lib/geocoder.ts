@@ -14,6 +14,7 @@ export function initGeocoder(): NodeGeocoder.Geocoder {
   return NodeGeocoder({ provider: "openstreetmap", fetch: customFetch });
 }
 
+// TODO: Update with additional address data
 export async function getLongLat(
   placeName: string,
   state: string | null,

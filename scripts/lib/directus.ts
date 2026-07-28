@@ -50,8 +50,8 @@ type NudgeRecord = {
   last_verified_at: string | null;
   summary: string;
   reporter: string | null;
-  org_credit: string | null;
-  org_credit_expanded: string | null;
+  org_credit: string[] | null;
+  org_credit_expanded: string[] | null;
   notes: string | null;
   citations: number[];
 } & Metadata;
@@ -78,7 +78,7 @@ export type Institution = {
   name: string;
   street: string | null;
   city: string | null;
-  region_state: string | null;
+  state: string | null;
   postal_code: string | null;
   country_code: string;
   coordinates: Coordinates | null;
