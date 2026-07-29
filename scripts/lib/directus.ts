@@ -70,7 +70,7 @@ export interface Schema {
   citations: Citation[];
   nudges: Nudge[];
   citations_files: CitationsFileJunction[];
-  nudge_citations: NudgeCitationJunction[];
+  nudges_citations: NudgeCitationJunction[];
 }
 
 export type Institution = {
