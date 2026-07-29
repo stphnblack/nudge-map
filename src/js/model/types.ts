@@ -55,7 +55,7 @@ export interface RawPlace {
   // Full name of the place.
   name: string;
   street: string | null;
-  city: string | null;
+  city: string;
   postal_code: string | null;
   // State or province abbreviation. Not set for countries.
   state: string | null;

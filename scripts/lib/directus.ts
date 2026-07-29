@@ -77,7 +77,7 @@ export type Institution = {
   type: PlaceType;
   name: string;
   street: string | null;
-  city: string | null;
+  city: string;
   state: string | null;
   postal_code: string | null;
   country_code: string;

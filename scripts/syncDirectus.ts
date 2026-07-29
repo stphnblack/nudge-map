@@ -85,6 +85,7 @@ async function readPlacesAndEnsureCoordinates(
     if (!record.coordinates) {
       console.log(`Getting coordinates for ${stringId}`);
       const longLat = await getLongLat(
+        record.name,
         record.street,
         record.city,
         record.state,
