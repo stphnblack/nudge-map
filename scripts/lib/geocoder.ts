@@ -4,6 +4,8 @@
 import nodeFetch, { RequestInfo, RequestInit, Response } from "node-fetch";
 import NodeGeocoder from "node-geocoder";
 
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
 export async function fetch(
   url: RequestInfo,
   options: RequestInit = {},
@@ -59,6 +61,7 @@ export async function getLongLat(
   for (const getLocationString of locationMethods) {
     const locationString = getLocationString();
     const geocodeResults = await geocoder.geocode(locationString);
+    await sleep(1100);
     if (geocodeResults.length > 0) {
       const lat = geocodeResults[0].latitude;
       const long = geocodeResults[0].longitude;
