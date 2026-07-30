@@ -27,7 +27,7 @@ import {
   NudgeStatus,
 } from "../../src/js/model/types.js";
 
-export const CITATIONS_FILES_FOLDER = "ADD_ID_HERE"; // TODO: Add the ID of the folder in Directus where citation files are stored
+export const CITATIONS_FILES_FOLDER = "1de1a366-4c32-40f7-9dbe-8d4293c359c2";
 
 // ------------------------------------------------------------------------------
 // Generic types
