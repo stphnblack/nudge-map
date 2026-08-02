@@ -50,8 +50,8 @@ type NudgeRecord = {
   last_verified_at: string | null;
   summary: string;
   reporter: string | null;
-  org_credit: string[] | null;
-  org_credit_expanded: string[] | null;
+  org_credit: string | null;
+  org_credit_expanded: string | null;
   notes: string | null;
   citations: number[];
 } & Metadata;

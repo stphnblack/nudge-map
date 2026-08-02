@@ -345,6 +345,12 @@ function createCitations(
   });
 }
 
+function parseOrgCredit(raw: string | null | undefined): string[] | undefined {
+  if (!raw) return undefined;
+  const orgs = raw.split(",").map((org) => org.trim()).filter(Boolean);
+  return orgs.length > 0 ? orgs : undefined;
+}
+
 function combineData(
   priorEncodedPlaceIds: Partial<Record<PlaceStringId, string>>,
   places: Record<PlaceStringId, Partial<DirectusPlace>>,
@@ -385,6 +391,7 @@ function combineData(
 
         if (nudges[placeId]) {
           nudges[placeId].forEach((record) => {
+            console.log(`Type for ${placeId}:`, JSON.stringify(record.type));
             const [collection, numNudgeRecords] = {
               "plant-based default": [defaultNudge, numDefault] as const,
               "climate-friendly ratio": [ratio, numRatio] as const,
@@ -400,7 +407,7 @@ function combineData(
               status: record.status!,
               date: record.date! ?? undefined,
               reporter: record.reporter!,
-              org_credit: record.org_credit! ?? undefined,
+              org_credit: parseOrgCredit(record.org_credit),
               org_credit_expanded: record.org_credit_expanded! ?? undefined,
               citations: createCitations(
                 record.citations!,
