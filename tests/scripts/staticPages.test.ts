@@ -9,7 +9,10 @@ test.describe("generateSEO", () => {
   const BASE_ENTRY: ProcessedCoreEntry = {
     place: {
       name: "Tucson",
+      street: "",
+      city: "Tucson",
       state: "",
+      postal_code: "",
       country: "",
       type: "Hotel",
       coord: [0, 0],

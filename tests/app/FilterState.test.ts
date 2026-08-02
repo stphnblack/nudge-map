@@ -32,6 +32,9 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
       "Place 1": {
         place: {
           name: "Place 1",
+          street: "",
+          city: "Chicago",
+          postal_code: "",
           state: "",
           country: "United States",
           encoded: "",
@@ -51,6 +54,9 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
       "Place 2": {
         place: {
           name: "Place 2",
+          street: "",
+          city: "Brasilia",
+          postal_code: "",
           state: "",
           country: "Brazil",
           encoded: "",

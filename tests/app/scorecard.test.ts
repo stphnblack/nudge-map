@@ -49,6 +49,9 @@ test("scorecard pops up and closes", async ({ page }) => {
 test("generateScorecard()", () => {
   const place: ProcessedPlace = {
     name: "My City",
+    street: "123 Main St",
+    city: "My City",
+    postal_code: "12345",
     state: "Arizona",
     country: "United States",
     encoded: "",

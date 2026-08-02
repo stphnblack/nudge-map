@@ -13,6 +13,9 @@ import {
 test("determineOptionValues()", () => {
   const commonPlace = {
     name: "n/a",
+    street: "n/a",
+    city: "n/a",
+    postal_code: "n/a",
     state: "n/a",
     encoded: "",
     coord: [0, 0] as [number, number],
