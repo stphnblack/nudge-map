@@ -4,7 +4,10 @@
 import nodeFetch, { RequestInfo, RequestInit, Response } from "node-fetch";
 import NodeGeocoder from "node-geocoder";
 
-const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+const sleep = (ms: number) =>
+  new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
 
 export async function fetch(
   url: RequestInfo,
@@ -38,16 +41,21 @@ export async function getLongLat(
 
   if (placeName && street) {
     locationMethods.push(
-      () => `${placeName}, ${streetQuery}${city}, ${stateQuery}${postalQuery}${countryCode}`,
+      () =>
+        `${placeName}, ${streetQuery}${city}, ${stateQuery}${postalQuery}${countryCode}`,
     );
   }
 
   if (street) {
-    locationMethods.push(() => `${streetQuery}${city}, ${stateQuery}${postalQuery}${countryCode}`);
+    locationMethods.push(
+      () => `${streetQuery}${city}, ${stateQuery}${postalQuery}${countryCode}`,
+    );
   }
 
   if (placeName) {
-    locationMethods.push(() => `${placeName}, ${city}, ${stateQuery}${countryCode}`);
+    locationMethods.push(
+      () => `${placeName}, ${city}, ${stateQuery}${countryCode}`,
+    );
   }
 
   locationMethods.push(() => `${city}, ${stateQuery}${countryCode}`);

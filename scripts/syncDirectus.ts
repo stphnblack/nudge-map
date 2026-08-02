@@ -146,7 +146,10 @@ async function readNudges(
       ],
     },
   );
-  return groupBy(records, (record) => placeDirectusIdToStringId[record.institution]);
+  return groupBy(
+    records,
+    (record) => placeDirectusIdToStringId[record.institution],
+  );
 }
 
 async function readCitations(
@@ -288,7 +291,7 @@ export function createAttachments(
       "subtle substitution": "sub",
       "tasty titles & descriptions": "titles",
       "prime placement": "placement",
-      "other": "other",
+      other: "other",
     }[fileNameArgs.nudgeType];
     const recordIdx =
       fileNameArgs.nudgeRecordIdx === null
@@ -347,7 +350,10 @@ function createCitations(
 
 function parseOrgCredit(raw: string | null | undefined): string[] | undefined {
   if (!raw) return undefined;
-  const orgs = raw.split(",").map((org) => org.trim()).filter(Boolean);
+  const orgs = raw
+    .split(",")
+    .map((org) => org.trim())
+    .filter(Boolean);
   return orgs.length > 0 ? orgs : undefined;
 }
 
@@ -378,9 +384,14 @@ function combineData(
           });
         }
         const hasDistinctNudgeTypes =
-          [numDefault, numRatio, numSub, numTitles, numPlacement, numOther].filter(
-            Boolean,
-          ).length > 1;
+          [
+            numDefault,
+            numRatio,
+            numSub,
+            numTitles,
+            numPlacement,
+            numOther,
+          ].filter(Boolean).length > 1;
 
         const defaultNudge: Array<RawCompleteNudge> = [];
         const ratio: Array<RawCompleteNudge> = [];
@@ -398,7 +409,7 @@ function combineData(
               "subtle substitution": [sub, numSub] as const,
               "tasty titles & descriptions": [titles, numTitles] as const,
               "prime placement": [placement, numPlacement] as const,
-              "other": [other, numOther] as const,
+              other: [other, numOther] as const,
             }[record.type!];
             const nudgeRecordIdx =
               numNudgeRecords > 1 ? collection.length : null;
@@ -440,11 +451,11 @@ function combineData(
             coord: place.coordinates!.coordinates,
           },
           ...(defaultNudge.length && { default: defaultNudge }),
-          ...(ratio.length && { ratio: ratio }),
-          ...(sub.length && { sub: sub }),
-          ...(titles.length && { titles: titles }),
-          ...(placement.length && { placement: placement }),
-          ...(other.length && { other: other }),
+          ...(ratio.length && { ratio }),
+          ...(sub.length && { sub }),
+          ...(titles.length && { titles }),
+          ...(placement.length && { placement }),
+          ...(other.length && { other }),
         };
         return [placeId, result];
       })
@@ -555,16 +566,13 @@ async function main(): Promise<void> {
   const priorEncodedPlaceIds = await readPriorEncodedPlaceIds();
 
   const places = await readPlacesAndEnsureCoordinates(client, geocoder);
-  const nudges = await readNudges(
-    client,
-    places.directusIdToStringId,
-  );
+  const nudges = await readNudges(client, places.directusIdToStringId);
   const citations = await readCitations(client);
   const citationsByNudgeJunctionId = await readCitationsByJunctionId(
-  client,
-  citations,
-  "nudges_citations",
-);
+    client,
+    citations,
+    "nudges_citations",
+  );
   const filesByAttachmentJunctionId =
     await readFilesByAttachmentJunctionId(client);
 

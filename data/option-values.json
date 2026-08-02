@@ -61,24 +61,9 @@
       "University Event",
       "Workplace Cafeteria "
     ],
-    "country": [
-      "United States",
-      "Canada",
-      "United Kingdom"
-    ],
-    "year": [
-      "unknown",
-      "2025",
-      "2024",
-      "2023",
-      "2022"
-    ],
-    "orgCredit": [
-      "BFF",
-      "GBD",
-      "Rachel Atcheson",
-      "Unknown"
-    ]
+    "country": ["United States", "Canada", "United Kingdom"],
+    "year": ["unknown", "2025", "2024", "2023", "2022"],
+    "orgCredit": ["BFF", "GBD", "Rachel Atcheson", "Unknown"]
   },
   "anyPledged": {
     "placeType": [
@@ -132,37 +117,14 @@
       "University Dining Hall",
       "University Event"
     ],
-    "country": [
-      "United States",
-      "Canada",
-      "United Kingdom"
-    ],
-    "year": [
-      "unknown",
-      "2025",
-      "2024",
-      "2023",
-      "2022"
-    ],
-    "orgCredit": [
-      "BFF",
-      "GBD",
-      "Rachel Atcheson",
-      "Unknown"
-    ]
+    "country": ["United States", "Canada", "United Kingdom"],
+    "year": ["unknown", "2025", "2024", "2023", "2022"],
+    "orgCredit": ["BFF", "GBD", "Rachel Atcheson", "Unknown"]
   },
   "defaultPledged": {
-    "placeType": [
-      "City/Government"
-    ],
-    "country": [
-      "United States"
-    ],
-    "year": [
-      "2025",
-      "2024",
-      "2023"
-    ],
+    "placeType": ["City/Government"],
+    "country": ["United States"],
+    "year": ["2025", "2024", "2023"],
     "orgCredit": [
       "BFF",
       "Civic Plate (a project of @MercyForAnimals)",
@@ -177,16 +139,9 @@
       "University Dining Hall",
       "Workplace Cafeteria "
     ],
-    "country": [
-      "United States"
-    ],
-    "year": [
-      "unknown",
-      "2025"
-    ],
-    "orgCredit": [
-      "Unknown"
-    ]
+    "country": ["United States"],
+    "year": ["unknown", "2025"],
+    "orgCredit": ["Unknown"]
   },
   "ratioPledged": {
     "placeType": [
@@ -195,22 +150,8 @@
       "Prison",
       "University Dining Hall"
     ],
-    "country": [
-      "United States",
-      "Canada",
-      "Finland",
-      "Netherlands",
-      "Spain"
-    ],
-    "year": [
-      "2027",
-      "2026",
-      "2025",
-      "2024",
-      "2022",
-      "2021",
-      "2020"
-    ],
+    "country": ["United States", "Canada", "Finland", "Netherlands", "Spain"],
+    "year": ["2027", "2026", "2025", "2024", "2022", "2021", "2020"],
     "orgCredit": [
       "Earthsave Canada",
       "FF",
@@ -222,18 +163,10 @@
     ]
   },
   "subAdopted": {
-    "placeType": [
-      "University Dining Hall"
-    ],
-    "country": [
-      "Canada"
-    ],
-    "year": [
-      "2024"
-    ],
-    "orgCredit": [
-      "Unknown"
-    ]
+    "placeType": ["University Dining Hall"],
+    "country": ["Canada"],
+    "year": ["2024"],
+    "orgCredit": ["Unknown"]
   },
   "subPledged": {
     "placeType": [],
@@ -254,32 +187,16 @@
     "orgCredit": []
   },
   "placementAdopted": {
-    "placeType": [
-      "Workplace Cafeteria "
-    ],
-    "country": [
-      "United States"
-    ],
-    "year": [
-      "unknown"
-    ],
-    "orgCredit": [
-      "Unknown"
-    ]
+    "placeType": ["Workplace Cafeteria "],
+    "country": ["United States"],
+    "year": ["unknown"],
+    "orgCredit": ["Unknown"]
   },
   "placementPledged": {
-    "placeType": [
-      "City/Government"
-    ],
-    "country": [
-      "Canada"
-    ],
-    "year": [
-      "2024"
-    ],
-    "orgCredit": [
-      "Plant-Based Cities Movement"
-    ]
+    "placeType": ["City/Government"],
+    "country": ["Canada"],
+    "year": ["2024"],
+    "orgCredit": ["Plant-Based Cities Movement"]
   },
   "otherAdopted": {
     "placeType": [],
@@ -288,20 +205,9 @@
     "orgCredit": []
   },
   "otherPledged": {
-    "placeType": [
-      "City/Government"
-    ],
-    "country": [
-      "United States",
-      "Australia",
-      "Canada",
-      "Netherlands"
-    ],
-    "year": [
-      "2024",
-      "2021",
-      "2019"
-    ],
+    "placeType": ["City/Government"],
+    "country": ["United States", "Australia", "Canada", "Netherlands"],
+    "year": ["2024", "2021", "2019"],
     "orgCredit": [
       "BFF",
       "GBD",
