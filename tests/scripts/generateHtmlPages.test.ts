@@ -18,8 +18,8 @@ test("generate html page", async ({}, testInfo) => {
     expect(content).toMatchSnapshot(`${snapshotName}.html`);
   };
 
-  await assertPlace("north_vancouver_district");
-  await assertPlace("california_state_los_angeles");
-  await assertPlace("university_of_north_texas");
-  await assertPlace("hennepin_county_minnesota");
+  await assertPlace("north-vancouver-district-bc-canada");
+  await assertPlace("california-state-los-angeles-ca-united-states");
+  await assertPlace("university-of-north-texas-tx-united-states");
+  await assertPlace("hennepin-county-minnesota-mn-united-states");
 });
