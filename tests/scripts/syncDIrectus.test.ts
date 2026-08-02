@@ -18,9 +18,9 @@ test("createAttachments()", () => {
 
   const simplest = createAttachments(filesByAttachmentJunctionId, [1, 4], {
     placeId: "Chicago, IL",
-    policyType: "add parking maximums",
-    hasDistinctPolicyTypes: false,
-    policyRecordIdx: null,
+    nudgeType: "plant-based default",
+    hasDistinctNudgeTypes: false,
+    nudgeRecordIdx: null,
     citationIdx: null,
   });
   expect(simplest).toEqual({
@@ -33,9 +33,9 @@ test("createAttachments()", () => {
     [1, 4],
     {
       placeId: "Chicago, IL",
-      policyType: "add parking maximums",
-      hasDistinctPolicyTypes: false,
-      policyRecordIdx: null,
+      nudgeType: "plant-based default",
+      hasDistinctNudgeTypes: false,
+      nudgeRecordIdx: null,
       citationIdx: 1,
     },
   );
@@ -53,9 +53,9 @@ test("createAttachments()", () => {
     [2, 3, 5, 6],
     {
       placeId: "Chicago, IL",
-      policyType: "add parking maximums",
-      hasDistinctPolicyTypes: false,
-      policyRecordIdx: null,
+      nudgeType: "plant-based default",
+      hasDistinctNudgeTypes: false,
+      nudgeRecordIdx: null,
       citationIdx: null,
     },
   );
@@ -70,43 +70,43 @@ test("createAttachments()", () => {
     ],
   });
 
-  const distinctPolicyTypes = createAttachments(
+  const distinctNudgeTypes = createAttachments(
     filesByAttachmentJunctionId,
     [1, 4],
     {
       placeId: "Chicago, IL",
-      policyType: "add parking maximums",
-      hasDistinctPolicyTypes: true,
-      policyRecordIdx: null,
+      nudgeType: "plant-based default",
+      hasDistinctNudgeTypes: true,
+      nudgeRecordIdx: null,
       citationIdx: null,
     },
   );
-  expect(distinctPolicyTypes).toEqual({
+  expect(distinctNudgeTypes).toEqual({
     attachments: [
-      { fileName: "chicago-il-add-max-attachment.pdf", directusId: "a" },
+      { fileName: "chicago-il-default-attachment.pdf", directusId: "a" },
     ],
     screenshots: [
-      { fileName: "chicago-il-add-max-screenshot.png", directusId: "d" },
+      { fileName: "chicago-il-default-screenshot.png", directusId: "d" },
     ],
   });
 
-  const multiplePolicyRecords = createAttachments(
+  const multipleNudgeRecords = createAttachments(
     filesByAttachmentJunctionId,
     [1, 4],
     {
       placeId: "Chicago, IL",
-      policyType: "reduce parking minimums",
-      hasDistinctPolicyTypes: false,
-      policyRecordIdx: 1,
+      nudgeType: "climate-friendly ratio",
+      hasDistinctNudgeTypes: false,
+      nudgeRecordIdx: 1,
       citationIdx: null,
     },
   );
-  expect(multiplePolicyRecords).toEqual({
+  expect(multipleNudgeRecords).toEqual({
     attachments: [
-      { fileName: "chicago-il-reduce-min2-attachment.pdf", directusId: "a" },
+      { fileName: "chicago-il-ratio2-attachment.pdf", directusId: "a" },
     ],
     screenshots: [
-      { fileName: "chicago-il-reduce-min2-screenshot.png", directusId: "d" },
+      { fileName: "chicago-il-ratio2-screenshot.png", directusId: "d" },
     ],
   });
 
@@ -115,30 +115,30 @@ test("createAttachments()", () => {
     [2, 3, 5, 6],
     {
       placeId: "Chicago, IL",
-      policyType: "remove parking minimums",
-      hasDistinctPolicyTypes: true,
-      policyRecordIdx: 1,
+      nudgeType: "climate-friendly ratio",
+      hasDistinctNudgeTypes: true,
+      nudgeRecordIdx: 1,
       citationIdx: 0,
     },
   );
   expect(mostComplex).toEqual({
     attachments: [
       {
-        fileName: "chicago-il-remove-min2-citation1-attachment1.pdf",
+        fileName: "chicago-il-ratio2-citation1-attachment1.pdf",
         directusId: "b",
       },
       {
-        fileName: "chicago-il-remove-min2-citation1-attachment2.docx",
+        fileName: "chicago-il-ratio2-citation1-attachment2.docx",
         directusId: "c",
       },
     ],
     screenshots: [
       {
-        fileName: "chicago-il-remove-min2-citation1-screenshot1.png",
+        fileName: "chicago-il-ratio2-citation1-screenshot1.png",
         directusId: "e",
       },
       {
-        fileName: "chicago-il-remove-min2-citation1-screenshot2.jpg",
+        fileName: "chicago-il-ratio2-citation1-screenshot2.jpg",
         directusId: "f",
       },
     ],
