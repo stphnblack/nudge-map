@@ -1,23 +1,62 @@
 {
-  "North Vancouver District": {
+  "Amsterdam, Netherlands, Netherlands": {
     "ratio": [
       {
-        "summary": "North Vancouver District Council passed a commitment to prioritize plant-based municipial food procurement.",
-        "link": "North Vancouver District to prioritize plant-based foods",
-        "notes": "Official record of passing: https://www.bing.com/ck/a?!&&p=94f058ee545ed2b78ff393d0d563e81043819f1f4717ab627bc48d42eb0d9b4fJmltdHM9MTc1NjMzOTIwMA&ptn=3&ver=2&hsh=4&fclid=1d86bc03-2669-6c2d-2896-aa3827d06df6&psq=District+of+North+Vancouver+plant-based+meal+policy&u=a1aHR0cHM6Ly9hcHAuZG52Lm9yZy9PcGVuRG9jdW1lbnQvRGVmYXVsdC5hc3B4P2RvY051bT02MzEwNTI3",
+        "summary": "Amsterdam City Council serves plant-based food by default at all council events. The city also aims to encourage residents to adopt a diet that is at least 60% plant-based by 2030.",
+        "reporter": "Björn Ólafsson",
         "citations": [
           {
-            "id": 11056,
-            "description": "City Press Release",
-            "url": "https://www.toronto.ca/news/city-council-approves-changes-to-regulations-for-car-and-bike-parking-spaces-in-new-developments/",
+            "id": 75,
+            "description": "Vegconomist article",
+            "url": "https://vegconomist.com/politics-law/amsterdam-passes-new-motion-building-endorsement-plant-based-treaty/",
             "notes": null,
             "attachments": [],
             "screenshots": []
           },
           {
-            "id": 11057,
-            "description": "Article about the nudge",
-            "url": "https://storeys.com/toronto-removes-parking-minimums-residential-developments/",
+            "id": 76,
+            "description": "DefaultVeg Medium article",
+            "url": "https://defaultveg.medium.com/in-europe-everyday-is-veggiedag-5532fc660f85",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 77,
+            "description": "I amsterdam article",
+            "url": "https://www.iamsterdam.com/en/business/amsterdam-first-eu-capital-to-embrace-the-plant-based-treaty",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ],
+    "other": [
+      {
+        "summary": "Amsterdam City Council serves plant-based food by default at all council events. The city also aims to encourage residents to adopt a diet that is at least 60% plant-based by 2030.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 75,
+            "description": "Vegconomist article",
+            "url": "https://vegconomist.com/politics-law/amsterdam-passes-new-motion-building-endorsement-plant-based-treaty/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 76,
+            "description": "DefaultVeg Medium article",
+            "url": "https://defaultveg.medium.com/in-europe-everyday-is-veggiedag-5532fc660f85",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 77,
+            "description": "I amsterdam article",
+            "url": "https://www.iamsterdam.com/en/business/amsterdam-first-eu-capital-to-embrace-the-plant-based-treaty",
             "notes": null,
             "attachments": [],
             "screenshots": []
@@ -26,18 +65,17 @@
       }
     ]
   },
-  "California State Los Angeles": {
+  "Austin Office of Sustainability, TX, United States": {
     "default": [
       {
-        "summary": "At California State Los Angeles, the nutritional science department's graduation event menu was plant-based by default.",
-        "link": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
-        "notes": "Through months of conversations, Susan Oseguera successfully advocated for the Department of Nutrition and Food Science to adopt a plant-based default menu for their annual Honors Graduation Celebration.\n\nWhile animal product options remained available, plant-based dishes took center stage. Susan’s pitch emphasized inclusivity across dietary needs, helping create allergen information cards to ensure all students can dine safely and confidently.",
+        "summary": "Austin’s Office of Sustainability committed to offering plant-based meals by default.",
+        "reporter": "Björn Ólafsson",
         "citations": [
           {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
+            "id": 63,
+            "description": "DefaultVeg Medium article",
+            "url": "https://defaultveg.medium.com/city-of-austin-raises-redesigned-texas-flag-celebrating-plant-based-food-commitment-c094bc6800bd",
+            "notes": null,
             "attachments": [],
             "screenshots": []
           }
@@ -45,217 +83,33 @@
       }
     ]
   },
-  "University of North Texas": {
-    "ratio": [
-      {
-        "summary": "UNT signed the Forward Food Pledge, pledging to increase its plant-based meal offerings to 60% by 2027.",
-        "link": "https://vegoutmag.com/news/university-of-north-texas-plant-based-dining/\nhttps://vegconomist.com/society/university-of-north-texas-commits-to-60-plant-based-dining-by-2027/",
-        "notes": "UNT was previously recognized for its efforts to increase the availability of plant-based meals in the Humane World for Animal's College and University Protein Sustainability Scorecard. UNT ranked second in the nation behind the University of Colorado Boulder and just above the University of Texas Austin.",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "City of Sammamish": {
-    "default": [
-      {
-        "summary": "Sammamish City Council serves plant-based food by default at city events, specifically those where the City serves food to the public.",
-        "link": "https://sammamishindependent.com/2025/02/council-mandates-vegan-catering-for-city-provided-food/",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "University of Michigan (MDining)": {
-    "default": [
-      {
-        "summary": "University of Michigan offers oat milk by default in its dining services. MDining also has an ongoing commitment to a 55% plant-based menu because of the associated emissions reductions and cost savings.",
-        "link": "https://www.michigandaily.com/news/campus-life/at-mdining-regular-milk-now-means-oat-milk-unless-otherwise-stated/ \n\nhttps://nacas.org/hubfs/MDining_Plant-Rich%20Champion%20Story_03182026.pdf?hsLang=en",
-        "notes": "University of Michigan's plant-forward menu was driven by its students, who work closely with dining staff, conduct research studies on the emissions reductions of plant-based menus, and give feedback on new menu items.",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "University of Northern Colorado": {
-    "ratio": [
-      {
-        "summary": "University of North Colorado expanded plant-based offerings in dining in spring 2025.",
-        "link": "https://patch.com/colorado/across-co/university-northern-colorado-welcomes-spring-2025",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "NYC Health + Hospitals": {
-    "default": [
-      {
-        "summary": "NYC Health + Hospitals serves plant-based meals by default to its patients. It has served over 2 million plant-based meals from March 2022 to Feburary 2025.",
-        "link": "Mayor Adams, NYC H+H CEO Katz Announce Successful Rollout and Expansion of Plant-Based Meals as Default Option for Patients in NYC Public Hospitals - NYC Mayor's Office\nhttps://www.nyc.gov/assets/foodpolicy/downloads/pdf/NYCHospitals_PlantBasedDefaults_2025.pdf",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "University College London (Students' Union - four cafes)": {
-    "default": [
-      {
-        "summary": "All four cafes in Students' Union at University College London offer oat milk by default.",
-        "link": "https://studentsunionucl.org/articles/why-is-oat-milk-our-default",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "University of California Riverside": {
-    "ratio": [
-      {
-        "summary": "University of California Riverside signed the Forward Food Pledge, pledging to increase its plant-based meal offerings to 50% by 2027.",
-        "link": "University of California Riverside Sets 50% Plant-Based Meal Target by 2027 - vegconomist - the vegan business magazine",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "Western Oregon University": {
-    "ratio": [
-      {
-        "summary": "Western Oregon University signed the Forward Food Pledge, pledging to increase its plant-based meal offerings to 50% by 2027.",
-        "link": "Western Oregon University Commits to 50% Plant-Based Meals by 2027 - vegconomist - the vegan business magazine",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "Hennepin County, Minnesota": {
-    "default": [
-      {
-        "summary": "Hennepin County adopted a plant-based by default catering policy for county-sponsored events and meetings.",
-        "link": "Instagram",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "Stanford University": {
-    "ratio": [
-      {
-        "summary": "At Stanford University, 50% of all menu items offered at dining halls are entirely plant-based. Mixed meat dishes are also served with a 30% vegetable blend.",
-        "link": "All You Can Eat: Stanford dining pushes for plant-based",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "Merri-bek City Council (Melbourne)": {
-    "other": [
-      {
-        "summary": "Moreland Council adopted a policy of offering entirely plant-based food options at government events on Mondays.",
-        "link": "Moreland Council’s eat less meat climate debate #MeatlessMonday | Climate Action Merribek: people in Brunswick, Coburg, Fawkner and Glenroy wanting action on climate change",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "Barcelona": {
+  "Barcelona, Spain": {
     "ratio": [
       {
         "summary": "As part of its 2020 Climate Emergency Declaration, Barcelona is reducing consumption of animal proteins at public schools. Now, the presence of vegetable protein has increased on school menus, while red meat is served once a month.",
-        "link": "https://www.barcelona.cat/infobarcelona/en/tema/city-council/no-pork-consumption-prohibition-by-the-city-council-in-nursery-schools_1607511.html\n\nhttps://www.uoc.edu/en/news/2025/replace-animal-protein-to-reduce-environmental-impact-in-school-diets \n\nhttps://www.barcelona.cat/barcelona-pel-clima/sites/default/files/Climate_Emergency_Declaration_en.pdf",
+        "reporter": "Björn Ólafsson",
         "citations": [
           {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
+            "id": 72,
+            "description": "City of Barcelona official website",
+            "url": "https://www.barcelona.cat/infobarcelona/en/tema/city-council/no-pork-consumption-prohibition-by-the-city-council-in-nursery-schools_1607511.html",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 73,
+            "description": "Universitat Oberta de Catalunya (UOC) news article",
+            "url": "https://www.uoc.edu/en/news/2025/replace-animal-protein-to-reduce-environmental-impact-in-school-diets",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 74,
+            "description": "City of Barcelona Climate Emergency Declaration (PDF)",
+            "url": "https://www.barcelona.cat/barcelona-pel-clima/sites/default/files/Climate_Emergency_Declaration_en.pdf",
+            "notes": null,
             "attachments": [],
             "screenshots": []
           }
@@ -263,142 +117,38 @@
       }
     ]
   },
-  "Amsterdam, Netherlands": {
-    "ratio": [
-      {
-        "summary": "Amsterdam City Council serves plant-based food by default at all council events. The city also aims to encourage residents to adopt a diet that is at least 60% plant-based by 2030.",
-        "link": "https://vegconomist.com/politics-law/amsterdam-passes-new-motion-building-endorsement-plant-based-treaty/\n\nhttps://defaultveg.medium.com/in-europe-everyday-is-veggiedag-5532fc660f85 \n\nhttps://www.iamsterdam.com/en/business/amsterdam-first-eu-capital-to-embrace-the-plant-based-treaty",
-        "notes": "In 2021, Amsterdam committed to increasing the proportion of plant-based food in its citizens’ diets to at least 50% by 2030 and 60% by 2040. Now, this goal has reportedly been brought forward, and the city aims to increase the share of plant-based protein in local diets to 60% by 2030.\n\nAdditionally, Amsterdam became the first EU capital city to endorse the Plant-Based Treaty in 2024.",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ],
-    "other": [
-      {
-        "summary": "Amsterdam City Council serves plant-based food by default at all council events. The city also aims to encourage residents to adopt a diet that is at least 60% plant-based by 2030.",
-        "link": "https://vegconomist.com/politics-law/amsterdam-passes-new-motion-building-endorsement-plant-based-treaty/\n\nhttps://defaultveg.medium.com/in-europe-everyday-is-veggiedag-5532fc660f85 \n\nhttps://www.iamsterdam.com/en/business/amsterdam-first-eu-capital-to-embrace-the-plant-based-treaty",
-        "notes": "In 2021, Amsterdam committed to increasing the proportion of plant-based food in its citizens’ diets to at least 50% by 2030 and 60% by 2040. Now, this goal has reportedly been brought forward, and the city aims to increase the share of plant-based protein in local diets to 60% by 2030.\n\nAdditionally, Amsterdam became the first EU capital city to endorse the Plant-Based Treaty in 2024.",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "West Hollywood, California": {
-    "default": [
-      {
-        "summary": "The City of West Hollywood serves plant-based food by default catering at all city-produced events and meetings.",
-        "link": "West Hollywood Announces ‘Groundbreaking’ Plant-Based Policy",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "Kingston, Ontario": {
-    "other": [
-      {
-        "summary": "In 2024, Kingston City Council passed a motion for the city to promote plant-based foods by prioritizing them in its procurement process and placing them in higher-profile locations at city events.",
-        "link": "Kingston adopts plant-based food policy | The Kingston Whig Standard",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ],
-    "placement": [
-      {
-        "summary": "In 2024, Kingston City Council passed a motion for the city to promote plant-based foods by prioritizing them in its procurement process and placing them in higher-profile locations at city events.",
-        "link": "Kingston adopts plant-based food policy | The Kingston Whig Standard",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "Helsinki, Finland": {
-    "ratio": [
-      {
-        "summary": "Helsinki declared itself a “Fair Trade city” in 2013 and has been using fair-trade-related criteria in its procurement. In March 2026, the City Council voted to halve its procurement of meat and dairy products by 2030 and replace it with plant-based food options in schools, hospitals and municipal institutions. There has already been some progress: since 2019, the amount of red meat served has already been cut by half. From 2029, meat dishes will be served only once or twice a week.",
-        "link": "Helsinki ditches meat and cow’s milk from the menu | Euractiv (not using bc no further proof)\n\nhttps://yle.fi/a/74-20213319 \n\nhttps://www.greenqueen.com.hk/helsinki-puloet-parempaa-meat-dairy-plant-based-food-policy-2030/",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "Brampton, Ontario": {
-    "ratio": [
-      {
-        "summary": "In August 2022, Brampton's City Council approved a motion for Brampton to transition 50% of city food purchases to plant-based options by re-evaluating its current procurement.",
-        "link": "https://pub-brampton.escribemeetings.com/Meeting.aspx?Id=692d53a9-cfcd-4e04-9258-111138df4985&Agenda=PostMinutes&lang=English",
-        "citations": [
-          {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "Berkeley, CA, USA": {
+  "Berkeley, CA, USA, CA, United States": {
     "ratio": [
       {
         "summary": "In July 2021, Berkeley's City Council adopted a goal to achieve a 50% decrease in animal-based food products served by the city by 2024.",
-        "link": "https://www.cityofberkeley.info/Clerk/City_Council/2021/03_Mar/Documents/2021-03-09_Item_19_Support_Vision_2025_for_Sustainable.aspx\n\nhttps://berkeleyca.gov/sites/default/files/documents/2021-07-27%20Item%2022%20Accelerating%20transition%20to%20Plant-Based%20Foods%20-%20Rev%20Hahn.pdf \n\nhttps://berkeleyca.gov/sites/default/files/documents/2021-07-27%20Item%2022%20Accelerating%20transition%20to%20Plant-Based%20Foods.pdf \n\nhttps://sentientmedia.org/how-one-small-city-in-california-is-going-plant-based/",
-        "notes": "*No public update since 2024",
+        "reporter": "Björn Ólafsson",
         "citations": [
           {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
+            "id": 84,
+            "description": "City of Berkeley official council document",
+            "url": null,
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 85,
+            "description": "City of Berkeley official council report",
+            "url": null,
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "berkeley-ca-usa-ca-united-states-citation2-attachment.pdf",
+                "directusId": "a54cb6f0-f4a2-4d99-9b4d-37f27fd19d87"
+              }
+            ],
+            "screenshots": []
+          },
+          {
+            "id": 86,
+            "description": "Sentient Media article",
+            "url": "https://sentientmedia.org/how-one-small-city-in-california-is-going-plant-based/",
+            "notes": null,
             "attachments": [],
             "screenshots": []
           }
@@ -406,18 +156,35 @@
       }
     ]
   },
-  "Los Angeles County, CA, USA": {
+  "Brampton, Ontario, ON, Canada": {
+    "ratio": [
+      {
+        "summary": "In August 2022, Brampton's City Council approved a motion for Brampton to transition 50% of city food purchases to plant-based options by re-evaluating its current procurement.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 83,
+            "description": "City of Brampton official council meeting minutes",
+            "url": "https://pub-brampton.escribemeetings.com/Meeting.aspx?Id=692d53a9-cfcd-4e04-9258-111138df4985&Agenda=PostMinutes&lang=English",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "California State Los Angeles, CA, United States": {
     "default": [
       {
-        "summary": "In March 2024, Los Angeles County passed a motion requiring all departmental food procurement to be plant-based by default.",
-        "link": "https://sentientmedia.org/how-one-small-city-in-california-is-going-plant-based/\n\nhttps://laclimateweek.com/event/measuring-what-matters-how-local-food-policy-is-changing-la/\n\nhttps://plantbasedfoods.org/latest/plant-based-by-default-wins-in-la-county#:~:text=Los%20Angeles%20County%20passed%20a%20motion%20that,and%20increasing%20awareness%20of%20plant%2Dbased%20food%20procurement.\n\nhttps://mercyforanimals.org/blog/los-angeles-county-passes-groundbreaking-policy-requiring-plant-based-food-purchases/#:~:text=We%20look%20forward%20to%20working,and%20have%20far%2Dreaching%20effects.",
-        "notes": "More recently, Los Angeles committed to achieving the Planetary Health Diet by cutting their dairy and meat consumption to around 250 grams and 50 grams per day per person, respectively, while the San Francisco Board of Supervisors voted to reduce animal product consumption by 15 percent and 50 percent in hospitals and jails.\n\nIn November 2025, the County joined the World Resources Institute’s Coolfood Pledge, committing to reduce food-based emissions by at least 25% by 2030 and produce its first food procurement climate impact report.",
+        "summary": "At California State Los Angeles, the nutritional science department's graduation event menu was plant-based by default.",
+        "reporter": "Björn Ólafsson",
         "citations": [
           {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
+            "id": 54,
+            "description": "Better Food Foundation article",
+            "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
+            "notes": null,
             "attachments": [],
             "screenshots": []
           }
@@ -425,17 +192,69 @@
       }
     ]
   },
-  "Google Headquarters": {
+  "City of Sammamish, WA, United States": {
+    "default": [
+      {
+        "summary": "Sammamish City Council serves plant-based food by default at city events, specifically those where the City serves food to the public.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 57,
+            "description": "Sammamish Independent article",
+            "url": "https://sammamishindependent.com/2025/02/council-mandates-vegan-catering-for-city-provided-food/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Galaxy Hut, VA, United States": {
+    "default": [
+      {
+        "summary": "At Galaxy Hut, all meals are plant-based by default, and cheese is available upon request.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 94,
+            "description": "Galaxy Hut website",
+            "url": "https://galaxyhut.com/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Google Headquarters, NY, United States": {
     "ratio": [
       {
         "summary": "Google has a Food Choice Architecture program, a research-based team within Food at Google designed to make “the healthiest choice the easiest choice” for employees. Fruits and vegetables \"take center stage\" in Google's network of 380 cafes and 1,500 MicroKitchens to encourage a more balanced and plant-forward diet.",
-        "link": "Inside Google's Efforts to Engineer Its Food for Healthiness | OneZero\n\nhttps://workforcenutrition.org/employee-wellbeing-far-beyond-technology-googles-approach-to-workforce-nutrition/#:~:text=Google's%20Food%20at%20Google%20program%20aims%20to,in%20the%20garden%20*%20**MicroKitchens**%20Number%201%2C500 \n\nhttps://www.wbcsd.org/resources/foodwork-program/#:~:text=Google's%20Food@Work%20program%20aims%20to%20encourage%20healthier,footprint%20from%20food%20between%202017%20and%202019.",
+        "reporter": "Björn Ólafsson",
         "citations": [
           {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
+            "id": 97,
+            "description": "OneZero (Medium) article",
+            "url": "https://onezero.medium.com/how-google-got-its-employees-to-eat-their-vegetables-a2206820d90d",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 98,
+            "description": "Workforce Nutrition Alliance article",
+            "url": "https://workforcenutrition.org/employee-wellbeing-far-beyond-technology-googles-approach-to-workforce-nutrition/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 99,
+            "description": "WBCSD resource page",
+            "url": "https://www.wbcsd.org/resources/foodwork-program/",
+            "notes": null,
             "attachments": [],
             "screenshots": []
           }
@@ -445,13 +264,511 @@
     "placement": [
       {
         "summary": "Google has a Food Choice Architecture program, a research-based team within Food at Google designed to make “the healthiest choice the easiest choice” for employees. Fruits and vegetables \"take center stage\" in Google's network of 380 cafes and 1,500 MicroKitchens to encourage a more balanced and plant-forward diet.",
-        "link": "Inside Google's Efforts to Engineer Its Food for Healthiness | OneZero\n\nhttps://workforcenutrition.org/employee-wellbeing-far-beyond-technology-googles-approach-to-workforce-nutrition/#:~:text=Google's%20Food%20at%20Google%20program%20aims%20to,in%20the%20garden%20*%20**MicroKitchens**%20Number%201%2C500 \n\nhttps://www.wbcsd.org/resources/foodwork-program/#:~:text=Google's%20Food@Work%20program%20aims%20to%20encourage%20healthier,footprint%20from%20food%20between%202017%20and%202019.",
+        "reporter": "Björn Ólafsson",
         "citations": [
           {
-            "id": 12698,
-            "description": "Torrington Zoning Code",
-            "url": "https://www.torringtonct.gov/DocumentCenter/View/389/Full-Zoning-Regulations-Revised-to-December-29-2022-PDF",
-            "notes": "5.13.4.C.\nPages 90",
+            "id": 97,
+            "description": "OneZero (Medium) article",
+            "url": "https://onezero.medium.com/how-google-got-its-employees-to-eat-their-vegetables-a2206820d90d",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 98,
+            "description": "Workforce Nutrition Alliance article",
+            "url": "https://workforcenutrition.org/employee-wellbeing-far-beyond-technology-googles-approach-to-workforce-nutrition/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 99,
+            "description": "WBCSD resource page",
+            "url": "https://www.wbcsd.org/resources/foodwork-program/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Helsinki, Finland, Finland": {
+    "ratio": [
+      {
+        "summary": "Helsinki declared itself a “Fair Trade city” in 2013 and has been using fair-trade-related criteria in its procurement. In March 2026, the City Council voted to halve its procurement of meat and dairy products by 2030 and replace it with plant-based food options in schools, hospitals and municipal institutions. There has already been some progress: since 2019, the amount of red meat served has already been cut by half. From 2029, meat dishes will be served only once or twice a week.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 81,
+            "description": "Yle (Finnish public broadcaster) article",
+            "url": "https://yle.fi/a/74-20213319",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 82,
+            "description": "Green Queen article",
+            "url": "https://www.greenqueen.com.hk/helsinki-puloet-parempaa-meat-dairy-plant-based-food-policy-2030/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Hennepin County, Minnesota, MN, United States": {
+    "default": [
+      {
+        "summary": "Hennepin County adopted a plant-based by default catering policy for county-sponsored events and meetings.",
+        "reporter": "Björn Ólafsson",
+        "citations": []
+      }
+    ]
+  },
+  "Kingston, Ontario, ON, Canada": {
+    "placement": [
+      {
+        "summary": "In 2024, Kingston City Council passed a motion for the city to promote plant-based foods by prioritizing them in its procurement process and placing them in higher-profile locations at city events.",
+        "reporter": "Björn Ólafsson",
+        "citations": []
+      }
+    ],
+    "other": [
+      {
+        "summary": "In 2024, Kingston City Council passed a motion for the city to promote plant-based foods by prioritizing them in its procurement process and placing them in higher-profile locations at city events.",
+        "reporter": "Björn Ólafsson",
+        "citations": []
+      }
+    ]
+  },
+  "Los Angeles County, CA, USA, CA, United States": {
+    "default": [
+      {
+        "summary": "In March 2024, Los Angeles County passed a motion requiring all departmental food procurement to be plant-based by default.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 87,
+            "description": "Sentient Media article",
+            "url": "https://sentientmedia.org/how-one-small-city-in-california-is-going-plant-based/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 88,
+            "description": "LA Climate Week event page",
+            "url": "https://laclimateweek.com/event/measuring-what-matters-how-local-food-policy-is-changing-la/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 89,
+            "description": "Plant Based Foods Association article",
+            "url": "https://plantbasedfoods.org/latest/plant-based-by-default-wins-in-la-county",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 90,
+            "description": "Mercy For Animals blog post",
+            "url": "https://mercyforanimals.org/blog/los-angeles-county-passes-groundbreaking-policy-requiring-plant-based-food-purchases/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Merri-bek City Council (Melbourne), Victoria, Australia": {
+    "other": [
+      {
+        "summary": "Moreland Council adopted a policy of offering entirely plant-based food options at government events on Mondays.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 71,
+            "description": "Climate Action Merribek blog post",
+            "url": "https://climateactionmerribek.org/2019/08/18/moreland-councils-eat-less-meat-climate-debate-meatlessmonday/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "NYC Health + Hospitals, NY, United States": {
+    "default": [
+      {
+        "summary": "NYC Health + Hospitals serves plant-based meals by default to its patients. It has served over 2 million plant-based meals from March 2022 to Feburary 2025.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 64,
+            "description": "NYC Health + Hospitals press release",
+            "url": "https://www.nychealthandhospitals.org/pressrelease/mayor-adams-nyc-health-hospitals-announce-successful-rollout-and-expansion-of-plant-based-meals-as-primary-option-for-patients-in-nyc-public-hospitals/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 65,
+            "description": "NY Health + Hospitals Plant-Based Meal Program",
+            "url": null,
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "nyc-health-hospitals-ny-united-states-citation2-attachment.pdf",
+                "directusId": "447187bb-5e82-4cd0-bfd1-bf471c771ccb"
+              }
+            ],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "North Vancouver District, BC, Canada": {
+    "ratio": [
+      {
+        "summary": "North Vancouver District Council passed a commitment to prioritize plant-based municipial food procurement.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 53,
+            "description": "District of North Vancouver Meeting Notes",
+            "url": null,
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "north-vancouver-district-bc-canada-attachment.pdf",
+                "directusId": "20f08ebd-33b1-46e2-a479-af285cf97988"
+              }
+            ],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Ocean Beach People's Food Co-Op, CA, United States": {
+    "ratio": [
+      {
+        "summary": "Ocean Beach People's Food Co-Op is a vegan deli and plant-forward grocery store, with some dairy and eggs products available, but not sold in the deli.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 96,
+            "description": "Co-op online store",
+            "url": "https://obpeoplesfood.storebyweb.com/s/1000-1/b?g=CGP-1000-2185",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Paquebot Café, QC, Canada": {
+    "default": [
+      {
+        "summary": "Since February 2024, Pacquebot Cafe has offered oat milk by default.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 62,
+            "description": "Instagram Reel",
+            "url": "https://www.instagram.com/reel/DE5FhScx4iw/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "San Francisco Hospitals, CA, United States": {
+    "ratio": [
+      {
+        "summary": "In 2020, the San Francisco City Board of Supervisors passed a motion requiring San Francisco public hospitals to reduce purchases of animal products by 15% in 2023.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 93,
+            "description": "Eurogroup for Animals article",
+            "url": "https://www.eurogroupforanimals.org/news/san-francisco-reduce-meat-and-dairy-served-hospitals-and-jails",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "San Francisco Jails, CA, United States": {
+    "ratio": [
+      {
+        "summary": "In 2020, the San Francisco City Board of Supervisors passed a motion requiring San Francisco jails to reduce purchases of animal products by 50 percent in 2024.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 91,
+            "description": "Eurogroup for Animals article",
+            "url": "https://www.eurogroupforanimals.org/news/san-francisco-reduce-meat-and-dairy-served-hospitals-and-jails",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 92,
+            "description": "Sentient Media article",
+            "url": "https://sentientmedia.org/how-one-small-city-in-california-is-going-plant-based/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Stanford University, CA, United States": {
+    "ratio": [
+      {
+        "summary": "At Stanford University, 50% of all menu items offered at dining halls are entirely plant-based. Mixed meat dishes are also served with a 30% vegetable blend.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 70,
+            "description": "Stanford Daily article",
+            "url": "https://stanforddaily.com/2025/11/10/all-you-can-eat-stanford-dining-pushes-for-plant-based/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Stumptown Roasters, OR, United States": {
+    "default": [
+      {
+        "summary": "Stumptown Roasters offers oat milk by default at all cafes.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 66,
+            "description": "VegNews article",
+            "url": "https://vegnews.com/stumptown-coffee-oat-milk-default",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "The Briar Bar, MN, United States": {
+    "ratio": [
+      {
+        "summary": "The Briar Bar is the first café to offer oat milk by default in Minnesota.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 59,
+            "description": "Instagram Reel",
+            "url": "https://www.instagram.com/reel/DF0JbQ4xDQY/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Tony's, CA, United States": {
+    "default": [
+      {
+        "summary": "Tony's has a plant-based by default menu with dairy products available upon request.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 95,
+            "description": "Tony's website",
+            "url": "https://www.tonysda.com/menus",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "University College London (Students' Union - four cafes), United Kingdom": {
+    "default": [
+      {
+        "summary": "All four cafes in Students' Union at University College London offer oat milk by default.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 67,
+            "description": "UCL Students' Union website article",
+            "url": "https://studentsunionucl.org/articles/why-is-oat-milk-our-default",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "University of California Riverside, CA, United States": {
+    "ratio": [
+      {
+        "summary": "University of California Riverside signed the Forward Food Pledge, pledging to increase its plant-based meal offerings to 50% by 2027.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 68,
+            "description": "Vegconomist article",
+            "url": "https://vegconomist.com/society/university-california-riverside-sets-50-plant-based-meal-target-2027/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "University of Michigan (MDining), MI, United States": {
+    "default": [
+      {
+        "summary": "University of Michigan offers oat milk by default in its dining services. MDining also has an ongoing commitment to a 55% plant-based menu because of the associated emissions reductions and cost savings.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 58,
+            "description": "Michigan Daily article",
+            "url": "https://www.michigandaily.com/news/campus-life/at-mdining-regular-milk-now-means-oat-milk-unless-otherwise-stated/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 60,
+            "description": "NACAS Plant-Rich Champion Stories",
+            "url": null,
+            "notes": null,
+            "attachments": [
+              {
+                "fileName": "university-of-michigan-m-dining-mi-united-states-citation2-attachment.pdf",
+                "directusId": "27330699-f0cf-4c79-9ca6-43fa1bd11acf"
+              }
+            ],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "University of North Texas, TX, United States": {
+    "ratio": [
+      {
+        "summary": "UNT signed the Forward Food Pledge, pledging to increase its plant-based meal offerings to 60% by 2027.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 55,
+            "description": "VegOut Mag article",
+            "url": "https://vegoutmag.com/news/university-of-north-texas-plant-based-dining/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          },
+          {
+            "id": 56,
+            "description": "Vegconomist article",
+            "url": "https://vegconomist.com/society/university-of-north-texas-commits-to-60-plant-based-dining-by-2027/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "University of Northern Colorado, CO, United States": {
+    "ratio": [
+      {
+        "summary": "University of North Colorado expanded plant-based offerings in dining in spring 2025.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 61,
+            "description": "Patch article",
+            "url": "https://patch.com/colorado/across-co/university-northern-colorado-welcomes-spring-2025",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Victoria College at University of Toronto, ON, Canada": {
+    "sub": [
+      {
+        "summary": "In Victoria College's dining, vegan margarine and vegan mayo are the default and there is no upcharge for nondairy milk at all coffee bars.",
+        "reporter": "Björn Ólafsson",
+        "citations": []
+      }
+    ]
+  },
+  "Washington, DC Department of Youth and Rehabilitation Services, DC, United States": {
+    "other": [
+      {
+        "summary": "Need more info",
+        "reporter": "Björn Ólafsson",
+        "citations": []
+      }
+    ]
+  },
+  "West Hollywood, California, CA, United States": {
+    "default": [
+      {
+        "summary": "The City of West Hollywood serves plant-based food by default catering at all city-produced events and meetings.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 80,
+            "description": "Plant Based News article",
+            "url": "https://plantbasednews.org/news/environment/west-hollywood-plant-based-policy/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "Western Oregon University, OR, United States": {
+    "ratio": [
+      {
+        "summary": "Western Oregon University signed the Forward Food Pledge, pledging to increase its plant-based meal offerings to 50% by 2027.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 69,
+            "description": "Vegconomist article",
+            "url": "https://vegconomist.com/society/western-oregon-university-commits-to-50-plant-based-meals-by-2027/",
+            "notes": null,
             "attachments": [],
             "screenshots": []
           }

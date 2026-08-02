@@ -1,263 +1,366 @@
 {
-  "North Vancouver District": {
+  "Amsterdam, Netherlands, Netherlands": {
     "place": {
-      "name": "North Vancouver District",
-      "state": "British Columbia",
+      "name": "Amsterdam, Netherlands",
+      "street": "Amstel 1",
+      "city": "Amsterdam",
+      "state": null,
+      "postal_code": "1011 PN",
+      "country": "Netherlands",
+      "type": "City/Government",
+      "encoded": "amsterdam-netherlands-netherlands",
+      "consumer_base": 1200000,
+      "coord": [
+        4.9002256,
+        52.3676842
+      ]
+    },
+    "ratio": [
+      {
+        "status": "pledged",
+        "date": "2021",
+        "org_credit": [
+          "Plant-Based Treaty"
+        ]
+      }
+    ],
+    "other": [
+      {
+        "status": "pledged",
+        "date": "2021",
+        "org_credit": [
+          "Plant-Based Treaty"
+        ]
+      }
+    ]
+  },
+  "Austin Office of Sustainability, TX, United States": {
+    "place": {
+      "name": "Austin Office of Sustainability",
+      "street": "301 W. Second St.",
+      "city": "Austin",
+      "state": "TX",
+      "postal_code": "78701",
+      "country": "United States",
+      "type": "City/Government",
+      "encoded": "austin-office-of-sustainability-tx-united-states",
+      "consumer_base": 1007435,
+      "coord": [
+        -97.7436995,
+        30.2711286
+      ]
+    },
+    "default": [
+      {
+        "status": "pledged",
+        "date": "2023",
+        "org_credit": [
+          "BFF",
+          "Planted Society"
+        ]
+      }
+    ]
+  },
+  "Barcelona, Spain": {
+    "place": {
+      "name": "Barcelona",
+      "street": "Pl. Sant Jaume, 1",
+      "city": "Barcelona",
+      "state": null,
+      "postal_code": "8002",
+      "country": "Spain",
+      "type": "City/Government",
+      "encoded": "barcelona-spain",
+      "consumer_base": 5750000,
+      "coord": [
+        2.1772738,
+        41.3823178
+      ]
+    },
+    "ratio": [
+      {
+        "status": "pledged",
+        "date": "2021"
+      }
+    ]
+  },
+  "Berkeley, CA, USA, CA, United States": {
+    "place": {
+      "name": "Berkeley, CA, USA",
+      "street": "2180 Milvia St",
+      "city": "Berkeley",
+      "state": "CA",
+      "postal_code": "94704",
+      "country": "United States",
+      "type": "City/Government",
+      "encoded": "berkeley-ca-usa-ca-united-states",
+      "consumer_base": 120500,
+      "coord": [
+        -122.2707951,
+        37.8694472
+      ]
+    },
+    "ratio": [
+      {
+        "status": "pledged",
+        "date": "2021"
+      }
+    ]
+  },
+  "Brampton, Ontario, ON, Canada": {
+    "place": {
+      "name": "Brampton, Ontario",
+      "street": "2 Wellington St W",
+      "city": "Brampton",
+      "state": "ON",
+      "postal_code": "L6Y 4R2",
       "country": "Canada",
       "type": "City/Government",
-      "public": "public",
-      "encoded": "north_vancouver_district",
-      "consumer_base": 58120,
-      "coord": [-123.0781375, 49.3360952]
+      "encoded": "brampton-ontario-on-canada",
+      "consumer_base": 833365,
+      "coord": [
+        -79.7595042,
+        43.6849825
+      ]
     },
     "ratio": [
       {
         "status": "pledged",
-        "org_credit": ["Plant-Based Cities Movement"],
-        "org_credit_expanded": ["Plant-Based Cities Movement"],
-        "date": "2024"
+        "date": "2022",
+        "org_credit": [
+          "Plant-Based Cities Movement",
+          "Earthsave Canada"
+        ]
       }
     ]
   },
-  "California State Los Angeles": {
+  "California State Los Angeles, CA, United States": {
     "place": {
       "name": "California State Los Angeles",
-      "state": "California",
+      "street": "5151 State University Drive",
+      "city": "Los Angeles",
+      "state": "CA",
+      "postal_code": "90032",
       "country": "United States",
       "type": "University Event",
-      "public": "public",
-      "encoded": "california_state_los_angeles",
+      "encoded": "california-state-los-angeles-ca-united-states",
       "consumer_base": 21708,
-      "coord": [-118.1671415, 34.0664949]
+      "coord": [
+        -118.1671415,
+        34.0664949
+      ]
     },
     "default": [
       {
         "status": "adopted",
-        "org_credit": ["BFF"],
-        "org_credit_expanded": [
-          "Better Food Foundation Student Advocate (Susan Oseguera)"
-        ],
-        "date": "2025"
-      }
-    ]
-  },
-  "University of North Texas": {
-    "place": {
-      "name": "University of North Texas",
-      "state": "Texas",
-      "country": "United States",
-      "type": "University Dining Hall",
-      "public": "public",
-      "encoded": "university_of_north_texas",
-      "consumer_base": 43567,
-      "coord": [-97.1514762, 33.2098926]
-    },
-    "ratio": [
-      {
-        "status": "pledged",
-        "org_credit": ["Humane World for Animals"],
-        "org_credit_expanded": ["Humane World for Animals"],
         "date": "2025",
-        "deadline": "2027"
+        "org_credit": [
+          "BFF"
+        ]
       }
     ]
   },
-  "City of Sammamish": {
+  "City of Sammamish, WA, United States": {
     "place": {
       "name": "City of Sammamish",
-      "state": "Washington",
+      "street": "801 228th Avenue SE",
+      "city": "Sammamish",
+      "state": "WA",
+      "postal_code": "98075",
       "country": "United States",
       "type": "City/Government",
-      "public": "public",
-      "encoded": "city_of_sammamish",
+      "encoded": "city-of-sammamish-wa-united-states",
       "consumer_base": 65986,
-      "coord": [-122.0367582, 47.6013674]
+      "coord": [
+        -122.0367582,
+        47.6013675
+      ]
     },
     "default": [
       {
         "status": "pledged",
-        "org_credit": ["MFA"],
-        "org_credit_expanded": ["Mercy for Animals"],
-        "date": "2025"
+        "date": "2025",
+        "org_credit": [
+          "MFA"
+        ]
       }
     ]
   },
-  "University of Michigan (MDining)": {
+  "Galaxy Hut, VA, United States": {
     "place": {
-      "name": "University of Michigan (MDining)",
-      "state": "Michigan",
+      "name": "Galaxy Hut",
+      "street": "2711 Wilson Blvd",
+      "city": "Arlington",
+      "state": "VA",
+      "postal_code": "22201",
       "country": "United States",
-      "type": "University Dining Hall",
-      "public": "public",
-      "encoded": "university_of_michigan_mdining",
-      "consumer_base": 35358,
-      "coord": [-83.7347356, 42.2781548]
+      "type": "Ind. Restaurant",
+      "encoded": "galaxy-hut-va-united-states",
+      "consumer_base": 100,
+      "coord": [
+        -77.091012,
+        38.8896232
+      ]
     },
     "default": [
       {
-        "status": "adopted",
-        "org_credit": ["BFF"],
-        "org_credit_expanded": [
-          "Better Food Foundation (influenced via MCURC & dining director contact)"
-        ],
-        "date": "2025"
+        "status": "adopted"
       }
     ]
   },
-  "University of Northern Colorado": {
+  "Google Headquarters, NY, United States": {
     "place": {
-      "name": "University of Northern Colorado",
-      "state": "Colorado",
+      "name": "Google Headquarters",
+      "street": "111 8th Ave",
+      "city": "New York",
+      "state": "NY",
+      "postal_code": "10011",
       "country": "United States",
-      "type": "University Dining Hall",
-      "public": "public",
-      "encoded": "university_of_northern_colorado",
-      "consumer_base": 8561,
-      "coord": [-104.7017242, 40.4028503]
+      "type": "Workplace Cafeteria ",
+      "encoded": "google-headquarters-ny-united-states",
+      "consumer_base": 187103,
+      "coord": [
+        -74.0019656,
+        40.7408359
+      ]
     },
     "ratio": [
       {
-        "status": "adopted",
-        "date": "2025"
+        "status": "adopted"
       }
-    ]
-  },
-  "NYC Health + Hospitals": {
-    "place": {
-      "name": "NYC Health + Hospitals",
-      "state": "New York",
-      "country": "United States",
-      "type": "Hospital",
-      "public": "public",
-      "encoded": "nyc_health_hospitals",
-      "consumer_base": 15000,
-      "coord": [-73.9356551, 40.6734444]
-    },
-    "default": [
+    ],
+    "placement": [
       {
-        "status": "adopted",
-        "org_credit": ["GBD", "BFF", "Rachel Atcheson"],
-        "org_credit_expanded": [
-          "Greener by Default",
-          "Better Food Foundation",
-          "Rachel Atcheson"
-        ],
-        "date": "2022"
+        "status": "adopted"
       }
     ]
   },
-  "University College London (Students' Union - four cafes)": {
+  "Helsinki, Finland, Finland": {
     "place": {
-      "name": "University College London (Students' Union - four cafes)",
-      "state": "England",
-      "country": "United Kingdom",
-      "type": "University Cafe",
-      "public": "private",
-      "encoded": "university_college_london_students_union_four_cafes",
-      "consumer_base": 51315,
-      "coord": [-0.1341274, 51.5238591]
-    },
-    "default": [
-      {
-        "status": "adopted",
-        "org_credit": ["GBD"],
-        "org_credit_expanded": ["Greener by Default"],
-        "date": "2022"
-      }
-    ]
-  },
-  "University of California Riverside": {
-    "place": {
-      "name": "University of California Riverside",
-      "state": "California",
-      "country": "United States",
-      "type": "University Dining Hall",
-      "public": "public",
-      "encoded": "university_of_california_riverside",
-      "consumer_base": 18279,
-      "coord": [-117.3398097, 33.9642576]
+      "name": "Helsinki, Finland",
+      "street": "Pohjoisesplanadi 11-13",
+      "city": "Helsinki",
+      "state": null,
+      "postal_code": "170",
+      "country": "Finland",
+      "type": "City/Government",
+      "encoded": "helsinki-finland-finland",
+      "consumer_base": 1400000,
+      "coord": [
+        24.9528649,
+        60.1683175
+      ]
     },
     "ratio": [
       {
         "status": "pledged",
-        "org_credit": ["Humane World for Animals"],
-        "org_credit_expanded": ["Humane World for Animals"],
-        "date": "2027",
-        "deadline": "2027"
+        "date": "2026"
       }
     ]
   },
-  "Western Oregon University": {
-    "place": {
-      "name": "Western Oregon University",
-      "state": "Oregon",
-      "country": "United States",
-      "type": "University Dining Hall",
-      "public": "public",
-      "encoded": "western_oregon_university",
-      "consumer_base": 3857,
-      "coord": [-123.2415064, 44.8530112]
-    },
-    "ratio": [
-      {
-        "status": "pledged",
-        "org_credit": ["Humane World for Animals"],
-        "org_credit_expanded": ["Humane World for Animals"],
-        "date": "2027",
-        "deadline": "2027"
-      }
-    ]
-  },
-  "Hennepin County, Minnesota": {
+  "Hennepin County, Minnesota, MN, United States": {
     "place": {
       "name": "Hennepin County, Minnesota",
-      "state": "Minnesota",
+      "street": "300 South 6th Street",
+      "city": "Minneapolis",
+      "state": "MN",
+      "postal_code": "55487",
       "country": "United States",
       "type": "City/Government",
-      "public": "public",
-      "encoded": "hennepin_county_minnesota",
+      "encoded": "hennepin-county-minnesota-mn-united-states",
       "consumer_base": 1293582,
-      "coord": [-93.2666616, 44.9758533]
+      "coord": [
+        -93.266666,
+        44.9758491
+      ]
     },
     "default": [
       {
         "status": "pledged",
+        "date": "2025",
         "org_credit": [
           "Wholesome Minnesota of Compassionate Action for Animals",
           "Civic Plate (a project of @MercyForAnimals)"
-        ],
-        "date": "2025"
+        ]
       }
     ]
   },
-  "Stanford University": {
+  "Kingston, Ontario, ON, Canada": {
     "place": {
-      "name": "Stanford University",
-      "state": "California",
-      "country": "United States",
-      "type": "University Dining Hall",
-      "public": "private",
-      "encoded": "stanford_university",
-      "consumer_base": 17289,
-      "coord": [-122.1693654, 37.4313138]
+      "name": "Kingston, Ontario",
+      "street": "216 Ontario Street",
+      "city": "Kingston",
+      "state": "ON",
+      "postal_code": "K7L 2Z3",
+      "country": "Canada",
+      "type": "City/Government",
+      "encoded": "kingston-ontario-on-canada",
+      "consumer_base": 153346,
+      "coord": [
+        -76.4801367,
+        44.2301058
+      ]
     },
-    "ratio": [
+    "placement": [
       {
-        "status": "adopted",
-        "date": "2025"
+        "status": "pledged",
+        "date": "2024",
+        "org_credit": [
+          "Plant-Based Cities Movement"
+        ]
+      }
+    ],
+    "other": [
+      {
+        "status": "pledged",
+        "date": "2024",
+        "org_credit": [
+          "Plant-Based Cities Movement"
+        ]
       }
     ]
   },
-  "Merri-bek City Council (Melbourne)": {
+  "Los Angeles County, CA, USA, CA, United States": {
+    "place": {
+      "name": "Los Angeles County, CA, USA",
+      "street": "500 W Temple St",
+      "city": "Los Angeles",
+      "state": "CA",
+      "postal_code": "90012",
+      "country": "United States",
+      "type": "City/Government",
+      "encoded": "los-angeles-county-ca-usa-ca-united-states",
+      "consumer_base": 9757179,
+      "coord": [
+        -118.2462025,
+        34.0568474
+      ]
+    },
+    "default": [
+      {
+        "status": "pledged",
+        "date": "2024",
+        "org_credit": [
+          "MFA"
+        ]
+      }
+    ]
+  },
+  "Merri-bek City Council (Melbourne), Victoria, Australia": {
     "place": {
       "name": "Merri-bek City Council (Melbourne)",
+      "street": "90 Bell Street",
+      "city": "Coburg",
       "state": "Victoria",
+      "postal_code": "3058",
       "country": "Australia",
       "type": "City/Government",
-      "public": "public",
-      "encoded": "merribek_city_council_melbourne",
+      "encoded": "merri-bek-city-council-melbourne-victoria-australia",
       "consumer_base": 186534,
-      "coord": [144.9695238, -37.7410304]
+      "coord": [
+        144.9695238,
+        -37.7410304
+      ]
     },
     "other": [
       {
@@ -266,200 +369,476 @@
       }
     ]
   },
-  "Barcelona": {
+  "NYC Health + Hospitals, NY, United States": {
     "place": {
-      "name": "Barcelona",
-      "state": "Barcelona",
-      "country": "Spain",
-      "type": "City/Government",
-      "public": "public",
-      "encoded": "barcelona",
-      "consumer_base": 5750000,
-      "coord": [2.1772738, 41.3823178]
+      "name": "NYC Health + Hospitals",
+      "street": "1218 Prospect Pl",
+      "city": "Brooklyn",
+      "state": "NY",
+      "postal_code": "11213",
+      "country": "United States",
+      "type": "Hospital",
+      "encoded": "nyc-health-hospitals-ny-united-states",
+      "consumer_base": 15000,
+      "coord": [
+        -73.9356551,
+        40.6734444
+      ]
     },
-    "ratio": [
+    "default": [
       {
-        "status": "pledged",
-        "date": "2021"
+        "status": "adopted",
+        "date": "2022",
+        "org_credit": [
+          "GBD",
+          "BFF",
+          "Rachel Atcheson"
+        ]
       }
     ]
   },
-  "Amsterdam, Netherlands": {
+  "North Vancouver District, BC, Canada": {
     "place": {
-      "name": "Amsterdam, Netherlands",
-      "state": "Amsterdam",
-      "country": "Netherlands",
+      "name": "North Vancouver District",
+      "street": "355 West Queens Road",
+      "city": "North Vancouver",
+      "state": "BC",
+      "postal_code": "V7N 4N5",
+      "country": "Canada",
       "type": "City/Government",
-      "public": "public",
-      "encoded": "amsterdam_netherlands",
-      "consumer_base": 1200000,
-      "coord": [4.9002256, 52.3676842]
+      "encoded": "north-vancouver-district-bc-canada",
+      "consumer_base": 58120,
+      "coord": [
+        -123.0781375,
+        49.3360952
+      ]
     },
     "ratio": [
       {
         "status": "pledged",
-        "org_credit": ["Plant-Based Treaty"],
-        "org_credit_expanded": ["Plant-Based Treaty"],
-        "date": "2021"
+        "date": "2024",
+        "org_credit": [
+          "Plant-Based Cities Movement"
+        ]
       }
-    ],
+    ]
+  },
+  "Ocean Beach People's Food Co-Op, CA, United States": {
+    "place": {
+      "name": "Ocean Beach People's Food Co-Op",
+      "street": "4765 Voltaire St",
+      "city": "San Diego",
+      "state": "CA",
+      "postal_code": "92107",
+      "country": "United States",
+      "type": "Ind. Restaurant",
+      "encoded": "ocean-beach-peoples-food-co-op-ca-united-states",
+      "consumer_base": 100,
+      "coord": [
+        -117.242746,
+        32.749377
+      ]
+    },
+    "ratio": [
+      {
+        "status": "adopted"
+      }
+    ]
+  },
+  "Paquebot Café, QC, Canada": {
+    "place": {
+      "name": "Paquebot Café",
+      "street": "2110 Rue Bélanger",
+      "city": "Montréal",
+      "state": "QC",
+      "postal_code": "H2G 1C2",
+      "country": "Canada",
+      "type": "Cafe",
+      "encoded": "paquebot-cafe-qc-canada",
+      "consumer_base": 100,
+      "coord": [
+        -73.6011456,
+        45.5488035
+      ]
+    },
+    "default": [
+      {
+        "status": "adopted",
+        "date": "2024"
+      }
+    ]
+  },
+  "San Francisco Hospitals, CA, United States": {
+    "place": {
+      "name": "San Francisco Hospitals",
+      "street": "1001 Potrero Ave",
+      "city": "San Francisco",
+      "state": "CA",
+      "postal_code": "94110",
+      "country": "United States",
+      "type": "Hospital",
+      "encoded": "san-francisco-hospitals-ca-united-states",
+      "consumer_base": 100,
+      "coord": [
+        -122.4052532,
+        37.7568103
+      ]
+    },
+    "ratio": [
+      {
+        "status": "pledged",
+        "date": "2020",
+        "org_credit": [
+          "FoE",
+          "FF"
+        ]
+      }
+    ]
+  },
+  "San Francisco Jails, CA, United States": {
+    "place": {
+      "name": "San Francisco Jails",
+      "street": "425 7th St",
+      "city": "San Francisco",
+      "state": "CA",
+      "postal_code": "94103",
+      "country": "United States",
+      "type": "Prison",
+      "encoded": "san-francisco-jails-ca-united-states",
+      "consumer_base": 100,
+      "coord": [
+        -122.4049148,
+        37.775226
+      ]
+    },
+    "ratio": [
+      {
+        "status": "pledged",
+        "date": "2020",
+        "org_credit": [
+          "FoE",
+          "FF"
+        ]
+      }
+    ]
+  },
+  "Stanford University, CA, United States": {
+    "place": {
+      "name": "Stanford University",
+      "street": "450 Jane Stanford Way",
+      "city": "Stanford",
+      "state": "CA",
+      "postal_code": "94305",
+      "country": "United States",
+      "type": "University Dining Hall",
+      "encoded": "stanford-university-ca-united-states",
+      "consumer_base": 17289,
+      "coord": [
+        -122.1693654,
+        37.4313138
+      ]
+    },
+    "ratio": [
+      {
+        "status": "adopted",
+        "date": "2025"
+      }
+    ]
+  },
+  "Stumptown Roasters, OR, United States": {
+    "place": {
+      "name": "Stumptown Roasters",
+      "street": "4525 SE DIVISION ST",
+      "city": "PORTLAND",
+      "state": "OR",
+      "postal_code": "97206",
+      "country": "United States",
+      "type": "Chain Restaurant",
+      "encoded": "stumptown-roasters-or-united-states",
+      "consumer_base": 100,
+      "coord": [
+        -122.6155605,
+        45.5054248
+      ]
+    },
+    "default": [
+      {
+        "status": "adopted",
+        "date": "2023"
+      }
+    ]
+  },
+  "The Briar Bar, MN, United States": {
+    "place": {
+      "name": "The Briar Bar",
+      "street": "1231 Washington St NE",
+      "city": "Minneapolis",
+      "state": "MN",
+      "postal_code": "55413",
+      "country": "United States",
+      "type": "Ind. Restaurant",
+      "encoded": "the-briar-bar-mn-united-states",
+      "consumer_base": 100,
+      "coord": [
+        -93.2573731,
+        45.0007576
+      ]
+    },
+    "ratio": [
+      {
+        "status": "adopted",
+        "date": "2025"
+      }
+    ]
+  },
+  "Tony's, CA, United States": {
+    "place": {
+      "name": "Tony's",
+      "street": "1710 W Magnolia Blvd",
+      "city": "Burbank",
+      "state": "CA",
+      "postal_code": "91506",
+      "country": "United States",
+      "type": "Ind. Restaurant",
+      "encoded": "tonys-ca-united-states",
+      "consumer_base": 100,
+      "coord": [
+        -118.3269699,
+        34.1743839
+      ]
+    },
+    "default": [
+      {
+        "status": "adopted"
+      }
+    ]
+  },
+  "University College London (Students' Union - four cafes), United Kingdom": {
+    "place": {
+      "name": "University College London (Students' Union - four cafes)",
+      "street": "Gower Street",
+      "city": "London",
+      "state": null,
+      "postal_code": "WC1E 6BT",
+      "country": "United Kingdom",
+      "type": "University Cafe",
+      "encoded": "university-college-london-students-union-four-cafes-united-kingdom",
+      "consumer_base": 51315,
+      "coord": [
+        -0.1341273,
+        51.5238591
+      ]
+    },
+    "default": [
+      {
+        "status": "adopted",
+        "date": "2022",
+        "org_credit": [
+          "GBD"
+        ]
+      }
+    ]
+  },
+  "University of California Riverside, CA, United States": {
+    "place": {
+      "name": "University of California Riverside",
+      "street": "900 University Ave.",
+      "city": "Riverside",
+      "state": "CA",
+      "postal_code": "92521",
+      "country": "United States",
+      "type": "University Dining Hall",
+      "encoded": "university-of-california-riverside-ca-united-states",
+      "consumer_base": 18279,
+      "coord": [
+        -117.3398097,
+        33.9642576
+      ]
+    },
+    "ratio": [
+      {
+        "status": "pledged",
+        "date": "2027",
+        "org_credit": [
+          "Humane World for Animals"
+        ]
+      }
+    ]
+  },
+  "University of Michigan (MDining), MI, United States": {
+    "place": {
+      "name": "University of Michigan (MDining)",
+      "street": "1109 Geddes Ave.",
+      "city": "Ann Arbor",
+      "state": "MI",
+      "postal_code": "48109-1079",
+      "country": "United States",
+      "type": "University Dining Hall",
+      "encoded": "university-of-michigan-mdining-mi-united-states",
+      "consumer_base": 35358,
+      "coord": [
+        -83.7347356,
+        42.2781548
+      ]
+    },
+    "default": [
+      {
+        "status": "adopted",
+        "date": "2025",
+        "org_credit": [
+          "BFF"
+        ]
+      }
+    ]
+  },
+  "University of North Texas, TX, United States": {
+    "place": {
+      "name": "University of North Texas",
+      "street": "1155 Union Circle",
+      "city": "Denton",
+      "state": "TX",
+      "postal_code": "76203-5017",
+      "country": "United States",
+      "type": "University Dining Hall",
+      "encoded": "university-of-north-texas-tx-united-states",
+      "consumer_base": 43567,
+      "coord": [
+        -97.1514763,
+        33.2098922
+      ]
+    },
+    "ratio": [
+      {
+        "status": "pledged",
+        "date": "2025",
+        "org_credit": [
+          "Humane World for Animals"
+        ]
+      }
+    ]
+  },
+  "University of Northern Colorado, CO, United States": {
+    "place": {
+      "name": "University of Northern Colorado",
+      "street": "501 20th St.",
+      "city": "Greeley",
+      "state": "CO",
+      "postal_code": "80639",
+      "country": "United States",
+      "type": "University Dining Hall",
+      "encoded": "university-of-northern-colorado-co-united-states",
+      "consumer_base": 8561,
+      "coord": [
+        -104.7017242,
+        40.4028503
+      ]
+    },
+    "ratio": [
+      {
+        "status": "adopted",
+        "date": "2025"
+      }
+    ]
+  },
+  "Victoria College at University of Toronto, ON, Canada": {
+    "place": {
+      "name": "Victoria College at University of Toronto",
+      "street": "73 Queen's Park Crescent",
+      "city": "Toronto",
+      "state": "ON",
+      "postal_code": "M5S 1K7",
+      "country": "Canada",
+      "type": "University Dining Hall",
+      "encoded": "victoria-college-at-university-of-toronto-on-canada",
+      "consumer_base": 3274,
+      "coord": [
+        -79.3839347,
+        43.6534817
+      ]
+    },
+    "sub": [
+      {
+        "status": "adopted",
+        "date": "2024"
+      }
+    ]
+  },
+  "Washington, DC Department of Youth and Rehabilitation Services, DC, United States": {
+    "place": {
+      "name": "Washington, DC Department of Youth and Rehabilitation Services",
+      "street": "1100 4th Street SW",
+      "city": "Washington",
+      "state": "DC",
+      "postal_code": "20024",
+      "country": "United States",
+      "type": "City/Government",
+      "encoded": "washington-dc-department-of-youth-and-rehabilitation-services-dc-united-states",
+      "consumer_base": 100,
+      "coord": [
+        -77.0172181,
+        38.8774173
+      ]
+    },
     "other": [
       {
         "status": "pledged",
-        "org_credit": ["Plant-Based Treaty"],
-        "org_credit_expanded": ["Plant-Based Treaty"],
-        "date": "2021"
+        "date": "2024",
+        "org_credit": [
+          "GBD",
+          "BFF"
+        ]
       }
     ]
   },
-  "West Hollywood, California": {
+  "West Hollywood, California, CA, United States": {
     "place": {
       "name": "West Hollywood, California",
-      "state": "California",
+      "street": "8300 Santa Monica Boulevard",
+      "city": "West Hollywood",
+      "state": "CA",
+      "postal_code": "90069",
       "country": "United States",
       "type": "City/Government",
-      "public": "public",
-      "encoded": "west_hollywood_california",
+      "encoded": "west-hollywood-california-ca-united-states",
       "consumer_base": 33700,
-      "coord": [-118.372853, 34.090567]
+      "coord": [
+        -118.3706843,
+        34.0904774
+      ]
     },
     "default": [
       {
         "status": "pledged",
-        "org_credit": ["MFA"],
-        "org_credit_expanded": ["Mercy for Animals"],
-        "date": "2024"
+        "date": "2024",
+        "org_credit": [
+          "MFA"
+        ]
       }
     ]
   },
-  "Kingston, Ontario": {
+  "Western Oregon University, OR, United States": {
     "place": {
-      "name": "Kingston, Ontario",
-      "state": "Ontario",
-      "country": "Canada",
-      "type": "City/Government",
-      "public": "public",
-      "encoded": "kingston_ontario",
-      "consumer_base": 153346,
-      "coord": [-76.4283781, 44.3054151]
-    },
-    "other": [
-      {
-        "status": "pledged",
-        "org_credit": ["Plant-Based Cities Movement"],
-        "org_credit_expanded": ["Plant-Based Cities Movement"],
-        "date": "2024"
-      }
-    ],
-    "placement": [
-      {
-        "status": "pledged",
-        "org_credit": ["Plant-Based Cities Movement"],
-        "org_credit_expanded": ["Plant-Based Cities Movement"],
-        "date": "2024"
-      }
-    ]
-  },
-  "Helsinki, Finland": {
-    "place": {
-      "name": "Helsinki, Finland",
-      "state": "Helsinki",
-      "country": "Finland",
-      "type": "City/Government",
-      "public": "public",
-      "encoded": "helsinki_finland",
-      "consumer_base": 1400000,
-      "coord": [24.9528649, 60.1683175]
-    },
-    "ratio": [
-      {
-        "status": "pledged",
-        "date": "2026",
-        "deadline": "2030"
-      }
-    ]
-  },
-  "Brampton, Ontario": {
-    "place": {
-      "name": "Brampton, Ontario",
-      "state": "Ontario",
-      "country": "Canada",
-      "type": "City/Government",
-      "public": "public",
-      "encoded": "brampton_ontario",
-      "consumer_base": 833365,
-      "coord": [-79.7595042, 43.6849825]
-    },
-    "ratio": [
-      {
-        "status": "pledged",
-        "org_credit": ["Plant-Based Cities Movement", "Earthsave Canada"],
-        "org_credit_expanded": [
-          "Plant-Based Cities Movement",
-          "Earthsave Canada"
-        ],
-        "date": "2022"
-      }
-    ]
-  },
-  "Berkeley, CA, USA": {
-    "place": {
-      "name": "Berkeley, CA, USA",
-      "state": "California",
+      "name": "Western Oregon University",
+      "street": "345 Monmouth Ave. N.",
+      "city": "Monmouth",
+      "state": "OR",
+      "postal_code": "97361",
       "country": "United States",
-      "type": "City/Government",
-      "public": "public",
-      "encoded": "berkeley_ca_usa",
-      "consumer_base": 120500,
-      "coord": [-122.2707951, 37.8694472]
+      "type": "University Dining Hall",
+      "encoded": "western-oregon-university-or-united-states",
+      "consumer_base": 3857,
+      "coord": [
+        -123.2415064,
+        44.8530112
+      ]
     },
     "ratio": [
       {
         "status": "pledged",
-        "date": "2021",
-        "deadline": "2024"
-      }
-    ]
-  },
-  "Los Angeles County, CA, USA": {
-    "place": {
-      "name": "Los Angeles County, CA, USA",
-      "state": "California",
-      "country": "United States",
-      "type": "City/Government",
-      "public": "public",
-      "encoded": "los_angeles_county_ca_usa",
-      "consumer_base": 9757179,
-      "coord": [-118.2462025, 34.0568474]
-    },
-    "default": [
-      {
-        "status": "pledged",
-        "org_credit": ["MFA"],
-        "org_credit_expanded": ["Mercy for Animals"],
-        "date": "2024"
-      }
-    ]
-  },
-  "Google Headquarters": {
-    "place": {
-      "name": "Google Headquarters",
-      "state": "New York",
-      "country": "United States",
-      "type": "Workplace Cafeteria",
-      "public": "private",
-      "encoded": "google_headquarters",
-      "consumer_base": 187103,
-      "coord": [-74.0020865, 40.7408812]
-    },
-    "ratio": [
-      {
-        "status": "adopted"
-      }
-    ],
-    "placement": [
-      {
-        "status": "adopted"
+        "date": "2027",
+        "org_credit": [
+          "Humane World for Animals"
+        ]
       }
     ]
   }

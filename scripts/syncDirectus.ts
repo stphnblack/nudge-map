@@ -448,7 +448,7 @@ function combineData(
         };
         return [placeId, result];
       })
-      // Filter out places without any policy records.
+      // Filter out places without any nudge records.
       .filter(
         ([, entry]) =>
           entry.default?.length ||
