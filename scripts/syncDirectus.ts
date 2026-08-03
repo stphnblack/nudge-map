@@ -1,6 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-
 /* eslint-disable no-console */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-await-in-loop */
@@ -14,28 +11,24 @@ import NodeGeocoder from "node-geocoder";
 import {
   initDirectus,
   DirectusClient,
-  Place as DirectusPlace,
+  Institution as DirectusPlace,
   Citation as DirectusCitation,
   readItemsBatched,
   readCitationsFilesBatched,
-  LandUseRecord,
-  BenefitDistrict,
+  Nudge,
 } from "./lib/directus";
 import {
   PlaceId as PlaceStringId,
-  PolicyType,
-  RawCoreBenefitDistrict,
-  RawCoreLandUsePolicy,
+  NudgeType,
+  RawNudge,
 } from "../src/js/model/types";
 import { getLongLat, initGeocoder } from "./lib/geocoder";
 import {
   DirectusFile,
   Citation,
-  ExtendedLandUsePolicy,
+  ExtendedNudge,
   RawCompleteEntry,
-  RawCompleteLandUsePolicy,
-  RawCompleteBenefitDistrict,
-  ExtendedBenefitDistrict,
+  RawCompleteNudge,
   readRawCoreData,
 } from "./lib/data";
 import { saveOptionValues } from "./lib/optionValues";
@@ -72,14 +65,16 @@ async function readPlacesAndEnsureCoordinates(
   directusIdToStringId: Record<number, PlaceStringId>;
   stringIdToPlace: Record<PlaceStringId, Partial<DirectusPlace>>;
 }> {
-  const records = await readItemsBatched(client, "places", [
+  const records = await readItemsBatched(client, "institutions", [
     "id",
     "name",
+    "street",
+    "city",
     "state",
+    "postal_code",
     "country_code",
     "type",
-    "population",
-    "complete_minimums_repeal",
+    "consumer_base",
     "coordinates",
   ]);
   const directusIdToStringId: Record<number, PlaceStringId> = {};
@@ -91,7 +86,10 @@ async function readPlacesAndEnsureCoordinates(
       console.log(`Getting coordinates for ${stringId}`);
       const longLat = await getLongLat(
         record.name,
+        record.street,
+        record.city,
         record.state,
+        record.postal_code,
         record.country_code,
         geocoder,
       );
@@ -103,7 +101,7 @@ async function readPlacesAndEnsureCoordinates(
       const coordinates = { type: "Point" as const, coordinates: longLat };
       record.coordinates = coordinates;
       await client.request(
-        updateItem("places", record.id, {
+        updateItem("institutions", record.id, {
           coordinates,
         }),
       );
@@ -118,27 +116,27 @@ async function readPlacesAndEnsureCoordinates(
   };
 }
 
-async function readLandUseRecords(
+async function readNudges(
   client: DirectusClient,
   placeDirectusIdToStringId: Record<number, PlaceStringId>,
-): Promise<Record<PlaceStringId, Array<Partial<LandUseRecord>>>> {
+): Promise<Record<PlaceStringId, Array<Partial<Nudge>>>> {
   const records = await readItemsBatched(
     client,
-    "land_use",
+    "nudges",
     [
       "id",
-      "place",
+      "institution",
       "archived",
       "last_verified_at",
+      "status",
+      "summary",
+      "reporter",
+      "date",
+      "citations",
+      "notes",
+      "org_credit",
+      "org_credit_expanded",
       "type",
-      "land_uses",
-      "reform_scope",
-      "requirements",
-      "status",
-      "summary",
-      "reporter",
-      "reform_date",
-      "citations",
     ],
     100,
     {
@@ -148,36 +146,10 @@ async function readLandUseRecords(
       ],
     },
   );
-  return groupBy(records, (record) => placeDirectusIdToStringId[record.place]);
-}
-
-async function readBenefitDistrictRecords(
-  client: DirectusClient,
-  placeDirectusIdToStringId: Record<number, PlaceStringId>,
-): Promise<Record<PlaceStringId, Array<Partial<BenefitDistrict>>>> {
-  const records = await readItemsBatched(
-    client,
-    "benefit_districts",
-    [
-      "id",
-      "place",
-      "archived",
-      "last_verified_at",
-      "status",
-      "summary",
-      "reporter",
-      "reform_date",
-      "citations",
-    ],
-    100,
-    {
-      _and: [
-        { last_verified_at: { _nnull: true } },
-        { archived: { _eq: false } },
-      ],
-    },
+  return groupBy(
+    records,
+    (record) => placeDirectusIdToStringId[record.institution],
   );
-  return groupBy(records, (record) => placeDirectusIdToStringId[record.place]);
 }
 
 async function readCitations(
@@ -197,7 +169,7 @@ async function readCitations(
 async function readCitationsByJunctionId(
   client: DirectusClient,
   citations: Record<number, Partial<DirectusCitation>>,
-  table: "land_use_citations" | "benefit_districts_citations",
+  table: "nudges_citations",
 ): Promise<Record<number, Partial<DirectusCitation>>> {
   const junctionRecords = await readItemsBatched(
     client,
@@ -275,17 +247,17 @@ function mimeTypeToFileExtension(metadata: FileMetadata): string {
 
 interface AttachmentFileNameArgsBase {
   placeId: string;
-  hasDistinctPolicyTypes: boolean;
-  policyType: PolicyType;
-  /// The index of land use records for the current `policyType`. If
-  /// there is only one record for the `policyType`, this value should
+  hasDistinctNudgeTypes: boolean;
+  nudgeType: NudgeType;
+  /// The index of nudge records for the current `nudgeType`. If
+  /// there is only one record for the `nudgeType`, this value should
   /// be set to `null`.
-  policyRecordIdx: number | null;
+  nudgeRecordIdx: number | null;
 }
 
 type AttachmentFileNameArgs = AttachmentFileNameArgsBase & {
-  /// The index of citations for the current policy record. If
-  /// there is only one citation for the policy record, this value
+  /// The index of citations for the current nudge record. If
+  /// there is only one citation for the nudge record, this value
   /// should be set to `null`.
   citationIdx: number | null;
 };
@@ -310,20 +282,22 @@ export function createAttachments(
 
   let fileNamePrefix = kebabCase(fileNameArgs.placeId);
   if (
-    fileNameArgs.hasDistinctPolicyTypes ||
-    fileNameArgs.policyRecordIdx !== null
+    fileNameArgs.hasDistinctNudgeTypes ||
+    fileNameArgs.nudgeRecordIdx !== null
   ) {
-    const policyType = {
-      "add parking maximums": "add-max",
-      "reduce parking minimums": "reduce-min",
-      "remove parking minimums": "remove-min",
-      "parking benefit district": "benefit-district",
-    }[fileNameArgs.policyType];
+    const nudgeType = {
+      "plant-based default": "default",
+      "climate-friendly ratio": "ratio",
+      "subtle substitution": "sub",
+      "tasty titles & descriptions": "titles",
+      "prime placement": "placement",
+      other: "other",
+    }[fileNameArgs.nudgeType];
     const recordIdx =
-      fileNameArgs.policyRecordIdx === null
+      fileNameArgs.nudgeRecordIdx === null
         ? ""
-        : `${fileNameArgs.policyRecordIdx + 1}`;
-    fileNamePrefix += `-${policyType}${recordIdx}`;
+        : `${fileNameArgs.nudgeRecordIdx + 1}`;
+    fileNamePrefix += `-${nudgeType}${recordIdx}`;
   }
   if (fileNameArgs.citationIdx !== null) {
     fileNamePrefix += `-citation${fileNameArgs.citationIdx + 1}`;
@@ -374,129 +348,126 @@ function createCitations(
   });
 }
 
+function parseOrgCredit(raw: string | null | undefined): string[] | undefined {
+  if (!raw) return undefined;
+  const orgs = raw
+    .split(",")
+    .map((org) => org.trim())
+    .filter(Boolean);
+  return orgs.length > 0 ? orgs : undefined;
+}
+
 function combineData(
   priorEncodedPlaceIds: Partial<Record<PlaceStringId, string>>,
   places: Record<PlaceStringId, Partial<DirectusPlace>>,
-  landUseRecords: Record<PlaceStringId, Array<Partial<LandUseRecord>>>,
-  benefitDistrictRecords: Record<
-    PlaceStringId,
-    Array<Partial<BenefitDistrict>>
-  >,
-  citationsByLandUseJunctionId: Record<number, Partial<DirectusCitation>>,
-  citationsByBenefitDistrictJunctionId: Record<
-    number,
-    Partial<DirectusCitation>
-  >,
+  nudges: Record<PlaceStringId, Array<Partial<Nudge>>>,
+  citationsByNudgeJunctionId: Record<number, Partial<DirectusCitation>>,
   filesByAttachmentJunctionId: Record<number, FileMetadata>,
 ): Record<PlaceStringId, RawCompleteEntry> {
   return Object.fromEntries(
     Object.entries(places)
       .map(([placeId, place]): [PlaceStringId, RawCompleteEntry] => {
-        let numAddMax = 0;
-        let numReduceMin = 0;
-        let numRmMin = 0;
-        if (landUseRecords[placeId]) {
-          landUseRecords[placeId].forEach((record) => {
-            if (record.type === "add parking maximums") numAddMax += 1;
-            if (record.type === "reduce parking minimums") numReduceMin += 1;
-            if (record.type === "remove parking minimums") numRmMin += 1;
+        let numDefault = 0;
+        let numRatio = 0;
+        let numSub = 0;
+        let numTitles = 0;
+        let numPlacement = 0;
+        let numOther = 0;
+        if (nudges[placeId]) {
+          nudges[placeId].forEach((record) => {
+            if (record.type === "plant-based default") numDefault += 1;
+            if (record.type === "climate-friendly ratio") numRatio += 1;
+            if (record.type === "subtle substitution") numSub += 1;
+            if (record.type === "tasty titles & descriptions") numTitles += 1;
+            if (record.type === "prime placement") numPlacement += 1;
+            if (record.type === "other") numOther += 1;
           });
         }
-        const numBenefitDistrict = benefitDistrictRecords[placeId]?.length ?? 0;
-        const hasDistinctPolicyTypes =
-          [numAddMax, numReduceMin, numRmMin, numBenefitDistrict].filter(
-            Boolean,
-          ).length > 1;
+        const hasDistinctNudgeTypes =
+          [
+            numDefault,
+            numRatio,
+            numSub,
+            numTitles,
+            numPlacement,
+            numOther,
+          ].filter(Boolean).length > 1;
 
-        const addMax: Array<RawCompleteLandUsePolicy> = [];
-        const reduceMin: Array<RawCompleteLandUsePolicy> = [];
-        const rmMin: Array<RawCompleteLandUsePolicy> = [];
-        if (landUseRecords[placeId]) {
-          landUseRecords[placeId].forEach((record) => {
-            const [collection, numPolicyRecords] = {
-              "add parking maximums": [addMax, numAddMax] as const,
-              "reduce parking minimums": [reduceMin, numReduceMin] as const,
-              "remove parking minimums": [rmMin, numRmMin] as const,
+        const defaultNudge: Array<RawCompleteNudge> = [];
+        const ratio: Array<RawCompleteNudge> = [];
+        const sub: Array<RawCompleteNudge> = [];
+        const titles: Array<RawCompleteNudge> = [];
+        const placement: Array<RawCompleteNudge> = [];
+        const other: Array<RawCompleteNudge> = [];
+
+        if (nudges[placeId]) {
+          nudges[placeId].forEach((record) => {
+            console.log(`Type for ${placeId}:`, JSON.stringify(record.type));
+            const [collection, numNudgeRecords] = {
+              "plant-based default": [defaultNudge, numDefault] as const,
+              "climate-friendly ratio": [ratio, numRatio] as const,
+              "subtle substitution": [sub, numSub] as const,
+              "tasty titles & descriptions": [titles, numTitles] as const,
+              "prime placement": [placement, numPlacement] as const,
+              other: [other, numOther] as const,
             }[record.type!];
-            const policyRecordIdx =
-              numPolicyRecords > 1 ? collection.length : null;
-            const policy = {
+            const nudgeRecordIdx =
+              numNudgeRecords > 1 ? collection.length : null;
+            const nudge = {
               summary: record.summary!,
               status: record.status!,
-              scope: record.reform_scope!,
-              land: record.land_uses!,
-              date: record.reform_date! ?? undefined,
+              date: record.date! ?? undefined,
               reporter: record.reporter!,
-              requirements: record.requirements!,
+              org_credit: parseOrgCredit(record.org_credit),
+              org_credit_expanded: record.org_credit_expanded! ?? undefined,
               citations: createCitations(
                 record.citations!,
-                citationsByLandUseJunctionId,
+                citationsByNudgeJunctionId,
                 filesByAttachmentJunctionId,
                 {
                   placeId,
-                  hasDistinctPolicyTypes,
-                  policyType: record.type!,
-                  policyRecordIdx,
+                  hasDistinctNudgeTypes,
+                  nudgeType: record.type!,
+                  nudgeRecordIdx,
                 },
               ),
             };
-            collection.push(policy);
-          });
-        }
-
-        const benefitDistricts: Array<RawCompleteBenefitDistrict> = [];
-        if (benefitDistrictRecords[placeId]) {
-          benefitDistrictRecords[placeId].forEach((record) => {
-            const policyRecordIdx =
-              numBenefitDistrict > 1 ? benefitDistricts.length : null;
-            benefitDistricts.push({
-              summary: record.summary!,
-              status: record.status!,
-              date: record.reform_date! ?? undefined,
-              reporter: record.reporter!,
-              citations: createCitations(
-                record.citations!,
-                citationsByBenefitDistrictJunctionId,
-                filesByAttachmentJunctionId,
-                {
-                  placeId,
-                  hasDistinctPolicyTypes,
-                  policyType: "parking benefit district",
-                  policyRecordIdx,
-                },
-              ),
-            });
+            collection.push(nudge);
           });
         }
 
         const result: RawCompleteEntry = {
           place: {
             name: place.name!,
+            street: place.street!,
+            city: place.city!,
             state: place.state!,
+            postal_code: place.postal_code!,
             country:
               COUNTRY_MAPPING[place.country_code!] ?? place.country_code!,
             type: place.type!,
             encoded: priorEncodedPlaceIds[placeId] ?? encodePlaceId(placeId),
-            pop: place.population!,
-            repeal: place.complete_minimums_repeal ? true : undefined,
+            consumer_base: place.consumer_base!,
             coord: place.coordinates!.coordinates,
           },
-          ...(addMax.length && { add_max: addMax }),
-          ...(reduceMin.length && { reduce_min: reduceMin }),
-          ...(rmMin.length && { rm_min: rmMin }),
-          ...(benefitDistricts.length && {
-            benefit_district: benefitDistricts,
-          }),
+          ...(defaultNudge.length && { default: defaultNudge }),
+          ...(ratio.length && { ratio }),
+          ...(sub.length && { sub }),
+          ...(titles.length && { titles }),
+          ...(placement.length && { placement }),
+          ...(other.length && { other }),
         };
         return [placeId, result];
       })
-      // Filter out places without any policy records.
+      // Filter out places without any nudge records.
       .filter(
         ([, entry]) =>
-          entry.add_max?.length ||
-          entry.rm_min?.length ||
-          entry.reduce_min?.length ||
-          entry.benefit_district?.length,
+          entry.default?.length ||
+          entry.ratio?.length ||
+          entry.sub?.length ||
+          entry.titles?.length ||
+          entry.placement?.length ||
+          entry.other?.length,
       )
       .sort(),
   );
@@ -509,16 +480,10 @@ function combineData(
 async function saveCoreData(
   result: Record<PlaceStringId, RawCompleteEntry>,
 ): Promise<void> {
-  const formatLandUse = (record: RawCoreLandUsePolicy) => ({
-    status: record.status,
-    scope: record.scope.sort(),
-    land: record.land.sort(),
-    date: record.date,
-  });
-
-  const formatBenefitDistrict = (record: RawCoreBenefitDistrict) => ({
+  const formatNudge = (record: RawNudge) => ({
     status: record.status,
     date: record.date,
+    org_credit: record.org_credit,
   });
 
   const pruned = Object.fromEntries(
@@ -527,25 +492,33 @@ async function saveCoreData(
       {
         place: {
           name: entry.place.name,
+          street: entry.place.street,
+          city: entry.place.city,
           state: entry.place.state,
+          postal_code: entry.place.postal_code,
           country: entry.place.country,
           type: entry.place.type,
           encoded: entry.place.encoded,
-          pop: entry.place.pop,
+          consumer_base: entry.place.consumer_base,
           coord: entry.place.coord,
-          repeal: entry.place.repeal,
         },
-        ...(entry.add_max && {
-          add_max: entry.add_max.map(formatLandUse),
+        ...(entry.default && {
+          default: entry.default.map(formatNudge),
         }),
-        ...(entry.reduce_min && {
-          reduce_min: entry.reduce_min.map(formatLandUse),
+        ...(entry.ratio && {
+          ratio: entry.ratio.map(formatNudge),
         }),
-        ...(entry.rm_min && {
-          rm_min: entry.rm_min.map(formatLandUse),
+        ...(entry.sub && {
+          sub: entry.sub.map(formatNudge),
         }),
-        ...(entry.benefit_district && {
-          benefit_district: entry.benefit_district.map(formatBenefitDistrict),
+        ...(entry.titles && {
+          titles: entry.titles.map(formatNudge),
+        }),
+        ...(entry.placement && {
+          placement: entry.placement.map(formatNudge),
+        }),
+        ...(entry.other && {
+          other: entry.other.map(formatNudge),
         }),
       },
     ]),
@@ -558,14 +531,7 @@ async function saveCoreData(
 async function saveExtendedData(
   result: Record<PlaceStringId, RawCompleteEntry>,
 ): Promise<void> {
-  const formatLandUse = (record: ExtendedLandUsePolicy) => ({
-    summary: record.summary,
-    reporter: record.reporter,
-    requirements: record.requirements.sort(),
-    citations: record.citations,
-  });
-
-  const formatBenefitDistrict = (record: ExtendedBenefitDistrict) => ({
+  const formatNudge = (record: ExtendedNudge) => ({
     summary: record.summary,
     reporter: record.reporter,
     citations: record.citations,
@@ -575,14 +541,12 @@ async function saveExtendedData(
     Object.entries(result).map(([placeId, entry]) => [
       placeId,
       {
-        ...(entry.add_max && { add_max: entry.add_max.map(formatLandUse) }),
-        ...(entry.reduce_min && {
-          reduce_min: entry.reduce_min.map(formatLandUse),
-        }),
-        ...(entry.rm_min && { rm_min: entry.rm_min.map(formatLandUse) }),
-        ...(entry.benefit_district && {
-          benefit_district: entry.benefit_district.map(formatBenefitDistrict),
-        }),
+        ...(entry.default && { default: entry.default.map(formatNudge) }),
+        ...(entry.ratio && { ratio: entry.ratio.map(formatNudge) }),
+        ...(entry.sub && { sub: entry.sub.map(formatNudge) }),
+        ...(entry.titles && { titles: entry.titles.map(formatNudge) }),
+        ...(entry.placement && { placement: entry.placement.map(formatNudge) }),
+        ...(entry.other && { other: entry.other.map(formatNudge) }),
       },
     ]),
   );
@@ -602,24 +566,12 @@ async function main(): Promise<void> {
   const priorEncodedPlaceIds = await readPriorEncodedPlaceIds();
 
   const places = await readPlacesAndEnsureCoordinates(client, geocoder);
-  const landUseRecords = await readLandUseRecords(
-    client,
-    places.directusIdToStringId,
-  );
-  const benefitDistrictRecords = await readBenefitDistrictRecords(
-    client,
-    places.directusIdToStringId,
-  );
+  const nudges = await readNudges(client, places.directusIdToStringId);
   const citations = await readCitations(client);
-  const citationsByLandUseJunctionId = await readCitationsByJunctionId(
+  const citationsByNudgeJunctionId = await readCitationsByJunctionId(
     client,
     citations,
-    "land_use_citations",
-  );
-  const citationsByBenefitDistrictJunctionId = await readCitationsByJunctionId(
-    client,
-    citations,
-    "benefit_districts_citations",
+    "nudges_citations",
   );
   const filesByAttachmentJunctionId =
     await readFilesByAttachmentJunctionId(client);
@@ -627,10 +579,8 @@ async function main(): Promise<void> {
   const result = combineData(
     priorEncodedPlaceIds,
     places.stringIdToPlace,
-    landUseRecords,
-    benefitDistrictRecords,
-    citationsByLandUseJunctionId,
-    citationsByBenefitDistrictJunctionId,
+    nudges,
+    citationsByNudgeJunctionId,
     filesByAttachmentJunctionId,
   );
 

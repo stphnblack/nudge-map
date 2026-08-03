@@ -34,22 +34,22 @@ const TESTS: EdgeCase[] = [
   {
     desc: "default: any",
     nudgeTypeFilter: "any nudge",
-    expectedRange: [1, 8],
+    expectedRange: [1, 30],
   },
   {
     desc: "default: default",
     nudgeTypeFilter: "plant-based default",
-    expectedRange: [1, 8],
+    expectedRange: [1, 30],
   },
   {
     desc: "default: ratio",
     nudgeTypeFilter: "climate-friendly ratio",
-    expectedRange: [1, 8],
+    expectedRange: [1, 30],
   },
   {
     desc: "default: sub",
     nudgeTypeFilter: "subtle substitution",
-    expectedRange: [0, 0],
+    expectedRange: [1, 10],
   },
   {
     desc: "default: titles",
@@ -59,7 +59,7 @@ const TESTS: EdgeCase[] = [
   {
     desc: "default: placement",
     nudgeTypeFilter: "prime placement",
-    expectedRange: [1, 8],
+    expectedRange: [1, 30],
   },
   {
     desc: "default: other",
@@ -76,19 +76,19 @@ const TESTS: EdgeCase[] = [
     desc: "any nudge: nudge change filter",
     nudgeTypeFilter: "any nudge",
     includedNudge: ["Plant-based default"],
-    expectedRange: [1, 8],
+    expectedRange: [1, 30],
   },
   {
     desc: "country filter",
     nudgeTypeFilter: "any nudge",
     country: ["United States"],
-    expectedRange: [1, 8],
+    expectedRange: [1, 30],
   },
   {
     desc: "place type filter",
     nudgeTypeFilter: "any nudge",
     placeType: ["Hospital"],
-    expectedRange: [1, 8],
+    expectedRange: [1, 30],
   },
   {
     desc: "status filter",
@@ -98,15 +98,15 @@ const TESTS: EdgeCase[] = [
   },
   {
     desc: "year filter",
-    nudgeTypeFilter: "prime placement",
-    year: ["Unknown", "2023"],
-    expectedRange: [1, 4],
+    nudgeTypeFilter: "climate-friendly ratio",
+    year: ["Unknown", "2025"],
+    expectedRange: [1, 30],
   },
   {
     desc: "any status",
     nudgeTypeFilter: "any nudge",
     nudgeStatusFilter: "any status",
-    expectedRange: [20, 30],
+    expectedRange: [20, 50],
   },
 ];
 

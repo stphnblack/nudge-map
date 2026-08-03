@@ -32,7 +32,10 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
       "Place 1": {
         place: {
           name: "Place 1",
-          state: "",
+          street: null,
+          city: "Chicago",
+          postal_code: null,
+          state: null,
           country: "United States",
           encoded: "",
           coord: [0, 0],
@@ -51,7 +54,10 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
       "Place 2": {
         place: {
           name: "Place 2",
-          state: "",
+          street: null,
+          city: "Brasilia",
+          postal_code: null,
+          state: null,
           country: "Brazil",
           encoded: "",
           coord: [0, 0],

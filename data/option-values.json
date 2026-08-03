@@ -1,31 +1,50 @@
 {
   "merged": {
     "placeType": [
+      "Cafe",
+      "Chain Restaurant",
       "City/Government",
       "Hospital",
+      "Ind. Restaurant",
+      "Prison",
       "University Cafe",
       "University Dining Hall",
       "University Event",
-      "Workplace Cafeteria"
+      "Workplace Cafeteria "
     ],
     "country": [
       "United States",
+      "Australia",
       "Canada",
       "Finland",
       "Netherlands",
       "Spain",
       "United Kingdom"
     ],
-    "year": ["unknown", "2027", "2026", "2025", "2024", "2022", "2021"],
+    "year": [
+      "unknown",
+      "2027",
+      "2026",
+      "2025",
+      "2024",
+      "2023",
+      "2022",
+      "2021",
+      "2020",
+      "2019"
+    ],
     "orgCredit": [
       "BFF",
       "Civic Plate (a project of @MercyForAnimals)",
       "Earthsave Canada",
+      "FF",
+      "FoE",
       "GBD",
       "Humane World for Animals",
       "MFA",
       "Plant-Based Cities Movement",
       "Plant-Based Treaty",
+      "Planted Society",
       "Rachel Atcheson",
       "Unknown",
       "Wholesome Minnesota of Compassionate Action for Animals"
@@ -33,64 +52,110 @@
   },
   "anyAdopted": {
     "placeType": [
+      "Cafe",
+      "Chain Restaurant",
       "Hospital",
+      "Ind. Restaurant",
       "University Cafe",
       "University Dining Hall",
       "University Event",
-      "Workplace Cafeteria"
+      "Workplace Cafeteria "
     ],
-    "country": ["United States", "United Kingdom"],
-    "year": ["unknown", "2025", "2022"],
+    "country": ["United States", "Canada", "United Kingdom"],
+    "year": ["unknown", "2025", "2024", "2023", "2022"],
     "orgCredit": ["BFF", "GBD", "Rachel Atcheson", "Unknown"]
   },
   "anyPledged": {
-    "placeType": ["City/Government", "University Dining Hall"],
-    "country": ["United States", "Canada", "Finland", "Netherlands", "Spain"],
-    "year": ["2027", "2026", "2025", "2024", "2022", "2021"],
+    "placeType": [
+      "City/Government",
+      "Hospital",
+      "Prison",
+      "University Dining Hall"
+    ],
+    "country": [
+      "United States",
+      "Australia",
+      "Canada",
+      "Finland",
+      "Netherlands",
+      "Spain"
+    ],
+    "year": [
+      "2027",
+      "2026",
+      "2025",
+      "2024",
+      "2023",
+      "2022",
+      "2021",
+      "2020",
+      "2019"
+    ],
     "orgCredit": [
+      "BFF",
       "Civic Plate (a project of @MercyForAnimals)",
       "Earthsave Canada",
+      "FF",
+      "FoE",
+      "GBD",
       "Humane World for Animals",
       "MFA",
       "Plant-Based Cities Movement",
       "Plant-Based Treaty",
+      "Planted Society",
       "Unknown",
       "Wholesome Minnesota of Compassionate Action for Animals"
     ]
   },
   "defaultAdopted": {
     "placeType": [
+      "Cafe",
+      "Chain Restaurant",
       "Hospital",
+      "Ind. Restaurant",
       "University Cafe",
       "University Dining Hall",
       "University Event"
     ],
-    "country": ["United States", "United Kingdom"],
-    "year": ["2025", "2022"],
-    "orgCredit": ["BFF", "GBD", "Rachel Atcheson"]
+    "country": ["United States", "Canada", "United Kingdom"],
+    "year": ["unknown", "2025", "2024", "2023", "2022"],
+    "orgCredit": ["BFF", "GBD", "Rachel Atcheson", "Unknown"]
   },
   "defaultPledged": {
     "placeType": ["City/Government"],
     "country": ["United States"],
-    "year": ["2025", "2024"],
+    "year": ["2025", "2024", "2023"],
     "orgCredit": [
+      "BFF",
       "Civic Plate (a project of @MercyForAnimals)",
       "MFA",
+      "Planted Society",
       "Wholesome Minnesota of Compassionate Action for Animals"
     ]
   },
   "ratioAdopted": {
-    "placeType": ["University Dining Hall", "Workplace Cafeteria"],
+    "placeType": [
+      "Ind. Restaurant",
+      "University Dining Hall",
+      "Workplace Cafeteria "
+    ],
     "country": ["United States"],
     "year": ["unknown", "2025"],
     "orgCredit": ["Unknown"]
   },
   "ratioPledged": {
-    "placeType": ["City/Government", "University Dining Hall"],
+    "placeType": [
+      "City/Government",
+      "Hospital",
+      "Prison",
+      "University Dining Hall"
+    ],
     "country": ["United States", "Canada", "Finland", "Netherlands", "Spain"],
-    "year": ["2027", "2026", "2025", "2024", "2022", "2021"],
+    "year": ["2027", "2026", "2025", "2024", "2022", "2021", "2020"],
     "orgCredit": [
       "Earthsave Canada",
+      "FF",
+      "FoE",
       "Humane World for Animals",
       "Plant-Based Cities Movement",
       "Plant-Based Treaty",
@@ -98,10 +163,10 @@
     ]
   },
   "subAdopted": {
-    "placeType": [],
-    "country": [],
-    "year": [],
-    "orgCredit": []
+    "placeType": ["University Dining Hall"],
+    "country": ["Canada"],
+    "year": ["2024"],
+    "orgCredit": ["Unknown"]
   },
   "subPledged": {
     "placeType": [],
@@ -122,7 +187,7 @@
     "orgCredit": []
   },
   "placementAdopted": {
-    "placeType": ["Workplace Cafeteria"],
+    "placeType": ["Workplace Cafeteria "],
     "country": ["United States"],
     "year": ["unknown"],
     "orgCredit": ["Unknown"]
@@ -140,9 +205,15 @@
     "orgCredit": []
   },
   "otherPledged": {
-    "placeType": [],
-    "country": [],
-    "year": [],
-    "orgCredit": []
+    "placeType": ["City/Government"],
+    "country": ["United States", "Australia", "Canada", "Netherlands"],
+    "year": ["2024", "2021", "2019"],
+    "orgCredit": [
+      "BFF",
+      "GBD",
+      "Plant-Based Cities Movement",
+      "Plant-Based Treaty",
+      "Unknown"
+    ]
   }
 }
