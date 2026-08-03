@@ -70,6 +70,8 @@ export async function getLongLat(
 
   const locationMethods: Array<() => string> = [];
 
+  // Ordered from most to least precise.
+
   if (placeName && street) {
     locationMethods.push(
       () =>
