@@ -1,5 +1,4 @@
 /* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable no-await-in-loop */
 
 import nodeFetch, { RequestInfo, RequestInit, Response } from "node-fetch";
 import NodeGeocoder from "node-geocoder";
@@ -9,7 +8,31 @@ const sleep = (ms: number) =>
     setTimeout(resolve, ms);
   });
 
-export async function fetch(
+/**
+ * Wraps an async function so consecutive calls are spaced at least
+ * `minDelayMs` apart, measured from the end of one call to the start
+ * of the next — equivalent to geopy's RateLimiter(min_delay_seconds=...).
+ */
+function rateLimit<Args extends unknown[], R>(
+  fn: (...args: Args) => Promise<R>,
+  minDelayMs: number,
+): (...args: Args) => Promise<R> {
+  let lastCallEnded = 0;
+
+  return async (...args: Args): Promise<R> => {
+    const elapsed = Date.now() - lastCallEnded;
+    if (elapsed < minDelayMs) {
+      await sleep(minDelayMs - elapsed);
+    }
+    try {
+      return await fn(...args);
+    } finally {
+      lastCallEnded = Date.now();
+    }
+  };
+}
+
+export async function customFetch(
   url: RequestInfo,
   options: RequestInit = {},
 ): Promise<Response> {
@@ -20,7 +43,12 @@ export async function fetch(
 }
 
 export function initGeocoder(): NodeGeocoder.Geocoder {
-  return NodeGeocoder({ provider: "openstreetmap", fetch });
+  const geocoder = NodeGeocoder({ provider: "openstreetmap", fetch: customFetch });
+
+  const throttledGeocode = rateLimit(geocoder.geocode.bind(geocoder), 1100);
+  geocoder.geocode = throttledGeocode as NodeGeocoder.Geocoder["geocode"];
+
+  return geocoder;
 }
 
 export async function getLongLat(
@@ -36,7 +64,6 @@ export async function getLongLat(
   const streetQuery = street ? `${street}, ` : "";
   const postalQuery = postalCode ? `${postalCode}, ` : "";
 
-  // Ordered from most to least precise.
   const locationMethods: Array<() => string> = [];
 
   if (placeName && street) {
@@ -69,7 +96,6 @@ export async function getLongLat(
   for (const getLocationString of locationMethods) {
     const locationString = getLocationString();
     const geocodeResults = await geocoder.geocode(locationString);
-    await sleep(1100);
     if (geocodeResults.length > 0) {
       const lat = geocodeResults[0].latitude;
       const long = geocodeResults[0].longitude;
