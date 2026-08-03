@@ -1,4 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-await-in-loop */
 
 import nodeFetch, { RequestInfo, RequestInit, Response } from "node-fetch";
 import NodeGeocoder from "node-geocoder";
@@ -43,7 +44,10 @@ export async function customFetch(
 }
 
 export function initGeocoder(): NodeGeocoder.Geocoder {
-  const geocoder = NodeGeocoder({ provider: "openstreetmap", fetch: customFetch });
+  const geocoder = NodeGeocoder({
+    provider: "openstreetmap",
+    fetch: customFetch,
+  });
 
   const throttledGeocode = rateLimit(geocoder.geocode.bind(geocoder), 1100);
   geocoder.geocode = throttledGeocode as NodeGeocoder.Geocoder["geocode"];
