@@ -95,6 +95,6 @@ test("encodePlaceId", () => {
 
 test("encodedPlaceToUrl", () => {
   expect(encodedPlaceToUrl("tucson-arizona-united-states")).toEqual(
-    "https://parkingreform.org/mandates-map/city_detail/tucson-arizona-united-states.html",
+    "https://better-food-foundation.github.io/nudge-map/place-detail/tucson-arizona-united-states.html",
   );
 });

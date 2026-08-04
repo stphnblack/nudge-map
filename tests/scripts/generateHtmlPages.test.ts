@@ -13,7 +13,7 @@ test("generate html page", async ({}, testInfo) => {
   testInfo.snapshotSuffix = "";
 
   const assertPlace = async (normalizedPlaceId: string): Promise<void> => {
-    const content = await readFile(`city_detail/${normalizedPlaceId}.html`);
+    const content = await readFile(`place-detail/${normalizedPlaceId}.html`);
     const snapshotName = normalizedPlaceId.toLowerCase().replace("_", "-");
     expect(content).toMatchSnapshot(`${snapshotName}.html`);
   };
