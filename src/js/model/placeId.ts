@@ -47,5 +47,5 @@ export function encodePlaceId(placeId: PlaceId): string {
 }
 
 export function encodedPlaceToUrl(encodedPlace: string): string {
-  return `https://parkingreform.org/mandates-map/city_detail/${encodedPlace}.html`;
+  return `https://better-food-foundation.github.io/nudge-map/place_detail/${encodedPlace}.html`;
 }

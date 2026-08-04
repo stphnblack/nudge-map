@@ -38,7 +38,7 @@ jobs:
         run: npm run gen-html -- --quiet
 
       - name: Copy static pages into dist
-        run: cp -r city_detail dist/city_detail
+        run: cp -r city_detail dist/place_detail
 
       - name: Add .nojekyll file
         run: touch dist/.nojekyll
