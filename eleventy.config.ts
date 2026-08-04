@@ -78,7 +78,7 @@ export default async function (eleventyConfig: any) {
   return {
     dir: {
       input: "scripts/11ty",
-      output: "city_detail",
+      output: "place-detail",
     },
   };
 }
