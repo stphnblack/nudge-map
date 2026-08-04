@@ -5,7 +5,7 @@
 /data/generated/*.csv
 /data/generated/*.json
 /data/generated/*.zip
-/city_detail/*.html
+/place-detail/*.html
 
 /node_modules
 tsconfig.tsbuildinfo
