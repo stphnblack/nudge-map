@@ -577,7 +577,7 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     filterStateKey: "placeType",
     legend: "Institution types",
     preserveCapitalization: true,
-    useTwoColumns: true,
+    useTwoColumns: false,
   });
 
   initConsumerBaseSlider(filterManager, optionsDiv);
