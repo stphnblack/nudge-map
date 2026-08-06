@@ -25,8 +25,8 @@ export default function createMap(): Map {
   });
 
   // Set default view show all the US on mobile. While this is fairly zoomed out,
-  // the main purpose of the map on initial load is to tell the narrative that parking
-  // reform is popular, i.e. there are a lot of dots. Search, filter, and table view are
+  // the main purpose of the map on initial load is to tell the narrative that plant-based
+  // nudges are popular, i.e. there are a lot of dots. Search, filter, and table view are
   // meant for power users doing actual research.
   map.setView([40, -96], 3);
   map.attributionControl.setPrefix(
