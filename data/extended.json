@@ -1,4 +1,49 @@
 {
+  "Alcorcón, Spain, Spain": {
+    "other": [
+      {
+        "summary": "Formally declared support for the Plant Based Treaty on July 16, 2025.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Almere, Netherlands": {
+    "ratio": [
+      {
+        "summary": "Committed to a 60/40 plant-based protein consumption ratio by 2030. Endorsed PBT 7 Mar 2026.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Ambala Institute of Hotel Management, India": {
+    "ratio": [
+      {
+        "summary": "Following an HSI/India (Forward Food) two-day culinary workshop, the institute committed to replace 30% of all meat-, dairy- and egg-based menu items with plant-based options and to source its ~20,000 annual eggs exclusively cage-free. Serves ~43,000 meals/yr.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "American University, Davenport Coffee Lounge, DC, United States": {
+    "default": [
+      {
+        "summary": "After a New Roots Institute / DefaultVeg fellow campaign, the Davenport Coffee Lounge ('The Dav') eliminated the upcharge for plant-based milks, making dairy-free options financially accessible to all students.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "American University, School of Public Affairs event, DC, United States": {
+    "ratio": [
+      {
+        "summary": "Piloted a 50% plant-based menu at a School of Public Affairs event and created a 'Green Event' catering category. 50/50 plant-to-animal ratio.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "Amsterdam, Netherlands, Netherlands": {
     "ratio": [
       {
@@ -65,6 +110,40 @@
       }
     ]
   },
+  "Amsterdam, Netherlands": {
+    "default": [
+      {
+        "summary": "'Vegan Friday' adopted as the default across all public institutions' catering (opt-out). Part of a covenant signed April 2024 by 12 major Amsterdam institutions. Endorsed the Plant Based Treaty 30 Jan 2024.",
+        "reporter": null,
+        "citations": []
+      }
+    ],
+    "ratio": [
+      {
+        "summary": "City commitment to a 60% plant-based / 40% animal protein ratio (embedded in Amsterdam's food strategy; already applied in city-government catering, city-wide goal by 2030).",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Aramark, PA, United States": {
+    "other": [
+      {
+        "summary": "First foodservice provider to adopt WRI's Cool Food Meals badge (2021); piloted at 10 US universities, with WRI identifying 350+ residential-dining items meeting the low-carbon standard, labeled to nudge climate-friendly dining.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Arnhem, Netherlands": {
+    "default": [
+      {
+        "summary": "Plant-based food is the default at all municipal events; attendees who prefer meat or fish opt in beforehand. Municipal caterer also reducing animal proteins. Endorsed PBT 9 Dec 2025.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "Austin Office of Sustainability, TX, United States": {
     "default": [
       {
@@ -80,6 +159,15 @@
             "screenshots": []
           }
         ]
+      }
+    ]
+  },
+  "B Corp Champions Retreat 2022, PA, United States": {
+    "default": [
+      {
+        "summary": "GBD plant-based default via the RSVP form; 80% of attendees kept the plant-based meal.",
+        "reporter": null,
+        "citations": []
       }
     ]
   },
@@ -156,6 +244,15 @@
       }
     ]
   },
+  "Brampton, Canada": {
+    "titles": [
+      {
+        "summary": "Plant-based options featured at council meetings/civic events with displayed climate, health and cost information about food/protein sources; catering & concession contracts to add criteria promoting plant-based options (CAO report 2025-539); open-space events to require >=50% of caterers offer plant-based catering. Endorsed PBT 20 Nov 2024.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "Brampton, Ontario, ON, Canada": {
     "ratio": [
       {
@@ -171,6 +268,24 @@
             "screenshots": []
           }
         ]
+      }
+    ]
+  },
+  "Cafe Services Inc., NH, United States": {
+    "ratio": [
+      {
+        "summary": "Committed to 33% of employee dining meals plant-based by 2025. Grade B.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Calderdale Council, United Kingdom": {
+    "default": [
+      {
+        "summary": "Cabinet adopted a Plant-Based Catering Policy on 3 June 2024: food at council-hosted meetings and events (including Mayor Making and Chief Officer recruitment panels) is 100% plant-based, with a preference for seasonal, whole, non-processed foods.",
+        "reporter": null,
+        "citations": []
       }
     ]
   },
@@ -192,6 +307,24 @@
       }
     ]
   },
+  "Campolide (Lisbon), Portugal, Portugal": {
+    "other": [
+      {
+        "summary": "Junta de Freguesia de Campolide (a parish of Lisbon) unanimously endorsed the Plant Based Treaty on 25 July 2025 — the 44th municipality worldwide to do so — committing to public education campaigns.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Caribou Coffee Seasonal Menus, MN, United States": {
+    "other": [
+      {
+        "summary": "Eliminated the surcharge for non-dairy (oat/almond) milk across all ~800 US locations (April 2023); ~20% of orders were already dairy-free.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "City of Sammamish, WA, United States": {
     "default": [
       {
@@ -210,6 +343,177 @@
       }
     ]
   },
+  "CleanMed / Health Care Without Harm event, MO, United States": {
+    "default": [
+      {
+        "summary": "GBD plant-based event default + tasty titles + placement, with Health Care Without Harm, Practice Greenhealth, and MeetGreen.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "ClimateCAP Summit 2025 (UC Berkeley Haas), CA, United States": {
+    "default": [
+      {
+        "summary": "GBD plant-based defaults + full nudge set at the ClimateCAP event hosted by UC Berkeley Haas; saved ~260 kg CO2e from protein.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Colorado College Coffee Shop, CO, United States": {
+    "other": [
+      {
+        "summary": "Coffee shop pricing nudge on dairy vs. plant milk (details to confirm).",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Compass Group (UK & Ireland), England, United Kingdom": {
+    "ratio": [
+      {
+        "summary": "Compass Group UK&I committed to switch 25% of animal protein to plant-based by 2025 and 40% by 2030 across its foodservice contracts (business & industry, education, healthcare). Menu-ratio commitment across a major contract caterer.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Coolfood Pledge – US healthcare cohort, DC, United States": {
+    "ratio": [
+      {
+        "summary": "WRI Coolfood Pledge: 80+ hospitals committed to cut food-related emissions 25% by 2030. Across 23 US healthcare members, plant-based foods rose 27% on the average plate while beef/lamb fell 28% and all animal foods fell 16%. Program-level ratio commitment (cf. ProVeg School Plates row); individual signatories to be added separately.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Cornell University, NY, United States": {
+    "default": [
+      {
+        "summary": "Through DefaultVeg Ambassador / New Roots Institute campaigns, Cornell removed the upcharge for plant-based milks and dropped the dairy default at all campus cafes; baristas now ask which milk customers want rather than defaulting to dairy. Notable given Cornell operates its own dairy farm.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Creative Dining Services, MI, United States": {
+    "ratio": [
+      {
+        "summary": "Committed to 50% of meals plant-based by 2025. Grade C+.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "DC Harvest, Washington, DC, DC, United States": {
+    "sub": [
+      {
+        "summary": "Participated in DC Veg Week / DefaultVeg: vegan dinner-menu takeover, new vegan brunch dishes, and switched to plant-based cooking oils in place of butter.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Davidson College, NC, United States": {
+    "ratio": [
+      {
+        "summary": "Through a 2021 partnership with the Humane Society of the United States (Forward Food), Davidson College Dining committed to increasing plant-based meal offerings to 40% and decreasing use of animal-based products by 10%.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Duke Kunshan University, Never Mind Cafe, China": {
+    "default": [
+      {
+        "summary": "The student Plant Futures club worked with the campus Never Mind Cafe to make oat the default milk in coffee drinks, with diners able to opt in for dairy.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Edinburgh, Scotland, United Kingdom": {
+    "other": [
+      {
+        "summary": "City Council endorsed the Plant Based Treaty (Jan 2023) and adopted a PBT Action Plan (Jan 2024); measures include a daily vegetarian/vegan option in all schools and piloting plant-based snacks in youth library programs.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Efteling (theme park), Netherlands": {
+    "sub": [
+      {
+        "summary": "Plant-based default + subtle substitutions + tasty titles: only plant-based nuggets and vegan poffertjes; ~70% of burgers vegetarian after a menu change; plant-based mayo trial; 'vegakroket' renamed simply 'kroket'.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "El Masnou, Spain, Spain": {
+    "other": [
+      {
+        "summary": "City council endorsed the Plant Based Treaty on 19 June 2025 (17–2 vote); commitments include at least 50% plant-based catering at public events and engaging local schools to add plant-based meals (in line with Royal Decree 315/2025). Second Spanish city to endorse.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Elior North America, NC, United States": {
+    "ratio": [
+      {
+        "summary": "Committed to 50% plant-based in new food programs, 30% of higher-ed residential meals, and 30% of health care retail meals plant-based by 2025. Grade A.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Erasmus University Rotterdam, Netherlands": {
+    "default": [
+      {
+        "summary": "Having switched to plant-based defaults for on-campus catering in 2021 (with BFF support), the university made oat milk the default creamer at coffee corners across campus in 2024, saving ~600 L water and 2.25 kg CO2e per liter of dairy switched.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Exeter City Council, United Kingdom": {
+    "default": [
+      {
+        "summary": "Motion passed in 2022 to serve fully plant-based food and drink at all catered council meetings and events, as a response to the climate crisis.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Exmouth, United Kingdom": {
+    "default": [
+      {
+        "summary": "Council transitioned to plant-based meal plans when catering for climate-related meetings and events (completed). Also required a minimum two vegan options plus environmental-impact labelling at the summer festival. Endorsed PBT 11 Dec 2023.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Franklin & Marshall College, PA, United States": {
+    "placement": [
+      {
+        "summary": "As part of a New Roots Institute / DefaultVeg Ambassador campaign, campus dining relocated plant-based options from a secluded room into the main cafeteria, making them available to all students by default.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Fresh Ideas Food Service Management, MO, United States": {
+    "ratio": [
+      {
+        "summary": "Committed to 50% of meals plant-based by 2025 with a complementary animal protein reduction goal through 2025. Grade A.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "Galaxy Hut, VA, United States": {
     "default": [
       {
@@ -225,6 +529,15 @@
             "screenshots": []
           }
         ]
+      }
+    ]
+  },
+  "Good Eating Company (US), NC, United States": {
+    "default": [
+      {
+        "summary": "Foodservice provider Good Eating Company, partnering with Greener by Default, made oat milk the default at multiple corporate and academic outlets; at one site cow's-milk use fell from 70% to 18%, halving the dairy carbon footprint.",
+        "reporter": null,
+        "citations": []
       }
     ]
   },
@@ -294,6 +607,87 @@
       }
     ]
   },
+  "Grenoble, France, France": {
+    "other": [
+      {
+        "summary": "Endorsed the Plant Based Treaty as part of the 2025 cohort of new European municipal endorsers.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Groningen, Netherlands": {
+    "ratio": [
+      {
+        "summary": "Committed to a 60/40 plant-based protein consumption ratio by 2030. Endorsed PBT 9 Oct 2025.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Guckenheimer, CA, United States": {
+    "ratio": [
+      {
+        "summary": "Committed to 55% of meals offered being plant-based by 2025 (51% as of report) plus a goal to reduce animal protein purchases annually through 2027; uses a 'PowerPlant' toolkit with plant-based foods as the default core of menus. Ranked #1, grade A+.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Guest Services, Inc., VA, United States": {
+    "ratio": [
+      {
+        "summary": "Committed to 40% of meals plant-based by 2028 plus a 5% animal protein reduction by 2027. Grade C.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Guilder Cafe, Portland, Oregon, OR, United States": {
+    "other": [
+      {
+        "summary": "Oat milk offered at no upcharge; baristas ask customers which milk (oat, soy, almond or dairy) rather than defaulting to dairy.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "HHS, LLC., TX, United States": {
+    "ratio": [
+      {
+        "summary": "Committed to 50% of retail dining meals plant-based by 2027 and a 25% animal protein purchase reduction by 2027; new patient menu items defaulting to plant-based center-of-plate. Grade A+.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Haarlem, Netherlands": {
+    "ratio": [
+      {
+        "summary": "Committed to a 60/40 plant-based protein consumption ratio, supported by public-health campaigns. Endorsed PBT 7 Feb 2026. (Year = ratio target, consistent with Dutch 2030 goal.)",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Hackney Council (London), United Kingdom": {
+    "default": [
+      {
+        "summary": "Hackney committed to 100% plant-based catering at council events by 2030 via a phased transition; food emissions from events already cut ~70%, with AGMs served fully plant-based. 92% of 400 staff at 2024 tasting events supported the shift.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Harvard University (Office for Sustainability events), MA, United States": {
+    "default": [
+      {
+        "summary": "Harvard Office for Sustainability serves plant-based meals by default at its events and meetings (diners opt in for animal products); Harvard University Dining Services also cut beef (20,000 fewer beef burgers FY23 vs FY22).",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "Helsinki, Finland, Finland": {
     "ratio": [
       {
@@ -329,6 +723,24 @@
       }
     ]
   },
+  "Hunter College (CUNY), academic departments, NY, United States": {
+    "default": [
+      {
+        "summary": "Three academic departments (Nutrition, Welfare Rights Institute, Asian American Studies) adopted all five recommended behavioral nudges (default, ratio, placement, tasty titles, subtle substitutions).",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Kent State University, OH, United States": {
+    "ratio": [
+      {
+        "summary": "Kent State doubled its Forward Food commitment (Feb 2024) to serve 30% plant-based meals across both residential and retail dining by 2026, up from an initial 15% residential goal that it surpassed. Partner: Humane World for Animals.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "Kingston, Ontario, ON, Canada": {
     "placement": [
       {
@@ -341,6 +753,33 @@
       {
         "summary": "In 2024, Kingston City Council passed a motion for the city to promote plant-based foods by prioritizing them in its procurement process and placing them in higher-profile locations at city events.",
         "reporter": "Björn Ólafsson",
+        "citations": []
+      }
+    ]
+  },
+  "LPM & Affiliates dba Epicurean Feast Cafes, MA, United States": {
+    "ratio": [
+      {
+        "summary": "Committed to 40% of meals plant-based by 2025 with a complementary animal protein reduction goal. Grade B+.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "LinkedIn San Francisco Corporate Cafe, CA, United States": {
+    "default": [
+      {
+        "summary": "Good Eating Company (Sodexo) cafeteria shifted to ~65% plant-based menu with oat milk as the latte default via Greener by Default choice architecture; Feb–Apr 2022 pilot cut ~14,000 kg CO2e.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "London School of Economics (LSE), United Kingdom": {
+    "ratio": [
+      {
+        "summary": "In 2018/19 LSE Catering cut meat dishes from 65% to 37% and raised vegetarian/vegan dishes from 14% to 45%, banned beef across campus, and places vegan/vegetarian dishes first on all service counters (a default-order nudge). Daily vegan choices at all main restaurants and the four catered halls.",
+        "reporter": null,
         "citations": []
       }
     ]
@@ -387,6 +826,24 @@
       }
     ]
   },
+  "Los Angeles, California, CA, United States": {
+    "other": [
+      {
+        "summary": "City Council unanimously endorsed the Plant Based Treaty on October 18, 2022, making Los Angeles the largest US city to do so at the time.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "MAX Burgers (Sweden), Sweden": {
+    "other": [
+      {
+        "summary": "Swedish burger chain added WRI's Cool Food Meals badge to its menus in 2021, labeling lower-carbon items to nudge climate-friendly choices.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "Merri-bek City Council (Melbourne), Victoria, Australia": {
     "other": [
       {
@@ -402,6 +859,33 @@
             "screenshots": []
           }
         ]
+      }
+    ]
+  },
+  "Metz Culinary Management, PA, United States": {
+    "ratio": [
+      {
+        "summary": "Committed to 50% plant-based meals by 2025 (41-45% now) and a 5%/yr animal protein reduction through 2027; every account includes >=1 plant-based option per concept per meal; uses plant-based proteins as the default. Grade A+.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Milan (municipal schools), Italy": {
+    "ratio": [
+      {
+        "summary": "Through values-based procurement (WRI Coolfood), Milan cut food-related emissions 42% and made all Bolognese sauce served in city schools plant-based, achieving its 2030 25% emissions-reduction target early. Serving-side substitution distinguishes it from bare city endorsements.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Monash University, Wholefoods Restaurant, Australia": {
+    "default": [
+      {
+        "summary": "Student-run Wholefoods restaurant made online drink orders soy milk by default and added an up-charge for dairy cheese; skim milk removed.",
+        "reporter": null,
+        "citations": []
       }
     ]
   },
@@ -436,6 +920,33 @@
       }
     ]
   },
+  "Nestlé Professional USA, OH, United States": {
+    "other": [
+      {
+        "summary": "Adopted WRI's Cool Food menu certification in 2021, labeling qualifying lower-carbon dishes to help operators and diners choose climate-friendly meals.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "New York University, NY, United States": {
+    "default": [
+      {
+        "summary": "Through DefaultVeg Ambassador advocacy (with New Roots Institute), nine NYU campus organizations and departments committed to serving plant-based meals as the default at events and catering, with the option to opt in for animal products.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Nijmegen, Netherlands": {
+    "placement": [
+      {
+        "summary": "Municipal cafeterias promote the plant-based 'Nimma' sandwich as a signature dish (implemented Q4 2025) and added further plant-based options. Also banned meat advertising in public spaces (May 2025); second motion embeds PBT into procurement/catering (due Q3 2026). Endorsed PBT 20 Mar 2025.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "North Vancouver District, BC, Canada": {
     "ratio": [
       {
@@ -459,6 +970,15 @@
       }
     ]
   },
+  "Northshore School District, WA, United States": {
+    "ratio": [
+      {
+        "summary": "First district in Washington State (and the Pacific Northwest) to sign the Forward Food pledge, committing to serve 28% plant-based menus across all schools by 2027. Motivated by student and family demand for culturally diverse options.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "Ocean Beach People's Food Co-Op, CA, United States": {
     "ratio": [
       {
@@ -477,6 +997,42 @@
       }
     ]
   },
+  "Oregon State University, OR, United States": {
+    "ratio": [
+      {
+        "summary": "Ranked #9 on HWA's 2025 scorecard; committed to 50% of meals offered being plant-based by 2027.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Otis College of Art & Design (campus cafes), CA, United States": {
+    "default": [
+      {
+        "summary": "Made oat milk the default in campus cafes and adopted prime placement of plant-based options.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Otis College of Art & Design, CA, United States": {
+    "default": [
+      {
+        "summary": "For its October 2024 Partnership for Academic Leadership in Sustainability (PALS) Summit, Otis set plant-based food as the default in the event registration form, resulting in 100% plant-based catering at the event.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Panera Bread, MO, United States": {
+    "other": [
+      {
+        "summary": "First company to carry WRI's Cool Food Meals badge (Oct 2020): lower-carbon menu items are labeled on Panera's website and app to nudge climate-friendly choices; 55% of Panera entrées were certified.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "Paquebot Café, QC, Canada": {
     "default": [
       {
@@ -492,6 +1048,150 @@
             "screenshots": []
           }
         ]
+      }
+    ]
+  },
+  "Parkhurst Dining, PA, United States": {
+    "ratio": [
+      {
+        "summary": "Reached its internal goal of 21-25% plant-based meal offerings. Grade C+.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Parla, Spain, Spain": {
+    "other": [
+      {
+        "summary": "Endorsed the Plant Based Treaty in 2025 as part of the EU cohort (alongside El Masnou and Campolide).",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Pitzer College, Grove House, CA, United States": {
+    "default": [
+      {
+        "summary": "Grove House cafe makes lattes and cappuccinos with oat milk by default (student fellows with New Roots Institute).",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Poland — Hospitals (Ministry of Health), Poland": {
+    "other": [
+      {
+        "summary": "Poland's Ministry of Health announced (Nov–Dec 2025) a commitment to guarantee access to plant-based meals in public healthcare facilities. Implementation details still under development; no signed hospital regulation yet.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Poland — Schools (Ministry of Health), Poland": {
+    "other": [
+      {
+        "summary": "Poland's Ministry of Health signed a regulation (Feb 2026, in force 2026-09-01) guaranteeing schoolchildren access to plant-based meals: every school must serve at least one fully plant-based dish per week and provide a plant alternative to animal proteins. Replaces the 2016 standard; affects ~6.8M children across ~36,000 schools.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Pomptonian Food Service, NJ, United States": {
+    "ratio": [
+      {
+        "summary": "New goal: 30% of meals in its menu management system plant-based by 2027. Grade B.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "ProVeg UK — School Plates programme, United Kingdom": {
+    "titles": [
+      {
+        "summary": "ProVeg UK supports school caterers to redesign menus (descriptive/child-friendly names, avoid 'meat-free'/'vegan' labels, use (v)/(ve) symbols, don't separate 'Main' vs 'Vegetarian', 'Climate-Friendly'/'Chef's Special' highlights, plant-based options at top) plus a School Plates Awards scheme.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Public Schools of Brookline (MA), MA, United States": {
+    "ratio": [
+      {
+        "summary": "Already at 45% plant-based meals; signed a Forward Food pledge for 50% by 2026. Rolled out via Meatless Mondays (introduced without labeling meals 'plant-based'); switching to tofu/plant dishes raised school-lunch purchases by ~50%. Student-initiated (Warriors for Animal Rights, 2021).",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Quest Food Management Services, IL, United States": {
+    "ratio": [
+      {
+        "summary": "Reached its goal of 37% plant-based recipes in its menu management system. Grade B.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Ramapo College of New Jersey, NJ, United States": {
+    "placement": [
+      {
+        "summary": "Adopted prime placement of plant-based options, sustainability signage, and corrected dietary icons.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Richfield Public Schools, MN, United States": {
+    "ratio": [
+      {
+        "summary": "Richfield High School was the first K-12 school/district in the country to sign the Forward Food pledge (2021), committing that plant-based items would make up 20% of menu offerings by end of 2024. Partner: Humane World for Animals.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Rochester Institute of Technology, NY, United States": {
+    "ratio": [
+      {
+        "summary": "RIT signed the Forward Food pledge in 2023 (a 3-year collaboration with Humane World for Animals) and became the first university in New York State to reach a 50% plant-based campuswide menu. ~8,000 meals are served daily to 17,000 students across five main dining halls; roughly 4,000 plant-based meals/day.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "SLA Management, FL, United States": {
+    "ratio": [
+      {
+        "summary": "New goal: one-third (33%) of meals offered plant-based by 2027. Grade B.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "SSP America, VA, United States": {
+    "ratio": [
+      {
+        "summary": "Committed to 30% plant-based or vegetarian meal offerings across its own brands by 2025. Grade D+.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Saint Mary's College of California, CA, United States": {
+    "default": [
+      {
+        "summary": "Gael Dining (Good Eating Company) makes plant-based the default with oat milk as the coffee-bar default; goal of 50% plant-based entrees by 2025; partners Greener by Default and Food for Climate League.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "San Diego, CA, United States": {
+    "other": [
+      {
+        "summary": "As part of its Climate Action Plan, the city committed to cutting meat- and dairy-related emissions and water footprint by ~20%; secured by a 20-group coalition led by BFF.",
+        "reporter": null,
+        "citations": []
       }
     ]
   },
@@ -539,6 +1239,69 @@
       }
     ]
   },
+  "Scripps College, Mallott Dining Hall, CA, United States": {
+    "sub": [
+      {
+        "summary": "A student campaign (200 signatures + Scripps Voice op-ed) led the Mallott dining hall to replace shrimp dishes with tofu (subtle substitution); the intern also secured an entirely plant-based menu for the Scripps Sustainability Summit (50+ attendees).",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Smith College, MA, United States": {
+    "ratio": [
+      {
+        "summary": "Signed the Humane Society's Forward Food pledge in 2017, cutting overall meat consumption ~5% per year toward a goal of 55% plant-based entrees by 2025. HWA provided repeated on-site culinary training and custom menus.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Sodexo & Nuffield Health first to show 22% reduction in food-related emissions with Greener by Default, United Kingdom": {
+    "default": [
+      {
+        "summary": "First UK hospital caterer to apply plant-forward defaults for patient dining across 35 Nuffield Health hospitals (from early 2025): prime placement and appealing dish names shifted menus to 41% vegan; food-related emissions down 22%, meat per patient down ~14%, plant protein up ~50%.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Sodexo DefaultVeg (US Campuses), MD, United States": {
+    "default": [
+      {
+        "summary": "Sodexo embedded the DefaultVeg strategy in menu design at nearly 400 US college and university campuses; the main hot food station alternates daily with a plant-based entrée as the first option (schools may opt out). Sodexo committed to 50% plant-based meals on campuses by 2025.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Sodexo–Greener by Default (US Hospitals), MD, United States": {
+    "default": [
+      {
+        "summary": "Greener by Default and Sodexo expanded their partnership to make plant-based patient meals the default across Sodexo-managed US hospitals; 131 hospitals live as of April 2025, targeting 400 by 2026. Builds on the NYC Health + Hospitals program that cut food-related emissions by over a third.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Southwest Foodservice Excellence, AZ, United States": {
+    "ratio": [
+      {
+        "summary": "Committed to 33% of meals plant-based by 2027 plus an animal protein reduction goal by 2028 with a year-by-year glidepath. Grade B+.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "St. Mary's College of Maryland, MD, United States": {
+    "titles": [
+      {
+        "summary": "Dining team added new plant-based options with appetizing, flavor-forward names (Green Goddess Hummus, Rainbow Salad, Crispy Tofu); also funded a NuMilk machine and committed to plant-based catering in the Philosophy Department.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "Stanford University, CA, United States": {
     "ratio": [
       {
@@ -554,6 +1317,15 @@
             "screenshots": []
           }
         ]
+      }
+    ]
+  },
+  "Starbucks Seasonal Menus, WA, United States": {
+    "other": [
+      {
+        "summary": "Removed the non-dairy milk surcharge across US/Canada company-operated stores (Nov 2024) after multi-group advocacy incl. MFA; seasonal drinks available with plant milk.",
+        "reporter": null,
+        "citations": []
       }
     ]
   },
@@ -575,6 +1347,24 @@
       }
     ]
   },
+  "Tavira, Portugal": {
+    "default": [
+      {
+        "summary": "Transitioned to plant-based meals at council events and meetings related to environment/climate (completed; repeated across 2024-2025 events). Municipal Climate Action Plan (PMAC) cites the PBT partnership. Endorsed PBT 10 Oct 2024.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Texas State University, Nutrition and Foods Dept events, TX, United States": {
+    "placement": [
+      {
+        "summary": "Worked with faculty to prioritize (prime placement of) plant-based options and implement nudges at Nutrition and Foods Department events.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "The Briar Bar, MN, United States": {
     "ratio": [
       {
@@ -590,6 +1380,15 @@
             "screenshots": []
           }
         ]
+      }
+    ]
+  },
+  "The New York Times Climate Forward event, NY, United States": {
+    "default": [
+      {
+        "summary": "GBD plant-based default + tasty titles + prime placement at the NYT Climate Forward event (featuring Jane Goodall).",
+        "reporter": null,
+        "citations": []
       }
     ]
   },
@@ -611,6 +1410,42 @@
       }
     ]
   },
+  "Trellis Group (events), CA, United States": {
+    "default": [
+      {
+        "summary": "GBD plant-based event default + tasty titles + subtle substitutions + placement + 50%+ ratios at Trellis events.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Trenton Special School District, TN, United States": {
+    "ratio": [
+      {
+        "summary": "First school district in Tennessee to sign the Forward Food pledge; a small rural district (~1,400 students) committing to reach 33% plant-based meals by 2027. Partner: Humane World for Animals.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "UCLA, Plant Futures Sustainable Food Futures event, CA, United States": {
+    "default": [
+      {
+        "summary": "Plant-based default menu at Plant Futures UCLA's Sustainable Food Futures career/networking event; only ~4% of registrants opted for a meat option.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "UCSF Health, CA, United States": {
+    "ratio": [
+      {
+        "summary": "UCSF Health committed to procure 30% plant-based food by 2030 (tracked annually via its Nutrition & Food Services dashboard) and signed the WRI Coolfood Pledge to cut food-related emissions 25% by 2030 vs a 2015 baseline. An academic medical center — NOT the 2020 SF municipal public-hospital motion.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "University College London (Students' Union - four cafes), United Kingdom": {
     "default": [
       {
@@ -629,6 +1464,15 @@
       }
     ]
   },
+  "University of Arizona, AZ, United States": {
+    "ratio": [
+      {
+        "summary": "Ranked #5 on HWA's 2025 scorecard; committed to 40% of meals offered being plant-based by 2025.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "University of California Riverside, CA, United States": {
     "ratio": [
       {
@@ -644,6 +1488,69 @@
             "screenshots": []
           }
         ]
+      }
+    ]
+  },
+  "University of California, Berkeley, CA, United States": {
+    "ratio": [
+      {
+        "summary": "UC Berkeley committed to making at least 50% of its entrée offerings plant-based by 2027 (with Humane Society of the US / Humane World for Animals). Separately, DefaultVeg Ambassadors made the student group BEACN's events plant-based by default.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of California, Los Angeles, CA, United States": {
+    "ratio": [
+      {
+        "summary": "Ranked #10 on HWA's 2025 scorecard; committed to 50% of meals offered being plant-based by 2027; UCLA Dining named 'Best College Food in America' six consecutive years.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of California, San Diego (academic dept events), CA, United States": {
+    "default": [
+      {
+        "summary": "Piloted plant-based defaults at Sociology and Latin American Studies department events (e.g., 4 of 6 pizzas vegetarian at the Sociology Colloquium; vegan pizzas as the default at the LAS Burnout Prevention Dinner). LAS committed to continuing plant-based defaults.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of Colorado Boulder, CO, United States": {
+    "ratio": [
+      {
+        "summary": "Ranked #1 on Humane World for Animals' 2025 College & University Protein Sustainability Scorecard; committed to 75% of dining options being plant-based by 2025, using plant proteins as the default within dining stations.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of Dayton, OH, United States": {
+    "ratio": [
+      {
+        "summary": "Signed the Forward Food Collaborative pledge in 2021, targeting 30% plant-based entrees by 2025; has surpassed the goal and now serves over 40% plant-based entrees (per Humane World / HSUS).",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of Georgia, Honors College Lunch and Learn, GA, United States": {
+    "placement": [
+      {
+        "summary": "Secured prime placement of plant-based options at the Honors College Lunch and Learn and passed a supporting Student Government bill.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of Guelph, ON, Canada": {
+    "ratio": [
+      {
+        "summary": "Joined the Forward Food movement, committing to transition 20% of the meat protein on its menus to plant-based alternatives.",
+        "reporter": null,
+        "citations": []
       }
     ]
   },
@@ -675,6 +1582,15 @@
             "screenshots": []
           }
         ]
+      }
+    ]
+  },
+  "University of Michigan–Ann Arbor (MDining), MI, United States": {
+    "ratio": [
+      {
+        "summary": "Michigan Dining committed to making 55% of meals offered plant-based by 2025 (with Humane World for Animals); ranked 4th in the 2025 HWA College & University Protein Sustainability Scorecard.",
+        "reporter": null,
+        "citations": []
       }
     ]
   },
@@ -722,6 +1638,87 @@
       }
     ]
   },
+  "University of Pittsburgh, PA, United States": {
+    "other": [
+      {
+        "summary": "Among the first universities worldwide to join WRI's Coolfood Pledge (2019), committing to cut food-related GHG emissions 25% by 2030 and track progress across dining.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of Portsmouth, United Kingdom": {
+    "ratio": [
+      {
+        "summary": "Around 40% of the University of Portsmouth's menu is plant-based; its 'Kale Yeah!'/'Kale Kitchen' scheme (chefs trained via HSI/UK Forward Food) plus a loyalty scheme (6 plant-based meals = 1 free) nudge uptake. Ranked a UK top-10 vegan-friendly university.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of San Diego, Aromas Cafe, CA, United States": {
+    "default": [
+      {
+        "summary": "Aromas Cafe piloted oat milk by default (Silk Oat) each spring; USD later removed the plant-milk upcharge campus-wide (with BFF and New Roots Institute).",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of Texas at Austin, TX, United States": {
+    "ratio": [
+      {
+        "summary": "First US higher-education institution to fulfill the Forward Food pledge with Humane World for Animals (formerly HSUS), reaching 50% plant-based meals served on campus.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of Vermont, VT, United States": {
+    "ratio": [
+      {
+        "summary": "Striving for 50% of dining-hall entrées to be plant-based by 2025.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of Victoria, BC, Canada": {
+    "default": [
+      {
+        "summary": "Residence dining adopted a Greener by Default approach: plant-based meals are the default (diners opt in for meat/dairy), plant-based options are listed first on all menus, ~50% of residence entrées were already plant-based as of 2021 with a 60% target, and vegan chili replaced beef chili at all outlets.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of Virginia, Brody Jewish Center (Hillel), VA, United States": {
+    "default": [
+      {
+        "summary": "Plant-based defaults implemented at the campus Hillel, including a plant-based Shabbat celebration with the option to opt in for animal products.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "University of Washington, WA, United States": {
+    "ratio": [
+      {
+        "summary": "Ranked #9 on HWA's 2025 scorecard; committed to 48% of meals offered being plant-based by 2025.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Vermaat (caterer, Netherlands) — hybrid tuna salad, Netherlands": {
+    "sub": [
+      {
+        "summary": "Hybrid tuna salad: 60% of the tuna substituted with locally grown lupini beans.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "Victoria College at University of Toronto, ON, Canada": {
     "sub": [
       {
@@ -731,11 +1728,38 @@
       }
     ]
   },
+  "Vitam (caterer, Netherlands) — plant-based cooking cream, Netherlands": {
+    "sub": [
+      {
+        "summary": "Company-wide switch to plant-based cooking cream.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "Washington State University, WA, United States": {
+    "ratio": [
+      {
+        "summary": "Ranked #6 on HWA's 2025 scorecard; committed to 40% of meals offered being plant-based by 2025.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
   "Washington, DC Department of Youth and Rehabilitation Services, DC, United States": {
     "other": [
       {
         "summary": "Need more info",
         "reporter": "Björn Ólafsson",
+        "citations": []
+      }
+    ]
+  },
+  "Washington, DC, DC, United States": {
+    "other": [
+      {
+        "summary": "DC committed (FOE-led coalition) to a 25% cut in food-related emissions by 2030 and passed the Healthy Students Amendment Act requiring daily plant-forward school meal options and adopting the Good Food Purchasing Program.",
+        "reporter": null,
         "citations": []
       }
     ]
@@ -773,6 +1797,24 @@
             "screenshots": []
           }
         ]
+      }
+    ]
+  },
+  "Whitsons Culinary Group, NY, United States": {
+    "ratio": [
+      {
+        "summary": "Committed to 33% of meals plant-based by 2025. Grade B+.",
+        "reporter": null,
+        "citations": []
+      }
+    ]
+  },
+  "York University (Toronto), ON, Canada": {
+    "ratio": [
+      {
+        "summary": "Signed the Forward Food pledge with Humane World for Animals / Humane Society International Canada, committing to at least 60% plant-forward menu offerings across its dining halls.",
+        "reporter": null,
+        "citations": []
       }
     ]
   }
