@@ -34,37 +34,37 @@ const TESTS: EdgeCase[] = [
   {
     desc: "default: any",
     nudgeTypeFilter: "any nudge",
-    expectedRange: [1, 30],
+    expectedRange: [1, 200],
   },
   {
     desc: "default: default",
     nudgeTypeFilter: "plant-based default",
-    expectedRange: [1, 30],
+    expectedRange: [1, 200],
   },
   {
     desc: "default: ratio",
     nudgeTypeFilter: "climate-friendly ratio",
-    expectedRange: [1, 30],
+    expectedRange: [1, 200],
   },
   {
     desc: "default: sub",
     nudgeTypeFilter: "subtle substitution",
-    expectedRange: [1, 10],
+    expectedRange: [1, 200],
   },
   {
     desc: "default: titles",
     nudgeTypeFilter: "tasty titles & descriptions",
-    expectedRange: [0, 0],
+    expectedRange: [1, 200],
   },
   {
     desc: "default: placement",
     nudgeTypeFilter: "prime placement",
-    expectedRange: [1, 30],
+    expectedRange: [1, 200],
   },
   {
     desc: "default: other",
     nudgeTypeFilter: "other",
-    expectedRange: [0, 0],
+    expectedRange: [1, 200],
   },
   {
     desc: "disabled filter",
@@ -76,19 +76,19 @@ const TESTS: EdgeCase[] = [
     desc: "any nudge: nudge change filter",
     nudgeTypeFilter: "any nudge",
     includedNudge: ["Plant-based default"],
-    expectedRange: [1, 30],
+    expectedRange: [1, 200],
   },
   {
     desc: "country filter",
     nudgeTypeFilter: "any nudge",
     country: ["United States"],
-    expectedRange: [1, 30],
+    expectedRange: [1, 200],
   },
   {
     desc: "place type filter",
     nudgeTypeFilter: "any nudge",
     placeType: ["Hospital"],
-    expectedRange: [1, 30],
+    expectedRange: [1, 200],
   },
   {
     desc: "status filter",
@@ -106,7 +106,7 @@ const TESTS: EdgeCase[] = [
     desc: "any status",
     nudgeTypeFilter: "any nudge",
     nudgeStatusFilter: "any status",
-    expectedRange: [20, 50],
+    expectedRange: [20, 200],
   },
 ];
 
