@@ -77,7 +77,7 @@ test("generateScorecard()", () => {
         <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-circle-xmark"></use></svg>
       </button>
     </header>
-    <a class="external-link" target="_blank" href=https://my-site.org>Details and citations <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-arrow-right"></use></svg></a>
+    <a class="external-link" target="_blank" href=https://my-site.org>More info <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-arrow-right"></use></svg></a>
     `,
   );
 });

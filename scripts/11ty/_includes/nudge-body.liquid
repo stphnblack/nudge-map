@@ -6,10 +6,6 @@
     <dt>{{ record.dateLabel }}</dt>
     <dd>{{ record.date }}</dd>
   {%- endif %}
-  {% if record.reporter -%}
-    <dt>Reporter</dt>
-    <dd>{{ record.reporter }}</dd>
-  {%- endif %}
 </dl>
 {% for citation in record.citations -%}
   {% render "citation" citation: citation numCitations: record.citations.size index: forloop.index %}

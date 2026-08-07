@@ -27,7 +27,7 @@ export function generateScorecard(entry: ProcessedCoreEntry): string {
     </header>
     <a class="external-link" target="_blank" href=${
       entry.place.url
-    }>Details and citations ${iconHtml("arrow-right")}</a>
+    }>More info ${iconHtml("arrow-right")}</a>
     `;
 }
 
