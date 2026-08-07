@@ -1,11 +1,11 @@
-# Parking reform map
+# Plant-based nudges map
 
-This code runs the Reform Map app for the Parking Reform Network: https://parkingreform.org/mandates-map/.
+This code runs the Nudge Map app for the Better Food Foundation: https://better-food-foundation.github.io/nudge-map/.
 
 We do not use frameworks like React or Svelte to keep things simple. However, we do use these techniques:
 
 - TypeScript
-- Sass and the folder `src/css/theme`, which should stay aligned with https://github.com/ParkingReformNetwork/parking-lot-map
+- Sass and the folder `src/css/theme`
 - Reactive state management - see [State diagram](#state-diagram)
 
 The main files are `index.html`, `src/js/main.ts`, and `data/*.json`. `main.ts` will load the JSON data to load all our data.
@@ -108,19 +108,11 @@ element.appendChild(icon);
 
 ## Staging
 
-We use continuous deployment, meaning that we re-deploy the site every time we merge a pull request to staging at https://parkingreform.org/mandates-map-staging/. You can check how the site renders about ~1-2 minutes after your change merges.
-
-## Deploy the site to prod
-
-First, check that staging looks good at https://parkingreform.org/mandates-map-staging/.
-
-Then, when ready, click "Run workflow" at https://github.com/ParkingReformNetwork/reform-map/actions/workflows/deploy-map-prod.yaml with the default option. Check that the deploy worked by confirming https://parkingreform.org/mandates-map/ looks good.
+We use continuous deployment, meaning that we re-deploy the site every time we merge a pull request to https://better-food-foundation.github.io/nudge-map/. You can check how the site renders about ~1-2 minutes after your change merges.
 
 ## Updating the data
 
-You usually should not need to manually do this. We have a GitHub Action that runs every night to open a PR with any updates.
-
-You can trigger the GitHub Action to run early by clicking "Run workflow" at https://github.com/ParkingReformNetwork/reform-map/actions/workflows/update-data.yaml with the default option, if you're an admin. This will create a pull request that you then need to merge.
+You usually should not need to manually do this. We will have a GitHub Action that runs every night to open a PR with any updates.
 
 To instead manually update the data, first run `npm install`. Then, run `npm run sync-directus`.
 
@@ -166,13 +158,13 @@ graph TD
     Z[view icon]
     AA[view: map-table]
 
-    AB[selected cities]
+    AB[selected places]
     AC[AND]
 
-    AD[shown cities]
+    AD[shown places]
 
     AF[scorecard]
-    AG[clicking city dot]
+    AG[clicking place dot]
     AH[clicking outside popup]
 
     %% Relationships
