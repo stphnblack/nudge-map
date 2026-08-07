@@ -10,18 +10,13 @@
       "type": "City/Government",
       "encoded": "alcorcon-spain-spain",
       "consumer_base": 100,
-      "coord": [
-        -3.8284295,
-        40.3492998
-      ]
+      "coord": [-3.8284295, 40.3492998]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -36,18 +31,13 @@
       "type": "City/Government",
       "encoded": "almere-netherlands",
       "consumer_base": 100,
-      "coord": [
-        5.3238309,
-        52.4064476
-      ]
+      "coord": [5.3238309, 52.4064476]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2030",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -62,18 +52,13 @@
       "type": "University Dining Hall",
       "encoded": "ambala-institute-of-hotel-management-india",
       "consumer_base": 118,
-      "coord": [
-        76.770421,
-        30.3843674
-      ]
+      "coord": [76.770421, 30.3843674]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2022",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -88,19 +73,13 @@
       "type": "University Cafe",
       "encoded": "american-university-davenport-coffee-lounge-dc-united-states",
       "consumer_base": 350,
-      "coord": [
-        -77.0363849,
-        38.8950982
-      ]
+      "coord": [-77.0363849, 38.8950982]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "BFF",
-          "NRI"
-        ]
+        "org_credit": ["BFF", "NRI"]
       }
     ]
   },
@@ -115,19 +94,13 @@
       "type": "University Event",
       "encoded": "american-university-school-of-public-affairs-event-dc-united-states",
       "consumer_base": 100,
-      "coord": [
-        -77.0871074,
-        38.9366523
-      ]
+      "coord": [-77.0871074, 38.9366523]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF",
-          "NRI"
-        ]
+        "org_credit": ["BFF", "NRI"]
       }
     ]
   },
@@ -142,27 +115,20 @@
       "type": "City/Government",
       "encoded": "amsterdam-netherlands-netherlands",
       "consumer_base": 1200000,
-      "coord": [
-        4.9002256,
-        52.3676842
-      ]
+      "coord": [4.9002256, 52.3676842]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2021",
-        "org_credit": [
-          "Plant-Based Treaty"
-        ]
+        "org_credit": ["Plant-Based Treaty"]
       }
     ],
     "other": [
       {
         "status": "pledged",
         "date": "2021",
-        "org_credit": [
-          "Plant-Based Treaty"
-        ]
+        "org_credit": ["Plant-Based Treaty"]
       }
     ]
   },
@@ -177,27 +143,20 @@
       "type": "City/Government",
       "encoded": "amsterdam-netherlands",
       "consumer_base": 100,
-      "coord": [
-        4.8924534,
-        52.3730796
-      ]
+      "coord": [4.8924534, 52.3730796]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ],
     "ratio": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -212,18 +171,13 @@
       "type": "University Dining Hall",
       "encoded": "aramark-pa-united-states",
       "consumer_base": 100,
-      "coord": [
-        -75.1585405,
-        39.9521552
-      ]
+      "coord": [-75.1585405, 39.9521552]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": [
-          "WRI"
-        ]
+        "org_credit": ["WRI"]
       }
     ]
   },
@@ -238,18 +192,13 @@
       "type": "City/Government",
       "encoded": "arnhem-netherlands",
       "consumer_base": 100,
-      "coord": [
-        5.9011598,
-        51.9844332
-      ]
+      "coord": [5.9011598, 51.9844332]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -264,19 +213,13 @@
       "type": "City/Government",
       "encoded": "austin-office-of-sustainability-tx-united-states",
       "consumer_base": 1007435,
-      "coord": [
-        -97.7436995,
-        30.2711286
-      ]
+      "coord": [-97.7436995, 30.2711286]
     },
     "default": [
       {
         "status": "pledged",
         "date": "2023",
-        "org_credit": [
-          "BFF",
-          "Planted Society"
-        ]
+        "org_credit": ["BFF", "Planted Society"]
       }
     ]
   },
@@ -291,18 +234,13 @@
       "type": "Event",
       "encoded": "b-corp-champions-retreat-2022-pa-united-states",
       "consumer_base": 100,
-      "coord": [
-        -75.1635262,
-        39.9527237
-      ]
+      "coord": [-75.1635262, 39.9527237]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": [
-          "GBD"
-        ]
+        "org_credit": ["GBD"]
       }
     ]
   },
@@ -317,10 +255,7 @@
       "type": "City/Government",
       "encoded": "barcelona-spain",
       "consumer_base": 5750000,
-      "coord": [
-        2.1772738,
-        41.3823178
-      ]
+      "coord": [2.1772738, 41.3823178]
     },
     "ratio": [
       {
@@ -340,10 +275,7 @@
       "type": "City/Government",
       "encoded": "berkeley-ca-usa-ca-united-states",
       "consumer_base": 120500,
-      "coord": [
-        -122.2707951,
-        37.8694472
-      ]
+      "coord": [-122.2707951, 37.8694472]
     },
     "ratio": [
       {
@@ -363,18 +295,13 @@
       "type": "City/Government",
       "encoded": "brampton-canada",
       "consumer_base": 100,
-      "coord": [
-        -79.7700677,
-        43.6857541
-      ]
+      "coord": [-79.7700677, 43.6857541]
     },
     "titles": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -389,19 +316,13 @@
       "type": "City/Government",
       "encoded": "brampton-ontario-on-canada",
       "consumer_base": 833365,
-      "coord": [
-        -79.7595042,
-        43.6849825
-      ]
+      "coord": [-79.7595042, 43.6849825]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2022",
-        "org_credit": [
-          "Plant-Based Cities Movement",
-          "Earthsave Canada"
-        ]
+        "org_credit": ["Plant-Based Cities Movement", "Earthsave Canada"]
       }
     ]
   },
@@ -416,18 +337,13 @@
       "type": "Workplace Cafeteria",
       "encoded": "cafe-services-inc-nh-united-states",
       "consumer_base": 100,
-      "coord": [
-        -71.348398,
-        43.0045289
-      ]
+      "coord": [-71.348398, 43.0045289]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -442,10 +358,7 @@
       "type": "City/Government",
       "encoded": "calderdale-council-united-kingdom",
       "consumer_base": 100,
-      "coord": [
-        -1.8633372,
-        53.6760345
-      ]
+      "coord": [-1.8633372, 53.6760345]
     },
     "default": [
       {
@@ -465,18 +378,13 @@
       "type": "University Event",
       "encoded": "california-state-los-angeles-ca-united-states",
       "consumer_base": 21708,
-      "coord": [
-        -118.1671415,
-        34.0664949
-      ]
+      "coord": [-118.1671415, 34.0664949]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -491,18 +399,13 @@
       "type": "City/Government",
       "encoded": "campolide-lisbon-portugal-portugal",
       "consumer_base": 100,
-      "coord": [
-        -9.1646135,
-        38.727895
-      ]
+      "coord": [-9.1646135, 38.727895]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -517,18 +420,13 @@
       "type": "Chain Restaurant",
       "encoded": "caribou-coffee-seasonal-menus-mn-united-states",
       "consumer_base": 100,
-      "coord": [
-        -93.2654692,
-        44.9772995
-      ]
+      "coord": [-93.2654692, 44.9772995]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2023",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -543,18 +441,13 @@
       "type": "City/Government",
       "encoded": "city-of-sammamish-wa-united-states",
       "consumer_base": 65986,
-      "coord": [
-        -122.0367582,
-        47.6013675
-      ]
+      "coord": [-122.0367582, 47.6013675]
     },
     "default": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "MFA"
-        ]
+        "org_credit": ["MFA"]
       }
     ]
   },
@@ -569,18 +462,13 @@
       "type": "Event",
       "encoded": "cleanmed-health-care-without-harm-event-mo-united-states",
       "consumer_base": 100,
-      "coord": [
-        -94.5781416,
-        39.100105
-      ]
+      "coord": [-94.5781416, 39.100105]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "GBD"
-        ]
+        "org_credit": ["GBD"]
       }
     ]
   },
@@ -595,18 +483,13 @@
       "type": "University Event",
       "encoded": "climatecap-summit-2025-uc-berkeley-haas-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -122.272863,
-        37.8708393
-      ]
+      "coord": [-122.272863, 37.8708393]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "GBD"
-        ]
+        "org_credit": ["GBD"]
       }
     ]
   },
@@ -621,18 +504,12 @@
       "type": "University Cafe",
       "encoded": "colorado-college-coffee-shop-co-united-states",
       "consumer_base": 350,
-      "coord": [
-        -104.825348,
-        38.8339578
-      ]
+      "coord": [-104.825348, 38.8339578]
     },
     "other": [
       {
         "status": "adopted",
-        "org_credit": [
-          "BFF",
-          "NRI"
-        ]
+        "org_credit": ["BFF", "NRI"]
       }
     ]
   },
@@ -647,18 +524,13 @@
       "type": "Chain Restaurant",
       "encoded": "compass-group-uk-ireland-england-united-kingdom",
       "consumer_base": 100,
-      "coord": [
-        -0.5038294,
-        51.392296
-      ]
+      "coord": [-0.5038294, 51.392296]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "Compass"
-        ]
+        "org_credit": ["Compass"]
       }
     ]
   },
@@ -673,18 +545,13 @@
       "type": "Hospital",
       "encoded": "coolfood-pledge-us-healthcare-cohort-dc-united-states",
       "consumer_base": 100,
-      "coord": [
-        -77.0047055,
-        38.8867409
-      ]
+      "coord": [-77.0047055, 38.8867409]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "WRI"
-        ]
+        "org_credit": ["WRI"]
       }
     ]
   },
@@ -699,19 +566,13 @@
       "type": "University Cafe",
       "encoded": "cornell-university-ny-united-states",
       "consumer_base": 350,
-      "coord": [
-        -76.4800635,
-        42.452916
-      ]
+      "coord": [-76.4800635, 42.452916]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "BFF",
-          "NRI"
-        ]
+        "org_credit": ["BFF", "NRI"]
       }
     ]
   },
@@ -726,18 +587,13 @@
       "type": "Other",
       "encoded": "creative-dining-services-mi-united-states",
       "consumer_base": 100,
-      "coord": [
-        -86.0165267,
-        42.8123375
-      ]
+      "coord": [-86.0165267, 42.8123375]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -752,17 +608,12 @@
       "type": "Ind. Restaurant",
       "encoded": "dc-harvest-washington-dc-dc-united-states",
       "consumer_base": 300,
-      "coord": [
-        -76.9988101,
-        38.9000401
-      ]
+      "coord": [-76.9988101, 38.9000401]
     },
     "sub": [
       {
         "status": "adopted",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -777,18 +628,13 @@
       "type": "University Dining Hall",
       "encoded": "davidson-college-nc-united-states",
       "consumer_base": 2000,
-      "coord": [
-        -80.8339303,
-        35.5032193
-      ]
+      "coord": [-80.8339303, 35.5032193]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2021",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -803,17 +649,12 @@
       "type": "University Cafe",
       "encoded": "duke-kunshan-university-never-mind-cafe-china",
       "consumer_base": 350,
-      "coord": [
-        120.9764683,
-        31.3869323
-      ]
+      "coord": [120.9764683, 31.3869323]
     },
     "default": [
       {
         "status": "adopted",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -828,18 +669,13 @@
       "type": "City/Government",
       "encoded": "edinburgh-scotland-united-kingdom",
       "consumer_base": 100,
-      "coord": [
-        -3.1904199,
-        55.9519018
-      ]
+      "coord": [-3.1904199, 55.9519018]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2023",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -854,18 +690,13 @@
       "type": "Stadium",
       "encoded": "efteling-theme-park-netherlands",
       "consumer_base": 15800,
-      "coord": [
-        5.0477212,
-        51.6499584
-      ]
+      "coord": [5.0477212, 51.6499584]
     },
     "sub": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "ProVeg"
-        ]
+        "org_credit": ["ProVeg"]
       }
     ]
   },
@@ -880,18 +711,13 @@
       "type": "City/Government",
       "encoded": "el-masnou-spain-spain",
       "consumer_base": 100,
-      "coord": [
-        2.3118347,
-        41.4796899
-      ]
+      "coord": [2.3118347, 41.4796899]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -906,18 +732,13 @@
       "type": "Other",
       "encoded": "elior-north-america-nc-united-states",
       "consumer_base": 100,
-      "coord": [
-        -80.8428524,
-        35.2278153
-      ]
+      "coord": [-80.8428524, 35.2278153]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -932,18 +753,13 @@
       "type": "University Cafe",
       "encoded": "erasmus-university-rotterdam-netherlands",
       "consumer_base": 350,
-      "coord": [
-        4.5259623,
-        51.9176312
-      ]
+      "coord": [4.5259623, 51.9176312]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -958,10 +774,7 @@
       "type": "City/Government",
       "encoded": "exeter-city-council-united-kingdom",
       "consumer_base": 100,
-      "coord": [
-        -3.5269209,
-        50.7256138
-      ]
+      "coord": [-3.5269209, 50.7256138]
     },
     "default": [
       {
@@ -981,18 +794,13 @@
       "type": "City/Government",
       "encoded": "exmouth-united-kingdom",
       "consumer_base": 100,
-      "coord": [
-        -3.4149723,
-        50.6215885
-      ]
+      "coord": [-3.4149723, 50.6215885]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2023",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -1007,19 +815,13 @@
       "type": "University Dining Hall",
       "encoded": "franklin-marshall-college-pa-united-states",
       "consumer_base": 2400,
-      "coord": [
-        -76.3194658,
-        40.0496761
-      ]
+      "coord": [-76.3194658, 40.0496761]
     },
     "placement": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "BFF",
-          "NRI"
-        ]
+        "org_credit": ["BFF", "NRI"]
       }
     ]
   },
@@ -1034,18 +836,13 @@
       "type": "Other",
       "encoded": "fresh-ideas-food-service-management-mo-united-states",
       "consumer_base": 100,
-      "coord": [
-        -92.3337366,
-        38.951883
-      ]
+      "coord": [-92.3337366, 38.951883]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -1060,10 +857,7 @@
       "type": "Ind. Restaurant",
       "encoded": "galaxy-hut-va-united-states",
       "consumer_base": 100,
-      "coord": [
-        -77.091012,
-        38.8896232
-      ]
+      "coord": [-77.091012, 38.8896232]
     },
     "default": [
       {
@@ -1082,18 +876,13 @@
       "type": "Other",
       "encoded": "good-eating-company-us-nc-united-states",
       "consumer_base": 100,
-      "coord": [
-        -80.8430827,
-        35.2272086
-      ]
+      "coord": [-80.8430827, 35.2272086]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "GBD"
-        ]
+        "org_credit": ["GBD"]
       }
     ]
   },
@@ -1108,10 +897,7 @@
       "type": "Workplace Cafeteria",
       "encoded": "google-headquarters-ny-united-states",
       "consumer_base": 187103,
-      "coord": [
-        -74.0019656,
-        40.7408359
-      ]
+      "coord": [-74.0019656, 40.7408359]
     },
     "ratio": [
       {
@@ -1135,18 +921,13 @@
       "type": "City/Government",
       "encoded": "grenoble-france-france",
       "consumer_base": 100,
-      "coord": [
-        5.7357819,
-        45.1875602
-      ]
+      "coord": [5.7357819, 45.1875602]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -1161,18 +942,13 @@
       "type": "City/Government",
       "encoded": "groningen-netherlands",
       "consumer_base": 100,
-      "coord": [
-        6.5680077,
-        53.2190652
-      ]
+      "coord": [6.5680077, 53.2190652]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2030",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -1187,18 +963,13 @@
       "type": "Workplace Cafeteria",
       "encoded": "guckenheimer-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -122.232523,
-        37.4863239
-      ]
+      "coord": [-122.232523, 37.4863239]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -1213,18 +984,13 @@
       "type": "Other",
       "encoded": "guest-services-inc-va-united-states",
       "consumer_base": 100,
-      "coord": [
-        -77.3063733,
-        38.8462236
-      ]
+      "coord": [-77.3063733, 38.8462236]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -1239,17 +1005,12 @@
       "type": "Cafe",
       "encoded": "guilder-cafe-portland-oregon-or-united-states",
       "consumer_base": 350,
-      "coord": [
-        -122.6819149,
-        45.5231098
-      ]
+      "coord": [-122.6819149, 45.5231098]
     },
     "other": [
       {
         "status": "adopted",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -1264,18 +1025,13 @@
       "type": "Hospital",
       "encoded": "hhs-llc-tx-united-states",
       "consumer_base": 100,
-      "coord": [
-        -98.0866781,
-        30.1902067
-      ]
+      "coord": [-98.0866781, 30.1902067]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -1290,18 +1046,13 @@
       "type": "City/Government",
       "encoded": "haarlem-netherlands",
       "consumer_base": 100,
-      "coord": [
-        4.6435679,
-        52.3837281
-      ]
+      "coord": [4.6435679, 52.3837281]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2030",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -1316,10 +1067,7 @@
       "type": "City/Government",
       "encoded": "hackney-council-london-united-kingdom",
       "consumer_base": 100,
-      "coord": [
-        -0.0546004,
-        51.5474009
-      ]
+      "coord": [-0.0546004, 51.5474009]
     },
     "default": [
       {
@@ -1339,18 +1087,13 @@
       "type": "University Event",
       "encoded": "harvard-university-office-for-sustainability-events-ma-united-states",
       "consumer_base": 100,
-      "coord": [
-        -71.1040018,
-        42.3656347
-      ]
+      "coord": [-71.1040018, 42.3656347]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2023",
-        "org_credit": [
-          "Unknown"
-        ]
+        "org_credit": ["Unknown"]
       }
     ]
   },
@@ -1365,10 +1108,7 @@
       "type": "City/Government",
       "encoded": "helsinki-finland-finland",
       "consumer_base": 1400000,
-      "coord": [
-        24.9528649,
-        60.1683175
-      ]
+      "coord": [24.9528649, 60.1683175]
     },
     "ratio": [
       {
@@ -1388,10 +1128,7 @@
       "type": "City/Government",
       "encoded": "hennepin-county-minnesota-mn-united-states",
       "consumer_base": 1293582,
-      "coord": [
-        -93.266666,
-        44.9758491
-      ]
+      "coord": [-93.266666, 44.9758491]
     },
     "default": [
       {
@@ -1415,18 +1152,13 @@
       "type": "University Event",
       "encoded": "hunter-college-cuny-academic-departments-ny-united-states",
       "consumer_base": 100,
-      "coord": [
-        -74.0060152,
-        40.7127281
-      ]
+      "coord": [-74.0060152, 40.7127281]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -1441,18 +1173,13 @@
       "type": "University Dining Hall",
       "encoded": "kent-state-university-oh-united-states",
       "consumer_base": 28000,
-      "coord": [
-        -81.3398329,
-        41.1441814
-      ]
+      "coord": [-81.3398329, 41.1441814]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2026",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -1467,27 +1194,20 @@
       "type": "City/Government",
       "encoded": "kingston-ontario-on-canada",
       "consumer_base": 153346,
-      "coord": [
-        -76.4801367,
-        44.2301058
-      ]
+      "coord": [-76.4801367, 44.2301058]
     },
     "placement": [
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": [
-          "Plant-Based Cities Movement"
-        ]
+        "org_credit": ["Plant-Based Cities Movement"]
       }
     ],
     "other": [
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": [
-          "Plant-Based Cities Movement"
-        ]
+        "org_credit": ["Plant-Based Cities Movement"]
       }
     ]
   },
@@ -1502,18 +1222,13 @@
       "type": "Workplace Cafeteria",
       "encoded": "lpm-affiliates-dba-epicurean-feast-cafes-ma-united-states",
       "consumer_base": 100,
-      "coord": [
-        -71.6097744,
-        42.4342336
-      ]
+      "coord": [-71.6097744, 42.4342336]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -1528,19 +1243,13 @@
       "type": "Workplace Cafeteria",
       "encoded": "linkedin-san-francisco-corporate-cafe-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -122.4075201,
-        37.7879363
-      ]
+      "coord": [-122.4075201, 37.7879363]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": [
-          "BFF",
-          "GBD"
-        ]
+        "org_credit": ["BFF", "GBD"]
       }
     ]
   },
@@ -1555,18 +1264,13 @@
       "type": "University Dining Hall",
       "encoded": "london-school-of-economics-lse-united-kingdom",
       "consumer_base": 13000,
-      "coord": [
-        -0.1165253,
-        51.5139905
-      ]
+      "coord": [-0.1165253, 51.5139905]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2019",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -1581,18 +1285,13 @@
       "type": "City/Government",
       "encoded": "los-angeles-county-ca-usa-ca-united-states",
       "consumer_base": 9757179,
-      "coord": [
-        -118.2462025,
-        34.0568474
-      ]
+      "coord": [-118.2462025, 34.0568474]
     },
     "default": [
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": [
-          "MFA"
-        ]
+        "org_credit": ["MFA"]
       }
     ]
   },
@@ -1607,18 +1306,13 @@
       "type": "City/Government",
       "encoded": "los-angeles-california-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -118.242766,
-        34.0536909
-      ]
+      "coord": [-118.242766, 34.0536909]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -1633,18 +1327,13 @@
       "type": "Chain Restaurant",
       "encoded": "max-burgers-sweden-sweden",
       "consumer_base": 100,
-      "coord": [
-        22.1459535,
-        65.5831187
-      ]
+      "coord": [22.1459535, 65.5831187]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": [
-          "WRI"
-        ]
+        "org_credit": ["WRI"]
       }
     ]
   },
@@ -1659,10 +1348,7 @@
       "type": "City/Government",
       "encoded": "merri-bek-city-council-melbourne-victoria-australia",
       "consumer_base": 186534,
-      "coord": [
-        144.9695238,
-        -37.7410304
-      ]
+      "coord": [144.9695238, -37.7410304]
     },
     "other": [
       {
@@ -1682,18 +1368,13 @@
       "type": "Other",
       "encoded": "metz-culinary-management-pa-united-states",
       "consumer_base": 100,
-      "coord": [
-        -75.9632636,
-        41.33617
-      ]
+      "coord": [-75.9632636, 41.33617]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -1708,18 +1389,13 @@
       "type": "City/Government",
       "encoded": "milan-municipal-schools-italy",
       "consumer_base": 100,
-      "coord": [
-        9.1896346,
-        45.4641943
-      ]
+      "coord": [9.1896346, 45.4641943]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "WRI"
-        ]
+        "org_credit": ["WRI"]
       }
     ]
   },
@@ -1734,18 +1410,13 @@
       "type": "Ind. Restaurant",
       "encoded": "monash-university-wholefoods-restaurant-australia",
       "consumer_base": 300,
-      "coord": [
-        145.1313859,
-        -37.9158025
-      ]
+      "coord": [145.1313859, -37.9158025]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -1760,20 +1431,13 @@
       "type": "Hospital",
       "encoded": "nyc-health-hospitals-ny-united-states",
       "consumer_base": 15000,
-      "coord": [
-        -73.9356551,
-        40.6734444
-      ]
+      "coord": [-73.9356551, 40.6734444]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": [
-          "GBD",
-          "BFF",
-          "Rachel Atcheson"
-        ]
+        "org_credit": ["GBD", "BFF", "Rachel Atcheson"]
       }
     ]
   },
@@ -1788,18 +1452,13 @@
       "type": "Other",
       "encoded": "nestle-professional-usa-oh-united-states",
       "consumer_base": 100,
-      "coord": [
-        -81.4412259,
-        41.3897764
-      ]
+      "coord": [-81.4412259, 41.3897764]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": [
-          "WRI"
-        ]
+        "org_credit": ["WRI"]
       }
     ]
   },
@@ -1814,19 +1473,13 @@
       "type": "University Dining Hall",
       "encoded": "new-york-university-ny-united-states",
       "consumer_base": 59000,
-      "coord": [
-        -73.9950148,
-        40.7292053
-      ]
+      "coord": [-73.9950148, 40.7292053]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "BFF",
-          "NRI"
-        ]
+        "org_credit": ["BFF", "NRI"]
       }
     ]
   },
@@ -1841,18 +1494,13 @@
       "type": "City/Government",
       "encoded": "nijmegen-netherlands",
       "consumer_base": 100,
-      "coord": [
-        5.8389606,
-        51.8425749
-      ]
+      "coord": [5.8389606, 51.8425749]
     },
     "placement": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -1867,18 +1515,13 @@
       "type": "City/Government",
       "encoded": "north-vancouver-district-bc-canada",
       "consumer_base": 58120,
-      "coord": [
-        -123.0781375,
-        49.3360952
-      ]
+      "coord": [-123.0781375, 49.3360952]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": [
-          "Plant-Based Cities Movement"
-        ]
+        "org_credit": ["Plant-Based Cities Movement"]
       }
     ]
   },
@@ -1893,18 +1536,13 @@
       "type": "K-12",
       "encoded": "northshore-school-district-wa-united-states",
       "consumer_base": 23186,
-      "coord": [
-        -122.1897643,
-        47.7770655
-      ]
+      "coord": [-122.1897643, 47.7770655]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2027",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -1919,10 +1557,7 @@
       "type": "Ind. Restaurant",
       "encoded": "ocean-beach-peoples-food-co-op-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -117.242746,
-        32.749377
-      ]
+      "coord": [-117.242746, 32.749377]
     },
     "ratio": [
       {
@@ -1941,18 +1576,13 @@
       "type": "University Dining Hall",
       "encoded": "oregon-state-university-or-united-states",
       "consumer_base": 34000,
-      "coord": [
-        -123.2839234,
-        44.563056
-      ]
+      "coord": [-123.2839234, 44.563056]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2027",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -1967,18 +1597,13 @@
       "type": "University Cafe",
       "encoded": "otis-college-of-art-design-campus-cafes-ca-united-states",
       "consumer_base": 350,
-      "coord": [
-        -118.4154043,
-        33.9562141
-      ]
+      "coord": [-118.4154043, 33.9562141]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -1993,18 +1618,13 @@
       "type": "Event",
       "encoded": "otis-college-of-art-design-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -118.4171761,
-        33.9575309
-      ]
+      "coord": [-118.4171761, 33.9575309]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -2019,18 +1639,13 @@
       "type": "Chain Restaurant",
       "encoded": "panera-bread-mo-united-states",
       "consumer_base": 100,
-      "coord": [
-        -90.2026877,
-        38.6060635
-      ]
+      "coord": [-90.2026877, 38.6060635]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2020",
-        "org_credit": [
-          "WRI"
-        ]
+        "org_credit": ["WRI"]
       }
     ]
   },
@@ -2045,10 +1660,7 @@
       "type": "Cafe",
       "encoded": "paquebot-cafe-qc-canada",
       "consumer_base": 100,
-      "coord": [
-        -73.6011456,
-        45.5488035
-      ]
+      "coord": [-73.6011456, 45.5488035]
     },
     "default": [
       {
@@ -2068,18 +1680,13 @@
       "type": "Other",
       "encoded": "parkhurst-dining-pa-united-states",
       "consumer_base": 100,
-      "coord": [
-        -79.9119948,
-        40.4059025
-      ]
+      "coord": [-79.9119948, 40.4059025]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -2094,18 +1701,13 @@
       "type": "City/Government",
       "encoded": "parla-spain-spain",
       "consumer_base": 100,
-      "coord": [
-        -3.7718902,
-        40.2373952
-      ]
+      "coord": [-3.7718902, 40.2373952]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -2120,18 +1722,12 @@
       "type": "University Cafe",
       "encoded": "pitzer-college-grove-house-ca-united-states",
       "consumer_base": 350,
-      "coord": [
-        -117.7197785,
-        34.0966764
-      ]
+      "coord": [-117.7197785, 34.0966764]
     },
     "default": [
       {
         "status": "adopted",
-        "org_credit": [
-          "BFF",
-          "NRI"
-        ]
+        "org_credit": ["BFF", "NRI"]
       }
     ]
   },
@@ -2146,10 +1742,7 @@
       "type": "City/Government",
       "encoded": "poland-hospitals-ministry-of-health-poland",
       "consumer_base": 100,
-      "coord": [
-        21.008278,
-        52.2469371
-      ]
+      "coord": [21.008278, 52.2469371]
     },
     "other": [
       {
@@ -2169,10 +1762,7 @@
       "type": "City/Government",
       "encoded": "poland-schools-ministry-of-health-poland",
       "consumer_base": 100,
-      "coord": [
-        21.0711489,
-        52.2333742
-      ]
+      "coord": [21.0711489, 52.2333742]
     },
     "other": [
       {
@@ -2192,18 +1782,13 @@
       "type": "K-12",
       "encoded": "pomptonian-food-service-nj-united-states",
       "consumer_base": 100,
-      "coord": [
-        -74.3068718,
-        40.8837238
-      ]
+      "coord": [-74.3068718, 40.8837238]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -2218,18 +1803,13 @@
       "type": "K-12",
       "encoded": "proveg-uk-school-plates-programme-united-kingdom",
       "consumer_base": 100,
-      "coord": [
-        -0.1277653,
-        51.5074456
-      ]
+      "coord": [-0.1277653, 51.5074456]
     },
     "titles": [
       {
         "status": "adopted",
         "date": "2026",
-        "org_credit": [
-          "ProVeg UK"
-        ]
+        "org_credit": ["ProVeg UK"]
       }
     ]
   },
@@ -2244,18 +1824,13 @@
       "type": "K-12",
       "encoded": "public-schools-of-brookline-ma-ma-united-states",
       "consumer_base": 7039,
-      "coord": [
-        -71.1187829,
-        42.332918
-      ]
+      "coord": [-71.1187829, 42.332918]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2026",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -2270,18 +1845,13 @@
       "type": "Other",
       "encoded": "quest-food-management-services-il-united-states",
       "consumer_base": 100,
-      "coord": [
-        -88.0201536,
-        41.8864687
-      ]
+      "coord": [-88.0201536, 41.8864687]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -2296,18 +1866,13 @@
       "type": "University Dining Hall",
       "encoded": "ramapo-college-of-new-jersey-nj-united-states",
       "consumer_base": 5500,
-      "coord": [
-        -74.1738235,
-        41.0822446
-      ]
+      "coord": [-74.1738235, 41.0822446]
     },
     "placement": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -2322,18 +1887,13 @@
       "type": "K-12",
       "encoded": "richfield-public-schools-mn-united-states",
       "consumer_base": 4043,
-      "coord": [
-        -93.2877877,
-        44.8766431
-      ]
+      "coord": [-93.2877877, 44.8766431]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -2348,18 +1908,13 @@
       "type": "University Dining Hall",
       "encoded": "rochester-institute-of-technology-ny-united-states",
       "consumer_base": 8000,
-      "coord": [
-        -77.6729322,
-        43.0826701
-      ]
+      "coord": [-77.6729322, 43.0826701]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -2374,18 +1929,13 @@
       "type": "K-12",
       "encoded": "sla-management-fl-united-states",
       "consumer_base": 100,
-      "coord": [
-        -81.3656419,
-        28.6275253
-      ]
+      "coord": [-81.3656419, 28.6275253]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -2400,18 +1950,13 @@
       "type": "Transit Station",
       "encoded": "ssp-america-va-united-states",
       "consumer_base": 100,
-      "coord": [
-        -77.4744148,
-        39.029784
-      ]
+      "coord": [-77.4744148, 39.029784]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -2426,19 +1971,13 @@
       "type": "University Dining Hall",
       "encoded": "saint-marys-college-of-california-ca-united-states",
       "consumer_base": 3600,
-      "coord": [
-        -122.109459,
-        37.8409597
-      ]
+      "coord": [-122.109459, 37.8409597]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": [
-          "BFF",
-          "GBD"
-        ]
+        "org_credit": ["BFF", "GBD"]
       }
     ]
   },
@@ -2453,18 +1992,13 @@
       "type": "City/Government",
       "encoded": "san-diego-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -117.162772,
-        32.7174202
-      ]
+      "coord": [-117.162772, 32.7174202]
     },
     "other": [
       {
         "status": "pledged",
         "date": "2022",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -2479,19 +2013,13 @@
       "type": "Hospital",
       "encoded": "san-francisco-hospitals-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -122.4052532,
-        37.7568103
-      ]
+      "coord": [-122.4052532, 37.7568103]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2020",
-        "org_credit": [
-          "FoE",
-          "FF"
-        ]
+        "org_credit": ["FoE", "FF"]
       }
     ]
   },
@@ -2506,19 +2034,13 @@
       "type": "Prison",
       "encoded": "san-francisco-jails-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -122.4049148,
-        37.775226
-      ]
+      "coord": [-122.4049148, 37.775226]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2020",
-        "org_credit": [
-          "FoE",
-          "FF"
-        ]
+        "org_credit": ["FoE", "FF"]
       }
     ]
   },
@@ -2533,18 +2055,13 @@
       "type": "University Dining Hall",
       "encoded": "scripps-college-mallott-dining-hall-ca-united-states",
       "consumer_base": 1100,
-      "coord": [
-        -117.711399,
-        34.1030684
-      ]
+      "coord": [-117.711399, 34.1030684]
     },
     "sub": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -2559,18 +2076,13 @@
       "type": "University Dining Hall",
       "encoded": "smith-college-ma-united-states",
       "consumer_base": 2900,
-      "coord": [
-        -72.6403932,
-        42.3162239
-      ]
+      "coord": [-72.6403932, 42.3162239]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2017",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -2585,18 +2097,13 @@
       "type": "Hospital",
       "encoded": "sodexo-nuffield-health-first-to-show-22-reduction-in-food-related-emissions-with-greener-by-default-united-kingdom",
       "consumer_base": 100,
-      "coord": [
-        -2.2891921,
-        53.4877463
-      ]
+      "coord": [-2.2891921, 53.4877463]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "GBD"
-        ]
+        "org_credit": ["GBD"]
       }
     ]
   },
@@ -2611,18 +2118,13 @@
       "type": "University Dining Hall",
       "encoded": "sodexo-defaultveg-us-campuses-md-united-states",
       "consumer_base": 100,
-      "coord": [
-        -77.200177,
-        39.1165215
-      ]
+      "coord": [-77.200177, 39.1165215]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -2637,18 +2139,13 @@
       "type": "Hospital",
       "encoded": "sodexo-greener-by-default-us-hospitals-md-united-states",
       "consumer_base": 100,
-      "coord": [
-        -77.1929215,
-        39.1399187
-      ]
+      "coord": [-77.1929215, 39.1399187]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "GBD"
-        ]
+        "org_credit": ["GBD"]
       }
     ]
   },
@@ -2663,18 +2160,13 @@
       "type": "K-12",
       "encoded": "southwest-foodservice-excellence-az-united-states",
       "consumer_base": 100,
-      "coord": [
-        -111.878835,
-        33.6204611
-      ]
+      "coord": [-111.878835, 33.6204611]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -2689,18 +2181,13 @@
       "type": "University Dining Hall",
       "encoded": "st-marys-college-of-maryland-md-united-states",
       "consumer_base": 1600,
-      "coord": [
-        -76.43012,
-        38.1864921
-      ]
+      "coord": [-76.43012, 38.1864921]
     },
     "titles": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -2715,10 +2202,7 @@
       "type": "University Dining Hall",
       "encoded": "stanford-university-ca-united-states",
       "consumer_base": 17289,
-      "coord": [
-        -122.1693654,
-        37.4313138
-      ]
+      "coord": [-122.1693654, 37.4313138]
     },
     "ratio": [
       {
@@ -2738,18 +2222,13 @@
       "type": "Chain Restaurant",
       "encoded": "starbucks-seasonal-menus-wa-united-states",
       "consumer_base": 100,
-      "coord": [
-        -122.330062,
-        47.6038321
-      ]
+      "coord": [-122.330062, 47.6038321]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "MFA"
-        ]
+        "org_credit": ["MFA"]
       }
     ]
   },
@@ -2764,10 +2243,7 @@
       "type": "Chain Restaurant",
       "encoded": "stumptown-roasters-or-united-states",
       "consumer_base": 100,
-      "coord": [
-        -122.6155605,
-        45.5054248
-      ]
+      "coord": [-122.6155605, 45.5054248]
     },
     "default": [
       {
@@ -2787,18 +2263,13 @@
       "type": "City/Government",
       "encoded": "tavira-portugal",
       "consumer_base": 100,
-      "coord": [
-        -7.6557321,
-        37.1209922
-      ]
+      "coord": [-7.6557321, 37.1209922]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "PBT"
-        ]
+        "org_credit": ["PBT"]
       }
     ]
   },
@@ -2813,18 +2284,13 @@
       "type": "University Event",
       "encoded": "texas-state-university-nutrition-and-foods-dept-events-tx-united-states",
       "consumer_base": 100,
-      "coord": [
-        -97.9405828,
-        29.8826436
-      ]
+      "coord": [-97.9405828, 29.8826436]
     },
     "placement": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -2839,10 +2305,7 @@
       "type": "Ind. Restaurant",
       "encoded": "the-briar-bar-mn-united-states",
       "consumer_base": 100,
-      "coord": [
-        -93.2573731,
-        45.0007576
-      ]
+      "coord": [-93.2573731, 45.0007576]
     },
     "ratio": [
       {
@@ -2862,18 +2325,13 @@
       "type": "Event",
       "encoded": "the-new-york-times-climate-forward-event-ny-united-states",
       "consumer_base": 100,
-      "coord": [
-        -73.9892319,
-        40.7560001
-      ]
+      "coord": [-73.9892319, 40.7560001]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "GBD"
-        ]
+        "org_credit": ["GBD"]
       }
     ]
   },
@@ -2888,10 +2346,7 @@
       "type": "Ind. Restaurant",
       "encoded": "tonys-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -118.3269699,
-        34.1743839
-      ]
+      "coord": [-118.3269699, 34.1743839]
     },
     "default": [
       {
@@ -2910,18 +2365,13 @@
       "type": "Event",
       "encoded": "trellis-group-events-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -122.271356,
-        37.8044557
-      ]
+      "coord": [-122.271356, 37.8044557]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "GBD"
-        ]
+        "org_credit": ["GBD"]
       }
     ]
   },
@@ -2936,18 +2386,13 @@
       "type": "K-12",
       "encoded": "trenton-special-school-district-tn-united-states",
       "consumer_base": 1400,
-      "coord": [
-        -88.9416829,
-        35.9808073
-      ]
+      "coord": [-88.9416829, 35.9808073]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2027",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -2962,18 +2407,13 @@
       "type": "University Event",
       "encoded": "ucla-plant-futures-sustainable-food-futures-event-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -118.443139,
-        34.069187
-      ]
+      "coord": [-118.443139, 34.069187]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -2988,18 +2428,13 @@
       "type": "Hospital",
       "encoded": "ucsf-health-ca-united-states",
       "consumer_base": 390,
-      "coord": [
-        -122.4393639,
-        37.7858067
-      ]
+      "coord": [-122.4393639, 37.7858067]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2030",
-        "org_credit": [
-          "WRI"
-        ]
+        "org_credit": ["WRI"]
       }
     ]
   },
@@ -3014,18 +2449,13 @@
       "type": "University Cafe",
       "encoded": "university-college-london-students-union-four-cafes-united-kingdom",
       "consumer_base": 51315,
-      "coord": [
-        -0.1341273,
-        51.5238591
-      ]
+      "coord": [-0.1341273, 51.5238591]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": [
-          "GBD"
-        ]
+        "org_credit": ["GBD"]
       }
     ]
   },
@@ -3040,18 +2470,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-arizona-az-united-states",
       "consumer_base": 53000,
-      "coord": [
-        -110.951744,
-        32.2356985
-      ]
+      "coord": [-110.951744, 32.2356985]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -3066,18 +2491,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-california-riverside-ca-united-states",
       "consumer_base": 18279,
-      "coord": [
-        -117.3398097,
-        33.9642576
-      ]
+      "coord": [-117.3398097, 33.9642576]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2027",
-        "org_credit": [
-          "Humane World for Animals"
-        ]
+        "org_credit": ["Humane World for Animals"]
       }
     ]
   },
@@ -3092,19 +2512,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-california-berkeley-ca-united-states",
       "consumer_base": 45000,
-      "coord": [
-        -122.2390685,
-        37.8754996
-      ]
+      "coord": [-122.2390685, 37.8754996]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "BFF",
-          "HWA"
-        ]
+        "org_credit": ["BFF", "HWA"]
       }
     ]
   },
@@ -3119,18 +2533,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-california-los-angeles-ca-united-states",
       "consumer_base": 46000,
-      "coord": [
-        -118.4468503,
-        34.0708777
-      ]
+      "coord": [-118.4468503, 34.0708777]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2027",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -3145,19 +2554,13 @@
       "type": "University Event",
       "encoded": "university-of-california-san-diego-academic-dept-events-ca-united-states",
       "consumer_base": 100,
-      "coord": [
-        -117.2311247,
-        32.8792438
-      ]
+      "coord": [-117.2311247, 32.8792438]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF",
-          "NRI"
-        ]
+        "org_credit": ["BFF", "NRI"]
       }
     ]
   },
@@ -3172,18 +2575,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-colorado-boulder-co-united-states",
       "consumer_base": 39000,
-      "coord": [
-        -105.2664423,
-        40.0070061
-      ]
+      "coord": [-105.2664423, 40.0070061]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -3198,18 +2596,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-dayton-oh-united-states",
       "consumer_base": 11000,
-      "coord": [
-        -84.1791678,
-        39.7383807
-      ]
+      "coord": [-84.1791678, 39.7383807]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -3224,18 +2617,13 @@
       "type": "University Event",
       "encoded": "university-of-georgia-honors-college-lunch-and-learn-ga-united-states",
       "consumer_base": 100,
-      "coord": [
-        -83.376398,
-        33.9597677
-      ]
+      "coord": [-83.376398, 33.9597677]
     },
     "placement": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -3250,18 +2638,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-guelph-on-canada",
       "consumer_base": 30000,
-      "coord": [
-        -80.2249974,
-        43.5327864
-      ]
+      "coord": [-80.2249974, 43.5327864]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -3276,18 +2659,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-michigan-mdining-mi-united-states",
       "consumer_base": 35358,
-      "coord": [
-        -83.7347356,
-        42.2781548
-      ]
+      "coord": [-83.7347356, 42.2781548]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -3302,18 +2680,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-michigan-ann-arbor-mdining-mi-united-states",
       "consumer_base": 52000,
-      "coord": [
-        -83.7484616,
-        42.2813722
-      ]
+      "coord": [-83.7484616, 42.2813722]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -3328,18 +2701,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-north-texas-tx-united-states",
       "consumer_base": 43567,
-      "coord": [
-        -97.1514763,
-        33.2098922
-      ]
+      "coord": [-97.1514763, 33.2098922]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "Humane World for Animals"
-        ]
+        "org_credit": ["Humane World for Animals"]
       }
     ]
   },
@@ -3354,10 +2722,7 @@
       "type": "University Dining Hall",
       "encoded": "university-of-northern-colorado-co-united-states",
       "consumer_base": 8561,
-      "coord": [
-        -104.7017242,
-        40.4028503
-      ]
+      "coord": [-104.7017242, 40.4028503]
     },
     "ratio": [
       {
@@ -3377,18 +2742,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-pittsburgh-pa-united-states",
       "consumer_base": 33000,
-      "coord": [
-        -79.962461,
-        40.444153
-      ]
+      "coord": [-79.962461, 40.444153]
     },
     "other": [
       {
         "status": "pledged",
         "date": "2019",
-        "org_credit": [
-          "WRI"
-        ]
+        "org_credit": ["WRI"]
       }
     ]
   },
@@ -3403,18 +2763,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-portsmouth-united-kingdom",
       "consumer_base": 26000,
-      "coord": [
-        -1.0935529,
-        50.795245
-      ]
+      "coord": [-1.0935529, 50.795245]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -3429,19 +2784,13 @@
       "type": "University Cafe",
       "encoded": "university-of-san-diego-aromas-cafe-ca-united-states",
       "consumer_base": 350,
-      "coord": [
-        -117.1891347,
-        32.7726302
-      ]
+      "coord": [-117.1891347, 32.7726302]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": [
-          "BFF",
-          "NRI"
-        ]
+        "org_credit": ["BFF", "NRI"]
       }
     ]
   },
@@ -3456,18 +2805,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-texas-at-austin-tx-united-states",
       "consumer_base": 52000,
-      "coord": [
-        -97.7339352,
-        30.2851494
-      ]
+      "coord": [-97.7339352, 30.2851494]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -3482,18 +2826,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-vermont-vt-united-states",
       "consumer_base": 13000,
-      "coord": [
-        -73.1941468,
-        44.4737365
-      ]
+      "coord": [-73.1941468, 44.4737365]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "Unknown"
-        ]
+        "org_credit": ["Unknown"]
       }
     ]
   },
@@ -3508,18 +2847,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-victoria-bc-canada",
       "consumer_base": 22000,
-      "coord": [
-        -123.364953,
-        48.4283182
-      ]
+      "coord": [-123.364953, 48.4283182]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": [
-          "GBD"
-        ]
+        "org_credit": ["GBD"]
       }
     ]
   },
@@ -3534,18 +2868,13 @@
       "type": "Religious Center",
       "encoded": "university-of-virginia-brody-jewish-center-hillel-va-united-states",
       "consumer_base": 150,
-      "coord": [
-        -78.4766781,
-        38.029306
-      ]
+      "coord": [-78.4766781, 38.029306]
     },
     "default": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "BFF"
-        ]
+        "org_credit": ["BFF"]
       }
     ]
   },
@@ -3560,18 +2889,13 @@
       "type": "University Dining Hall",
       "encoded": "university-of-washington-wa-united-states",
       "consumer_base": 48000,
-      "coord": [
-        -122.3001692,
-        47.6554303
-      ]
+      "coord": [-122.3001692, 47.6554303]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -3586,18 +2910,13 @@
       "type": "Other",
       "encoded": "vermaat-caterer-netherlands-hybrid-tuna-salad-netherlands",
       "consumer_base": 100,
-      "coord": [
-        5.0286859,
-        52.0262053
-      ]
+      "coord": [5.0286859, 52.0262053]
     },
     "sub": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "Unknown"
-        ]
+        "org_credit": ["Unknown"]
       }
     ]
   },
@@ -3612,10 +2931,7 @@
       "type": "University Dining Hall",
       "encoded": "victoria-college-at-university-of-toronto-on-canada",
       "consumer_base": 3274,
-      "coord": [
-        -79.3839347,
-        43.6534817
-      ]
+      "coord": [-79.3839347, 43.6534817]
     },
     "sub": [
       {
@@ -3635,18 +2951,13 @@
       "type": "Other",
       "encoded": "vitam-caterer-netherlands-plant-based-cooking-cream-netherlands",
       "consumer_base": 100,
-      "coord": [
-        5.3629244,
-        51.71866
-      ]
+      "coord": [5.3629244, 51.71866]
     },
     "sub": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": [
-          "ProVeg"
-        ]
+        "org_credit": ["ProVeg"]
       }
     ]
   },
@@ -3661,18 +2972,13 @@
       "type": "University Dining Hall",
       "encoded": "washington-state-university-wa-united-states",
       "consumer_base": 30000,
-      "coord": [
-        -117.1498035,
-        46.7337716
-      ]
+      "coord": [-117.1498035, 46.7337716]
     },
     "ratio": [
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -3687,19 +2993,13 @@
       "type": "City/Government",
       "encoded": "washington-dc-department-of-youth-and-rehabilitation-services-dc-united-states",
       "consumer_base": 100,
-      "coord": [
-        -77.0172181,
-        38.8774173
-      ]
+      "coord": [-77.0172181, 38.8774173]
     },
     "other": [
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": [
-          "GBD",
-          "BFF"
-        ]
+        "org_credit": ["GBD", "BFF"]
       }
     ]
   },
@@ -3714,18 +3014,13 @@
       "type": "City/Government",
       "encoded": "washington-dc-dc-united-states",
       "consumer_base": 100,
-      "coord": [
-        -77.0402691,
-        38.8898398
-      ]
+      "coord": [-77.0402691, 38.8898398]
     },
     "other": [
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": [
-          "FOE"
-        ]
+        "org_credit": ["FOE"]
       }
     ]
   },
@@ -3740,18 +3035,13 @@
       "type": "City/Government",
       "encoded": "west-hollywood-california-ca-united-states",
       "consumer_base": 33700,
-      "coord": [
-        -118.3706843,
-        34.0904774
-      ]
+      "coord": [-118.3706843, 34.0904774]
     },
     "default": [
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": [
-          "MFA"
-        ]
+        "org_credit": ["MFA"]
       }
     ]
   },
@@ -3766,18 +3056,13 @@
       "type": "University Dining Hall",
       "encoded": "western-oregon-university-or-united-states",
       "consumer_base": 3857,
-      "coord": [
-        -123.2415064,
-        44.8530112
-      ]
+      "coord": [-123.2415064, 44.8530112]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2027",
-        "org_credit": [
-          "Humane World for Animals"
-        ]
+        "org_credit": ["Humane World for Animals"]
       }
     ]
   },
@@ -3792,18 +3077,13 @@
       "type": "K-12",
       "encoded": "whitsons-culinary-group-ny-united-states",
       "consumer_base": 100,
-      "coord": [
-        -73.1690019,
-        40.8042649
-      ]
+      "coord": [-73.1690019, 40.8042649]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   },
@@ -3818,18 +3098,13 @@
       "type": "University Dining Hall",
       "encoded": "york-university-toronto-on-canada",
       "consumer_base": 55000,
-      "coord": [
-        -79.5002705,
-        43.7743325
-      ]
+      "coord": [-79.5002705, 43.7743325]
     },
     "ratio": [
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": [
-          "HWA"
-        ]
+        "org_credit": ["HWA"]
       }
     ]
   }
