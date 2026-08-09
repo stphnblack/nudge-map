@@ -12,6 +12,7 @@ import {
   ProcessedNudge,
 } from "../../src/js/model/types";
 import { processRawCoreEntry } from "../../src/js/model/data";
+import { CitationType } from "./directus";
 
 export interface DirectusFile {
   fileName: string;
@@ -21,6 +22,7 @@ export interface DirectusFile {
 export interface Citation {
   id: number;
   description: string;
+  type: CitationType;
   url: string | null;
   notes: string | null;
   attachments: DirectusFile[];

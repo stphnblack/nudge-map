@@ -158,6 +158,7 @@ async function readCitations(
   const rawCitations = await readItemsBatched(client, "citations", [
     "id",
     "source_description",
+    "type",
     "notes",
     "url",
     "broken_url",
@@ -339,6 +340,7 @@ function createCitations(
     const url = citationRecord.broken_url === true ? null : citationRecord.url!;
     return {
       id: citationRecord.id!,
+      type: citationRecord.type!,
       description: citationRecord.source_description!,
       url,
       notes: citationRecord.notes!,
