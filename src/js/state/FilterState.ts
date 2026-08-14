@@ -242,34 +242,45 @@ export class PlaceFilterManager {
     if (!isPlace) return null;
 
     if (filterState.nudgeTypeFilter === "any nudge") {
-      let nudgeTypes: NudgeType[];
-      if (filterState.status === "any status") {
-        nudgeTypes = [
-          ...new Set(
-            ALL_NUDGE_STATUS.flatMap((status) =>
-              determineAllNudgeTypes(entry, status),
-            ),
-          ),
-        ];
-      } else {
-        nudgeTypes = determineAllNudgeTypes(
-          entry,
-          filterState.status as NudgeStatus,
-        );
-      }
+      const matchingDefault = getFilteredIndexes(entry.default ?? [], (n) =>
+        this.matchesNudge(n),
+      );
+      const matchingRatio = getFilteredIndexes(entry.ratio ?? [], (n) =>
+        this.matchesNudge(n),
+      );
+      const matchingSub = getFilteredIndexes(entry.sub ?? [], (n) =>
+        this.matchesNudge(n),
+      );
+      const matchingTitles = getFilteredIndexes(entry.titles ?? [], (n) =>
+        this.matchesNudge(n),
+      );
+      const matchingPlacement = getFilteredIndexes(entry.placement ?? [], (n) =>
+        this.matchesNudge(n),
+      );
+      const matchingOther = getFilteredIndexes(entry.other ?? [], (n) =>
+        this.matchesNudge(n),
+      );
+
+      const hasDefault = matchingDefault.length > 0;
+      const hasRatio = matchingRatio.length > 0;
+      const hasSub = matchingSub.length > 0;
+      const hasTitles = matchingTitles.length > 0;
+      const hasPlacement = matchingPlacement.length > 0;
+      const hasOther = matchingOther.length > 0;
+
+      const nudgeTypes: NudgeType[] = [];
+      if (hasDefault) nudgeTypes.push("plant-based default");
+      if (hasRatio) nudgeTypes.push("climate-friendly ratio");
+      if (hasSub) nudgeTypes.push("subtle substitution");
+      if (hasTitles) nudgeTypes.push("tasty titles & descriptions");
+      if (hasPlacement) nudgeTypes.push("prime placement");
+      if (hasOther) nudgeTypes.push("other");
+
       const isNudgeType = nudgeTypes.some((v) =>
         filterState.includedNudges.has(v),
       );
       return isNudgeType
-        ? {
-            type: "any",
-            hasDefault: nudgeTypes.includes("plant-based default"),
-            hasRatio: nudgeTypes.includes("climate-friendly ratio"),
-            hasSub: nudgeTypes.includes("subtle substitution"),
-            hasTitles: nudgeTypes.includes("tasty titles & descriptions"),
-            hasPlacement: nudgeTypes.includes("prime placement"),
-            hasOther: nudgeTypes.includes("other"),
-          }
+        ? { type: "any", hasDefault, hasRatio, hasSub, hasTitles, hasPlacement, hasOther }
         : null;
     }
 

@@ -447,43 +447,6 @@ function initOutermostContainers(
   };
 }
 
-function initNudgeTypeFilterDropdown(
-  filterManager: PlaceFilterManager,
-  dropdownContainer: HTMLDivElement,
-): void {
-  const id = "filter-nudge-type-dropdown";
-
-  const container = document.createElement("div");
-  container.className = "filter-nudge-type-dropdown-container";
-
-  const label = document.createElement("label");
-  label.htmlFor = id;
-  label.textContent = "Nudge type";
-
-  const select = document.createElement("select");
-  select.id = id;
-  select.name = id;
-
-  ALL_NUDGE_TYPE_FILTER.forEach((option) => {
-    const element = document.createElement("option");
-    element.value = option;
-    element.textContent = capitalize(option);
-    select.append(element);
-  });
-
-  // Set initial value.
-  select.value = filterManager.getState().nudgeTypeFilter;
-
-  select.addEventListener("change", () => {
-    const nudgeTypeFilter = select.value as NudgeTypeFilter;
-    filterManager.update({ nudgeTypeFilter });
-  });
-
-  container.append(label);
-  container.append(select);
-  dropdownContainer.append(container);
-}
-
 function initStatusDropdown(
   filterManager: PlaceFilterManager,
   dropdownContainer: HTMLDivElement,
@@ -531,8 +494,7 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     filterPopup,
   );
 
-  // Top-level options that change profoundly the app.
-  initNudgeTypeFilterDropdown(filterManager, datasetDiv);
+  // Top-level option
   initStatusDropdown(filterManager, datasetDiv);
 
   // Options about the nudge
@@ -540,7 +502,6 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     htmlName: "nudge-change",
     filterStateKey: "includedNudges",
     legend: "Nudge types",
-    hide: ({ nudgeTypeFilter }) => nudgeTypeFilter !== "any nudge",
   });
   initFilterGroup(filterManager, optionsDiv, {
     htmlName: "year",
@@ -554,7 +515,6 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
       return mapping[status];
     },
     useTwoColumns: true,
-    hide: ({ nudgeTypeFilter }) => nudgeTypeFilter === "any nudge",
   });
   initFilterGroup(filterManager, optionsDiv, {
     htmlName: "org-credit",
@@ -562,7 +522,6 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     legend: "Organization credit",
     preserveCapitalization: true,
     useTwoColumns: false,
-    hide: ({ nudgeTypeFilter }) => nudgeTypeFilter === "any nudge",
   });
 
   // Options about the Place
