@@ -6,14 +6,13 @@ import {
   PlaceType,
   ProcessedCoreEntry,
   ProcessedPlace,
-  NudgeStatus,
   NudgeType,
   ProcessedNudge,
   UNKNOWN_YEAR,
   UNKNOWN_ORG,
 } from "../model/types";
 import Observable from "./Observable";
-import { determineAllNudgeTypes, getFilteredIndexes } from "../model/data";
+import { getFilteredIndexes } from "../model/data";
 
 export const POPULATION_INTERVALS: Array<[string, number]> = [
   ["100", 100],
@@ -280,7 +279,15 @@ export class PlaceFilterManager {
         filterState.includedNudges.has(v),
       );
       return isNudgeType
-        ? { type: "any", hasDefault, hasRatio, hasSub, hasTitles, hasPlacement, hasOther }
+        ? {
+            type: "any",
+            hasDefault,
+            hasRatio,
+            hasSub,
+            hasTitles,
+            hasPlacement,
+            hasOther,
+          }
         : null;
     }
 

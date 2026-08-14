@@ -9,9 +9,7 @@ import {
   getTotalNumPlaces,
   openFilter,
 } from "./utils";
-import {
-  NudgeStatusFilter,
-} from "../../src/js/state/FilterState";
+import { NudgeStatusFilter } from "../../src/js/state/FilterState";
 
 type StringArrayOption = string[] | "all";
 

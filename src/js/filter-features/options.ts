@@ -2,7 +2,6 @@ import { capitalize } from "lodash-es";
 
 import {
   ALL_NUDGE_STATUS_FILTER,
-  ALL_NUDGE_TYPE_FILTER,
   FilterState,
   PlaceFilterManager,
   NudgeTypeFilter,
