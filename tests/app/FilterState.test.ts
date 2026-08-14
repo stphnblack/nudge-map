@@ -130,14 +130,26 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
       "Place 2": expectedPlace2Match,
     });
 
-    // The below filters should have no impact.
-    manager.update({
-      year: new Set(),
-    });
+    // Year is now applied per-nudge-record in the "any nudge" view too, so
+    // clearing it excludes everything.
+    manager.update({ year: new Set() });
+    expect(manager.matchedPlaces).toEqual({});
+    manager.update({ year: defaultState().year });
+
+    // Narrowing year to only what Place 2's nudges use should drop Place 1
+    // (its "default" nudge is dated 2024).
+    manager.update({ year: new Set(["2023"]) });
     expect(manager.matchedPlaces).toEqual({
-      "Place 1": expectedPlace1Match,
       "Place 2": expectedPlace2Match,
     });
+    manager.update({ year: defaultState().year });
+
+    // Org credit is likewise applied per-nudge-record now.
+    manager.update({ orgCredit: new Set(["org1"]) });
+    expect(manager.matchedPlaces).toEqual({
+      "Place 1": expectedPlace1Match,
+    });
+    manager.update({ orgCredit: defaultState().orgCredit });
 
     manager.update({
       includedNudges: new Set(["plant-based default"]),
