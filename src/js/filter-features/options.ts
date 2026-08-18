@@ -4,7 +4,6 @@ import {
   ALL_NUDGE_STATUS_FILTER,
   FilterState,
   PlaceFilterManager,
-  NudgeTypeFilter,
   NudgeStatusFilter,
 } from "../state/FilterState";
 import Observable from "../state/Observable";
@@ -38,14 +37,12 @@ type DataSetSpecificOptions = {
 export interface FilterOptions {
   readonly merged: DataSetSpecificOptions;
   readonly datasets: Record<
-    NudgeTypeFilter,
-    Record<NudgeStatus, DataSetSpecificOptions>
+    NudgeStatus, DataSetSpecificOptions
   >;
   getOptions(
-    nudgeType: NudgeTypeFilter,
     status: NudgeStatusFilter,
   ): DataSetSpecificOptions;
-  enabled(nudgeType: NudgeTypeFilter, status: NudgeStatusFilter): boolean;
+  enabled(status: NudgeStatusFilter): boolean;
 }
 
 function mergeDataSetOptions(
@@ -65,97 +62,34 @@ export const FILTER_OPTIONS: FilterOptions = {
   },
 
   datasets: {
-    "any nudge": {
       adopted: {
         includedNudges: ALL_NUDGE_TYPE,
-        ...optionValuesData.anyAdopted,
-      },
-      pledged: {
-        includedNudges: ALL_NUDGE_TYPE,
-        ...optionValuesData.anyPledged,
-      },
-    },
-    "plant-based default": {
-      adopted: {
-        includedNudges: [],
         ...optionValuesData.defaultAdopted,
       },
       pledged: {
-        includedNudges: [],
+        includedNudges: ALL_NUDGE_TYPE,
         ...optionValuesData.defaultPledged,
       },
-    },
-    "climate-friendly ratio": {
-      adopted: {
-        includedNudges: [],
-        ...optionValuesData.ratioAdopted,
-      },
-      pledged: {
-        includedNudges: [],
-        ...optionValuesData.ratioPledged,
-      },
-    },
-    "subtle substitution": {
-      adopted: {
-        includedNudges: [],
-        ...optionValuesData.subAdopted,
-      },
-      pledged: {
-        includedNudges: [],
-        ...optionValuesData.subPledged,
-      },
-    },
-    "tasty titles & descriptions": {
-      adopted: {
-        includedNudges: [],
-        ...optionValuesData.titlesAdopted,
-      },
-      pledged: {
-        includedNudges: [],
-        ...optionValuesData.titlesPledged,
-      },
-    },
-    "prime placement": {
-      adopted: {
-        includedNudges: [],
-        ...optionValuesData.placementAdopted,
-      },
-      pledged: {
-        includedNudges: [],
-        ...optionValuesData.placementPledged,
-      },
-    },
-    other: {
-      adopted: {
-        includedNudges: [],
-        ...optionValuesData.otherAdopted,
-      },
-      pledged: {
-        includedNudges: [],
-        ...optionValuesData.otherPledged,
-      },
-    },
   },
 
   getOptions(
-    nudgeType: NudgeTypeFilter,
     status: NudgeStatusFilter,
   ): DataSetSpecificOptions {
     if (status === "any status") {
       return mergeDataSetOptions(
-        ...ALL_NUDGE_STATUS.map((s) => this.datasets[nudgeType][s]),
+        ...ALL_NUDGE_STATUS.map((s) => this.datasets[s]),
       );
     }
-    return this.datasets[nudgeType][status];
+    return this.datasets[status];
   },
 
-  enabled(nudgeType: NudgeTypeFilter, status: NudgeStatusFilter): boolean {
+  enabled(status: NudgeStatusFilter): boolean {
     if (status === "any status") {
       return ALL_NUDGE_STATUS.some(
-        (s) => this.datasets[nudgeType][s].placeType.length > 0,
+        (s) => this.datasets[s].placeType.length > 0,
       );
     }
-    return this.datasets[nudgeType][status].placeType.length > 0;
+    return this.datasets[status].placeType.length > 0;
   },
 } as const;
 
@@ -388,7 +322,7 @@ function initFilterGroup(
     `possibly update ${params.htmlName} filter UI`,
     (state) => {
       updateCheckboxVisibility(
-        FILTER_OPTIONS.getOptions(state.nudgeTypeFilter, state.status)[
+        FILTER_OPTIONS.getOptions(state.status)[
           params.filterStateKey
         ],
         accordionElements.fieldSet,
@@ -430,8 +364,8 @@ function initOutermostContainers(
 
   filterManager.subscribe(
     `possibly disable dataset`,
-    ({ nudgeTypeFilter, status }) => {
-      const enabled = FILTER_OPTIONS.enabled(nudgeTypeFilter, status);
+    ({ status }) => {
+      const enabled = FILTER_OPTIONS.enabled(status);
       disabledDatasetDiv.hidden = enabled;
       optionsDiv.hidden = !enabled;
     },

@@ -1,7 +1,6 @@
 import { isEqual } from "lodash-es";
 import {
   ALL_NUDGE_STATUS,
-  ALL_NUDGE_TYPE,
   PlaceId,
   PlaceType,
   ProcessedCoreEntry,
@@ -31,9 +30,6 @@ export const ALL_NUDGE_STATUS_FILTER = [
 ] as const;
 export type NudgeStatusFilter = (typeof ALL_NUDGE_STATUS_FILTER)[number];
 
-export const ALL_NUDGE_TYPE_FILTER = ["any nudge", ...ALL_NUDGE_TYPE] as const;
-export type NudgeTypeFilter = (typeof ALL_NUDGE_TYPE_FILTER)[number];
-
 // Note that this only tracks state set by the user.
 // Computed values are handled elsewhere.
 //
@@ -47,7 +43,6 @@ export type NudgeTypeFilter = (typeof ALL_NUDGE_TYPE_FILTER)[number];
 // Keep key names in alignment with DataSetSpecificOptions in filter-features/options.ts
 export interface FilterState {
   searchInput: string | null;
-  nudgeTypeFilter: NudgeTypeFilter;
   status: NudgeStatusFilter;
   placeType: Set<string>;
   includedNudges: Set<string>;
@@ -240,141 +235,53 @@ export class PlaceFilterManager {
     const isPlace = this.matchesPlace(entry.place);
     if (!isPlace) return null;
 
-    if (filterState.nudgeTypeFilter === "any nudge") {
-      const matchingDefault = getFilteredIndexes(entry.default ?? [], (n) =>
-        this.matchesNudge(n),
-      );
-      const matchingRatio = getFilteredIndexes(entry.ratio ?? [], (n) =>
-        this.matchesNudge(n),
-      );
-      const matchingSub = getFilteredIndexes(entry.sub ?? [], (n) =>
-        this.matchesNudge(n),
-      );
-      const matchingTitles = getFilteredIndexes(entry.titles ?? [], (n) =>
-        this.matchesNudge(n),
-      );
-      const matchingPlacement = getFilteredIndexes(entry.placement ?? [], (n) =>
-        this.matchesNudge(n),
-      );
-      const matchingOther = getFilteredIndexes(entry.other ?? [], (n) =>
-        this.matchesNudge(n),
-      );
+    const matchingDefault = getFilteredIndexes(entry.default ?? [], (n) =>
+      this.matchesNudge(n),
+    );
+    const matchingRatio = getFilteredIndexes(entry.ratio ?? [], (n) =>
+      this.matchesNudge(n),
+    );
+    const matchingSub = getFilteredIndexes(entry.sub ?? [], (n) =>
+      this.matchesNudge(n),
+    );
+    const matchingTitles = getFilteredIndexes(entry.titles ?? [], (n) =>
+      this.matchesNudge(n),
+    );
+    const matchingPlacement = getFilteredIndexes(entry.placement ?? [], (n) =>
+      this.matchesNudge(n),
+    );
+    const matchingOther = getFilteredIndexes(entry.other ?? [], (n) =>
+      this.matchesNudge(n),
+    );
 
-      const hasDefault = matchingDefault.length > 0;
-      const hasRatio = matchingRatio.length > 0;
-      const hasSub = matchingSub.length > 0;
-      const hasTitles = matchingTitles.length > 0;
-      const hasPlacement = matchingPlacement.length > 0;
-      const hasOther = matchingOther.length > 0;
+    const hasDefault = matchingDefault.length > 0;
+    const hasRatio = matchingRatio.length > 0;
+    const hasSub = matchingSub.length > 0;
+    const hasTitles = matchingTitles.length > 0;
+    const hasPlacement = matchingPlacement.length > 0;
+    const hasOther = matchingOther.length > 0;
 
-      const nudgeTypes: NudgeType[] = [];
-      if (hasDefault) nudgeTypes.push("plant-based default");
-      if (hasRatio) nudgeTypes.push("climate-friendly ratio");
-      if (hasSub) nudgeTypes.push("subtle substitution");
-      if (hasTitles) nudgeTypes.push("tasty titles & descriptions");
-      if (hasPlacement) nudgeTypes.push("prime placement");
-      if (hasOther) nudgeTypes.push("other");
+    const nudgeTypes: NudgeType[] = [];
+    if (hasDefault) nudgeTypes.push("plant-based default");
+    if (hasRatio) nudgeTypes.push("climate-friendly ratio");
+    if (hasSub) nudgeTypes.push("subtle substitution");
+    if (hasTitles) nudgeTypes.push("tasty titles & descriptions");
+    if (hasPlacement) nudgeTypes.push("prime placement");
+    if (hasOther) nudgeTypes.push("other");
 
-      const isNudgeType = nudgeTypes.some((v) =>
-        filterState.includedNudges.has(v),
-      );
-      return isNudgeType
-        ? {
-            type: "any",
-            hasDefault,
-            hasRatio,
-            hasSub,
-            hasTitles,
-            hasPlacement,
-            hasOther,
-          }
-        : null;
-    }
-
-    if (filterState.nudgeTypeFilter === "plant-based default") {
-      const matchingNudges = getFilteredIndexes(
-        entry.default ?? [],
-        (nudgeRecord) => this.matchesNudge(nudgeRecord),
-      );
-      return matchingNudges.length
-        ? {
-            type: "single nudge",
-            nudgeType: "plant-based default",
-            matchingIndexes: matchingNudges,
-          }
-        : null;
-    }
-
-    if (filterState.nudgeTypeFilter === "climate-friendly ratio") {
-      const matchingNudges = getFilteredIndexes(
-        entry.ratio ?? [],
-        (nudgeRecord) => this.matchesNudge(nudgeRecord),
-      );
-      return matchingNudges.length
-        ? {
-            type: "single nudge",
-            nudgeType: "climate-friendly ratio",
-            matchingIndexes: matchingNudges,
-          }
-        : null;
-    }
-
-    if (filterState.nudgeTypeFilter === "subtle substitution") {
-      const matchingNudges = getFilteredIndexes(
-        entry.sub ?? [],
-        (nudgeRecord) => this.matchesNudge(nudgeRecord),
-      );
-      return matchingNudges.length
-        ? {
-            type: "single nudge",
-            nudgeType: "subtle substitution",
-            matchingIndexes: matchingNudges,
-          }
-        : null;
-    }
-
-    if (filterState.nudgeTypeFilter === "tasty titles & descriptions") {
-      const matchingNudges = getFilteredIndexes(
-        entry.titles ?? [],
-        (nudgeRecord) => this.matchesNudge(nudgeRecord),
-      );
-      return matchingNudges.length
-        ? {
-            type: "single nudge",
-            nudgeType: "tasty titles & descriptions",
-            matchingIndexes: matchingNudges,
-          }
-        : null;
-    }
-
-    if (filterState.nudgeTypeFilter === "prime placement") {
-      const matchingNudges = getFilteredIndexes(
-        entry.placement ?? [],
-        (nudgeRecord) => this.matchesNudge(nudgeRecord),
-      );
-      return matchingNudges.length
-        ? {
-            type: "single nudge",
-            nudgeType: "prime placement",
-            matchingIndexes: matchingNudges,
-          }
-        : null;
-    }
-
-    if (filterState.nudgeTypeFilter === "other") {
-      const matchingNudges = getFilteredIndexes(
-        entry.other ?? [],
-        (nudgeRecord) => this.matchesNudge(nudgeRecord),
-      );
-      return matchingNudges.length
-        ? {
-            type: "single nudge",
-            nudgeType: "other",
-            matchingIndexes: matchingNudges,
-          }
-        : null;
-    }
-
-    throw new Error(`Unrecognized nudge type`);
+    const isNudgeType = nudgeTypes.some((v) =>
+      filterState.includedNudges.has(v),
+    );
+    return isNudgeType
+      ? {
+          type: "any",
+          hasDefault,
+          hasRatio,
+          hasSub,
+          hasTitles,
+          hasPlacement,
+          hasOther,
+        }
+      : null;
   }
 }
