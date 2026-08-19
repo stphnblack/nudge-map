@@ -16,10 +16,7 @@ import {
   CellComponent,
 } from "tabulator-tables";
 
-import {
-  PlaceFilterManager,
-  NudgeStatusFilter,
-} from "./state/FilterState";
+import { PlaceFilterManager, NudgeStatusFilter } from "./state/FilterState";
 import { Date, ProcessedNudge } from "./model/types";
 import { ViewStateObservable } from "./layout/viewToggle";
 import { determineAllNudgeTypes } from "./model/data";
@@ -165,9 +162,7 @@ const ANY_NUDGE_COLUMNS: ColumnDefinition[] = [
   },
 ];
 
-export function tableDownloadFileName(
-  status: NudgeStatusFilter,
-): string {
+export function tableDownloadFileName(status: NudgeStatusFilter): string {
   const nudge = {
     "plant-based default": "defaults",
     "climate-friendly ratio": "ratios",
@@ -283,9 +278,7 @@ export default function initTable(
     saveNudge(dataOther, entry.other);
   });
 
-  const filterStateToConfig:
-    Record<string, [ColumnDefinition[], any[]]>
-   = {
+  const filterStateToConfig: Record<string, [ColumnDefinition[], any[]]> = {
     adopted: [SINGLE_NUDGE_COLUMNS, dataDefault],
     pledged: [SINGLE_NUDGE_COLUMNS, dataDefault],
     "any status": [SINGLE_NUDGE_COLUMNS, dataDefault],
@@ -295,8 +288,7 @@ export default function initTable(
   // we need to load the new columns and data.
   let currentStatus = filterManager.getState().status;
 
-  const [columns, data] =
-    filterStateToConfig[currentStatus];
+  const [columns, data] = filterStateToConfig[currentStatus];
   const table = new Tabulator("#table", {
     data,
     columns,
@@ -336,17 +328,12 @@ export default function initTable(
   });
 
   // Either re-filter the data or load an entirely new dataset.
-  const updateData = (
-    newStatus: NudgeStatusFilter,
-  ): void => {
-    if (
-      newStatus === currentStatus
-    ) {
+  const updateData = (newStatus: NudgeStatusFilter): void => {
+    if (newStatus === currentStatus) {
       table.refreshFilter();
     } else {
       currentStatus = newStatus;
-      const [columns2, data2] =
-        filterStateToConfig[newStatus];
+      const [columns2, data2] = filterStateToConfig[newStatus];
       table.setColumns(columns2);
       table.setData(data2);
     }
@@ -356,19 +343,16 @@ export default function initTable(
   // we switch to table view.
   let dataRefreshQueued = false;
 
-  filterManager.subscribe(
-    "update table's records",
-    ({ status }) => {
-      updateCounterDownload(table, status);
-      if (!tableBuilt) return;
-      if (viewToggle.getValue() === "map") {
-        dataRefreshQueued = true;
-        return;
-      }
+  filterManager.subscribe("update table's records", ({ status }) => {
+    updateCounterDownload(table, status);
+    if (!tableBuilt) return;
+    if (viewToggle.getValue() === "map") {
+      dataRefreshQueued = true;
+      return;
+    }
 
-      updateData(status);
-    },
-  );
+    updateData(status);
+  });
 
   viewToggle.subscribe((view) => {
     if (view === "map" || !dataRefreshQueued) return;

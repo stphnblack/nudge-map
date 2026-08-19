@@ -196,11 +196,11 @@ export function determineHtml(
   );
 
   return determineAnyNudge(
-        view,
-        placeDescription,
-        matchedNudgeTypes,
-        state.includedNudges,
-        state.status,
+    view,
+    placeDescription,
+    matchedNudgeTypes,
+    state.includedNudges,
+    state.status,
   );
 }
 

@@ -14,10 +14,7 @@ import {
   TABLE_DOWNLOAD_HTML,
   determineAnyNudge,
 } from "../../src/js/filter-features/counters";
-import {
-  FilterState,
-  ALL_NUDGE_TYPE_FILTER,
-} from "../../src/js/state/FilterState";
+import { FilterState } from "../../src/js/state/FilterState";
 import {
   ALL_NUDGE_STATUS,
   ALL_NUDGE_TYPE,
@@ -29,7 +26,6 @@ import { ViewState } from "../../src/js/layout/viewToggle";
 test.describe("determineHtml", () => {
   const DEFAULT_STATE: FilterState = {
     searchInput: null,
-    nudgeTypeFilter: "any nudge",
     includedNudges: new Set(ALL_NUDGE_TYPE),
     // The below values are ignored.
     country: new Set(),
@@ -79,40 +75,20 @@ test("determineSearch()", () => {
   const placeLink = `<a class="external-link" target="_blank" href=https://better-food-foundation.github.io/nudge-map/place-detail/${encodedPlace}.html>${placeId} <svg aria-hidden="true" width="1em" height="1em"><use href="#icon-arrow-right"></use></svg></a>`;
 
   // Map view always has the same text.
-  for (const nudgeType of ALL_NUDGE_TYPE_FILTER) {
-    for (const status of ALL_NUDGE_STATUS) {
-      expect(
-        determineSearch("map", placeId, encodedPlace, nudgeType, status),
-      ).toEqual(`Showing ${placeLink} — ${SEARCH_RESET_HTML}`);
-    }
+  for (const status of ALL_NUDGE_STATUS) {
+    expect(determineSearch("map", placeId, encodedPlace, status)).toEqual(
+      `Showing ${placeLink} — ${SEARCH_RESET_HTML}`,
+    );
   }
 
-  expect(
-    determineSearch("table", placeId, encodedPlace, "any nudge", "adopted"),
-  ).toEqual(
-    `Showing an overview of adopted nudges in ${placeLink} — ${SEARCH_RESET_HTML}`,
+  expect(determineSearch("table", placeId, encodedPlace, "adopted")).toEqual(
+    `Showing details about adopted nudges in ${placeLink} — ${SEARCH_RESET_HTML}`,
   );
-  expect(
-    determineSearch(
-      "table",
-      placeId,
-      encodedPlace,
-      "plant-based default",
-      "pledged",
-    ),
-  ).toEqual(
-    `Showing details about pledged plant-based defaults in ${placeLink} — ${SEARCH_RESET_HTML}`,
+  expect(determineSearch("table", placeId, encodedPlace, "pledged")).toEqual(
+    `Showing details about pledged nudges in ${placeLink} — ${SEARCH_RESET_HTML}`,
   );
-  expect(
-    determineSearch(
-      "table",
-      placeId,
-      encodedPlace,
-      "climate-friendly ratio",
-      "adopted",
-    ),
-  ).toEqual(
-    `Showing details about adopted climate-friendly ratios in ${placeLink} — ${SEARCH_RESET_HTML}`,
+  expect(determineSearch("table", placeId, encodedPlace, "adopted")).toEqual(
+    `Showing details about adopted nudges in ${placeLink} — ${SEARCH_RESET_HTML}`,
   );
 });
 

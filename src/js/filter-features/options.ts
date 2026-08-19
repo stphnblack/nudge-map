@@ -36,12 +36,8 @@ type DataSetSpecificOptions = {
 
 export interface FilterOptions {
   readonly merged: DataSetSpecificOptions;
-  readonly datasets: Record<
-    NudgeStatus, DataSetSpecificOptions
-  >;
-  getOptions(
-    status: NudgeStatusFilter,
-  ): DataSetSpecificOptions;
+  readonly datasets: Record<NudgeStatus, DataSetSpecificOptions>;
+  getOptions(status: NudgeStatusFilter): DataSetSpecificOptions;
   enabled(status: NudgeStatusFilter): boolean;
 }
 
@@ -62,19 +58,17 @@ export const FILTER_OPTIONS: FilterOptions = {
   },
 
   datasets: {
-      adopted: {
-        includedNudges: ALL_NUDGE_TYPE,
-        ...optionValuesData.defaultAdopted,
-      },
-      pledged: {
-        includedNudges: ALL_NUDGE_TYPE,
-        ...optionValuesData.defaultPledged,
-      },
+    adopted: {
+      includedNudges: ALL_NUDGE_TYPE,
+      ...optionValuesData.defaultAdopted,
+    },
+    pledged: {
+      includedNudges: ALL_NUDGE_TYPE,
+      ...optionValuesData.defaultPledged,
+    },
   },
 
-  getOptions(
-    status: NudgeStatusFilter,
-  ): DataSetSpecificOptions {
+  getOptions(status: NudgeStatusFilter): DataSetSpecificOptions {
     if (status === "any status") {
       return mergeDataSetOptions(
         ...ALL_NUDGE_STATUS.map((s) => this.datasets[s]),
@@ -322,9 +316,7 @@ function initFilterGroup(
     `possibly update ${params.htmlName} filter UI`,
     (state) => {
       updateCheckboxVisibility(
-        FILTER_OPTIONS.getOptions(state.status)[
-          params.filterStateKey
-        ],
+        FILTER_OPTIONS.getOptions(state.status)[params.filterStateKey],
         accordionElements.fieldSet,
         params.preserveCapitalization,
       );
@@ -362,14 +354,11 @@ function initOutermostContainers(
 
   const optionsDiv = document.createElement("div");
 
-  filterManager.subscribe(
-    `possibly disable dataset`,
-    ({ status }) => {
-      const enabled = FILTER_OPTIONS.enabled(status);
-      disabledDatasetDiv.hidden = enabled;
-      optionsDiv.hidden = !enabled;
-    },
-  );
+  filterManager.subscribe(`possibly disable dataset`, ({ status }) => {
+    const enabled = FILTER_OPTIONS.enabled(status);
+    disabledDatasetDiv.hidden = enabled;
+    optionsDiv.hidden = !enabled;
+  });
 
   filterPopup.append(datasetDiv);
   filterPopup.append(disabledDatasetDiv);
