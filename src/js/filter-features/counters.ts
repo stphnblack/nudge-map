@@ -1,7 +1,6 @@
 import {
   FilterState,
   PlaceFilterManager,
-  NudgeTypeFilter,
   NudgeStatusFilter,
 } from "../state/FilterState";
 import { PlaceId, ProcessedCoreEntry, NudgeType } from "../model/types";
@@ -36,7 +35,6 @@ export function determineSearch(
   view: ViewState,
   placeId: string,
   encodedPlace: string,
-  nudgeType: NudgeTypeFilter,
   status: NudgeStatusFilter,
 ): string {
   const placeLink = `<a class="external-link" target="_blank" href=${encodedPlaceToUrl(
@@ -47,25 +45,7 @@ export function determineSearch(
     return `Showing ${placeLink} — ${SEARCH_RESET_HTML}`;
   }
 
-  const suffix = `in ${placeLink} — ${SEARCH_RESET_HTML}`;
-  switch (nudgeType) {
-    case "any nudge":
-      return `Showing an overview of ${getStatusLabel(status)} nudges ${suffix}`;
-    case "plant-based default":
-      return `Showing details about ${getStatusLabel(status)} plant-based defaults ${suffix}`;
-    case "climate-friendly ratio":
-      return `Showing details about ${getStatusLabel(status)} climate-friendly ratios ${suffix}`;
-    case "subtle substitution":
-      return `Showing details about ${getStatusLabel(status)} subtle substitutions ${suffix}`;
-    case "tasty titles & descriptions":
-      return `Showing ${getStatusLabel(status)} tasty titles & descriptions ${suffix}`;
-    case "prime placement":
-      return `Showing details about ${getStatusLabel(status)} prime placements ${suffix}`;
-    case "other":
-      return `Showing details about ${getStatusLabel(status)} other nudges ${suffix}`;
-    default:
-      throw new Error(`Unexpected nudge type: ${nudgeType}`);
-  }
+  return `Showing details about ${getStatusLabel(status)} nudges in ${placeLink} — ${SEARCH_RESET_HTML}`;
 }
 
 export function determineAnyNudge(
@@ -206,7 +186,6 @@ export function determineHtml(
       view,
       placeId,
       entries[placeId].place.encoded,
-      state.nudgeTypeFilter,
       state.status,
     );
   }
@@ -216,30 +195,13 @@ export function determineHtml(
     matchedCountries,
   );
 
-  switch (state.nudgeTypeFilter) {
-    case "any nudge":
-      return determineAnyNudge(
+  return determineAnyNudge(
         view,
         placeDescription,
         matchedNudgeTypes,
         state.includedNudges,
         state.status,
-      );
-    case "plant-based default":
-      return determineDefault(view, placeDescription, state.status);
-    case "climate-friendly ratio":
-      return determineRatio(view, placeDescription, state.status);
-    case "subtle substitution":
-      return determineSubstitution(view, placeDescription, state.status);
-    case "tasty titles & descriptions":
-      return determineTitles(view, placeDescription, state.status);
-    case "prime placement":
-      return determinePlacement(view, placeDescription, state.status);
-    case "other":
-      return determineOther(view, placeDescription, state.status);
-    default:
-      throw new Error(`Unexpected nudge type: ${state.nudgeTypeFilter}`);
-  }
+  );
 }
 
 function setUpResetButton(
