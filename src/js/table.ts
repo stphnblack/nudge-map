@@ -316,9 +316,6 @@ export default function initTable(
 
   // We use Tabulator's filter to add/remove records based on FilterState,
   // as it's much faster than resetting the data.
-  //
-  // Note that the same filter works for every NudgeTypeFilter, meaning we
-  // don't need to re-set this up based on which is chosen.
   let tableBuilt = false;
   table.on("tableBuilt", () => {
     tableBuilt = true;
