@@ -21,11 +21,6 @@ import { Date, ProcessedNudge } from "./model/types";
 import { ViewStateObservable } from "./layout/viewToggle";
 import { determineAllNudgeTypes } from "./model/data";
 
-function formatBoolean(cell: CellComponent): string {
-  const v = cell.getValue() as boolean;
-  return v ? "✓" : "";
-}
-
 function formatDate(cell: CellComponent): string {
   const v = cell.getValue() as Date | null;
   return v ? v.format() : "";
@@ -116,62 +111,8 @@ const SINGLE_NUDGE_COLUMNS: ColumnDefinition[] = [
   },
 ];
 
-const ANY_NUDGE_COLUMNS: ColumnDefinition[] = [
-  ...PLACE_COLUMNS,
-  {
-    title: "Plant-based default",
-    field: "default",
-    width: 120,
-    formatter: formatBoolean,
-    hozAlign: "center",
-  },
-  {
-    title: "Climate-friendly ratio",
-    field: "ratio",
-    width: 120,
-    formatter: formatBoolean,
-    hozAlign: "center",
-  },
-  {
-    title: "Subtle substitution",
-    field: "sub",
-    width: 120,
-    formatter: formatBoolean,
-    hozAlign: "center",
-  },
-  {
-    title: "Tasty titles & descriptions",
-    field: "titles",
-    width: 120,
-    formatter: formatBoolean,
-    hozAlign: "center",
-  },
-  {
-    title: "Prime placement",
-    field: "placement",
-    width: 120,
-    formatter: formatBoolean,
-    hozAlign: "center",
-  },
-  {
-    title: "Other",
-    field: "other",
-    width: 120,
-    formatter: formatBoolean,
-    hozAlign: "center",
-  },
-];
-
 export function tableDownloadFileName(status: NudgeStatusFilter): string {
-  const nudge = {
-    "plant-based default": "defaults",
-    "climate-friendly ratio": "ratios",
-    "subtle substitution": "substitutions",
-    "tasty titles & descriptions": "titles-descriptions",
-    "prime placement": "placement",
-    other: "other",
-  };
-  return `nudges--${nudge}--${status}.csv`;
+  return `nudges--${status}.csv`;
 }
 
 function updateCounterDownload(
