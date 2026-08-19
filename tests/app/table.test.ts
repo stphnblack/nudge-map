@@ -5,12 +5,8 @@ import { compareDates, tableDownloadFileName } from "../../src/js/table";
 import { Date } from "../../src/js/model/types";
 
 test("tableDownloadFileName()", () => {
-  expect(tableDownloadFileName("adopted")).toEqual(
-    "nudges--adopted.csv",
-  );
-  expect(tableDownloadFileName("pledged")).toEqual(
-    "nudges--pledged.csv",
-  );
+  expect(tableDownloadFileName("adopted")).toEqual("nudges--adopted.csv");
+  expect(tableDownloadFileName("pledged")).toEqual("nudges--pledged.csv");
 });
 
 test("compareDates handles descending and ascending", () => {
