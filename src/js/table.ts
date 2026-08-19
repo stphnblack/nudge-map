@@ -18,7 +18,6 @@ import {
 
 import {
   PlaceFilterManager,
-  NudgeTypeFilter,
   NudgeStatusFilter,
 } from "./state/FilterState";
 import { Date, ProcessedNudge } from "./model/types";
@@ -167,30 +166,27 @@ const ANY_NUDGE_COLUMNS: ColumnDefinition[] = [
 ];
 
 export function tableDownloadFileName(
-  nudgeType: NudgeTypeFilter,
   status: NudgeStatusFilter,
 ): string {
   const nudge = {
-    "any nudge": "overview",
     "plant-based default": "defaults",
     "climate-friendly ratio": "ratios",
     "subtle substitution": "substitutions",
     "tasty titles & descriptions": "titles-descriptions",
     "prime placement": "placement",
     other: "other",
-  }[nudgeType];
+  };
   return `nudges--${nudge}--${status}.csv`;
 }
 
 function updateCounterDownload(
   table: Tabulator,
-  nudgeType: NudgeTypeFilter,
   status: NudgeStatusFilter,
 ): void {
   const button = document.querySelector(".counter-table-download");
   if (!button) return;
   button.addEventListener("click", () =>
-    table.download("csv", tableDownloadFileName(nudgeType, status)),
+    table.download("csv", tableDownloadFileName(status)),
   );
 }
 
@@ -287,54 +283,20 @@ export default function initTable(
     saveNudge(dataOther, entry.other);
   });
 
-  const filterStateToConfig: Record<
-    NudgeTypeFilter,
+  const filterStateToConfig:
     Record<string, [ColumnDefinition[], any[]]>
-  > = {
-    "any nudge": {
-      adopted: [ANY_NUDGE_COLUMNS, dataAnyAdopted],
-      pledged: [ANY_NUDGE_COLUMNS, dataAnyPledged],
-      "any status": [ANY_NUDGE_COLUMNS, dataAnyAll],
-    },
-    "plant-based default": {
-      adopted: [SINGLE_NUDGE_COLUMNS, dataDefault],
-      pledged: [SINGLE_NUDGE_COLUMNS, dataDefault],
-      "any status": [SINGLE_NUDGE_COLUMNS, dataDefault],
-    },
-    "climate-friendly ratio": {
-      adopted: [SINGLE_NUDGE_COLUMNS, dataRatio],
-      pledged: [SINGLE_NUDGE_COLUMNS, dataRatio],
-      "any status": [SINGLE_NUDGE_COLUMNS, dataRatio],
-    },
-    "subtle substitution": {
-      adopted: [SINGLE_NUDGE_COLUMNS, dataSub],
-      pledged: [SINGLE_NUDGE_COLUMNS, dataSub],
-      "any status": [SINGLE_NUDGE_COLUMNS, dataSub],
-    },
-    "tasty titles & descriptions": {
-      adopted: [SINGLE_NUDGE_COLUMNS, dataTitles],
-      pledged: [SINGLE_NUDGE_COLUMNS, dataTitles],
-      "any status": [SINGLE_NUDGE_COLUMNS, dataTitles],
-    },
-    "prime placement": {
-      adopted: [SINGLE_NUDGE_COLUMNS, dataPlacement],
-      pledged: [SINGLE_NUDGE_COLUMNS, dataPlacement],
-      "any status": [SINGLE_NUDGE_COLUMNS, dataPlacement],
-    },
-    other: {
-      adopted: [SINGLE_NUDGE_COLUMNS, dataOther],
-      pledged: [SINGLE_NUDGE_COLUMNS, dataOther],
-      "any status": [SINGLE_NUDGE_COLUMNS, dataOther],
-    },
+   = {
+    adopted: [SINGLE_NUDGE_COLUMNS, dataDefault],
+    pledged: [SINGLE_NUDGE_COLUMNS, dataDefault],
+    "any status": [SINGLE_NUDGE_COLUMNS, dataDefault],
   };
 
   // We track what the filter is currently set to. When the filter changes,
   // we need to load the new columns and data.
-  let currentNudgeTypeFilter = filterManager.getState().nudgeTypeFilter;
   let currentStatus = filterManager.getState().status;
 
   const [columns, data] =
-    filterStateToConfig[currentNudgeTypeFilter][currentStatus];
+    filterStateToConfig[currentStatus];
   const table = new Tabulator("#table", {
     data,
     columns,
@@ -370,11 +332,6 @@ export default function initTable(
       // we do still have to pay attention to what dataset is loaded
       // (nudge type x status).
       if (entry.type === "search") {
-        // With 'any nudge', each nudge status has a different dataset already.
-        // So, it's safe to include the entry from search.
-        if (currentNudgeTypeFilter === "any nudge") {
-          return true;
-        }
         return row.status === currentStatus;
       }
       return entry.matchingIndexes.includes(row.nudgeIdx);
@@ -383,19 +340,16 @@ export default function initTable(
 
   // Either re-filter the data or load an entirely new dataset.
   const updateData = (
-    newNudgeTypeFilter: NudgeTypeFilter,
     newStatus: NudgeStatusFilter,
   ): void => {
     if (
-      newNudgeTypeFilter === currentNudgeTypeFilter &&
       newStatus === currentStatus
     ) {
       table.refreshFilter();
     } else {
-      currentNudgeTypeFilter = newNudgeTypeFilter;
       currentStatus = newStatus;
       const [columns2, data2] =
-        filterStateToConfig[newNudgeTypeFilter][newStatus];
+        filterStateToConfig[newStatus];
       table.setColumns(columns2);
       table.setData(data2);
     }
@@ -407,15 +361,15 @@ export default function initTable(
 
   filterManager.subscribe(
     "update table's records",
-    ({ nudgeTypeFilter, status }) => {
-      updateCounterDownload(table, nudgeTypeFilter, status);
+    ({ status }) => {
+      updateCounterDownload(table, status);
       if (!tableBuilt) return;
       if (viewToggle.getValue() === "map") {
         dataRefreshQueued = true;
         return;
       }
 
-      updateData(nudgeTypeFilter, status);
+      updateData(status);
     },
   );
 
@@ -423,7 +377,7 @@ export default function initTable(
     if (view === "map" || !dataRefreshQueued) return;
     dataRefreshQueued = false;
     const state = filterManager.getState();
-    updateData(state.nudgeTypeFilter, state.status);
+    updateData(state.status);
   }, "apply queued table data refresh");
 
   return table;
