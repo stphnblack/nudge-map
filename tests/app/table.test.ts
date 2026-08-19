@@ -6,10 +6,10 @@ import { Date } from "../../src/js/model/types";
 
 test("tableDownloadFileName()", () => {
   expect(tableDownloadFileName("adopted")).toEqual(
-    "nudges--overview--adopted.csv",
+    "nudges--adopted.csv",
   );
   expect(tableDownloadFileName("pledged")).toEqual(
-    "nudges--overview--pledged.csv",
+    "nudges--pledged.csv",
   );
 });
 
