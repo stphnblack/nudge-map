@@ -60,11 +60,11 @@ export const FILTER_OPTIONS: FilterOptions = {
   datasets: {
     adopted: {
       includedNudges: ALL_NUDGE_TYPE,
-      ...optionValuesData.defaultAdopted,
+      ...optionValuesData.anyAdopted,
     },
     pledged: {
       includedNudges: ALL_NUDGE_TYPE,
-      ...optionValuesData.defaultPledged,
+      ...optionValuesData.anyPledged,
     },
   },
 
