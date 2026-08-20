@@ -16,7 +16,6 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
   function defaultState(): FilterState {
     return {
       searchInput: null,
-      nudgeTypeFilter: "any nudge",
       status: "adopted",
       placeType: new Set(["Transit Station", "Cafe"]),
       includedNudges: new Set(ALL_NUDGE_TYPE),
@@ -104,7 +103,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
     };
   }
 
-  test("any nudge", () => {
+  test("matches places across all filter fields", () => {
     const expectedPlace1Match = {
       type: "any",
       hasDefault: true,
@@ -130,14 +129,26 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
       "Place 2": expectedPlace2Match,
     });
 
-    // The below filters should have no impact.
-    manager.update({
-      year: new Set(),
-    });
+    // Year is now applied per-nudge-record, so
+    // clearing it excludes everything.
+    manager.update({ year: new Set() });
+    expect(manager.matchedPlaces).toEqual({});
+    manager.update({ year: defaultState().year });
+
+    // Narrowing year to only what Place 2's nudges use should drop Place 1
+    // (its "default" nudge is dated 2024).
+    manager.update({ year: new Set(["2023"]) });
     expect(manager.matchedPlaces).toEqual({
-      "Place 1": expectedPlace1Match,
       "Place 2": expectedPlace2Match,
     });
+    manager.update({ year: defaultState().year });
+
+    // Org credit is likewise applied per-nudge-record now.
+    manager.update({ orgCredit: new Set(["org1"]) });
+    expect(manager.matchedPlaces).toEqual({
+      "Place 1": expectedPlace1Match,
+    });
+    manager.update({ orgCredit: defaultState().orgCredit });
 
     manager.update({
       includedNudges: new Set(["plant-based default"]),
@@ -188,143 +199,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
     });
   });
 
-  test("plant-based default", () => {
-    const manager = new PlaceFilterManager(defaultEntries(), {
-      ...defaultState(),
-      nudgeTypeFilter: "plant-based default",
-      // Should be ignored.
-      includedNudges: new Set(),
-    });
-    expect(manager.matchedPlaces).toEqual({
-      "Place 1": {
-        type: "single nudge",
-        nudgeType: "plant-based default",
-        matchingIndexes: [0],
-      },
-    });
-
-    manager.update({ status: "pledged" });
-    expect(manager.matchedPlaces).toEqual({});
-    manager.update({ status: defaultState().status });
-
-    manager.update({ year: new Set(["2023"]) });
-    expect(manager.matchedPlaces).toEqual({});
-    manager.update({ year: defaultState().year });
-  });
-
-  test("climate-friendly ratio", () => {
-    const manager = new PlaceFilterManager(defaultEntries(), {
-      ...defaultState(),
-      nudgeTypeFilter: "climate-friendly ratio",
-      // Should be ignored.
-      includedNudges: new Set(),
-    });
-    expect(manager.matchedPlaces).toEqual({});
-
-    manager.update({ status: "pledged" });
-    expect(manager.matchedPlaces).toEqual({
-      "Place 2": {
-        type: "single nudge",
-        nudgeType: "climate-friendly ratio",
-        matchingIndexes: [0],
-      },
-    });
-    manager.update({ status: defaultState().status });
-
-    manager.update({ year: new Set(["2024"]) });
-    expect(manager.matchedPlaces).toEqual({});
-    manager.update({ year: defaultState().year });
-  });
-
-  test("subtle substitution", () => {
-    const manager = new PlaceFilterManager(defaultEntries(), {
-      ...defaultState(),
-      nudgeTypeFilter: "subtle substitution",
-      // Should be ignored.
-      includedNudges: new Set(),
-    });
-
-    expect(manager.matchedPlaces).toEqual({
-      "Place 2": {
-        type: "single nudge",
-        nudgeType: "subtle substitution",
-        matchingIndexes: [0],
-      },
-    });
-    manager.update({ status: defaultState().status });
-
-    manager.update({ year: new Set(["2024"]) });
-    expect(manager.matchedPlaces).toEqual({});
-    manager.update({ year: defaultState().year });
-  });
-
-  test("tasty titles & descriptions", () => {
-    const manager = new PlaceFilterManager(defaultEntries(), {
-      ...defaultState(),
-      nudgeTypeFilter: "tasty titles & descriptions",
-      // Should be ignored.
-      includedNudges: new Set(),
-    });
-
-    expect(manager.matchedPlaces).toEqual({
-      "Place 2": {
-        type: "single nudge",
-        nudgeType: "tasty titles & descriptions",
-        matchingIndexes: [0],
-      },
-    });
-    manager.update({ status: defaultState().status });
-
-    manager.update({ year: new Set(["2024"]) });
-    expect(manager.matchedPlaces).toEqual({});
-    manager.update({ year: defaultState().year });
-  });
-
-  test("prime placement", () => {
-    const manager = new PlaceFilterManager(defaultEntries(), {
-      ...defaultState(),
-      nudgeTypeFilter: "prime placement",
-      // Should be ignored.
-      includedNudges: new Set(),
-    });
-
-    expect(manager.matchedPlaces).toEqual({
-      "Place 2": {
-        type: "single nudge",
-        nudgeType: "prime placement",
-        matchingIndexes: [0],
-      },
-    });
-    manager.update({ status: defaultState().status });
-
-    manager.update({ year: new Set(["2024"]) });
-    expect(manager.matchedPlaces).toEqual({});
-    manager.update({ year: defaultState().year });
-  });
-
-  test("other", () => {
-    const manager = new PlaceFilterManager(defaultEntries(), {
-      ...defaultState(),
-      nudgeTypeFilter: "other",
-      // Should be ignored.
-      includedNudges: new Set(),
-    });
-
-    expect(manager.matchedPlaces).toEqual({
-      "Place 2": {
-        type: "single nudge",
-        nudgeType: "other",
-        matchingIndexes: [0],
-      },
-    });
-    manager.update({ status: defaultState().status });
-
-    manager.update({ year: new Set(["2024"]) });
-    expect(manager.matchedPlaces).toEqual({});
-    manager.update({ year: defaultState().year });
-  });
-
-  test("any status with any nudge", () => {
+  test("any status", () => {
     // With "any status", both adopted and pledged nudges should be included
     const manager = new PlaceFilterManager(defaultEntries(), {
       ...defaultState(),
@@ -350,27 +225,6 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
         hasOther: true,
       },
     });
-  });
-
-  test("any status with specific nudge type", () => {
-    // With "any status" and a specific nudge type, should match places with that nudge type regardless of status
-    const manager = new PlaceFilterManager(defaultEntries(), {
-      ...defaultState(),
-      nudgeTypeFilter: "climate-friendly ratio",
-      status: "any status",
-    });
-    // Place 2 has a pledged ratio, which should be included with "any status"
-    expect(manager.matchedPlaces).toEqual({
-      "Place 2": {
-        type: "single nudge",
-        nudgeType: "climate-friendly ratio",
-        matchingIndexes: [0],
-      },
-    });
-
-    // Switch to a specific status to verify "any status" was actually combining
-    manager.update({ status: "adopted" });
-    expect(manager.matchedPlaces).toEqual({});
   });
 
   test("search", () => {

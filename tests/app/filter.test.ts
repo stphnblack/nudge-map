@@ -9,16 +9,12 @@ import {
   getTotalNumPlaces,
   openFilter,
 } from "./utils";
-import {
-  NudgeTypeFilter,
-  NudgeStatusFilter,
-} from "../../src/js/state/FilterState";
+import { NudgeStatusFilter } from "../../src/js/state/FilterState";
 
 type StringArrayOption = string[] | "all";
 
 interface EdgeCase {
   desc: string;
-  nudgeTypeFilter: NudgeTypeFilter;
   nudgeStatusFilter?: NudgeStatusFilter;
   includedNudge?: StringArrayOption;
   country?: StringArrayOption;
@@ -33,78 +29,67 @@ interface EdgeCase {
 const TESTS: EdgeCase[] = [
   {
     desc: "default: any",
-    nudgeTypeFilter: "any nudge",
     expectedRange: [1, 200],
   },
   {
     desc: "default: default",
-    nudgeTypeFilter: "plant-based default",
-    expectedRange: [1, 200],
-  },
-  {
-    desc: "default: ratio",
-    nudgeTypeFilter: "climate-friendly ratio",
-    expectedRange: [1, 200],
-  },
-  {
-    desc: "default: sub",
-    nudgeTypeFilter: "subtle substitution",
-    expectedRange: [1, 200],
-  },
-  {
-    desc: "default: titles",
-    nudgeTypeFilter: "tasty titles & descriptions",
-    expectedRange: [1, 200],
-  },
-  {
-    desc: "default: placement",
-    nudgeTypeFilter: "prime placement",
-    expectedRange: [1, 200],
-  },
-  {
-    desc: "default: other",
-    nudgeTypeFilter: "other",
-    expectedRange: [1, 200],
-  },
-  {
-    desc: "disabled filter",
-    nudgeTypeFilter: "any nudge",
-    country: [],
-    expectedRange: [0, 0],
-  },
-  {
-    desc: "any nudge: nudge change filter",
-    nudgeTypeFilter: "any nudge",
     includedNudge: ["Plant-based default"],
     expectedRange: [1, 200],
   },
   {
+    desc: "default: ratio",
+    includedNudge: ["Climate-friendly ratio"],
+    expectedRange: [1, 200],
+  },
+  {
+    desc: "default: sub",
+    includedNudge: ["Subtle substitution"],
+    expectedRange: [1, 200],
+  },
+  {
+    desc: "default: titles",
+    includedNudge: ["Tasty titles & descriptions"],
+    expectedRange: [1, 200],
+  },
+  {
+    desc: "default: placement",
+    includedNudge: ["Prime placement"],
+    expectedRange: [1, 200],
+  },
+  {
+    desc: "default: other",
+    includedNudge: ["Other"],
+    expectedRange: [1, 200],
+  },
+  {
+    desc: "disabled filter",
+    country: [],
+    expectedRange: [0, 0],
+  },
+  {
     desc: "country filter",
-    nudgeTypeFilter: "any nudge",
     country: ["United States"],
     expectedRange: [1, 200],
   },
   {
     desc: "place type filter",
-    nudgeTypeFilter: "any nudge",
     placeType: ["Hospital"],
     expectedRange: [1, 200],
   },
   {
     desc: "status filter",
-    nudgeTypeFilter: "subtle substitution",
+    includedNudge: ["Subtle substitution"],
     nudgeStatusFilter: "pledged",
     expectedRange: [0, 0],
   },
   {
     desc: "year filter",
-    nudgeTypeFilter: "climate-friendly ratio",
+    includedNudge: ["Climate-friendly ratio"],
     year: ["Unknown", "2025"],
     expectedRange: [1, 30],
   },
   {
     desc: "any status",
-    nudgeTypeFilter: "any nudge",
     nudgeStatusFilter: "any status",
     expectedRange: [20, 200],
   },
@@ -161,12 +146,6 @@ for (const edgeCase of TESTS) {
     await loadMap(page);
     await openFilter(page);
 
-    if (edgeCase.nudgeTypeFilter !== "any nudge") {
-      await page
-        .locator("#filter-nudge-type-dropdown")
-        .selectOption(edgeCase.nudgeTypeFilter);
-    }
-
     if (
       edgeCase.nudgeStatusFilter &&
       edgeCase.nudgeStatusFilter !== "adopted"
@@ -176,6 +155,7 @@ for (const edgeCase of TESTS) {
         .selectOption(edgeCase.nudgeStatusFilter);
     }
 
+    await selectIfSet(page, "nudge-change", edgeCase.includedNudge);
     await selectIfSet(page, "country", edgeCase.country);
     await selectIfSet(page, "year", edgeCase.year);
     await selectIfSet(page, "place-type", edgeCase.placeType);

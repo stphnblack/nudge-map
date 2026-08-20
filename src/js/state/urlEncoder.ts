@@ -15,7 +15,6 @@ export const MERGED_STRING_SET_OPTIONS = {
 
 export const DEFAULT_FILTER_STATE: FilterState = {
   searchInput: null,
-  nudgeTypeFilter: "any nudge",
   status: "adopted",
   ...MERGED_STRING_SET_OPTIONS,
   consumerBaseSliderIndexes: [0, POPULATION_MAX_INDEX],
@@ -172,9 +171,6 @@ export function decodeFilterState(queryString: string): FilterState {
   const params = queryStringToParams(queryString);
   return {
     searchInput: DEFAULT_FILTER_STATE.searchInput,
-    nudgeTypeFilter:
-      NUDGE_TYPE_MAP.decode(params.get(NUDGE_TYPE_NAME)) ??
-      DEFAULT_FILTER_STATE.nudgeTypeFilter,
     status:
       STATUS_MAP.decode(params.get(STATUS_NAME)) ?? DEFAULT_FILTER_STATE.status,
     includedNudges: NUDGE_TYPE_MAP.decodeSet(

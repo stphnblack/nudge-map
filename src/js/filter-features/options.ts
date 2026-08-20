@@ -2,10 +2,8 @@ import { capitalize } from "lodash-es";
 
 import {
   ALL_NUDGE_STATUS_FILTER,
-  ALL_NUDGE_TYPE_FILTER,
   FilterState,
   PlaceFilterManager,
-  NudgeTypeFilter,
   NudgeStatusFilter,
 } from "../state/FilterState";
 import Observable from "../state/Observable";
@@ -38,15 +36,9 @@ type DataSetSpecificOptions = {
 
 export interface FilterOptions {
   readonly merged: DataSetSpecificOptions;
-  readonly datasets: Record<
-    NudgeTypeFilter,
-    Record<NudgeStatus, DataSetSpecificOptions>
-  >;
-  getOptions(
-    nudgeType: NudgeTypeFilter,
-    status: NudgeStatusFilter,
-  ): DataSetSpecificOptions;
-  enabled(nudgeType: NudgeTypeFilter, status: NudgeStatusFilter): boolean;
+  readonly datasets: Record<NudgeStatus, DataSetSpecificOptions>;
+  getOptions(status: NudgeStatusFilter): DataSetSpecificOptions;
+  enabled(status: NudgeStatusFilter): boolean;
 }
 
 function mergeDataSetOptions(
@@ -66,97 +58,32 @@ export const FILTER_OPTIONS: FilterOptions = {
   },
 
   datasets: {
-    "any nudge": {
-      adopted: {
-        includedNudges: ALL_NUDGE_TYPE,
-        ...optionValuesData.anyAdopted,
-      },
-      pledged: {
-        includedNudges: ALL_NUDGE_TYPE,
-        ...optionValuesData.anyPledged,
-      },
+    adopted: {
+      includedNudges: ALL_NUDGE_TYPE,
+      ...optionValuesData.anyAdopted,
     },
-    "plant-based default": {
-      adopted: {
-        includedNudges: [],
-        ...optionValuesData.defaultAdopted,
-      },
-      pledged: {
-        includedNudges: [],
-        ...optionValuesData.defaultPledged,
-      },
-    },
-    "climate-friendly ratio": {
-      adopted: {
-        includedNudges: [],
-        ...optionValuesData.ratioAdopted,
-      },
-      pledged: {
-        includedNudges: [],
-        ...optionValuesData.ratioPledged,
-      },
-    },
-    "subtle substitution": {
-      adopted: {
-        includedNudges: [],
-        ...optionValuesData.subAdopted,
-      },
-      pledged: {
-        includedNudges: [],
-        ...optionValuesData.subPledged,
-      },
-    },
-    "tasty titles & descriptions": {
-      adopted: {
-        includedNudges: [],
-        ...optionValuesData.titlesAdopted,
-      },
-      pledged: {
-        includedNudges: [],
-        ...optionValuesData.titlesPledged,
-      },
-    },
-    "prime placement": {
-      adopted: {
-        includedNudges: [],
-        ...optionValuesData.placementAdopted,
-      },
-      pledged: {
-        includedNudges: [],
-        ...optionValuesData.placementPledged,
-      },
-    },
-    other: {
-      adopted: {
-        includedNudges: [],
-        ...optionValuesData.otherAdopted,
-      },
-      pledged: {
-        includedNudges: [],
-        ...optionValuesData.otherPledged,
-      },
+    pledged: {
+      includedNudges: ALL_NUDGE_TYPE,
+      ...optionValuesData.anyPledged,
     },
   },
 
-  getOptions(
-    nudgeType: NudgeTypeFilter,
-    status: NudgeStatusFilter,
-  ): DataSetSpecificOptions {
+  getOptions(status: NudgeStatusFilter): DataSetSpecificOptions {
     if (status === "any status") {
       return mergeDataSetOptions(
-        ...ALL_NUDGE_STATUS.map((s) => this.datasets[nudgeType][s]),
+        ...ALL_NUDGE_STATUS.map((s) => this.datasets[s]),
       );
     }
-    return this.datasets[nudgeType][status];
+    return this.datasets[status];
   },
 
-  enabled(nudgeType: NudgeTypeFilter, status: NudgeStatusFilter): boolean {
+  enabled(status: NudgeStatusFilter): boolean {
     if (status === "any status") {
       return ALL_NUDGE_STATUS.some(
-        (s) => this.datasets[nudgeType][s].placeType.length > 0,
+        (s) => this.datasets[s].placeType.length > 0,
       );
     }
-    return this.datasets[nudgeType][status].placeType.length > 0;
+    return this.datasets[status].placeType.length > 0;
   },
 } as const;
 
@@ -389,9 +316,7 @@ function initFilterGroup(
     `possibly update ${params.htmlName} filter UI`,
     (state) => {
       updateCheckboxVisibility(
-        FILTER_OPTIONS.getOptions(state.nudgeTypeFilter, state.status)[
-          params.filterStateKey
-        ],
+        FILTER_OPTIONS.getOptions(state.status)[params.filterStateKey],
         accordionElements.fieldSet,
         params.preserveCapitalization,
       );
@@ -429,14 +354,11 @@ function initOutermostContainers(
 
   const optionsDiv = document.createElement("div");
 
-  filterManager.subscribe(
-    `possibly disable dataset`,
-    ({ nudgeTypeFilter, status }) => {
-      const enabled = FILTER_OPTIONS.enabled(nudgeTypeFilter, status);
-      disabledDatasetDiv.hidden = enabled;
-      optionsDiv.hidden = !enabled;
-    },
-  );
+  filterManager.subscribe(`possibly disable dataset`, ({ status }) => {
+    const enabled = FILTER_OPTIONS.enabled(status);
+    disabledDatasetDiv.hidden = enabled;
+    optionsDiv.hidden = !enabled;
+  });
 
   filterPopup.append(datasetDiv);
   filterPopup.append(disabledDatasetDiv);
@@ -445,43 +367,6 @@ function initOutermostContainers(
     datasetDiv,
     optionsDiv,
   };
-}
-
-function initNudgeTypeFilterDropdown(
-  filterManager: PlaceFilterManager,
-  dropdownContainer: HTMLDivElement,
-): void {
-  const id = "filter-nudge-type-dropdown";
-
-  const container = document.createElement("div");
-  container.className = "filter-nudge-type-dropdown-container";
-
-  const label = document.createElement("label");
-  label.htmlFor = id;
-  label.textContent = "Nudge type";
-
-  const select = document.createElement("select");
-  select.id = id;
-  select.name = id;
-
-  ALL_NUDGE_TYPE_FILTER.forEach((option) => {
-    const element = document.createElement("option");
-    element.value = option;
-    element.textContent = capitalize(option);
-    select.append(element);
-  });
-
-  // Set initial value.
-  select.value = filterManager.getState().nudgeTypeFilter;
-
-  select.addEventListener("change", () => {
-    const nudgeTypeFilter = select.value as NudgeTypeFilter;
-    filterManager.update({ nudgeTypeFilter });
-  });
-
-  container.append(label);
-  container.append(select);
-  dropdownContainer.append(container);
 }
 
 function initStatusDropdown(
@@ -531,8 +416,7 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     filterPopup,
   );
 
-  // Top-level options that change profoundly the app.
-  initNudgeTypeFilterDropdown(filterManager, datasetDiv);
+  // Top-level option
   initStatusDropdown(filterManager, datasetDiv);
 
   // Options about the nudge
@@ -540,7 +424,6 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     htmlName: "nudge-change",
     filterStateKey: "includedNudges",
     legend: "Nudge types",
-    hide: ({ nudgeTypeFilter }) => nudgeTypeFilter !== "any nudge",
   });
   initFilterGroup(filterManager, optionsDiv, {
     htmlName: "year",
@@ -554,7 +437,6 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
       return mapping[status];
     },
     useTwoColumns: true,
-    hide: ({ nudgeTypeFilter }) => nudgeTypeFilter === "any nudge",
   });
   initFilterGroup(filterManager, optionsDiv, {
     htmlName: "org-credit",
@@ -562,7 +444,6 @@ export function initFilterOptions(filterManager: PlaceFilterManager): void {
     legend: "Organization credit",
     preserveCapitalization: true,
     useTwoColumns: false,
-    hide: ({ nudgeTypeFilter }) => nudgeTypeFilter === "any nudge",
   });
 
   // Options about the Place

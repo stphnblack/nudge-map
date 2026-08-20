@@ -5,30 +5,8 @@ import { compareDates, tableDownloadFileName } from "../../src/js/table";
 import { Date } from "../../src/js/model/types";
 
 test("tableDownloadFileName()", () => {
-  expect(tableDownloadFileName("any nudge", "adopted")).toEqual(
-    "nudges--overview--adopted.csv",
-  );
-  expect(tableDownloadFileName("any nudge", "pledged")).toEqual(
-    "nudges--overview--pledged.csv",
-  );
-  expect(tableDownloadFileName("plant-based default", "adopted")).toEqual(
-    "nudges--defaults--adopted.csv",
-  );
-  expect(tableDownloadFileName("climate-friendly ratio", "adopted")).toEqual(
-    "nudges--ratios--adopted.csv",
-  );
-  expect(tableDownloadFileName("subtle substitution", "adopted")).toEqual(
-    "nudges--substitutions--adopted.csv",
-  );
-  expect(
-    tableDownloadFileName("tasty titles & descriptions", "adopted"),
-  ).toEqual("nudges--titles-descriptions--adopted.csv");
-  expect(tableDownloadFileName("prime placement", "adopted")).toEqual(
-    "nudges--placement--adopted.csv",
-  );
-  expect(tableDownloadFileName("other", "adopted")).toEqual(
-    "nudges--other--adopted.csv",
-  );
+  expect(tableDownloadFileName("adopted")).toEqual("nudges--adopted.csv");
+  expect(tableDownloadFileName("pledged")).toEqual("nudges--pledged.csv");
 });
 
 test("compareDates handles descending and ascending", () => {
