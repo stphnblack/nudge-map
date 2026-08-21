@@ -50,8 +50,6 @@
     ],
     "orgCredit": [
       "Better Food Foundation",
-      "Better Food Foundation; Humane World for Animals",
-      "Better Food Foundation; New Roots Institute",
       "Civic Plate (a project of @MercyForAnimals)",
       "Compass Group",
       "Earthsave Canada",
@@ -119,8 +117,6 @@
     ],
     "orgCredit": [
       "Better Food Foundation",
-      "Better Food Foundation; Humane World for Animals",
-      "Better Food Foundation; New Roots Institute",
       "Compass Group",
       "Friends of the Earth",
       "Greener by Default",
@@ -215,7 +211,6 @@
     "year": ["unknown", "2025", "2024", "2023", "2022", "2021"],
     "orgCredit": [
       "Better Food Foundation",
-      "Better Food Foundation; New Roots Institute",
       "Greener by Default",
       "New Roots Institute",
       "Plant Based Treaty",
@@ -258,7 +253,6 @@
     "year": ["unknown", "2026", "2025", "2024", "2021", "2019", "2017"],
     "orgCredit": [
       "Better Food Foundation",
-      "Better Food Foundation; Humane World for Animals",
       "Compass Group",
       "Humane World for Animals",
       "New Roots Institute",
@@ -340,7 +334,7 @@
     "year": ["unknown", "2025", "2024"],
     "orgCredit": [
       "Better Food Foundation",
-      "Better Food Foundation; New Roots Institute",
+      "New Roots Institute",
       "Plant Based Treaty",
       "Unknown"
     ]
