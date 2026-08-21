@@ -49,28 +49,30 @@
       "2017"
     ],
     "orgCredit": [
-      "BFF",
+      "Better Food Foundation",
+      "Better Food Foundation; Humane World for Animals",
+      "Better Food Foundation; New Roots Institute",
       "Civic Plate (a project of @MercyForAnimals)",
-      "Compass",
+      "Compass Group",
       "Earthsave Canada",
-      "FF",
-      "FOE",
-      "FoE",
-      "GBD",
-      "HWA",
+      "Farm Forward",
+      "Friends of the Earth",
+      "Greener by Default",
       "Humane World for Animals",
-      "MFA",
-      "NRI",
-      "PBT",
+      "Mercy For Animals",
+      "Mercy for Animals",
+      "New Roots Institute",
+      "Plant Based Treaty",
       "Plant-Based Cities Movement",
       "Plant-Based Treaty",
       "Planted Society",
+      "Practice Greenhealth",
       "ProVeg",
       "ProVeg UK",
       "Rachel Atcheson",
       "Unknown",
-      "WRI",
-      "Wholesome Minnesota of Compassionate Action for Animals"
+      "Wholesome Minnesota of Compassionate Action for Animals",
+      "World Resources Institute"
     ]
   },
   "anyAdopted": {
@@ -116,19 +118,22 @@
       "2017"
     ],
     "orgCredit": [
-      "BFF",
-      "Compass",
-      "FOE",
-      "GBD",
-      "HWA",
-      "MFA",
-      "NRI",
-      "PBT",
+      "Better Food Foundation",
+      "Better Food Foundation; Humane World for Animals",
+      "Better Food Foundation; New Roots Institute",
+      "Compass Group",
+      "Friends of the Earth",
+      "Greener by Default",
+      "Humane World for Animals",
+      "Mercy For Animals",
+      "New Roots Institute",
+      "Plant Based Treaty",
+      "Practice Greenhealth",
       "ProVeg",
       "ProVeg UK",
       "Rachel Atcheson",
       "Unknown",
-      "WRI"
+      "World Resources Institute"
     ]
   },
   "anyPledged": {
@@ -166,22 +171,21 @@
       "2019"
     ],
     "orgCredit": [
-      "BFF",
+      "Better Food Foundation",
       "Civic Plate (a project of @MercyForAnimals)",
       "Earthsave Canada",
-      "FF",
-      "FoE",
-      "GBD",
-      "HWA",
+      "Farm Forward",
+      "Friends of the Earth",
+      "Greener by Default",
       "Humane World for Animals",
-      "MFA",
-      "PBT",
+      "Mercy for Animals",
+      "Plant Based Treaty",
       "Plant-Based Cities Movement",
       "Plant-Based Treaty",
       "Planted Society",
       "Unknown",
-      "WRI",
-      "Wholesome Minnesota of Compassionate Action for Animals"
+      "Wholesome Minnesota of Compassionate Action for Animals",
+      "World Resources Institute"
     ]
   },
   "defaultAdopted": {
@@ -209,16 +213,24 @@
       "United Kingdom"
     ],
     "year": ["unknown", "2025", "2024", "2023", "2022", "2021"],
-    "orgCredit": ["BFF", "GBD", "NRI", "PBT", "Rachel Atcheson", "Unknown"]
+    "orgCredit": [
+      "Better Food Foundation",
+      "Better Food Foundation; New Roots Institute",
+      "Greener by Default",
+      "New Roots Institute",
+      "Plant Based Treaty",
+      "Rachel Atcheson",
+      "Unknown"
+    ]
   },
   "defaultPledged": {
     "placeType": ["City/Government"],
     "country": ["United States", "United Kingdom"],
     "year": ["2030", "2025", "2024", "2023"],
     "orgCredit": [
-      "BFF",
+      "Better Food Foundation",
       "Civic Plate (a project of @MercyForAnimals)",
-      "MFA",
+      "Mercy for Animals",
       "Planted Society",
       "Unknown",
       "Wholesome Minnesota of Compassionate Action for Animals"
@@ -244,7 +256,17 @@
       "United Kingdom"
     ],
     "year": ["unknown", "2026", "2025", "2024", "2021", "2019", "2017"],
-    "orgCredit": ["BFF", "Compass", "HWA", "NRI", "PBT", "Unknown", "WRI"]
+    "orgCredit": [
+      "Better Food Foundation",
+      "Better Food Foundation; Humane World for Animals",
+      "Compass Group",
+      "Humane World for Animals",
+      "New Roots Institute",
+      "Plant Based Treaty",
+      "Practice Greenhealth",
+      "Unknown",
+      "World Resources Institute"
+    ]
   },
   "ratioPledged": {
     "placeType": [
@@ -268,15 +290,14 @@
     "year": ["2030", "2027", "2026", "2025", "2024", "2022", "2021", "2020"],
     "orgCredit": [
       "Earthsave Canada",
-      "FF",
-      "FoE",
-      "HWA",
+      "Farm Forward",
+      "Friends of the Earth",
       "Humane World for Animals",
-      "PBT",
+      "Plant Based Treaty",
       "Plant-Based Cities Movement",
       "Plant-Based Treaty",
       "Unknown",
-      "WRI"
+      "World Resources Institute"
     ]
   },
   "subAdopted": {
@@ -288,7 +309,7 @@
     ],
     "country": ["United States", "Canada", "Netherlands"],
     "year": ["unknown", "2025", "2024"],
-    "orgCredit": ["BFF", "ProVeg", "Unknown"]
+    "orgCredit": ["Better Food Foundation", "ProVeg", "Unknown"]
   },
   "subPledged": {
     "placeType": [],
@@ -300,13 +321,13 @@
     "placeType": ["K-12", "University Dining Hall"],
     "country": ["United States", "United Kingdom"],
     "year": ["2026", "2025"],
-    "orgCredit": ["BFF", "ProVeg UK"]
+    "orgCredit": ["Better Food Foundation", "ProVeg UK"]
   },
   "titlesPledged": {
     "placeType": ["City/Government"],
     "country": ["Canada"],
     "year": ["2025"],
-    "orgCredit": ["PBT"]
+    "orgCredit": ["Plant Based Treaty"]
   },
   "placementAdopted": {
     "placeType": [
@@ -317,7 +338,12 @@
     ],
     "country": ["United States", "Netherlands"],
     "year": ["unknown", "2025", "2024"],
-    "orgCredit": ["BFF", "NRI", "PBT", "Unknown"]
+    "orgCredit": [
+      "Better Food Foundation",
+      "Better Food Foundation; New Roots Institute",
+      "Plant Based Treaty",
+      "Unknown"
+    ]
   },
   "placementPledged": {
     "placeType": ["City/Government"],
@@ -343,7 +369,14 @@
       "United Kingdom"
     ],
     "year": ["unknown", "2025", "2024", "2023", "2022", "2021", "2020"],
-    "orgCredit": ["BFF", "FOE", "MFA", "NRI", "PBT", "WRI"]
+    "orgCredit": [
+      "Better Food Foundation",
+      "Friends of the Earth",
+      "Mercy For Animals",
+      "New Roots Institute",
+      "Plant Based Treaty",
+      "World Resources Institute"
+    ]
   },
   "otherPledged": {
     "placeType": ["City/Government", "University Dining Hall"],
@@ -356,12 +389,12 @@
     ],
     "year": ["2026", "2025", "2024", "2022", "2021", "2019"],
     "orgCredit": [
-      "BFF",
-      "GBD",
+      "Better Food Foundation",
+      "Greener by Default",
       "Plant-Based Cities Movement",
       "Plant-Based Treaty",
       "Unknown",
-      "WRI"
+      "World Resources Institute"
     ]
   }
 }
