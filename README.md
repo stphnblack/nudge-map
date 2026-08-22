@@ -50,7 +50,7 @@ If the tests are taking a long time to start or have unexpected failures, run `r
 
 ### Autoformat code
 
-We use Prettier to nicely format code.
+We use Biome to nicely format code.
 
 ```bash
 ❯ npm run fmt
