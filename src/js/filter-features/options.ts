@@ -14,7 +14,9 @@ import {
   generateCheckbox,
   updateAccordionUI,
 } from "../layout/accordion";
-import optionValuesData from "../../../data/option-values.json" with { type: "json" };
+import optionValuesData from "../../../data/option-values.json" with {
+  type: "json",
+};
 import { ALL_NUDGE_STATUS, ALL_NUDGE_TYPE, NudgeStatus } from "../model/types";
 import { initConsumerBaseSlider } from "./consumerBaseSlider";
 import { createIcon } from "../layout/icons";
