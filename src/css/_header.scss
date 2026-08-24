@@ -49,6 +49,15 @@ $header-height: calc(
   }
 }
 
+.header-filter-icon-container {
+  width: auto;
+  padding: 0 spacing.$element-gap;
+  gap: spacing.$element-gap;
+  color: white;
+
+  font-size: typography.$font-size-base;
+}
+
 .header-full-screen-icon-container {
   // We don't show the icon on small screens because it takes up
   // too much screen real estate, and it's not very useful to see
