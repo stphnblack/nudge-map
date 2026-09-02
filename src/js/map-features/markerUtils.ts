@@ -1,8 +1,7 @@
 import type { ProcessedCoreEntry } from "../model/types";
 
 export function determineIsPrimary(entry: ProcessedCoreEntry): boolean {
-  const numAdoptedDefaults =
-    entry.default?.length ?? 0;
+  const numAdoptedDefaults = entry.default?.length ?? 0;
   return numAdoptedDefaults > 0;
 }
 

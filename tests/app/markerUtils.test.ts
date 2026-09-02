@@ -1,8 +1,10 @@
 import { expect, test } from "@playwright/test";
 
-import { radiusGivenZoom, determineIsPrimary } from "../../src/js/map-features/markerUtils";
+import {
+  radiusGivenZoom,
+  determineIsPrimary,
+} from "../../src/js/map-features/markerUtils";
 import { ProcessedPlace } from "../../src/js/model/types";
-
 
 test("determineIsPrimary", () => {
   const place: ProcessedPlace = {
