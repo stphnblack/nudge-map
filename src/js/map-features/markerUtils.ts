@@ -1,3 +1,11 @@
+import type { ProcessedCoreEntry } from "../model/types";
+
+export function determineIsPrimary(entry: ProcessedCoreEntry): boolean {
+  const numAdoptedDefaults =
+    entry.default?.length ?? 0;
+  return numAdoptedDefaults > 0;
+}
+
 export function radiusGivenZoom(zoom: number): number {
   // This formula comes from Claude to go from radius 5 to 21 between zoom 3 to 10
   // with roughly linear growth.
