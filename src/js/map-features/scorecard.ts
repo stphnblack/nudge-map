@@ -4,7 +4,7 @@ import type { ProcessedCoreEntry, PlaceId } from "../model/types";
 import Observable from "../state/Observable";
 import { PlaceFilterManager } from "../state/FilterState";
 import { ViewStateObservable } from "../layout/viewToggle";
-import type { MarkerWithPlaceId } from "./markers";
+import type { MarkerWithPlace } from "./markers";
 import { determinesupplementalPlaceInfo } from "../model/placeId";
 import { iconHtml } from "../layout/icons";
 
@@ -82,7 +82,7 @@ export default function initScorecard(
   // Clicking a city marker opens up the scorecard.
   markerGroup.on("click", (e) => {
     markerJustClicked = true;
-    const { placeId } = e.sourceTarget as MarkerWithPlaceId;
+    const { placeId } = e.sourceTarget as MarkerWithPlace;
     scorecardState.setValue({
       type: "visible",
       placeId,

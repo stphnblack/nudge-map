@@ -5,7 +5,10 @@ export function determineIsPrimary(entry: ProcessedCoreEntry): boolean {
   return numAdoptedDefaults > 0;
 }
 
-export function radiusGivenZoom(zoom: number, entry: ProcessedCoreEntry): number {
+export function radiusGivenZoom(
+  zoom: number,
+  entry: ProcessedCoreEntry,
+): number {
   // This formula comes from Claude to go from radius 5 to 21 between zoom 3 to 10
   // with roughly linear growth.
   //
@@ -22,12 +25,10 @@ export function radiusGivenZoom(zoom: number, entry: ProcessedCoreEntry): number
 
   const clampedValue = Math.max(
     minConsumerBase,
-    Math.min(entry.place.consumer_base, maxConsumerBase)
+    Math.min(entry.place.consumer_base, maxConsumerBase),
   );
 
-  const normalized =
-    (Math.log10(clampedValue) - logMin) /
-    (logMax - logMin);
+  const normalized = (Math.log10(clampedValue) - logMin) / (logMax - logMin);
 
   // Multiply normalized value by a factor to adjust the impact of consumer base on marker size
   // Multiplying by a value less than one will decrease the amount consumer base impacts size
