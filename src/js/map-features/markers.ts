@@ -3,12 +3,19 @@ import { CircleMarker, FeatureGroup, Map } from "leaflet";
 import { PlaceFilterManager } from "../state/FilterState";
 import { ViewStateObservable } from "../layout/viewToggle";
 import type { PlaceId } from "../model/types";
-import { radiusGivenZoom } from "./markerUtils";
+import { radiusGivenZoom, determineIsPrimary } from "./markerUtils";
 
-const MARKER_STYLE = {
+const PRIMARY_MARKER_STYLE = {
   weight: 1,
   color: "white",
-  fillColor: "#F05B43",
+  fillColor: "#06A38D",
+  fillOpacity: 1,
+} as const;
+
+const SECONDARY_MARKER_STYLE = {
+  weight: 1,
+  color: "white",
+  fillColor: "#014F31",
   fillOpacity: 1,
 } as const;
 
@@ -46,8 +53,10 @@ export default function initPlaceMarkers(
     filterManager.entries,
   ).reduce((acc: Record<string, MarkerWithPlaceId>, [placeId, entry]) => {
     const [long, lat] = entry.place.coord;
+    const isPrimary = determineIsPrimary(entry);
+    const style = isPrimary ? PRIMARY_MARKER_STYLE : SECONDARY_MARKER_STYLE;
     const marker = new CircleMarker([lat, long], {
-      ...MARKER_STYLE,
+      ...style,
       radius: radiusGivenZoom(map.getZoom()),
     }) as MarkerWithPlaceId;
     marker.placeId = placeId;
