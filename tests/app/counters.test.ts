@@ -26,6 +26,7 @@ import { ViewState } from "../../src/js/layout/viewToggle";
 test.describe("determineHtml", () => {
   const DEFAULT_STATE: FilterState = {
     searchInput: null,
+    isVerified: true,
     includedNudges: new Set(ALL_NUDGE_TYPE),
     // The below values are ignored.
     country: new Set(),

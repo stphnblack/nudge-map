@@ -17,6 +17,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
     return {
       searchInput: null,
       status: "adopted",
+      isVerified: true,
       placeType: new Set(["Transit Station", "Cafe"]),
       includedNudges: new Set(ALL_NUDGE_TYPE),
       year: new Set(["1997", "2023", "2024"]),
@@ -29,6 +30,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
   function defaultEntries(): Record<PlaceId, ProcessedCoreEntry> {
     return {
       "Place 1": {
+        isVerified: true,
         place: {
           name: "Place 1",
           street: null,
@@ -51,6 +53,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
         ],
       },
       "Place 2": {
+        isVerified: true,
         place: {
           name: "Place 2",
           street: null,
@@ -225,6 +228,18 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
         hasOther: true,
       },
     });
+  });
+
+  test("verified filter excludes places without a non-advocate citation", () => {
+    const entries = defaultEntries();
+    entries["Place 1"].isVerified = true;
+    entries["Place 2"].isVerified = false;
+    const manager = new PlaceFilterManager(entries, defaultState());
+
+    expect(manager.placeIds).toEqual(new Set(["Place 1"]));
+
+    manager.update({ isVerified: false });
+    expect(manager.placeIds).toEqual(new Set(["Place 1", "Place 2"]));
   });
 
   test("search", () => {

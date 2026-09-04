@@ -123,16 +123,44 @@ export function processRawCoreEntry(raw: RawCoreEntry): ProcessedCoreEntry {
   return result;
 }
 
+type RawExtendedNudge = {
+  citations: Array<{ type: string }>;
+};
+
+type RawExtendedEntry = Partial<
+  Record<
+    "default" | "ratio" | "sub" | "titles" | "placement" | "other",
+    RawExtendedNudge[]
+  >
+>;
+
+function isVerifiedEntry(entry: RawExtendedEntry): boolean {
+  return Object.values(entry)
+    .flatMap((nudges) => nudges ?? [])
+    .some((nudge) =>
+      nudge.citations.some((citation) => citation.type !== "Advocate report"),
+    );
+}
+
 export default async function readData(): Promise<
   Record<PlaceId, ProcessedCoreEntry>
 > {
-  const rawData = (await import("../../../data/core.json", {
-    with: { type: "json" },
-  })) as unknown as Record<PlaceId, RawCoreEntry>;
+  const [rawDataModule, rawExtendedDataModule] = await Promise.all([
+    import("../../../data/core.json", { with: { type: "json" } }),
+    import("../../../data/extended.json", { with: { type: "json" } }),
+  ]);
+  const rawData = rawDataModule as unknown as Record<PlaceId, RawCoreEntry>;
+  const rawExtendedData = rawExtendedDataModule as unknown as Record<
+    PlaceId,
+    RawExtendedEntry
+  >;
   return Object.fromEntries(
     Object.entries(rawData).map(([placeId, entry]) => [
       placeId,
-      processRawCoreEntry(entry),
+      {
+        ...processRawCoreEntry(entry),
+        isVerified: isVerifiedEntry(rawExtendedData[placeId] ?? {}),
+      },
     ]),
   );
 }
