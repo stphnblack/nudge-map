@@ -2,30 +2,33 @@ import { CircleMarker, FeatureGroup, Map } from "leaflet";
 
 import { PlaceFilterManager } from "../state/FilterState";
 import { ViewStateObservable } from "../layout/viewToggle";
-import type { PlaceId } from "../model/types";
+import type { PlaceId, ProcessedCoreEntry } from "../model/types";
 import { radiusGivenZoom, determineIsPrimary } from "./markerUtils";
 
 const PRIMARY_MARKER_STYLE = {
   weight: 1,
   color: "white",
   fillColor: "#06A38D",
-  fillOpacity: 1,
+  fillOpacity: 0.75,
 } as const;
 
 const SECONDARY_MARKER_STYLE = {
   weight: 1,
   color: "white",
   fillColor: "#014F31",
-  fillOpacity: 1,
+  fillOpacity: 0.75,
 } as const;
 
-/** We store the placeId on the marker to know which place a Marker corresponds to. */
-export type MarkerWithPlaceId = CircleMarker & { placeId: PlaceId };
+/** We store the placeId on the marker to know which place a Marker corresponds to, and the entry for accessing consumer base for marker sizing */
+export type MarkerWithPlace = CircleMarker & {
+  placeId: PlaceId;
+  entry: ProcessedCoreEntry;
+};
 
 function updatePlaceVisibility(
   currentlyVisiblePlaceIds: Set<string>,
   newVisiblePlaceIds: Set<PlaceId>,
-  placesToMarkers: Record<string, MarkerWithPlaceId>,
+  placesToMarkers: Record<string, MarkerWithPlace>,
   markerGroup: FeatureGroup,
 ): void {
   // Remove markers no longer visible.
@@ -49,17 +52,18 @@ export default function initPlaceMarkers(
   map: Map,
   viewToggle: ViewStateObservable,
 ): FeatureGroup {
-  const placesToMarkers: Record<string, MarkerWithPlaceId> = Object.entries(
+  const placesToMarkers: Record<string, MarkerWithPlace> = Object.entries(
     filterManager.entries,
-  ).reduce((acc: Record<string, MarkerWithPlaceId>, [placeId, entry]) => {
+  ).reduce((acc: Record<string, MarkerWithPlace>, [placeId, entry]) => {
     const [long, lat] = entry.place.coord;
     const isPrimary = determineIsPrimary(entry);
     const style = isPrimary ? PRIMARY_MARKER_STYLE : SECONDARY_MARKER_STYLE;
     const marker = new CircleMarker([lat, long], {
       ...style,
-      radius: radiusGivenZoom(map.getZoom()),
-    }) as MarkerWithPlaceId;
+      radius: radiusGivenZoom(map.getZoom(), entry),
+    }) as MarkerWithPlace;
     marker.placeId = placeId;
+    marker.entry = entry;
 
     // The tooltip is the text shown on hover. We strip the country
     // to make it less verbose.
@@ -109,7 +113,7 @@ export default function initPlaceMarkers(
     const zoom = map.getZoom();
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     Object.values(placesToMarkers).forEach((marker) => {
-      const newRadius = radiusGivenZoom(zoom);
+      const newRadius = radiusGivenZoom(zoom, marker.entry);
       marker.setRadius(newRadius);
     });
   });
