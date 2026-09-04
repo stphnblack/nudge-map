@@ -8,7 +8,7 @@ import { radiusGivenZoom, determineIsPrimary } from "./markerUtils";
 const PRIMARY_MARKER_STYLE = {
   weight: 1,
   color: "white",
-  fillColor: "#06A38D",
+  fillColor: "#F05B43",
   fillOpacity: 0.75,
 } as const;
 
