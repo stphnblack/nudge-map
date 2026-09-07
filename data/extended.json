@@ -7,6 +7,7 @@
         "citations": [
           {
             "id": 123,
+            "type": "News article",
             "description": "Five EU Municipalities Endorse the Plant Based Treaty",
             "url": "https://veganfta.com/articles/2025/08/15/five-eu-municipalities-endorse-the-plant-based-treaty/",
             "notes": null,
@@ -25,6 +26,7 @@
         "citations": [
           {
             "id": 118,
+            "type": "News article",
             "description": "Plant Based Treaty – Almere",
             "url": "https://www.almeredezeweek.nl/",
             "notes": null,
@@ -43,6 +45,7 @@
         "citations": [
           {
             "id": 179,
+            "type": "Press release",
             "description": "Humane World – Ambala Institute of Hotel Management adopts animal welfare policy",
             "url": "https://www.humaneworld.org/en/news/ambala-institute-hotel-management-adopts-animal-welfare-policy",
             "notes": null,
@@ -61,6 +64,7 @@
         "citations": [
           {
             "id": 130,
+            "type": "Press release",
             "description": "How DefaultVeg Interns Are Reshaping Food Systems (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -79,6 +83,7 @@
         "citations": [
           {
             "id": 130,
+            "type": "Press release",
             "description": "How DefaultVeg Interns Are Reshaping Food Systems (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -97,6 +102,7 @@
         "citations": [
           {
             "id": 75,
+            "type": "News article",
             "description": "Vegconomist article",
             "url": "https://vegconomist.com/politics-law/amsterdam-passes-new-motion-building-endorsement-plant-based-treaty/",
             "notes": null,
@@ -105,6 +111,7 @@
           },
           {
             "id": 76,
+            "type": "News article",
             "description": "DefaultVeg Medium article",
             "url": "https://defaultveg.medium.com/in-europe-everyday-is-veggiedag-5532fc660f85",
             "notes": null,
@@ -113,6 +120,7 @@
           },
           {
             "id": 77,
+            "type": "News article",
             "description": "I amsterdam article",
             "url": "https://www.iamsterdam.com/en/business/amsterdam-first-eu-capital-to-embrace-the-plant-based-treaty",
             "notes": null,
@@ -129,6 +137,7 @@
         "citations": [
           {
             "id": 75,
+            "type": "News article",
             "description": "Vegconomist article",
             "url": "https://vegconomist.com/politics-law/amsterdam-passes-new-motion-building-endorsement-plant-based-treaty/",
             "notes": null,
@@ -137,6 +146,7 @@
           },
           {
             "id": 76,
+            "type": "News article",
             "description": "DefaultVeg Medium article",
             "url": "https://defaultveg.medium.com/in-europe-everyday-is-veggiedag-5532fc660f85",
             "notes": null,
@@ -145,6 +155,7 @@
           },
           {
             "id": 77,
+            "type": "News article",
             "description": "I amsterdam article",
             "url": "https://www.iamsterdam.com/en/business/amsterdam-first-eu-capital-to-embrace-the-plant-based-treaty",
             "notes": null,
@@ -163,6 +174,7 @@
         "citations": [
           {
             "id": 114,
+            "type": "Press release",
             "description": "Plant Based Treaty – Amsterdam",
             "url": "https://plantbasedtreaty.org/cities/",
             "notes": null,
@@ -179,6 +191,7 @@
         "citations": [
           {
             "id": 114,
+            "type": "Press release",
             "description": "Plant Based Treaty – Amsterdam",
             "url": "https://plantbasedtreaty.org/cities/",
             "notes": null,
@@ -197,6 +210,7 @@
         "citations": [
           {
             "id": 136,
+            "type": "Press release",
             "description": "Cool Food Meals Badge Coming to Aramark, MAX Burgers and Nestlé Professional Menus (WRI)",
             "url": "https://www.wri.org/news/release-cool-food-meals-badge-coming-aramark-max-burgers-and-nestle-professional-menus-helping",
             "notes": null,
@@ -215,6 +229,7 @@
         "citations": [
           {
             "id": 115,
+            "type": "News article",
             "description": "Plant Based Treaty – Arnhem",
             "url": "https://www.bloeiinarnhem.nl/plant-based-treaty/",
             "notes": null,
@@ -233,6 +248,7 @@
         "citations": [
           {
             "id": 63,
+            "type": "News article",
             "description": "DefaultVeg Medium article",
             "url": "https://defaultveg.medium.com/city-of-austin-raises-redesigned-texas-flag-celebrating-plant-based-food-commitment-c094bc6800bd",
             "notes": null,
@@ -251,6 +267,7 @@
         "citations": [
           {
             "id": 156,
+            "type": "Press release",
             "description": "B Corp – Champions Retreat 2022 FAQ",
             "url": "https://usca.bcorporation.net/champions-retreat-2022/#faq",
             "notes": null,
@@ -269,6 +286,7 @@
         "citations": [
           {
             "id": 72,
+            "type": "News article",
             "description": "City of Barcelona official website",
             "url": "https://www.barcelona.cat/infobarcelona/en/tema/city-council/no-pork-consumption-prohibition-by-the-city-council-in-nursery-schools_1607511.html",
             "notes": null,
@@ -277,6 +295,7 @@
           },
           {
             "id": 73,
+            "type": "News article",
             "description": "Universitat Oberta de Catalunya (UOC) news article",
             "url": "https://www.uoc.edu/en/news/2025/replace-animal-protein-to-reduce-environmental-impact-in-school-diets",
             "notes": null,
@@ -285,6 +304,7 @@
           },
           {
             "id": 74,
+            "type": "Press release",
             "description": "City of Barcelona Climate Emergency Declaration (PDF)",
             "url": "https://www.barcelona.cat/barcelona-pel-clima/sites/default/files/Climate_Emergency_Declaration_en.pdf",
             "notes": null,
@@ -303,6 +323,7 @@
         "citations": [
           {
             "id": 84,
+            "type": "Policy",
             "description": "City of Berkeley official council document",
             "url": null,
             "notes": null,
@@ -311,6 +332,7 @@
           },
           {
             "id": 85,
+            "type": "Policy",
             "description": "City of Berkeley official council report",
             "url": null,
             "notes": null,
@@ -324,6 +346,7 @@
           },
           {
             "id": 86,
+            "type": "News article",
             "description": "Sentient Media article",
             "url": "https://sentientmedia.org/how-one-small-city-in-california-is-going-plant-based/",
             "notes": null,
@@ -342,6 +365,7 @@
         "citations": [
           {
             "id": 119,
+            "type": "Press release",
             "description": "Plant Based Treaty – Brampton",
             "url": "https://plantbasedtreaty.org/pbt-brampton/",
             "notes": null,
@@ -360,6 +384,7 @@
         "citations": [
           {
             "id": 83,
+            "type": "Internal document",
             "description": "City of Brampton official council meeting minutes",
             "url": "https://pub-brampton.escribemeetings.com/Meeting.aspx?Id=692d53a9-cfcd-4e04-9258-111138df4985&Agenda=PostMinutes&lang=English",
             "notes": null,
@@ -378,6 +403,7 @@
         "citations": [
           {
             "id": 130,
+            "type": "Press release",
             "description": "How DefaultVeg Interns Are Reshaping Food Systems (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -396,6 +422,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -414,6 +441,7 @@
         "citations": [
           {
             "id": 126,
+            "type": "Press release",
             "description": "Council plants new catering policy",
             "url": "https://news.calderdale.gov.uk/council-plants-new-catering-policy/",
             "notes": null,
@@ -432,6 +460,7 @@
         "citations": [
           {
             "id": 54,
+            "type": "News article",
             "description": "Better Food Foundation article",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -450,6 +479,7 @@
         "citations": [
           {
             "id": 133,
+            "type": "Press release",
             "description": "Lisbon Parish, Campolide, calls for a Plant Based Treaty and commits to public education campaigns",
             "url": "https://plantbasedtreaty.org/campolide/",
             "notes": null,
@@ -460,7 +490,7 @@
       }
     ]
   },
-  "Caribou Coffee Seasonal Menus, MN, United States": {
+  "Caribou Coffee, MN, United States": {
     "other": [
       {
         "summary": "Eliminated the surcharge for non-dairy (oat/almond) milk across all ~800 US locations (April 2023); ~20% of orders were already dairy-free.",
@@ -468,6 +498,7 @@
         "citations": [
           {
             "id": 103,
+            "type": "Press release",
             "description": "Caribou Coffee – No Added Charge for Non-Dairy Milk Options",
             "url": "https://www.cariboucoffee.com/2023/04/caribou-coffee-announces-no-added-charge-for-non-dairy-milk-options/",
             "notes": null,
@@ -486,6 +517,7 @@
         "citations": [
           {
             "id": 57,
+            "type": "News article",
             "description": "Sammamish Independent article",
             "url": "https://sammamishindependent.com/2025/02/council-mandates-vegan-catering-for-city-provided-food/",
             "notes": null,
@@ -504,6 +536,7 @@
         "citations": [
           {
             "id": 157,
+            "type": "Advocate report",
             "description": "Greener by Default submission (Google Drive)",
             "url": "https://drive.google.com/file/d/1ul-e0Rh82tvK0CeYnLmfn0wPEGc5phMC/view",
             "notes": null,
@@ -522,6 +555,7 @@
         "citations": [
           {
             "id": 158,
+            "type": "Advocate report",
             "description": "Greener by Default / LinkedIn – ClimateCAP",
             "url": "https://www.linkedin.com/posts/greener-by-default_proud-to-partner-with-climatecap-to-help-activity-7298802569802383360-vXLX/",
             "notes": null,
@@ -549,6 +583,7 @@
         "citations": [
           {
             "id": 160,
+            "type": "Press release",
             "description": "Compass Group – Plant Forward Meals",
             "url": "https://www.compass-group.com/en/sustainability/planet/plant-forward-meals.html",
             "notes": null,
@@ -567,6 +602,7 @@
         "citations": [
           {
             "id": 161,
+            "type": "Other",
             "description": "WRI – US hospitals reduce emissions through plant-based foods",
             "url": "https://www.wri.org/outcomes/us-hospitals-reduce-emissions-through-plant-based-foods",
             "notes": null,
@@ -585,6 +621,7 @@
         "citations": [
           {
             "id": 106,
+            "type": "Press release",
             "description": "Better Food Foundation – These 7 Colleges Are Making Plant-Based Dining the New Norm",
             "url": "https://www.betterfoodfoundation.org/news/these-7-colleges-are-making-plant-based-dining-the-new-norm-this-fall/",
             "notes": null,
@@ -603,6 +640,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -610,6 +648,15 @@
             "screenshots": []
           }
         ]
+      }
+    ]
+  },
+  "DC Department of Youth Rehabilitation Services, DC, United States": {
+    "other": [
+      {
+        "summary": "Need more info",
+        "reporter": "Björn Ólafsson",
+        "citations": []
       }
     ]
   },
@@ -621,6 +668,7 @@
         "citations": [
           {
             "id": 111,
+            "type": "Press release",
             "description": "Better Food Foundation – DC Veg Week Showcases More Than Just Tofu",
             "url": "https://www.betterfoodfoundation.org/news/capitalizing-on-its-diversity-dc-veg-week-showcases-more-than-just-tofu/",
             "notes": null,
@@ -639,6 +687,7 @@
         "citations": [
           {
             "id": 170,
+            "type": "Press release",
             "description": "Davidson – Partnership Aims to Increase Plant-Based Meal Options",
             "url": "https://www.davidson.edu/news/2021/04/21/partnership-aims-increase-plant-based-meal-options-curb-environmental-impact",
             "notes": null,
@@ -657,6 +706,7 @@
         "citations": [
           {
             "id": 134,
+            "type": "Press release",
             "description": "A Student's Case for an Oat Milk Default at Duke University (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/a-students-case-for-oat-milk-default-at-duke-university/",
             "notes": null,
@@ -667,7 +717,7 @@
       }
     ]
   },
-  "Edinburgh, Scotland, United Kingdom": {
+  "Edinburgh (municipal schools & council catering), United Kingdom": {
     "other": [
       {
         "summary": "City Council endorsed the Plant Based Treaty (Jan 2023) and adopted a PBT Action Plan (Jan 2024); measures include a daily vegetarian/vegan option in all schools and piloting plant-based snacks in youth library programs.",
@@ -675,6 +725,7 @@
         "citations": [
           {
             "id": 100,
+            "type": "Press release",
             "description": "City of Edinburgh Council – Council agrees Plant-Based Treaty Action Plan",
             "url": "https://www.edinburgh.gov.uk/news/article/13898/council-agrees-plant-based-treaty-action-plan",
             "notes": null,
@@ -693,6 +744,7 @@
         "citations": [
           {
             "id": 151,
+            "type": "News article",
             "description": "Change Inc / Looopings – Efteling plant-based",
             "url": "https://www.change.inc/transities/voedsel-transitie/3-lessen-over-plantaardig-eten-in-de-efteling-de-vegakroket-heet-gewoon-kroket",
             "notes": null,
@@ -711,6 +763,7 @@
         "citations": [
           {
             "id": 132,
+            "type": "News article",
             "description": "El Masnou Becomes Second Spanish City to Endorse the Plant Based Treaty (vegconomist)",
             "url": "https://vegconomist.com/society/charity-campaigns/el-masnou-becomes-second-spanish-city-endorse-plant-based-treaty/",
             "notes": null,
@@ -729,6 +782,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -747,6 +801,7 @@
         "citations": [
           {
             "id": 127,
+            "type": "News article",
             "description": "Oat milk is the new standard at coffee corners on campus (Erasmus Magazine)",
             "url": "https://www.erasmusmagazine.nl/en/2024/05/08/oat-milk-is-the-new-standard-at-coffee-corners-on-campus/",
             "notes": null,
@@ -765,6 +820,7 @@
         "citations": [
           {
             "id": 140,
+            "type": "News article",
             "description": "Food Matters Live – Exeter City Council votes to move towards more plant-based food options",
             "url": "https://foodmatterslive.com/article/exeter-city-council-plant-based/",
             "notes": null,
@@ -783,6 +839,7 @@
         "citations": [
           {
             "id": 116,
+            "type": "Press release",
             "description": "Plant Based Treaty – Exmouth",
             "url": "https://exmouth.gov.uk/tackling-the-climate-and-ecological-emergency/",
             "notes": null,
@@ -801,6 +858,7 @@
         "citations": [
           {
             "id": 106,
+            "type": "Press release",
             "description": "Better Food Foundation – These 7 Colleges Are Making Plant-Based Dining the New Norm",
             "url": "https://www.betterfoodfoundation.org/news/these-7-colleges-are-making-plant-based-dining-the-new-norm-this-fall/",
             "notes": null,
@@ -819,6 +877,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -837,6 +896,7 @@
         "citations": [
           {
             "id": 94,
+            "type": "Other",
             "description": "Galaxy Hut website",
             "url": "https://galaxyhut.com/",
             "notes": null,
@@ -855,6 +915,7 @@
         "citations": [
           {
             "id": 129,
+            "type": "News article",
             "description": "Good Eating Company Slashes Emissions, Offering Oat Milk by Default at Many Foodservice Locations (vegconomist)",
             "url": "https://vegconomist.com/gastronomy-food-service/food-service/good-eating-company-slashes-emissions-offering-oat-milk-default/",
             "notes": null,
@@ -873,6 +934,7 @@
         "citations": [
           {
             "id": 97,
+            "type": "News article",
             "description": "OneZero (Medium) article",
             "url": "https://onezero.medium.com/how-google-got-its-employees-to-eat-their-vegetables-a2206820d90d",
             "notes": null,
@@ -881,6 +943,7 @@
           },
           {
             "id": 98,
+            "type": "News article",
             "description": "Workforce Nutrition Alliance article",
             "url": "https://workforcenutrition.org/employee-wellbeing-far-beyond-technology-googles-approach-to-workforce-nutrition/",
             "notes": null,
@@ -889,6 +952,7 @@
           },
           {
             "id": 99,
+            "type": "Press release",
             "description": "WBCSD resource page",
             "url": "https://www.wbcsd.org/resources/foodwork-program/",
             "notes": null,
@@ -905,6 +969,7 @@
         "citations": [
           {
             "id": 97,
+            "type": "News article",
             "description": "OneZero (Medium) article",
             "url": "https://onezero.medium.com/how-google-got-its-employees-to-eat-their-vegetables-a2206820d90d",
             "notes": null,
@@ -913,6 +978,7 @@
           },
           {
             "id": 98,
+            "type": "News article",
             "description": "Workforce Nutrition Alliance article",
             "url": "https://workforcenutrition.org/employee-wellbeing-far-beyond-technology-googles-approach-to-workforce-nutrition/",
             "notes": null,
@@ -921,6 +987,7 @@
           },
           {
             "id": 99,
+            "type": "Press release",
             "description": "WBCSD resource page",
             "url": "https://www.wbcsd.org/resources/foodwork-program/",
             "notes": null,
@@ -939,6 +1006,7 @@
         "citations": [
           {
             "id": 123,
+            "type": "News article",
             "description": "Five EU Municipalities Endorse the Plant Based Treaty",
             "url": "https://veganfta.com/articles/2025/08/15/five-eu-municipalities-endorse-the-plant-based-treaty/",
             "notes": null,
@@ -957,6 +1025,7 @@
         "citations": [
           {
             "id": 114,
+            "type": "Press release",
             "description": "Plant Based Treaty – Amsterdam",
             "url": "https://plantbasedtreaty.org/cities/",
             "notes": null,
@@ -975,6 +1044,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -993,6 +1063,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -1011,6 +1082,7 @@
         "citations": [
           {
             "id": 104,
+            "type": "Press release",
             "description": "Guilder Cafe – Sustainability",
             "url": "https://www.guildercafe.com/sustainability",
             "notes": null,
@@ -1029,6 +1101,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -1047,6 +1120,7 @@
         "citations": [
           {
             "id": 114,
+            "type": "Press release",
             "description": "Plant Based Treaty – Amsterdam",
             "url": "https://plantbasedtreaty.org/cities/",
             "notes": null,
@@ -1065,6 +1139,7 @@
         "citations": [
           {
             "id": 139,
+            "type": "News article",
             "description": "Plant Based Councils – 100% Plant-Based Menus at Hackney Council by 2030",
             "url": "https://www.plantbasedcouncils.org/post/100-plant-based-menus-at-hackney-council-by-2030",
             "notes": null,
@@ -1083,6 +1158,7 @@
         "citations": [
           {
             "id": 163,
+            "type": "Other",
             "description": "Harvard Office for Sustainability – Healthful & Sustainable Food",
             "url": "https://sustainable.harvard.edu/our-plan/how-we-operate/food/",
             "notes": null,
@@ -1101,6 +1177,7 @@
         "citations": [
           {
             "id": 81,
+            "type": "News article",
             "description": "Yle (Finnish public broadcaster) article",
             "url": "https://yle.fi/a/74-20213319",
             "notes": null,
@@ -1109,6 +1186,7 @@
           },
           {
             "id": 82,
+            "type": "News article",
             "description": "Green Queen article",
             "url": "https://www.greenqueen.com.hk/helsinki-puloet-parempaa-meat-dairy-plant-based-food-policy-2030/",
             "notes": null,
@@ -1136,6 +1214,7 @@
         "citations": [
           {
             "id": 130,
+            "type": "Press release",
             "description": "How DefaultVeg Interns Are Reshaping Food Systems (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -1154,6 +1233,7 @@
         "citations": [
           {
             "id": 171,
+            "type": "Press release",
             "description": "Humane World – Kent State University doubles its plant-based pledge",
             "url": "https://www.humaneworld.org/en/news/kent-state-university-doubles-its-plant-based-pledge-ahead-national-nutrition-month",
             "notes": null,
@@ -1188,6 +1268,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -1206,6 +1287,7 @@
         "citations": [
           {
             "id": 105,
+            "type": "News article",
             "description": "FoodService Director – How LinkedIn’s cafeteria drives diners toward plant-forward eating",
             "url": "https://www.foodservicedirector.com/sustainability/how-linkedin-s-cafeteria-drives-diners-toward-plant-forward-eating",
             "notes": null,
@@ -1224,6 +1306,7 @@
         "citations": [
           {
             "id": 181,
+            "type": " Institutional website",
             "description": "LSE Catering – Sustainability progress tracker (45% veg/vegan; beef ban)",
             "url": "https://info.lse.ac.uk/staff/services/catering/assets/documents/sustainability-progress-tracker.pdf",
             "notes": null,
@@ -1242,6 +1325,7 @@
         "citations": [
           {
             "id": 87,
+            "type": "News article",
             "description": "Sentient Media article",
             "url": "https://sentientmedia.org/how-one-small-city-in-california-is-going-plant-based/",
             "notes": null,
@@ -1250,6 +1334,7 @@
           },
           {
             "id": 88,
+            "type": "Other",
             "description": "LA Climate Week event page",
             "url": "https://laclimateweek.com/event/measuring-what-matters-how-local-food-policy-is-changing-la/",
             "notes": null,
@@ -1258,6 +1343,7 @@
           },
           {
             "id": 89,
+            "type": "News article",
             "description": "Plant Based Foods Association article",
             "url": "https://plantbasedfoods.org/latest/plant-based-by-default-wins-in-la-county",
             "notes": null,
@@ -1266,6 +1352,7 @@
           },
           {
             "id": 90,
+            "type": "News article",
             "description": "Mercy For Animals blog post",
             "url": "https://mercyforanimals.org/blog/los-angeles-county-passes-groundbreaking-policy-requiring-plant-based-food-purchases/",
             "notes": null,
@@ -1284,6 +1371,7 @@
         "citations": [
           {
             "id": 122,
+            "type": "Press release",
             "description": "Los Angeles City Council unanimously endorses the Plant Based Treaty in response to the climate emergency",
             "url": "https://plantbasedtreaty.org/los-angeles-city-council-unanimously-endorses-the-plant-based-treaty/",
             "notes": null,
@@ -1302,6 +1390,7 @@
         "citations": [
           {
             "id": 136,
+            "type": "Press release",
             "description": "Cool Food Meals Badge Coming to Aramark, MAX Burgers and Nestlé Professional Menus (WRI)",
             "url": "https://www.wri.org/news/release-cool-food-meals-badge-coming-aramark-max-burgers-and-nestle-professional-menus-helping",
             "notes": null,
@@ -1320,6 +1409,7 @@
         "citations": [
           {
             "id": 71,
+            "type": "News article",
             "description": "Climate Action Merribek blog post",
             "url": "https://climateactionmerribek.org/2019/08/18/moreland-councils-eat-less-meat-climate-debate-meatlessmonday/",
             "notes": null,
@@ -1338,6 +1428,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -1356,6 +1447,7 @@
         "citations": [
           {
             "id": 178,
+            "type": "News article",
             "description": "Coolfood (WRI) – A Look at Coolfood in 2024",
             "url": "https://coolfood.org/a-look-at-coolfood-in-2024/",
             "notes": null,
@@ -1374,6 +1466,7 @@
         "citations": [
           {
             "id": 130,
+            "type": "Press release",
             "description": "How DefaultVeg Interns Are Reshaping Food Systems (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -1392,6 +1485,7 @@
         "citations": [
           {
             "id": 64,
+            "type": "Press release",
             "description": "NYC Health + Hospitals press release",
             "url": "https://www.nychealthandhospitals.org/pressrelease/mayor-adams-nyc-health-hospitals-announce-successful-rollout-and-expansion-of-plant-based-meals-as-primary-option-for-patients-in-nyc-public-hospitals/",
             "notes": null,
@@ -1400,6 +1494,7 @@
           },
           {
             "id": 65,
+            "type": "Other",
             "description": "NY Health + Hospitals Plant-Based Meal Program",
             "url": null,
             "notes": null,
@@ -1423,6 +1518,7 @@
         "citations": [
           {
             "id": 137,
+            "type": "Press release",
             "description": "Nestlé Professional USA Announces Cool Food Menu Certification in Partnership with WRI",
             "url": "https://www.prnewswire.com/news-releases/nestle-professional-usa-announces-cool-food-menu-certification-in-partnership-with-world-resources-institute-301379928.html",
             "notes": null,
@@ -1441,6 +1537,7 @@
         "citations": [
           {
             "id": 106,
+            "type": "Press release",
             "description": "Better Food Foundation – These 7 Colleges Are Making Plant-Based Dining the New Norm",
             "url": "https://www.betterfoodfoundation.org/news/these-7-colleges-are-making-plant-based-dining-the-new-norm-this-fall/",
             "notes": null,
@@ -1459,6 +1556,7 @@
         "citations": [
           {
             "id": 114,
+            "type": "Press release",
             "description": "Plant Based Treaty – Amsterdam",
             "url": "https://plantbasedtreaty.org/cities/",
             "notes": null,
@@ -1477,6 +1575,7 @@
         "citations": [
           {
             "id": 53,
+            "type": "Internal document",
             "description": "District of North Vancouver Meeting Notes",
             "url": null,
             "notes": null,
@@ -1500,6 +1599,7 @@
         "citations": [
           {
             "id": 173,
+            "type": "Press release",
             "description": "Humane World – Northshore School District sets a new standard in Washington state",
             "url": "https://www.humanesociety.org/news/northshore-school-district-sets-new-standard-washington-state-ambitious-plant-based-pledge",
             "notes": null,
@@ -1510,7 +1610,7 @@
       }
     ]
   },
-  "Ocean Beach People's Food Co-Op, CA, United States": {
+  "Ocean Beach People's Food Co-op, CA, United States": {
     "ratio": [
       {
         "summary": "Ocean Beach People's Food Co-Op is a vegan deli and plant-forward grocery store, with some dairy and eggs products available, but not sold in the deli.",
@@ -1518,6 +1618,7 @@
         "citations": [
           {
             "id": 96,
+            "type": "Other",
             "description": "Co-op online store",
             "url": "https://obpeoplesfood.storebyweb.com/s/1000-1/b?g=CGP-1000-2185",
             "notes": null,
@@ -1536,6 +1637,7 @@
         "citations": [
           {
             "id": 144,
+            "type": "Press release",
             "description": "Humane World for Animals – New report grades U.S. colleges on plant-based dining and sustainability initiatives",
             "url": "https://www.humaneworld.org/en/news/new-report-grades-us-colleges-plant",
             "notes": null,
@@ -1554,6 +1656,7 @@
         "citations": [
           {
             "id": 130,
+            "type": "Press release",
             "description": "How DefaultVeg Interns Are Reshaping Food Systems (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -1572,6 +1675,7 @@
         "citations": [
           {
             "id": 106,
+            "type": "Press release",
             "description": "Better Food Foundation – These 7 Colleges Are Making Plant-Based Dining the New Norm",
             "url": "https://www.betterfoodfoundation.org/news/these-7-colleges-are-making-plant-based-dining-the-new-norm-this-fall/",
             "notes": null,
@@ -1590,6 +1694,7 @@
         "citations": [
           {
             "id": 135,
+            "type": "Press release",
             "description": "New 'Cool Food Meals' Badge Hits Restaurant Menus Nationwide (WRI)",
             "url": "https://www.wri.org/news/release-new-cool-food-meals-badge-hits-restaurant-menus-nationwide-helping-consumers-act",
             "notes": null,
@@ -1608,6 +1713,7 @@
         "citations": [
           {
             "id": 62,
+            "type": "Social media",
             "description": "Instagram Reel",
             "url": "https://www.instagram.com/reel/DE5FhScx4iw/",
             "notes": null,
@@ -1626,6 +1732,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -1644,6 +1751,7 @@
         "citations": [
           {
             "id": 123,
+            "type": "News article",
             "description": "Five EU Municipalities Endorse the Plant Based Treaty",
             "url": "https://veganfta.com/articles/2025/08/15/five-eu-municipalities-endorse-the-plant-based-treaty/",
             "notes": null,
@@ -1662,6 +1770,7 @@
         "citations": [
           {
             "id": 106,
+            "type": "Press release",
             "description": "Better Food Foundation – These 7 Colleges Are Making Plant-Based Dining the New Norm",
             "url": "https://www.betterfoodfoundation.org/news/these-7-colleges-are-making-plant-based-dining-the-new-norm-this-fall/",
             "notes": null,
@@ -1680,6 +1789,7 @@
         "citations": [
           {
             "id": 182,
+            "type": "News article",
             "description": "European Vegetarian Union – Poland Moves to Introduce Plant-Based Meals in Schools and Hospitals",
             "url": "https://www.euroveg.eu/poland-moves-to-introduce-plant-based-meals-in-schools-and-hospitals/",
             "notes": "Source category: News Article",
@@ -1698,6 +1808,7 @@
         "citations": [
           {
             "id": 145,
+            "type": "News article",
             "description": "Notes From Poland – Polish government introduces healthier food and vegan options in school canteens",
             "url": "https://notesfrompoland.com/2026/02/20/polish-government-introduces-healthier-food-and-vegan-options-in-school-canteens/",
             "notes": null,
@@ -1716,6 +1827,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -1734,6 +1846,7 @@
         "citations": [
           {
             "id": 159,
+            "type": "Advocate report",
             "description": "ProVeg UK – School Plates",
             "url": "https://proveg.org/uk/school-plates/",
             "notes": null,
@@ -1752,6 +1865,7 @@
         "citations": [
           {
             "id": 166,
+            "type": "News article",
             "description": "Humane World – How HWA is shifting menus toward plants",
             "url": "https://www.humaneworld.org/en/all-animals/global-plant-based-menus",
             "notes": null,
@@ -1770,6 +1884,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -1788,6 +1903,7 @@
         "citations": [
           {
             "id": 130,
+            "type": "Press release",
             "description": "How DefaultVeg Interns Are Reshaping Food Systems (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -1806,6 +1922,7 @@
         "citations": [
           {
             "id": 175,
+            "type": "Press release",
             "description": "Humane World – Minnesota high school commits to adding plant-based protein meals",
             "url": "https://www.humanesociety.org/news/minnesota-high-school-commits-adding-plant-based-protein-meals",
             "notes": null,
@@ -1824,6 +1941,7 @@
         "citations": [
           {
             "id": 167,
+            "type": "Press release",
             "description": "Humane World – RIT becomes first NY university to achieve 50% plant-based menu goal",
             "url": "https://www.humaneworld.org/en/news/rochester-institute-technology-meets-plant-based-menu-goal",
             "notes": null,
@@ -1842,6 +1960,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -1860,6 +1979,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -1878,6 +1998,7 @@
         "citations": [
           {
             "id": 108,
+            "type": "Press release",
             "description": "Saint Mary’s College – Sustainable Food",
             "url": "https://www.stmarys-ca.edu/about/sustainability/food",
             "notes": null,
@@ -1888,43 +2009,7 @@
       }
     ]
   },
-  "San Diego, CA, United States": {
-    "other": [
-      {
-        "summary": "As part of its Climate Action Plan, the city committed to cutting meat- and dairy-related emissions and water footprint by ~20%; secured by a 20-group coalition led by BFF.",
-        "reporter": null,
-        "citations": [
-          {
-            "id": 101,
-            "description": "Better Food Foundation – Cities",
-            "url": "https://www.betterfoodfoundation.org/join-us/cities/",
-            "notes": null,
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "San Francisco Hospitals, CA, United States": {
-    "ratio": [
-      {
-        "summary": "In 2020, the San Francisco City Board of Supervisors passed a motion requiring San Francisco public hospitals to reduce purchases of animal products by 15% in 2023.",
-        "reporter": "Björn Ólafsson",
-        "citations": [
-          {
-            "id": 93,
-            "description": "Eurogroup for Animals article",
-            "url": "https://www.eurogroupforanimals.org/news/san-francisco-reduce-meat-and-dairy-served-hospitals-and-jails",
-            "notes": null,
-            "attachments": [],
-            "screenshots": []
-          }
-        ]
-      }
-    ]
-  },
-  "San Francisco Jails, CA, United States": {
+  "San Francisco County Jails, CA, United States": {
     "ratio": [
       {
         "summary": "In 2020, the San Francisco City Board of Supervisors passed a motion requiring San Francisco jails to reduce purchases of animal products by 50 percent in 2024.",
@@ -1932,6 +2017,7 @@
         "citations": [
           {
             "id": 91,
+            "type": "Press release",
             "description": "Eurogroup for Animals article",
             "url": "https://www.eurogroupforanimals.org/news/san-francisco-reduce-meat-and-dairy-served-hospitals-and-jails",
             "notes": null,
@@ -1940,8 +2026,28 @@
           },
           {
             "id": 92,
+            "type": "News article",
             "description": "Sentient Media article",
             "url": "https://sentientmedia.org/how-one-small-city-in-california-is-going-plant-based/",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "San Francisco Department of Public Health (hospitals), CA, United States": {
+    "ratio": [
+      {
+        "summary": "In 2020, the San Francisco City Board of Supervisors passed a motion requiring San Francisco public hospitals to reduce purchases of animal products by 15% in 2023.",
+        "reporter": "Björn Ólafsson",
+        "citations": [
+          {
+            "id": 93,
+            "type": "Press release",
+            "description": "Eurogroup for Animals article",
+            "url": "https://www.eurogroupforanimals.org/news/san-francisco-reduce-meat-and-dairy-served-hospitals-and-jails",
             "notes": null,
             "attachments": [],
             "screenshots": []
@@ -1958,6 +2064,7 @@
         "citations": [
           {
             "id": 130,
+            "type": "Press release",
             "description": "How DefaultVeg Interns Are Reshaping Food Systems (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -1976,6 +2083,7 @@
         "citations": [
           {
             "id": 169,
+            "type": "News article",
             "description": "Smith College – 'The Future of Breakfast' (Forward Food pledge; 55% plant-based entrees by 2025)",
             "url": "https://www.smith.edu/news-events/news/future-breakfast",
             "notes": null,
@@ -1994,6 +2102,7 @@
         "citations": [
           {
             "id": 113,
+            "type": "Press release",
             "description": "Sodexo UK – Partners with Greener by Default (22% reduction)",
             "url": "https://uk.sodexo.com/newsroom/2026/sodexo-partners-with-greener-by-default",
             "notes": null,
@@ -2012,6 +2121,7 @@
         "citations": [
           {
             "id": 121,
+            "type": "Press release",
             "description": "Sodexo Launches Massive Expansion of DefaultVeg Pilot, Making Plant-Based Meal Service a Norm at Campus Eateries Across USA",
             "url": "https://www.betterfoodfoundation.org/news/sodexo-launches-massive-expansion-of-defaultveg-pilot-making-plant-based-meal-service-a-norm-at-campus-eateries-across-usa/",
             "notes": null,
@@ -2030,6 +2140,7 @@
         "citations": [
           {
             "id": 120,
+            "type": "Press release",
             "description": "Greener by Default Announces Expanded Partnership With Sodexo to Offer Plant-Based Meals at 400 U.S. Hospitals",
             "url": "https://www.businesswire.com/news/home/20250407391456/en/Greener-by-Default-Announces-Expanded-Partnership-With-Sodexo-to-Offer-Plant-Based-Meals-at-400-U.S.-Hospitals",
             "notes": null,
@@ -2048,6 +2159,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -2066,6 +2178,7 @@
         "citations": [
           {
             "id": 130,
+            "type": "Press release",
             "description": "How DefaultVeg Interns Are Reshaping Food Systems (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -2084,6 +2197,7 @@
         "citations": [
           {
             "id": 70,
+            "type": "News article",
             "description": "Stanford Daily article",
             "url": "https://stanforddaily.com/2025/11/10/all-you-can-eat-stanford-dining-pushes-for-plant-based/",
             "notes": null,
@@ -2094,7 +2208,7 @@
       }
     ]
   },
-  "Starbucks Seasonal Menus, WA, United States": {
+  "Starbucks, WA, United States": {
     "other": [
       {
         "summary": "Removed the non-dairy milk surcharge across US/Canada company-operated stores (Nov 2024) after multi-group advocacy incl. MFA; seasonal drinks available with plant milk.",
@@ -2102,6 +2216,7 @@
         "citations": [
           {
             "id": 109,
+            "type": "Press release",
             "description": "Starbucks – Removal of Extra Charge for Non-Dairy Milk (Nov 7, 2024)",
             "url": "https://about.starbucks.com/press/2024/starbucks-announces-removal-of-extra-charge-for-non-dairy-milk-starting-nov-7/",
             "notes": null,
@@ -2112,7 +2227,7 @@
       }
     ]
   },
-  "Stumptown Roasters, OR, United States": {
+  "Stumptown Coffee Roasters, OR, United States": {
     "default": [
       {
         "summary": "Stumptown Roasters offers oat milk by default at all cafes.",
@@ -2120,6 +2235,7 @@
         "citations": [
           {
             "id": 66,
+            "type": "News article",
             "description": "VegNews article",
             "url": "https://vegnews.com/stumptown-coffee-oat-milk-default",
             "notes": null,
@@ -2138,6 +2254,7 @@
         "citations": [
           {
             "id": 117,
+            "type": "Press release",
             "description": "Plant Based Treaty – Tavira",
             "url": "https://plantbasedtreaty.org/braga-tavira/",
             "notes": null,
@@ -2156,6 +2273,7 @@
         "citations": [
           {
             "id": 130,
+            "type": "Press release",
             "description": "How DefaultVeg Interns Are Reshaping Food Systems (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -2174,6 +2292,7 @@
         "citations": [
           {
             "id": 59,
+            "type": "Social media",
             "description": "Instagram Reel",
             "url": "https://www.instagram.com/reel/DF0JbQ4xDQY/",
             "notes": null,
@@ -2192,6 +2311,7 @@
         "citations": [
           {
             "id": 152,
+            "type": "News article",
             "description": "Plant Based News – Jane Goodall NYT climate event",
             "url": "https://plantbasednews.org/news/environment/jane-goodall-new-york-times-climate-event/",
             "notes": null,
@@ -2202,7 +2322,7 @@
       }
     ]
   },
-  "Tony's, CA, United States": {
+  "Tony's Darts Away, CA, United States": {
     "default": [
       {
         "summary": "Tony's has a plant-based by default menu with dairy products available upon request.",
@@ -2210,6 +2330,7 @@
         "citations": [
           {
             "id": 95,
+            "type": "Other",
             "description": "Tony's website",
             "url": "https://www.tonysda.com/menus",
             "notes": null,
@@ -2228,6 +2349,7 @@
         "citations": [
           {
             "id": 155,
+            "type": "Press release",
             "description": "Trellis – sustainability",
             "url": "https://trellis.net/sustainability-at-trellis/",
             "notes": null,
@@ -2246,6 +2368,7 @@
         "citations": [
           {
             "id": 174,
+            "type": "Press release",
             "description": "Humane World – Trenton Special School District leads Tennessee in pledge to serve 33% plant-based meals by 2027",
             "url": "https://www.humaneworld.org/en/news/trenton-special-school-district-leads-tennessee-pledge-serve-33-plant-based-meals-2027",
             "notes": null,
@@ -2264,6 +2387,7 @@
         "citations": [
           {
             "id": 130,
+            "type": "Press release",
             "description": "How DefaultVeg Interns Are Reshaping Food Systems (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -2282,6 +2406,7 @@
         "citations": [
           {
             "id": 177,
+            "type": "Press release",
             "description": "UCSF Health Nutrition & Food Services – Sustainability Goals (30% plant-based by 2030)",
             "url": "https://nutrition.ucsf.edu/sustainability-goals",
             "notes": null,
@@ -2300,6 +2425,7 @@
         "citations": [
           {
             "id": 67,
+            "type": "News article",
             "description": "UCL Students' Union website article",
             "url": "https://studentsunionucl.org/articles/why-is-oat-milk-our-default",
             "notes": null,
@@ -2318,6 +2444,7 @@
         "citations": [
           {
             "id": 142,
+            "type": " Institutional website",
             "description": "Arizona Student Unions (official) – UofA Ranks Top 5 for Sustainable Dining",
             "url": "https://union.arizona.edu/news/uofa-ranks-top-5-sustainable-dining",
             "notes": null,
@@ -2336,6 +2463,7 @@
         "citations": [
           {
             "id": 68,
+            "type": "News article",
             "description": "Vegconomist article",
             "url": "https://vegconomist.com/society/university-california-riverside-sets-50-plant-based-meal-target-2027/",
             "notes": null,
@@ -2354,6 +2482,7 @@
         "citations": [
           {
             "id": 128,
+            "type": "News article",
             "description": "UC Berkeley commits to having 50% of its entrees be plant-based by 2027 (FoodService Director)",
             "url": "https://www.foodservicedirector.com/menu-trends/uc-berkeley-commits-to-having-50-of-its-entrees-be-plant-based-by-2027",
             "notes": null,
@@ -2372,6 +2501,7 @@
         "citations": [
           {
             "id": 144,
+            "type": "Press release",
             "description": "Humane World for Animals – New report grades U.S. colleges on plant-based dining and sustainability initiatives",
             "url": "https://www.humaneworld.org/en/news/new-report-grades-us-colleges-plant",
             "notes": null,
@@ -2390,6 +2520,7 @@
         "citations": [
           {
             "id": 146,
+            "type": "News article",
             "description": "Better Food Foundation – How DefaultVeg Interns Are Reshaping Global Food Systems",
             "url": "https://ucsdguardian.org/2026/01/05/plant-based-defaults-are-the-food-system-reform-ucsd-needs/",
             "notes": null,
@@ -2408,6 +2539,7 @@
         "citations": [
           {
             "id": 141,
+            "type": " Institutional website",
             "description": "University of Colorado Boulder (official) – CU Boulder named No. 1 for plant-based dining and sustainability",
             "url": "https://www.colorado.edu/today/2025/01/29/cu-boulder-named-no-1-plant-based-dining-and-sustainability",
             "notes": null,
@@ -2426,6 +2558,7 @@
         "citations": [
           {
             "id": 172,
+            "type": "Press release",
             "description": "Humane World – University of Dayton leads the way in swift plant-based menu changes",
             "url": "https://www.humaneworld.org/en/news/university-dayton-leads-way-swift-plant-based-menu-changes",
             "notes": null,
@@ -2444,6 +2577,7 @@
         "citations": [
           {
             "id": 130,
+            "type": "Press release",
             "description": "How DefaultVeg Interns Are Reshaping Food Systems (Better Food Foundation)",
             "url": "https://www.betterfoodfoundation.org/news/how-defaultveg-interns-are-reshaping-food-systems/",
             "notes": null,
@@ -2462,6 +2596,7 @@
         "citations": [
           {
             "id": 165,
+            "type": "Other",
             "description": "University of Guelph – Menus of Change",
             "url": "https://uoguelph.ca/hospitality-services/menus-of-change",
             "notes": null,
@@ -2480,6 +2615,7 @@
         "citations": [
           {
             "id": 58,
+            "type": "News article",
             "description": "Michigan Daily article",
             "url": "https://www.michigandaily.com/news/campus-life/at-mdining-regular-milk-now-means-oat-milk-unless-otherwise-stated/",
             "notes": null,
@@ -2488,6 +2624,7 @@
           },
           {
             "id": 60,
+            "type": "Other",
             "description": "NACAS Plant-Rich Champion Stories",
             "url": null,
             "notes": null,
@@ -2511,6 +2648,7 @@
         "citations": [
           {
             "id": 168,
+            "type": "Press release",
             "description": "University of Michigan M|Dining – Sustainable Procurement (55% plant-based, with HSUS)",
             "url": "https://dining.umich.edu/sustainability/social-sustainability/sustainable-procurement/",
             "notes": null,
@@ -2529,6 +2667,7 @@
         "citations": [
           {
             "id": 55,
+            "type": "News article",
             "description": "VegOut Mag article",
             "url": "https://vegoutmag.com/news/university-of-north-texas-plant-based-dining/",
             "notes": null,
@@ -2537,6 +2676,7 @@
           },
           {
             "id": 56,
+            "type": "News article",
             "description": "Vegconomist article",
             "url": "https://vegconomist.com/society/university-of-north-texas-commits-to-60-plant-based-dining-by-2027/",
             "notes": null,
@@ -2555,6 +2695,7 @@
         "citations": [
           {
             "id": 61,
+            "type": "News article",
             "description": "Patch article",
             "url": "https://patch.com/colorado/across-co/university-northern-colorado-welcomes-spring-2025",
             "notes": null,
@@ -2573,6 +2714,7 @@
         "citations": [
           {
             "id": 138,
+            "type": "Press release",
             "description": "Coolfood Pledge — Pitt Sustainability",
             "url": "https://www.sustainable.pitt.edu/initiatives/food-dining/coolfood-pledge",
             "notes": null,
@@ -2591,6 +2733,7 @@
         "citations": [
           {
             "id": 180,
+            "type": " Institutional website",
             "description": "University of Portsmouth (MyPort) – Eating green (~40% plant-based)",
             "url": "https://myport.port.ac.uk/life-at-uni/life-on-campus/sustainability/eating-green",
             "notes": null,
@@ -2609,8 +2752,28 @@
         "citations": [
           {
             "id": 110,
+            "type": "Press release",
             "description": "University of San Diego – Oat Milk Pilot at Aromas",
             "url": "https://www.sandiego.edu/news/detail.php?_focus=88494",
+            "notes": null,
+            "attachments": [],
+            "screenshots": []
+          }
+        ]
+      }
+    ]
+  },
+  "University of San Diego, Aromas, CA, United States": {
+    "other": [
+      {
+        "summary": "As part of its Climate Action Plan, the city committed to cutting meat- and dairy-related emissions and water footprint by ~20%; secured by a 20-group coalition led by BFF.",
+        "reporter": null,
+        "citations": [
+          {
+            "id": 101,
+            "type": "Press release",
+            "description": "Better Food Foundation – Cities",
+            "url": "https://www.betterfoodfoundation.org/join-us/cities/",
             "notes": null,
             "attachments": [],
             "screenshots": []
@@ -2627,6 +2790,7 @@
         "citations": [
           {
             "id": 124,
+            "type": "Press release",
             "description": "The University of Texas reaches major milestone with half of all meals served being plant based",
             "url": "https://www.forwardfood.org/news/the-university-of-texas-reaches-major-milestone-with-half-of-all-meals-served-being-plant-based/",
             "notes": null,
@@ -2645,6 +2809,7 @@
         "citations": [
           {
             "id": 164,
+            "type": "Other",
             "description": "UVM Office of Sustainability – Food & Dining",
             "url": "https://www.uvm.edu/sustainabilityoffice/food-and-dining",
             "notes": null,
@@ -2663,6 +2828,7 @@
         "citations": [
           {
             "id": 131,
+            "type": "Press release",
             "description": "Greener By Default at the University of Victoria",
             "url": "https://onlineacademiccommunity.uvic.ca/defaultveg/",
             "notes": null,
@@ -2681,6 +2847,7 @@
         "citations": [
           {
             "id": 144,
+            "type": "Press release",
             "description": "Humane World for Animals – New report grades U.S. colleges on plant-based dining and sustainability initiatives",
             "url": "https://www.humaneworld.org/en/news/new-report-grades-us-colleges-plant",
             "notes": null,
@@ -2699,6 +2866,7 @@
         "citations": [
           {
             "id": 154,
+            "type": "Other",
             "description": "Vermaat ESG Jaarverslag 2024 (p.42)",
             "url": "https://issuu.com/vermaat/docs/esg-jaarverslag-2024",
             "notes": null,
@@ -2726,6 +2894,7 @@
         "citations": [
           {
             "id": 153,
+            "type": "Other",
             "description": "Vitam Jaarverslag 2024 (p.14)",
             "url": "https://issuu.com/vitamnl/docs/vitam_jaarverslag_2024",
             "notes": null,
@@ -2744,6 +2913,7 @@
         "citations": [
           {
             "id": 143,
+            "type": " Institutional website",
             "description": "WSU Dining Services (official) – Sustainability",
             "url": "https://dining.wsu.edu/sustainability",
             "notes": null,
@@ -2754,16 +2924,7 @@
       }
     ]
   },
-  "Washington, DC Department of Youth and Rehabilitation Services, DC, United States": {
-    "other": [
-      {
-        "summary": "Need more info",
-        "reporter": "Björn Ólafsson",
-        "citations": []
-      }
-    ]
-  },
-  "Washington, DC, DC, United States": {
+  "Washington, DC (public schools), DC, United States": {
     "other": [
       {
         "summary": "DC committed (FOE-led coalition) to a 25% cut in food-related emissions by 2030 and passed the Healthy Students Amendment Act requiring daily plant-forward school meal options and adopting the Good Food Purchasing Program.",
@@ -2771,6 +2932,7 @@
         "citations": [
           {
             "id": 102,
+            "type": "Press release",
             "description": "Friends of the Earth – Applauds D.C. Council for Increasing Healthy, Sustainable Food Options in Schools",
             "url": "https://foe.org/news/friends-earth-applauds-d-c-council-increasing-healthy-sustainable-food-options-schools/",
             "notes": null,
@@ -2789,6 +2951,7 @@
         "citations": [
           {
             "id": 80,
+            "type": "News article",
             "description": "Plant Based News article",
             "url": "https://plantbasednews.org/news/environment/west-hollywood-plant-based-policy/",
             "notes": null,
@@ -2807,6 +2970,7 @@
         "citations": [
           {
             "id": 69,
+            "type": "News article",
             "description": "Vegconomist article",
             "url": "https://vegconomist.com/society/western-oregon-university-commits-to-50-plant-based-meals-by-2027/",
             "notes": null,
@@ -2825,6 +2989,7 @@
         "citations": [
           {
             "id": 147,
+            "type": "Other",
             "description": "Humane World for Animals – Food Service Industry Protein Sustainability Scorecard 2025",
             "url": "https://www.humaneworld.org/sites/default/files/docs/HumaneWorld_foodservicescorecard_2025.pdf",
             "notes": null,
@@ -2843,6 +3008,7 @@
         "citations": [
           {
             "id": 125,
+            "type": "Press release",
             "description": "York University commits to increasing plant-based menus in collaboration with Forward Food",
             "url": "https://humaneworldfoundation.ca/latest-updates/york-university-forward-food",
             "notes": null,

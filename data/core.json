@@ -452,16 +452,16 @@
       }
     ]
   },
-  "Caribou Coffee Seasonal Menus, MN, United States": {
+  "Caribou Coffee, MN, United States": {
     "place": {
-      "name": "Caribou Coffee Seasonal Menus",
+      "name": "Caribou Coffee",
       "street": null,
       "city": "Minneapolis",
       "state": "MN",
       "postal_code": null,
       "country": "United States",
       "type": "Chain Restaurant",
-      "encoded": "caribou-coffee-seasonal-menus-mn-united-states",
+      "encoded": "caribou-coffee-mn-united-states",
       "consumer_base": 100,
       "coord": [-93.2654692, 44.9772995]
     },
@@ -649,6 +649,28 @@
       }
     ]
   },
+  "DC Department of Youth Rehabilitation Services, DC, United States": {
+    "place": {
+      "name": "DC Department of Youth Rehabilitation Services",
+      "street": "1100 4th Street SW",
+      "city": "Washington",
+      "state": "DC",
+      "postal_code": "20024",
+      "country": "United States",
+      "type": "City/Government",
+      "encoded": "dc-department-of-youth-rehabilitation-services-dc-united-states",
+      "consumer_base": 100,
+      "coord": [-77.0172181, 38.8774173]
+    },
+    "other": [
+      {
+        "status": "pledged",
+        "date": "2024",
+        "org_credit": ["Greener by Default", "Better Food Foundation"],
+        "is_verified": false
+      }
+    ]
+  },
   "DC Harvest, Washington, DC, DC, United States": {
     "place": {
       "name": "DC Harvest, Washington, DC",
@@ -713,16 +735,16 @@
       }
     ]
   },
-  "Edinburgh, Scotland, United Kingdom": {
+  "Edinburgh (municipal schools & council catering), United Kingdom": {
     "place": {
-      "name": "Edinburgh, Scotland",
+      "name": "Edinburgh (municipal schools & council catering)",
       "street": null,
       "city": "Edinburgh",
       "state": null,
       "postal_code": null,
       "country": "United Kingdom",
       "type": "City/Government",
-      "encoded": "edinburgh-scotland-united-kingdom",
+      "encoded": "edinburgh-municipal-schools-council-catering-united-kingdom",
       "consumer_base": 100,
       "coord": [-3.1904199, 55.9519018]
     },
@@ -1648,9 +1670,9 @@
       }
     ]
   },
-  "Ocean Beach People's Food Co-Op, CA, United States": {
+  "Ocean Beach People's Food Co-op, CA, United States": {
     "place": {
-      "name": "Ocean Beach People's Food Co-Op",
+      "name": "Ocean Beach People's Food Co-op",
       "street": "4765 Voltaire St",
       "city": "San Diego",
       "state": "CA",
@@ -2104,40 +2126,18 @@
       }
     ]
   },
-  "San Diego, CA, United States": {
+  "San Francisco County Jails, CA, United States": {
     "place": {
-      "name": "San Diego",
-      "street": null,
-      "city": "San Diego",
-      "state": "CA",
-      "postal_code": null,
-      "country": "United States",
-      "type": "City/Government",
-      "encoded": "san-diego-ca-united-states",
-      "consumer_base": 100,
-      "coord": [-117.162772, 32.7174202]
-    },
-    "other": [
-      {
-        "status": "pledged",
-        "date": "2022",
-        "org_credit": ["Better Food Foundation"],
-        "is_verified": true
-      }
-    ]
-  },
-  "San Francisco Hospitals, CA, United States": {
-    "place": {
-      "name": "San Francisco Hospitals",
-      "street": "1001 Potrero Ave",
+      "name": "San Francisco County Jails",
+      "street": "425 7th St",
       "city": "San Francisco",
       "state": "CA",
-      "postal_code": "94110",
+      "postal_code": "94103",
       "country": "United States",
-      "type": "Hospital",
-      "encoded": "san-francisco-hospitals-ca-united-states",
+      "type": "Other",
+      "encoded": "san-francisco-county-jails-ca-united-states",
       "consumer_base": 100,
-      "coord": [-122.4052532, 37.7568103]
+      "coord": [-122.4049148, 37.775226]
     },
     "ratio": [
       {
@@ -2148,18 +2148,18 @@
       }
     ]
   },
-  "San Francisco Jails, CA, United States": {
+  "San Francisco Department of Public Health (hospitals), CA, United States": {
     "place": {
-      "name": "San Francisco Jails",
-      "street": "425 7th St",
+      "name": "San Francisco Department of Public Health (hospitals)",
+      "street": "1001 Potrero Ave",
       "city": "San Francisco",
       "state": "CA",
-      "postal_code": "94103",
+      "postal_code": "94110",
       "country": "United States",
-      "type": "Prison",
-      "encoded": "san-francisco-jails-ca-united-states",
+      "type": "Hospital",
+      "encoded": "san-francisco-department-of-public-health-hospitals-ca-united-states",
       "consumer_base": 100,
-      "coord": [-122.4049148, 37.775226]
+      "coord": [-122.4052532, 37.7568103]
     },
     "ratio": [
       {
@@ -2345,16 +2345,16 @@
       }
     ]
   },
-  "Starbucks Seasonal Menus, WA, United States": {
+  "Starbucks, WA, United States": {
     "place": {
-      "name": "Starbucks Seasonal Menus",
+      "name": "Starbucks",
       "street": null,
       "city": "Seattle",
       "state": "WA",
       "postal_code": null,
       "country": "United States",
       "type": "Chain Restaurant",
-      "encoded": "starbucks-seasonal-menus-wa-united-states",
+      "encoded": "starbucks-wa-united-states",
       "consumer_base": 100,
       "coord": [-122.330062, 47.6038321]
     },
@@ -2367,16 +2367,16 @@
       }
     ]
   },
-  "Stumptown Roasters, OR, United States": {
+  "Stumptown Coffee Roasters, OR, United States": {
     "place": {
-      "name": "Stumptown Roasters",
+      "name": "Stumptown Coffee Roasters",
       "street": "4525 SE DIVISION ST",
       "city": "PORTLAND",
       "state": "OR",
       "postal_code": "97206",
       "country": "United States",
       "type": "Chain Restaurant",
-      "encoded": "stumptown-roasters-or-united-states",
+      "encoded": "stumptown-coffee-roasters-or-united-states",
       "consumer_base": 100,
       "coord": [-122.6155605, 45.5054248]
     },
@@ -2475,16 +2475,16 @@
       }
     ]
   },
-  "Tony's, CA, United States": {
+  "Tony's Darts Away, CA, United States": {
     "place": {
-      "name": "Tony's",
+      "name": "Tony's Darts Away",
       "street": "1710 W Magnolia Blvd",
       "city": "Burbank",
       "state": "CA",
       "postal_code": "91506",
       "country": "United States",
       "type": "Ind. Restaurant",
-      "encoded": "tonys-ca-united-states",
+      "encoded": "tonys-darts-away-ca-united-states",
       "consumer_base": 100,
       "coord": [-118.3269699, 34.1743839]
     },
@@ -2956,6 +2956,28 @@
       }
     ]
   },
+  "University of San Diego, Aromas, CA, United States": {
+    "place": {
+      "name": "University of San Diego, Aromas",
+      "street": null,
+      "city": "San Diego",
+      "state": "CA",
+      "postal_code": null,
+      "country": "United States",
+      "type": "City/Government",
+      "encoded": "university-of-san-diego-aromas-ca-united-states",
+      "consumer_base": 100,
+      "coord": [-117.162772, 32.7174202]
+    },
+    "other": [
+      {
+        "status": "pledged",
+        "date": "2022",
+        "org_credit": ["Better Food Foundation"],
+        "is_verified": true
+      }
+    ]
+  },
   "University of Texas at Austin, TX, United States": {
     "place": {
       "name": "University of Texas at Austin",
@@ -3129,38 +3151,16 @@
       }
     ]
   },
-  "Washington, DC Department of Youth and Rehabilitation Services, DC, United States": {
+  "Washington, DC (public schools), DC, United States": {
     "place": {
-      "name": "Washington, DC Department of Youth and Rehabilitation Services",
-      "street": "1100 4th Street SW",
-      "city": "Washington",
-      "state": "DC",
-      "postal_code": "20024",
-      "country": "United States",
-      "type": "City/Government",
-      "encoded": "washington-dc-department-of-youth-and-rehabilitation-services-dc-united-states",
-      "consumer_base": 100,
-      "coord": [-77.0172181, 38.8774173]
-    },
-    "other": [
-      {
-        "status": "pledged",
-        "date": "2024",
-        "org_credit": ["Greener by Default", "Better Food Foundation"],
-        "is_verified": false
-      }
-    ]
-  },
-  "Washington, DC, DC, United States": {
-    "place": {
-      "name": "Washington, DC",
+      "name": "Washington, DC (public schools)",
       "street": null,
       "city": "Washington",
       "state": "DC",
       "postal_code": null,
       "country": "United States",
       "type": "City/Government",
-      "encoded": "washington-dc-dc-united-states",
+      "encoded": "washington-dc-public-schools-dc-united-states",
       "consumer_base": 100,
       "coord": [-77.0402691, 38.8898398]
     },
