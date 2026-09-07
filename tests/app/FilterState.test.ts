@@ -10,7 +10,6 @@ import {
   ProcessedNudge,
   Date,
   ALL_NUDGE_TYPE,
-  CitationType,
 } from "../../src/js/model/types";
 import { POPULATION_MAX_INDEX } from "../../src/js/filter-features/consumerBaseSlider";
 
@@ -50,7 +49,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
             status: "adopted",
             date: new Date("2024"),
             org_credit: ["org1"],
-            citation_types: ["News article"],
+            is_verified: true,
           },
         ],
       },
@@ -73,7 +72,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
             status: "pledged",
             date: new Date("2023"),
             org_credit: ["org2"],
-            citation_types: ["News article"],
+            is_verified: true,
           },
         ],
         sub: [
@@ -81,7 +80,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
             status: "adopted",
             date: new Date("2023"),
             org_credit: ["org2"],
-            citation_types: ["News article"],
+            is_verified: true,
           },
         ],
         titles: [
@@ -89,7 +88,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
             status: "adopted",
             date: new Date("2023"),
             org_credit: ["org2"],
-            citation_types: ["News article"],
+            is_verified: true,
           },
         ],
         placement: [
@@ -97,7 +96,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
             status: "adopted",
             date: new Date("2023"),
             org_credit: ["org2"],
-            citation_types: ["News article"],
+            is_verified: true,
           },
         ],
         other: [
@@ -105,7 +104,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
             status: "adopted",
             date: new Date("2023"),
             org_credit: ["org2"],
-            citation_types: ["News article"],
+            is_verified: true,
           },
         ],
       },
@@ -242,7 +241,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
     const advocateOnly = (nudges: ProcessedNudge[] | undefined) =>
       (nudges ?? []).map((nudge) => ({
         ...nudge,
-        citation_types: ["Advocate report" as CitationType],
+        is_verified: false,
       }));
     placeTwo.ratio = advocateOnly(placeTwo.ratio);
     placeTwo.sub = advocateOnly(placeTwo.sub);

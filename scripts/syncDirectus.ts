@@ -427,9 +427,15 @@ function combineData(
               reporter: record.reporter!,
               org_credit: parseOrgCredit(record.org_credit),
               org_credit_expanded: record.org_credit_expanded! ?? undefined,
-              citation_types: record.citations!.map(
-                (junctionId) => citationsByNudgeJunctionId[junctionId].type!,
-              ),
+              is_verified: record.citations!.some((junctionId) => {
+                const citation = citationsByNudgeJunctionId[junctionId];
+                if (!citation.type) {
+                  throw new Error(
+                    `Missing citation type for citation junction ${junctionId}`,
+                  );
+                }
+                return citation.type !== "Advocate report";
+              }),
               citations: createCitations(
                 record.citations!,
                 citationsByNudgeJunctionId,
@@ -494,7 +500,7 @@ async function saveCoreData(
     status: record.status,
     date: record.date,
     org_credit: record.org_credit,
-    citation_types: record.citation_types,
+    is_verified: record.is_verified,
   });
 
   const pruned = Object.fromEntries(
@@ -545,13 +551,7 @@ async function saveExtendedData(
   const formatNudge = (record: ExtendedNudge) => ({
     summary: record.summary,
     reporter: record.reporter,
-    citations: record.citations.map((citation) => {
-      const { type, ...citationWithoutType } = citation;
-      if (!type) {
-        throw new Error(`Missing citation type for citation ${citation.id}`);
-      }
-      return citationWithoutType;
-    }),
+    citations: record.citations,
   });
 
   const pruned = Object.fromEntries(

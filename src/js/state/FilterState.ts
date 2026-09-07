@@ -245,9 +245,7 @@ export class PlaceFilterManager {
         ...(entry.titles ?? []),
         ...(entry.placement ?? []),
         ...(entry.other ?? []),
-      ].some((nudge) =>
-        nudge.citation_types?.some((type) => type !== "Advocate report"),
-      )
+      ].some((nudge) => nudge.is_verified)
     ) {
       return null;
     }

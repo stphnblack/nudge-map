@@ -10,7 +10,6 @@ import {
   RawNudge,
   ProcessedPlace,
   ProcessedNudge,
-  CitationType,
 } from "../../src/js/model/types";
 import { processRawCoreEntry } from "../../src/js/model/data";
 
@@ -22,19 +21,16 @@ export interface DirectusFile {
 export interface Citation {
   id: number;
   description: string;
-  type: CitationType;
   url: string | null;
   notes: string | null;
   attachments: DirectusFile[];
   screenshots: DirectusFile[];
 }
 
-type RawExtendedCitation = Omit<Citation, "type">;
-
 interface RawExtendedNudge {
   summary: string;
   reporter: string | null;
-  citations: RawExtendedCitation[];
+  citations: Citation[];
 }
 
 export interface ExtendedNudge {
@@ -100,18 +96,9 @@ function mergeRawNudges(
         `Unequal number of '${nudgeKeyName}' entries for '${placeId}' between data/core.json and data/extended.json`,
       );
     }
-    if (coreNudge.citation_types.length !== extendedNudge.citations.length) {
-      throw new Error(
-        `Unequal number of citation types and citations for '${nudgeKeyName}' entry ${placeId}`,
-      );
-    }
     return {
       ...coreNudge,
       ...extendedNudge,
-      citations: extendedNudge.citations.map((citation, index) => ({
-        ...citation,
-        type: coreNudge.citation_types[index],
-      })),
     };
   });
 }
@@ -230,10 +217,10 @@ export async function readProcessedCompleteData(): Promise<
   );
 }
 
-export function getCitations(entry: ExtendedEntry): RawExtendedCitation[] {
+export function getCitations(entry: ExtendedEntry): Citation[] {
   const fromArray = (
-    nudges: Array<{ citations: RawExtendedCitation[] }> | undefined,
-  ): RawExtendedCitation[] => nudges?.flatMap((nudge) => nudge.citations) ?? [];
+    nudges: Array<{ citations: Citation[] }> | undefined,
+  ): Citation[] => nudges?.flatMap((nudge) => nudge.citations) ?? [];
 
   return [
     ...fromArray(entry.default),
