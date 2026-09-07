@@ -50,7 +50,6 @@ export interface FilterState {
   year: Set<string>;
   consumerBaseSliderIndexes: [number, number];
   orgCredit: Set<string>;
-  isVerified: boolean;
 }
 
 interface PlaceMatchSearch {
@@ -235,8 +234,6 @@ export class PlaceFilterManager {
 
     const isPlace = this.matchesPlace(entry.place);
     if (!isPlace) return null;
-
-    if (filterState.isVerified && !entry.isVerified) return null;
 
     const matchingDefault = getFilteredIndexes(entry.default ?? [], (n) =>
       this.matchesNudge(n),

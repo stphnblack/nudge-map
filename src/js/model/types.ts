@@ -108,7 +108,6 @@ export interface RawCoreEntry {
 }
 export interface ProcessedCoreEntry {
   place: ProcessedPlace;
-  isVerified?: boolean;
   default?: ProcessedNudge[];
   ratio?: ProcessedNudge[];
   sub?: ProcessedNudge[];

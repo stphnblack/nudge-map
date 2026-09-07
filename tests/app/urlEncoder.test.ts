@@ -26,13 +26,6 @@ test.describe("encodeFilterState", () => {
     // Check round-trip
     expect(decodeFilterState(result.toString())).toEqual(state);
   });
-
-  test("set verified filter", () => {
-    const state: FilterState = { ...DEFAULT_FILTER_STATE, isVerified: false };
-    const result = encodeFilterState(state);
-    expect(result.get("verified")).toEqual("false");
-    expect(decodeFilterState(result.toString())).toEqual(state);
-  });
 });
 
 test.describe("decodeFilterState", () => {

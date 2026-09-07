@@ -16,7 +16,6 @@ export const MERGED_STRING_SET_OPTIONS = {
 export const DEFAULT_FILTER_STATE: FilterState = {
   searchInput: null,
   status: "adopted",
-  isVerified: true,
   ...MERGED_STRING_SET_OPTIONS,
   consumerBaseSliderIndexes: [0, POPULATION_MAX_INDEX],
 };
@@ -82,7 +81,6 @@ export const PLACE_TYPE_NAME = "inst";
 export const INCLUDED_NUDGE_NAME = "nudges";
 export const ORG_NAME = "org";
 export const CONSUMER_BASE_NAME = "cb";
-export const IS_VERIFIED_NAME = "verified";
 
 export const NUDGE_TYPE_MAP = BidirectionalMap.from([
   ["any nudge", "any"],
@@ -134,10 +132,6 @@ export function encodeFilterState(filterState: FilterState): URLSearchParams {
 
   if (!isEqual(filterState.country, DEFAULT_FILTER_STATE.country)) {
     result.append(COUNTRY_NAME, COUNTRY_MAP.encodeSet(filterState.country));
-  }
-
-  if (filterState.isVerified !== DEFAULT_FILTER_STATE.isVerified) {
-    result.append(IS_VERIFIED_NAME, filterState.isVerified.toString());
   }
 
   // TODO: add other filters to URL params (e.g. year, consumer base)
@@ -199,9 +193,5 @@ export function decodeFilterState(queryString: string): FilterState {
       params.get(ORG_NAME),
       DEFAULT_FILTER_STATE.orgCredit,
     ),
-    isVerified:
-      params.get(IS_VERIFIED_NAME) === null
-        ? DEFAULT_FILTER_STATE.isVerified
-        : params.get(IS_VERIFIED_NAME) === "true",
   };
 }
