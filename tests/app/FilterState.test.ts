@@ -17,6 +17,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
     return {
       searchInput: null,
       status: "adopted",
+      isVerified: true,
       placeType: new Set(["Transit Station", "Cafe"]),
       includedNudges: new Set(ALL_NUDGE_TYPE),
       year: new Set(["1997", "2023", "2024"]),
@@ -47,6 +48,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
             status: "adopted",
             date: new Date("2024"),
             org_credit: ["org1"],
+            citation_types: ["News article"],
           },
         ],
       },
@@ -69,6 +71,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
             status: "pledged",
             date: new Date("2023"),
             org_credit: ["org2"],
+            citation_types: ["News article"],
           },
         ],
         sub: [
@@ -76,6 +79,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
             status: "adopted",
             date: new Date("2023"),
             org_credit: ["org2"],
+            citation_types: ["News article"],
           },
         ],
         titles: [
@@ -83,6 +87,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
             status: "adopted",
             date: new Date("2023"),
             org_credit: ["org2"],
+            citation_types: ["News article"],
           },
         ],
         placement: [
@@ -90,6 +95,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
             status: "adopted",
             date: new Date("2023"),
             org_credit: ["org2"],
+            citation_types: ["News article"],
           },
         ],
         other: [
@@ -97,6 +103,7 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
             status: "adopted",
             date: new Date("2023"),
             org_credit: ["org2"],
+            citation_types: ["News article"],
           },
         ],
       },
@@ -225,6 +232,27 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
         hasOther: true,
       },
     });
+  });
+
+  test("verified filter excludes places with only advocate reports", () => {
+    const entries = defaultEntries();
+    const placeTwo = entries["Place 2"];
+    const advocateOnly = (nudges: typeof placeTwo.ratio) =>
+      nudges?.map((nudge) => ({
+        ...nudge,
+        citation_types: ["Advocate report"],
+      }));
+    placeTwo.ratio = advocateOnly(placeTwo.ratio);
+    placeTwo.sub = advocateOnly(placeTwo.sub);
+    placeTwo.titles = advocateOnly(placeTwo.titles);
+    placeTwo.placement = advocateOnly(placeTwo.placement);
+    placeTwo.other = advocateOnly(placeTwo.other);
+    const manager = new PlaceFilterManager(entries, defaultState());
+
+    expect(manager.placeIds).toEqual(new Set(["Place 1"]));
+
+    manager.update({ isVerified: false });
+    expect(manager.placeIds).toEqual(new Set(["Place 1", "Place 2"]));
   });
 
   test("search", () => {

@@ -44,6 +44,7 @@ export type NudgeStatusFilter = (typeof ALL_NUDGE_STATUS_FILTER)[number];
 export interface FilterState {
   searchInput: string | null;
   status: NudgeStatusFilter;
+  isVerified: boolean;
   placeType: Set<string>;
   includedNudges: Set<string>;
   country: Set<string>;
@@ -234,6 +235,22 @@ export class PlaceFilterManager {
 
     const isPlace = this.matchesPlace(entry.place);
     if (!isPlace) return null;
+
+    if (
+      filterState.isVerified &&
+      ![
+        ...(entry.default ?? []),
+        ...(entry.ratio ?? []),
+        ...(entry.sub ?? []),
+        ...(entry.titles ?? []),
+        ...(entry.placement ?? []),
+        ...(entry.other ?? []),
+      ].some((nudge) =>
+        nudge.citation_types?.some((type) => type !== "Advocate report"),
+      )
+    ) {
+      return null;
+    }
 
     const matchingDefault = getFilteredIndexes(entry.default ?? [], (n) =>
       this.matchesNudge(n),
