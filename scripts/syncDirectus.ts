@@ -330,7 +330,9 @@ function createCitations(
   return citationJunctionIds.map((junctionId, citationIdx) => {
     const citationRecord = citationsByJunctionId[junctionId];
     if (!citationRecord.type) {
-      throw new Error(`Missing citation type for citation junction ${junctionId}`);
+      throw new Error(
+        `Missing citation type for citation junction ${junctionId}`,
+      );
     }
     const { attachments, screenshots } = createAttachments(
       filesByAttachmentJunctionId,
