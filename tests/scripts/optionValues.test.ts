@@ -33,6 +33,7 @@ test("determineOptionValues()", () => {
           status: "adopted",
           date: undefined,
           org_credit: undefined,
+          citation_types: [],
         },
       ],
       ratio: [
@@ -40,6 +41,7 @@ test("determineOptionValues()", () => {
           status: "pledged",
           date: "2022-02-13",
           org_credit: ["org1"],
+          citation_types: [],
         },
       ],
     },
@@ -54,14 +56,23 @@ test("determineOptionValues()", () => {
           status: "adopted",
           date: undefined,
           org_credit: undefined,
+          citation_types: [],
         },
         {
           status: "pledged",
           date: "2025",
           org_credit: ["org2"],
+          citation_types: [],
         },
       ],
-      titles: [{ status: "adopted", date: "1997", org_credit: ["org3"] }],
+      titles: [
+        {
+          status: "adopted",
+          date: "1997",
+          org_credit: ["org3"],
+          citation_types: [],
+        },
+      ],
     },
   ];
   const expected = {

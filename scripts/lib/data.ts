@@ -29,21 +29,27 @@ export interface Citation {
   screenshots: DirectusFile[];
 }
 
-type ExtendedCitation = Omit<Citation, "type"> & { type?: CitationType };
+type RawExtendedCitation = Omit<Citation, "type">;
+
+interface RawExtendedNudge {
+  summary: string;
+  reporter: string | null;
+  citations: RawExtendedCitation[];
+}
 
 export interface ExtendedNudge {
   summary: string;
   reporter: string | null;
-  citations: ExtendedCitation[];
+  citations: Citation[];
 }
 
 export type ExtendedEntry = {
-  default?: ExtendedNudge[];
-  ratio?: ExtendedNudge[];
-  sub?: ExtendedNudge[];
-  titles?: ExtendedNudge[];
-  placement?: ExtendedNudge[];
-  other?: ExtendedNudge[];
+  default?: RawExtendedNudge[];
+  ratio?: RawExtendedNudge[];
+  sub?: RawExtendedNudge[];
+  titles?: RawExtendedNudge[];
+  placement?: RawExtendedNudge[];
+  other?: RawExtendedNudge[];
 };
 
 export type RawCompleteNudge = RawNudge & ExtendedNudge;
@@ -84,7 +90,7 @@ export async function readRawExtendedData(): Promise<
 
 function mergeRawNudges(
   coreNudges: RawNudge[],
-  extendedNudges: ExtendedNudge[],
+  extendedNudges: RawExtendedNudge[],
   placeId: PlaceId,
   nudgeKeyName: string,
 ): RawCompleteNudge[] {
@@ -94,15 +100,17 @@ function mergeRawNudges(
         `Unequal number of '${nudgeKeyName}' entries for '${placeId}' between data/core.json and data/extended.json`,
       );
     }
-    const citationTypes =
-      coreNudge.citation_types ??
-      extendedNudge.citations.map((citation) => citation.type!);
+    if (coreNudge.citation_types.length !== extendedNudge.citations.length) {
+      throw new Error(
+        `Unequal number of citation types and citations for '${nudgeKeyName}' entry ${placeId}`,
+      );
+    }
     return {
       ...coreNudge,
       ...extendedNudge,
       citations: extendedNudge.citations.map((citation, index) => ({
         ...citation,
-        type: citationTypes[index],
+        type: coreNudge.citation_types[index],
       })),
     };
   });
@@ -222,10 +230,10 @@ export async function readProcessedCompleteData(): Promise<
   );
 }
 
-export function getCitations(entry: ExtendedEntry): ExtendedCitation[] {
+export function getCitations(entry: ExtendedEntry): RawExtendedCitation[] {
   const fromArray = (
-    nudges: Array<{ citations: ExtendedCitation[] }> | undefined,
-  ): ExtendedCitation[] => nudges?.flatMap((nudge) => nudge.citations) ?? [];
+    nudges: Array<{ citations: RawExtendedCitation[] }> | undefined,
+  ): RawExtendedCitation[] => nudges?.flatMap((nudge) => nudge.citations) ?? [];
 
   return [
     ...fromArray(entry.default),

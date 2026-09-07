@@ -103,13 +103,13 @@ export interface BaseNudge {
 export type RawNudge = BaseNudge & {
   date: string | undefined;
   org_credit: string[] | undefined;
-  citation_types: CitationType[] | undefined;
+  citation_types: CitationType[];
 };
 
 export type ProcessedNudge = BaseNudge & {
   date: Date | undefined;
   org_credit: string[] | undefined;
-  citation_types: CitationType[] | undefined;
+  citation_types: CitationType[];
 };
 export interface RawCoreEntry {
   place: RawPlace;

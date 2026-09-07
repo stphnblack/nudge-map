@@ -30,24 +30,27 @@ test.describe("generateSEO", () => {
       place: entry.place,
       default: [
         ...(entry.default ?? []),
-        { status, org_credit: [], date: undefined },
+        { status, org_credit: [], date: undefined, citation_types: [] },
       ],
       ratio: [
         ...(entry.ratio ?? []),
-        { status, org_credit: [], date: undefined },
+        { status, org_credit: [], date: undefined, citation_types: [] },
       ],
-      sub: [...(entry.sub ?? []), { status, org_credit: [], date: undefined }],
+      sub: [
+        ...(entry.sub ?? []),
+        { status, org_credit: [], date: undefined, citation_types: [] },
+      ],
       titles: [
         ...(entry.titles ?? []),
-        { status, org_credit: [], date: undefined },
+        { status, org_credit: [], date: undefined, citation_types: [] },
       ],
       placement: [
         ...(entry.placement ?? []),
-        { status, org_credit: [], date: undefined },
+        { status, org_credit: [], date: undefined, citation_types: [] },
       ],
       other: [
         ...(entry.other ?? []),
-        { status, org_credit: [], date: undefined },
+        { status, org_credit: [], date: undefined, citation_types: [] },
       ],
     };
   }

@@ -7,8 +7,10 @@ import {
 import {
   PlaceId,
   ProcessedCoreEntry,
+  ProcessedNudge,
   Date,
   ALL_NUDGE_TYPE,
+  CitationType,
 } from "../../src/js/model/types";
 import { POPULATION_MAX_INDEX } from "../../src/js/filter-features/consumerBaseSlider";
 
@@ -237,10 +239,10 @@ test.describe("PlaceFilterManager.matchedNudgeRecords()", () => {
   test("verified filter excludes places with only advocate reports", () => {
     const entries = defaultEntries();
     const placeTwo = entries["Place 2"];
-    const advocateOnly = (nudges: typeof placeTwo.ratio) =>
-      nudges?.map((nudge) => ({
+    const advocateOnly = (nudges: ProcessedNudge[] | undefined) =>
+      (nudges ?? []).map((nudge) => ({
         ...nudge,
-        citation_types: ["Advocate report"],
+        citation_types: ["Advocate report" as CitationType],
       }));
     placeTwo.ratio = advocateOnly(placeTwo.ratio);
     placeTwo.sub = advocateOnly(placeTwo.sub);

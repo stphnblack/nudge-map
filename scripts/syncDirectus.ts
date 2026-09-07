@@ -329,6 +329,9 @@ function createCitations(
 ): Citation[] {
   return citationJunctionIds.map((junctionId, citationIdx) => {
     const citationRecord = citationsByJunctionId[junctionId];
+    if (!citationRecord.type) {
+      throw new Error(`Missing citation type for citation junction ${junctionId}`);
+    }
     const { attachments, screenshots } = createAttachments(
       filesByAttachmentJunctionId,
       citationRecord.attachments!,
@@ -340,7 +343,7 @@ function createCitations(
     const url = citationRecord.broken_url === true ? null : citationRecord.url!;
     return {
       id: citationRecord.id!,
-      type: citationRecord.type!,
+      type: citationRecord.type,
       description: citationRecord.source_description!,
       url,
       notes: citationRecord.notes!,
@@ -541,8 +544,10 @@ async function saveExtendedData(
     summary: record.summary,
     reporter: record.reporter,
     citations: record.citations.map((citation) => {
-      const citationWithoutType = { ...citation };
-      delete citationWithoutType.type;
+      const { type, ...citationWithoutType } = citation;
+      if (!type) {
+        throw new Error(`Missing citation type for citation ${citation.id}`);
+      }
       return citationWithoutType;
     }),
   });
