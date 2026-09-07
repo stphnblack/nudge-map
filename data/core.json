@@ -16,7 +16,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -37,7 +38,8 @@
       {
         "status": "pledged",
         "date": "2030",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -58,7 +60,8 @@
       {
         "status": "pledged",
         "date": "2022",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -79,7 +82,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Better Food Foundation", "New Roots Institute"]
+        "org_credit": ["Better Food Foundation", "New Roots Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -100,7 +104,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation", "New Roots Institute"]
+        "org_credit": ["Better Food Foundation", "New Roots Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -121,14 +126,16 @@
       {
         "status": "pledged",
         "date": "2021",
-        "org_credit": ["Plant-Based Treaty"]
+        "org_credit": ["Plant-Based Treaty"],
+        "citation_types": ["News article", "News article", "News article"]
       }
     ],
     "other": [
       {
         "status": "pledged",
         "date": "2021",
-        "org_credit": ["Plant-Based Treaty"]
+        "org_credit": ["Plant-Based Treaty"],
+        "citation_types": ["News article", "News article", "News article"]
       }
     ]
   },
@@ -149,14 +156,16 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["Press release"]
       }
     ],
     "ratio": [
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -177,7 +186,8 @@
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": ["World Resources Institute"]
+        "org_credit": ["World Resources Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -198,7 +208,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -219,7 +230,8 @@
       {
         "status": "pledged",
         "date": "2023",
-        "org_credit": ["Better Food Foundation", "Planted Society"]
+        "org_credit": ["Better Food Foundation", "Planted Society"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -240,7 +252,8 @@
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": ["Greener by Default"]
+        "org_credit": ["Greener by Default"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -260,7 +273,8 @@
     "ratio": [
       {
         "status": "pledged",
-        "date": "2021"
+        "date": "2021",
+        "citation_types": ["News article", "News article", "Press release"]
       }
     ]
   },
@@ -280,7 +294,8 @@
     "ratio": [
       {
         "status": "pledged",
-        "date": "2021"
+        "date": "2021",
+        "citation_types": ["Policy", "Policy", "News article"]
       }
     ]
   },
@@ -301,7 +316,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -322,7 +338,30 @@
       {
         "status": "pledged",
         "date": "2022",
-        "org_credit": ["Plant-Based Cities Movement", "Earthsave Canada"]
+        "org_credit": ["Plant-Based Cities Movement", "Earthsave Canada"],
+        "citation_types": ["Internal document"]
+      }
+    ]
+  },
+  "Brody Jewish Center (UVA), VA, United States": {
+    "place": {
+      "name": "Brody Jewish Center (UVA)",
+      "street": null,
+      "city": "Charlottesville",
+      "state": "VA",
+      "postal_code": null,
+      "country": "United States",
+      "type": "Religious Center",
+      "encoded": "brody-jewish-center-uva-va-united-states",
+      "consumer_base": 150,
+      "coord": [-78.4766781, 38.029306]
+    },
+    "default": [
+      {
+        "status": "adopted",
+        "date": "2025",
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -343,7 +382,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -363,7 +403,8 @@
     "default": [
       {
         "status": "adopted",
-        "date": "2024"
+        "date": "2024",
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -384,7 +425,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -405,7 +447,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -426,7 +469,8 @@
       {
         "status": "adopted",
         "date": "2023",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -447,7 +491,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Mercy for Animals"]
+        "org_credit": ["Mercy for Animals"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -468,7 +513,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Greener by Default"]
+        "org_credit": ["Greener by Default"],
+        "citation_types": ["Advocate report"]
       }
     ]
   },
@@ -489,7 +535,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Greener by Default"]
+        "org_credit": ["Greener by Default"],
+        "citation_types": ["Advocate report"]
       }
     ]
   },
@@ -509,7 +556,8 @@
     "other": [
       {
         "status": "adopted",
-        "org_credit": ["Better Food Foundation", "New Roots Institute"]
+        "org_credit": ["Better Food Foundation", "New Roots Institute"],
+        "citation_types": []
       }
     ]
   },
@@ -530,7 +578,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Compass Group"]
+        "org_credit": ["Compass Group"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -551,7 +600,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["World Resources Institute", "Practice Greenhealth"]
+        "org_credit": ["World Resources Institute", "Practice Greenhealth"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -572,7 +622,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Better Food Foundation", "New Roots Institute"]
+        "org_credit": ["Better Food Foundation", "New Roots Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -593,7 +644,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -613,7 +665,8 @@
     "sub": [
       {
         "status": "adopted",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -634,7 +687,8 @@
       {
         "status": "pledged",
         "date": "2021",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -654,7 +708,8 @@
     "default": [
       {
         "status": "adopted",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -675,7 +730,8 @@
       {
         "status": "adopted",
         "date": "2023",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -696,7 +752,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["ProVeg"]
+        "org_credit": ["ProVeg"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -717,7 +774,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -738,7 +796,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -759,7 +818,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -779,7 +839,8 @@
     "default": [
       {
         "status": "adopted",
-        "date": "2022"
+        "date": "2022",
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -800,7 +861,8 @@
       {
         "status": "adopted",
         "date": "2023",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -821,7 +883,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Better Food Foundation", "New Roots Institute"]
+        "org_credit": ["Better Food Foundation", "New Roots Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -842,7 +905,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -861,7 +925,8 @@
     },
     "default": [
       {
-        "status": "adopted"
+        "status": "adopted",
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -882,7 +947,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Greener by Default"]
+        "org_credit": ["Greener by Default"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -901,12 +967,14 @@
     },
     "ratio": [
       {
-        "status": "adopted"
+        "status": "adopted",
+        "citation_types": ["News article", "News article", "Press release"]
       }
     ],
     "placement": [
       {
-        "status": "adopted"
+        "status": "adopted",
+        "citation_types": ["News article", "News article", "Press release"]
       }
     ]
   },
@@ -927,7 +995,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -948,7 +1017,8 @@
       {
         "status": "pledged",
         "date": "2030",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -969,7 +1039,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -990,7 +1061,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -1010,7 +1082,8 @@
     "other": [
       {
         "status": "adopted",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1031,7 +1104,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -1052,7 +1126,8 @@
       {
         "status": "pledged",
         "date": "2030",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1072,7 +1147,8 @@
     "default": [
       {
         "status": "pledged",
-        "date": "2030"
+        "date": "2030",
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -1092,7 +1168,8 @@
     "default": [
       {
         "status": "adopted",
-        "date": "2023"
+        "date": "2023",
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -1112,7 +1189,8 @@
     "ratio": [
       {
         "status": "pledged",
-        "date": "2026"
+        "date": "2026",
+        "citation_types": ["News article", "News article"]
       }
     ]
   },
@@ -1136,7 +1214,8 @@
         "org_credit": [
           "Wholesome Minnesota of Compassionate Action for Animals",
           "Civic Plate (a project of @MercyForAnimals)"
-        ]
+        ],
+        "citation_types": []
       }
     ]
   },
@@ -1157,7 +1236,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1178,7 +1258,8 @@
       {
         "status": "pledged",
         "date": "2026",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1199,14 +1280,16 @@
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": ["Plant-Based Cities Movement"]
+        "org_credit": ["Plant-Based Cities Movement"],
+        "citation_types": []
       }
     ],
     "other": [
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": ["Plant-Based Cities Movement"]
+        "org_credit": ["Plant-Based Cities Movement"],
+        "citation_types": []
       }
     ]
   },
@@ -1227,7 +1310,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -1248,7 +1332,8 @@
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": ["Better Food Foundation", "Greener by Default"]
+        "org_credit": ["Better Food Foundation", "Greener by Default"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -1269,7 +1354,8 @@
       {
         "status": "adopted",
         "date": "2019",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": [" Institutional website"]
       }
     ]
   },
@@ -1290,7 +1376,13 @@
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": ["Mercy for Animals"]
+        "org_credit": ["Mercy for Animals"],
+        "citation_types": [
+          "News article",
+          "Other",
+          "News article",
+          "News article"
+        ]
       }
     ]
   },
@@ -1311,7 +1403,8 @@
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1332,7 +1425,8 @@
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": ["World Resources Institute"]
+        "org_credit": ["World Resources Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1352,7 +1446,8 @@
     "other": [
       {
         "status": "pledged",
-        "date": "2019"
+        "date": "2019",
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -1373,7 +1468,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -1394,7 +1490,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["World Resources Institute"]
+        "org_credit": ["World Resources Institute"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -1415,7 +1512,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1440,7 +1538,8 @@
           "Greener by Default",
           "Better Food Foundation",
           "Rachel Atcheson"
-        ]
+        ],
+        "citation_types": ["Press release", "Other"]
       }
     ]
   },
@@ -1461,7 +1560,8 @@
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": ["World Resources Institute"]
+        "org_credit": ["World Resources Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1482,7 +1582,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Better Food Foundation", "New Roots Institute"]
+        "org_credit": ["Better Food Foundation", "New Roots Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1503,7 +1604,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1524,7 +1626,8 @@
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": ["Plant-Based Cities Movement"]
+        "org_credit": ["Plant-Based Cities Movement"],
+        "citation_types": ["Internal document"]
       }
     ]
   },
@@ -1545,7 +1648,8 @@
       {
         "status": "pledged",
         "date": "2027",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1564,7 +1668,8 @@
     },
     "ratio": [
       {
-        "status": "adopted"
+        "status": "adopted",
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -1585,7 +1690,8 @@
       {
         "status": "pledged",
         "date": "2027",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1606,7 +1712,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1627,7 +1734,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1648,7 +1756,8 @@
       {
         "status": "adopted",
         "date": "2020",
-        "org_credit": ["World Resources Institute"]
+        "org_credit": ["World Resources Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1668,7 +1777,8 @@
     "default": [
       {
         "status": "adopted",
-        "date": "2024"
+        "date": "2024",
+        "citation_types": ["Social media"]
       }
     ]
   },
@@ -1689,7 +1799,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -1710,7 +1821,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -1730,7 +1842,8 @@
     "default": [
       {
         "status": "adopted",
-        "org_credit": ["Better Food Foundation", "New Roots Institute"]
+        "org_credit": ["Better Food Foundation", "New Roots Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1750,7 +1863,8 @@
     "other": [
       {
         "status": "pledged",
-        "date": "2025"
+        "date": "2025",
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -1770,7 +1884,8 @@
     "other": [
       {
         "status": "pledged",
-        "date": "2026"
+        "date": "2026",
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -1791,7 +1906,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -1812,7 +1928,8 @@
       {
         "status": "adopted",
         "date": "2026",
-        "org_credit": ["ProVeg UK"]
+        "org_credit": ["ProVeg UK"],
+        "citation_types": ["Advocate report"]
       }
     ]
   },
@@ -1833,7 +1950,8 @@
       {
         "status": "adopted",
         "date": "2026",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -1854,7 +1972,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -1875,7 +1994,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1896,7 +2016,8 @@
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1917,7 +2038,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -1938,7 +2060,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -1959,7 +2082,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -1980,7 +2104,8 @@
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": ["Better Food Foundation", "Greener by Default"]
+        "org_credit": ["Better Food Foundation", "Greener by Default"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2001,7 +2126,8 @@
       {
         "status": "pledged",
         "date": "2022",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2022,7 +2148,8 @@
       {
         "status": "pledged",
         "date": "2020",
-        "org_credit": ["Friends of the Earth", "Farm Forward"]
+        "org_credit": ["Friends of the Earth", "Farm Forward"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2043,7 +2170,8 @@
       {
         "status": "pledged",
         "date": "2020",
-        "org_credit": ["Friends of the Earth", "Farm Forward"]
+        "org_credit": ["Friends of the Earth", "Farm Forward"],
+        "citation_types": ["Press release", "News article"]
       }
     ]
   },
@@ -2064,7 +2192,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2085,7 +2214,8 @@
       {
         "status": "adopted",
         "date": "2017",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -2106,7 +2236,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Greener by Default"]
+        "org_credit": ["Greener by Default"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2127,7 +2258,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2148,7 +2280,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Greener by Default"]
+        "org_credit": ["Greener by Default"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2169,7 +2302,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -2190,7 +2324,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2210,7 +2345,8 @@
     "ratio": [
       {
         "status": "adopted",
-        "date": "2025"
+        "date": "2025",
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -2231,7 +2367,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Mercy For Animals"]
+        "org_credit": ["Mercy for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2251,7 +2388,8 @@
     "default": [
       {
         "status": "adopted",
-        "date": "2023"
+        "date": "2023",
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -2272,7 +2410,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Plant Based Treaty"]
+        "org_credit": ["Plant Based Treaty"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2293,7 +2432,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2313,7 +2453,8 @@
     "ratio": [
       {
         "status": "adopted",
-        "date": "2025"
+        "date": "2025",
+        "citation_types": ["Social media"]
       }
     ]
   },
@@ -2334,7 +2475,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Greener by Default"]
+        "org_credit": ["Greener by Default"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -2353,7 +2495,8 @@
     },
     "default": [
       {
-        "status": "adopted"
+        "status": "adopted",
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -2374,7 +2517,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Greener by Default"]
+        "org_credit": ["Greener by Default"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2395,7 +2539,8 @@
       {
         "status": "pledged",
         "date": "2027",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2416,7 +2561,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2437,7 +2583,8 @@
       {
         "status": "pledged",
         "date": "2030",
-        "org_credit": ["World Resources Institute"]
+        "org_credit": ["World Resources Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2458,7 +2605,8 @@
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": ["Greener by Default"]
+        "org_credit": ["Greener by Default"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -2479,7 +2627,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": [" Institutional website"]
       }
     ]
   },
@@ -2500,7 +2649,8 @@
       {
         "status": "pledged",
         "date": "2027",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -2521,7 +2671,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Better Food Foundation", "Humane World for Animals"]
+        "org_credit": ["Better Food Foundation", "Humane World for Animals"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -2542,7 +2693,8 @@
       {
         "status": "pledged",
         "date": "2027",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2563,7 +2715,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation", "New Roots Institute"]
+        "org_credit": ["Better Food Foundation", "New Roots Institute"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -2584,7 +2737,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": [" Institutional website"]
       }
     ]
   },
@@ -2605,7 +2759,8 @@
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2626,7 +2781,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2647,7 +2803,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -2668,7 +2825,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Better Food Foundation"],
+        "citation_types": ["News article", "Other"]
       }
     ]
   },
@@ -2689,7 +2847,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2710,7 +2869,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["News article", "News article"]
       }
     ]
   },
@@ -2730,7 +2890,8 @@
     "ratio": [
       {
         "status": "adopted",
-        "date": "2025"
+        "date": "2025",
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -2751,7 +2912,8 @@
       {
         "status": "pledged",
         "date": "2019",
-        "org_credit": ["World Resources Institute"]
+        "org_credit": ["World Resources Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2772,7 +2934,8 @@
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": [" Institutional website"]
       }
     ]
   },
@@ -2793,7 +2956,8 @@
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": ["Better Food Foundation", "New Roots Institute"]
+        "org_credit": ["Better Food Foundation", "New Roots Institute"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2814,7 +2978,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2834,7 +2999,8 @@
     "ratio": [
       {
         "status": "pledged",
-        "date": "2025"
+        "date": "2025",
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -2855,28 +3021,8 @@
       {
         "status": "adopted",
         "date": "2021",
-        "org_credit": ["Greener by Default"]
-      }
-    ]
-  },
-  "University of Virginia, Brody Jewish Center (Hillel), VA, United States": {
-    "place": {
-      "name": "University of Virginia, Brody Jewish Center (Hillel)",
-      "street": null,
-      "city": "Charlottesville",
-      "state": "VA",
-      "postal_code": null,
-      "country": "United States",
-      "type": "Religious Center",
-      "encoded": "university-of-virginia-brody-jewish-center-hillel-va-united-states",
-      "consumer_base": 150,
-      "coord": [-78.4766781, 38.029306]
-    },
-    "default": [
-      {
-        "status": "adopted",
-        "date": "2025",
-        "org_credit": ["Better Food Foundation"]
+        "org_credit": ["Greener by Default"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -2897,27 +3043,29 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   },
-  "Vermaat (caterer, Netherlands) — hybrid tuna salad, Netherlands": {
+  "Vermaat , Netherlands": {
     "place": {
-      "name": "Vermaat (caterer, Netherlands) — hybrid tuna salad",
+      "name": "Vermaat ",
       "street": null,
       "city": "IJsselstein",
       "state": null,
       "postal_code": null,
       "country": "Netherlands",
       "type": "Other",
-      "encoded": "vermaat-caterer-netherlands-hybrid-tuna-salad-netherlands",
+      "encoded": "vermaat-netherlands",
       "consumer_base": 100,
       "coord": [5.0286859, 52.0262053]
     },
     "sub": [
       {
         "status": "adopted",
-        "date": "2024"
+        "date": "2024",
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -2937,20 +3085,21 @@
     "sub": [
       {
         "status": "adopted",
-        "date": "2024"
+        "date": "2024",
+        "citation_types": []
       }
     ]
   },
-  "Vitam (caterer, Netherlands) — plant-based cooking cream, Netherlands": {
+  "Vitam, Netherlands": {
     "place": {
-      "name": "Vitam (caterer, Netherlands) — plant-based cooking cream",
+      "name": "Vitam",
       "street": null,
       "city": "Rosmalen",
       "state": null,
       "postal_code": null,
       "country": "Netherlands",
       "type": "Other",
-      "encoded": "vitam-caterer-netherlands-plant-based-cooking-cream-netherlands",
+      "encoded": "vitam-netherlands",
       "consumer_base": 100,
       "coord": [5.3629244, 51.71866]
     },
@@ -2958,7 +3107,8 @@
       {
         "status": "adopted",
         "date": "2024",
-        "org_credit": ["ProVeg"]
+        "org_credit": ["ProVeg"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -2979,7 +3129,8 @@
       {
         "status": "adopted",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": [" Institutional website"]
       }
     ]
   },
@@ -3000,7 +3151,8 @@
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": ["Greener by Default", "Better Food Foundation"]
+        "org_credit": ["Greener by Default", "Better Food Foundation"],
+        "citation_types": []
       }
     ]
   },
@@ -3021,7 +3173,8 @@
       {
         "status": "adopted",
         "date": "2022",
-        "org_credit": ["Friends of the Earth"]
+        "org_credit": ["Friends of the Earth"],
+        "citation_types": ["Press release"]
       }
     ]
   },
@@ -3042,7 +3195,8 @@
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": ["Mercy for Animals"]
+        "org_credit": ["Mercy for Animals"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -3063,7 +3217,8 @@
       {
         "status": "pledged",
         "date": "2027",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["News article"]
       }
     ]
   },
@@ -3084,7 +3239,8 @@
       {
         "status": "pledged",
         "date": "2025",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Other"]
       }
     ]
   },
@@ -3105,7 +3261,8 @@
       {
         "status": "pledged",
         "date": "2024",
-        "org_credit": ["Humane World for Animals"]
+        "org_credit": ["Humane World for Animals"],
+        "citation_types": ["Press release"]
       }
     ]
   }

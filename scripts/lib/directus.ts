@@ -21,7 +21,12 @@ import {
   QueryFilter,
 } from "@directus/sdk";
 
-import { NudgeType, PlaceType, NudgeStatus } from "../../src/js/model/types.js";
+import {
+  NudgeType,
+  PlaceType,
+  NudgeStatus,
+  CitationType,
+} from "../../src/js/model/types.js";
 
 export const CITATIONS_FILES_FOLDER = "1de1a366-4c32-40f7-9dbe-8d4293c359c2";
 
@@ -80,16 +85,6 @@ export type Institution = {
   coordinates: Coordinates | null;
   consumer_base: number;
 } & Metadata;
-
-export type CitationType =
-  | "Press release"
-  | "News article"
-  | "Internal document"
-  | "Social media"
-  | "Policy"
-  | "Advocate report"
-  | "Institutional website"
-  | "Other";
 
 export type Citation = {
   type: CitationType;

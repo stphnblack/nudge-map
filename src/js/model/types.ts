@@ -83,6 +83,18 @@ export type NudgeType = (typeof ALL_NUDGE_TYPE)[number];
 export const ALL_NUDGE_STATUS = ["adopted", "pledged"] as const;
 export type NudgeStatus = (typeof ALL_NUDGE_STATUS)[number];
 
+export const ALL_CITATION_TYPES = [
+  "Press release",
+  "News article",
+  "Internal document",
+  "Social media",
+  "Policy",
+  "Advocate report",
+  "Institutional website",
+  "Other",
+] as const;
+export type CitationType = (typeof ALL_CITATION_TYPES)[number];
+
 /// Every nudge type has a status.
 export interface BaseNudge {
   status: NudgeStatus;
@@ -91,11 +103,13 @@ export interface BaseNudge {
 export type RawNudge = BaseNudge & {
   date: string | undefined;
   org_credit: string[] | undefined;
+  citation_types: CitationType[] | undefined;
 };
 
 export type ProcessedNudge = BaseNudge & {
   date: Date | undefined;
   org_credit: string[] | undefined;
+  citation_types: CitationType[] | undefined;
 };
 export interface RawCoreEntry {
   place: RawPlace;

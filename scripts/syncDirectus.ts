@@ -422,6 +422,9 @@ function combineData(
               reporter: record.reporter!,
               org_credit: parseOrgCredit(record.org_credit),
               org_credit_expanded: record.org_credit_expanded! ?? undefined,
+              citation_types: record.citations!.map(
+                (junctionId) => citationsByNudgeJunctionId[junctionId].type!,
+              ),
               citations: createCitations(
                 record.citations!,
                 citationsByNudgeJunctionId,
@@ -486,6 +489,7 @@ async function saveCoreData(
     status: record.status,
     date: record.date,
     org_credit: record.org_credit,
+    citation_types: record.citation_types,
   });
 
   const pruned = Object.fromEntries(
@@ -536,7 +540,11 @@ async function saveExtendedData(
   const formatNudge = (record: ExtendedNudge) => ({
     summary: record.summary,
     reporter: record.reporter,
-    citations: record.citations,
+    citations: record.citations.map((citation) => {
+      const citationWithoutType = { ...citation };
+      delete citationWithoutType.type;
+      return citationWithoutType;
+    }),
   });
 
   const pruned = Object.fromEntries(
