@@ -81,16 +81,18 @@ export type Institution = {
   consumer_base: number;
 } & Metadata;
 
+export type CitationType =
+  | "Press release"
+  | "News article"
+  | "Internal document"
+  | "Social media"
+  | "Policy"
+  | "Advocate report"
+  | "Institutional website"
+  | "Other";
+
 export type Citation = {
-  type:
-    | "Press release"
-    | "News article"
-    | "Internal document"
-    | "Social media"
-    | "Policy"
-    | "Advocate report"
-    | "Institutional website"
-    | "Other";
+  type: CitationType;
   source_description: string;
   notes: string | null;
   url: string | null;

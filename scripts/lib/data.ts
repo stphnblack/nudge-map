@@ -12,6 +12,7 @@ import {
   ProcessedNudge,
 } from "../../src/js/model/types";
 import { processRawCoreEntry } from "../../src/js/model/data";
+import { CitationType } from "./directus";
 
 export interface DirectusFile {
   fileName: string;
@@ -21,16 +22,11 @@ export interface DirectusFile {
 export interface Citation {
   id: number;
   description: string;
+  type: CitationType;
   url: string | null;
   notes: string | null;
   attachments: DirectusFile[];
   screenshots: DirectusFile[];
-}
-
-interface RawExtendedNudge {
-  summary: string;
-  reporter: string | null;
-  citations: Citation[];
 }
 
 export interface ExtendedNudge {
@@ -40,12 +36,12 @@ export interface ExtendedNudge {
 }
 
 export type ExtendedEntry = {
-  default?: RawExtendedNudge[];
-  ratio?: RawExtendedNudge[];
-  sub?: RawExtendedNudge[];
-  titles?: RawExtendedNudge[];
-  placement?: RawExtendedNudge[];
-  other?: RawExtendedNudge[];
+  default?: ExtendedNudge[];
+  ratio?: ExtendedNudge[];
+  sub?: ExtendedNudge[];
+  titles?: ExtendedNudge[];
+  placement?: ExtendedNudge[];
+  other?: ExtendedNudge[];
 };
 
 export type RawCompleteNudge = RawNudge & ExtendedNudge;
@@ -86,7 +82,7 @@ export async function readRawExtendedData(): Promise<
 
 function mergeRawNudges(
   coreNudges: RawNudge[],
-  extendedNudges: RawExtendedNudge[],
+  extendedNudges: ExtendedNudge[],
   placeId: PlaceId,
   nudgeKeyName: string,
 ): RawCompleteNudge[] {
